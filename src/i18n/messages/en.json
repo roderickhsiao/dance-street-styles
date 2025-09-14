@@ -144,6 +144,7 @@
           "playlist": "Curated playlist of tracks that define Locking's musical heritage and contemporary evolution."
         },
         "techniques": {
+          "title": "Techniques & Key Moves",
           "content": [
             "The fundamental 'Lock' — the signature freeze that gives the dance its name",
             "Points and hand gestures that emphasize the rhythmic breaks",
@@ -450,7 +451,7 @@
         "subtitle": "Aural Element • Sound Systems",
         "description": "The foundation of hip-hop culture. DJs manipulate records to create new sounds, extend break beats, and energize crowds using turntables and mixing techniques.",
         "why": "DJ Kool Herc noticed dancers got excited during drum breaks, so he used two turntables to extend these ’break beats’ - creating the backbone for all hip-hop music. As Herc said: ’to DJ is to have the insight to motivate the crowd. To have the crowd at your fingertips.’",
-        "pioneers": "DJ Kool Herc (The Father of Hip-Hop, 1973), Grandmaster Flash (Turntable Innovation), Afrika Bambaataa (Culture Builder)",
+        "pioneers": "streetCulture.elements.djing.pioneers",
         "historicalNote": "DJ is short for disc jockey, a term dating back to the 1940s. In hip-hop, it evolved into an art form of creating music and beats that would accompany MCs with rhymes and vocals."
       },
       "mcing": {
@@ -458,7 +459,6 @@
         "subtitle": "Oral Element • Street Poetry",
         "description": "Masters of Ceremony who speak rhythmically over beats, tell stories, and engage the crowd with clever wordplay. MCing is the act of singing or rhythmically rhyming while a DJ plays beats.",
         "why": "Originally, MCs helped DJs by talking to the crowd and announcing songs. This evolved into complex rhythmic storytelling that reflected street life and community experiences, tracing its origins back through African oral traditions and Jamaican toasting practices.",
-        "pioneers": "Grandmaster Caz (Lyrical Innovation), Melle Mel (Social Commentary), Kurtis Blow (First Rap Record Deal)",
         "historicalNote": "MC is short for master of ceremonies, often written as emcee. MCing emerged in the 1970s but traces its roots through African culture and oral traditions."
       },
       "breaking": {
@@ -466,7 +466,6 @@
         "subtitle": "Physical Element • Floor Dancing",
         "description": "The art of breakdancing, also known as breaking or b-boying/b-girling, is an energetic and acrobatic form of dance using elaborate choreography, footwork, and movements.",
         "why": "The break in breakdancing refers to the breaks and breakbeats in music made by early hip-hop DJs like DJ Kool Herc. B-boys and b-girls used dance battles as alternatives to gang violence, channeling aggression into artistic expression and community building.",
-        "pioneers": "Crazy Legs (Rock Steady Crew), Ken Swift (Dynamic Innovation), Baby Love (Female Pioneer)",
         "historicalNote": "Breaking originated in New York City during the late 1960s and early 1970s. It has reached mainstream acceptance to the point of being a 2024 Olympic event."
       },
       "graffiti": {
@@ -494,40 +493,13 @@
       },
       "videos": {
         "title": "Learn Through Video",
-        "subtitle": "Watch documentaries and educational content about the Five Elements of Hip-Hop",
+        "subtitle": "Watch documentaries and educational content about the Five Elements of Hip-Hop.",
         "watchVideo": "Watch Video",
         "videoTitle": "Hip-Hop Culture Video {number}",
         "thumbnailAlt": "Video {number} thumbnail",
         "previousVideo": "Previous video",
         "nextVideo": "Next video",
-        "videoLabel": "Video",
-        "items": [
-          {
-            "title": "Hip Hop Evolution: The Birth of Hip Hop",
-            "description": "A comprehensive documentary exploring how hip-hop culture emerged from the South Bronx in the 1970s",
-            "url": "https://www.youtube.com/watch?v=26ve5UYRCxo"
-          },
-          {
-            "title": "DJ Techniques & Turntablism",
-            "description": "Learn about the foundational DJ techniques that created hip-hop music and culture",
-            "url": "https://www.youtube.com/watch?v=Q5L2PvkZbU0"
-          },
-          {
-            "title": "The History of MCing and Rap", 
-            "description": "Discover how MCing evolved from party hosting into the powerful art of rap and storytelling",
-            "url": "https://www.youtube.com/watch?v=s9nEeyhld2E"
-          },
-          {
-            "title": "Breakdancing: From Streets to Olympics",
-            "description": "The complete story of breaking from underground dance battles to Olympic recognition", 
-            "url": "https://www.youtube.com/watch?v=9TMBWCcYs3o"
-          },
-          {
-            "title": "Graffiti Art & Urban Expression",
-            "description": "Explore how graffiti became a vital form of artistic expression in hip-hop culture",
-            "url": "https://www.youtube.com/watch?v=O0E2Y_R85c0"
-          }
-        ]
+        "videoLabel": "Video"
       }
     },
     "timeline": {
@@ -600,6 +572,152 @@
       "backHome": "Back to Home"
     }
   },    
+  "people": {
+    "donCampbell": {
+      "name": "Don 'Campbellock' Campbell",
+      "role": "Creator of Campbellock / Locking",
+      "bio": "Born January 8th, 1951, Don Campbell pioneered the Campbellock (Locking) in Los Angeles in 1970. An improvisational artist, his style emphasized theatrical freezes, funk-timed locks, and individual expression."
+    },
+    "toniBasil": {
+      "name": "Toni Basil",
+      "role": "Pioneer & Performer",
+      "bio": "Choreographer and performer who helped popularize Locking through appearances with The Lockers and mainstream media in the 1970s and beyond."
+    },
+    "fredBerry": {
+      "name": "Fred 'Rerun' Berry",
+      "role": "Performer & Early Promoter",
+      "bio": "Fred Berry ('Rerun') was a prominent performer and cultural figure who helped bring West Coast funk styles, including Locking, to wider attention through TV and stage performances."
+    },
+    "djKoolHerc": {
+      "name": "DJ Kool Herc",
+      "role": "The Father of Hip-Hop",
+      "bio": "Jamaican-American DJ who pioneered hip-hop music and culture through his block parties in the South Bronx, introducing the breakbeat technique that became the foundation of hip-hop."
+    },
+    "grandmasterFlash": {
+      "name": "Grandmaster Flash",
+      "role": "Turntable Innovation",
+      "bio": "Pioneer DJ known for developing turntable techniques like the backspin and crossfading, revolutionizing DJ culture and laying the groundwork for modern hip-hop production."
+    },
+    "afrikaBambaataa": {
+      "name": "Afrika Bambaataa",
+      "role": "Culture Builder",
+      "bio": "Hip-hop pioneer who founded the Universal Zulu Nation and added the fifth element 'Knowledge' to hip-hop, emphasizing education and community building."
+    },
+    "grandmasterCaz": {
+      "name": "Grandmaster Caz",
+      "role": "Lyrical Innovation",
+      "bio": "Early MC known for his complex rhyme schemes and lyrical innovation, helping to evolve MCing from simple party hosting into sophisticated rap storytelling."
+    },
+    "melleMel": {
+      "name": "Melle Mel",
+      "role": "Social Commentary",
+      "bio": "Pioneering rapper known for socially conscious lyrics and powerful delivery, bringing depth and message to hip-hop music through tracks like 'The Message'."
+    },
+    "kurtisBlow": {
+      "name": "Kurtis Blow",
+      "role": "First Rap Record Deal",
+      "bio": "First commercially successful rapper to sign with a major label, helping to bring hip-hop from the streets to mainstream audiences with hits like 'The Breaks'."
+    },
+    "crazyLegs": {
+      "name": "Crazy Legs",
+      "role": "Rock Steady Crew",
+      "bio": "Legendary b-boy and founder of Rock Steady Crew, known for his powerful breaking style and role in defining b-boy culture and competitions."
+    },
+    "kenSwift": {
+      "name": "Ken Swift",
+      "role": "Dynamic Innovation",
+      "bio": "Innovative b-boy known for his dynamic moves and contributions to the evolution of breaking, particularly in power moves and floor work."
+    },
+    "babyLove": {
+      "name": "Baby Love",
+      "role": "Female Pioneer",
+      "bio": "Trailblazing female b-girl who broke barriers in the male-dominated breaking scene, known for her technical skill and competitive spirit."
+    },
+    "darrylCornbreadMcCray": {
+      "name": "Darryl 'Cornbread' McCray",
+      "role": "Philadelphia Pioneer",
+      "bio": "Early graffiti pioneer from Philadelphia who helped establish tagging as a form of urban expression, influencing the development of modern graffiti art."
+    },
+    "taki183": {
+      "name": "TAKI 183",
+      "role": "First Famous Tag",
+      "bio": "Greek-American graffiti writer whose widespread tags in New York City brought graffiti to mainstream attention, inspiring a generation of urban artists."
+    },
+    "phase2": {
+      "name": "Phase 2",
+      "role": "Bubble Letters",
+      "bio": "Graffiti pioneer known for developing the bubble letter style and complex lettering techniques that revolutionized graffiti art and typography."
+    },
+    "ladyPink": {
+      "name": "Lady Pink",
+      "role": "Female Graffiti Pioneer",
+      "bio": "One of the first prominent female graffiti artists, known for her detailed pieces and role in bringing women into the graffiti movement."
+    },
+    "krsOne": {
+      "name": "KRS-One",
+      "role": "Teacher",
+      "bio": "Conscious rapper and activist known for educational approach to hip-hop, founding the Temple of Hip-Hop and emphasizing knowledge as the fifth element."
+    }
+  },
+  "crews": {
+    "theLockers": {
+      "name": "The Lockers",
+      "description": "An original Locking crew formed in the early 1970s that popularized Campbellock on television and stage; notable members included Don Campbell, Toni Basil, Fred 'Rerun' Berry, and others."
+    }
+  },
+  "videos": {
+    "locking": {
+      "lockingFeatured": {
+        "title": "The Original Lockers - Locking Technique",
+        "description": "Authentic Locking technique demonstration from The Lockers, highlighting the signature 'lock' freezes and groove-based phrasing."
+      },
+      "donCampbell": {
+        "title": "Don Campbell - Creator of Locking",
+        "description": "A historical overview and interview covering Don Campbell's early experiments and the birth of Campbellock/Locking."
+      }
+    },
+    "5ElementsOfHipHop": {
+      "title": "5 Elements of Hip-Hop",
+      "description": "A quick conversation about the elements of Hip Hop and why it's important to know about the cultural aspect."
+    },
+    "djEvolution": {
+      "title": "The Evolution of the DJ",
+      "description": "ABC News’ Megan Ryte reports on the evolution of the DJ in Hip-Hop and speaks with DJs about its humble beginnings in the Bronx and those who’ve helped DJ’s evolve into today’s creative force."
+    },
+    "mcingHistory": {
+      "title": "Early History of The MC",
+      "description": "Discover how MCing evolved from party hosting into the powerful art of rap and storytelling"
+    },
+    "breakingDocumentary": {
+      "title": "How the Bronx brought breaking to the world",
+      "description": "A documentary exploring the origins of breaking in the Bronx and its rise to global recognition."
+    },
+    "graffitiArt": {
+      "title": "A history of graffiti in NYC",
+      "description": "The history of graffiti in New York City and how pioneering artists who began by painting subway cars are now selling their art for thousands."
+    }
+  },
+  "moves": {
+    "locking": {
+      "theLock": {
+        "name": "The Lock",
+        "description": "The foundational Locking move — a sudden freeze or stop that punctuates motion and creates rhythmic contrast."
+      },
+      "points": {
+        "name": "Points",
+        "description": "Hand and arm gestures that accentuate musical breaks and direct attention during performance."
+      }
+    }
+  },
+  "musicGenres": {
+    "funk": {
+      "name": "Funk",
+      "description": "Groove-driven music with strong backbeats that provided the rhythmic foundation for Locking and many West Coast styles."
+    },
+    "soul": {
+      "name": "Soul"
+    }
+  },
   "meta": {
     "title": "Street Dance Culture Archive - History, Moves & Community",
     "description": "Discover the rich history, culture, and evolution of street dance styles from Hip-Hop to House, Breaking to Voguing. Learn about the artists, music, and communities that shaped urban movement.",

@@ -16,56 +16,56 @@ export const danceStyleTags: DanceStyleTag[] = [
     id: 'hipHopFoundation',
     nameKey: 'danceTags.hipHopFoundation.name',
     icon: '🎧',
-    color: 'primary'
+    color: 'primary',
   },
   {
     id: 'funkStyles',
     nameKey: 'danceTags.funkStyles.name',
     icon: '🕺',
-    color: 'secondary'
+    color: 'secondary',
   },
   {
     id: 'clubCulture',
     nameKey: 'danceTags.clubCulture.name',
     icon: '🏠',
-    color: 'tertiary'
+    color: 'tertiary',
   },
   {
     id: 'ballroomCulture',
     nameKey: 'danceTags.ballroomCulture.name',
     icon: '💃',
-    color: 'primary'
+    color: 'primary',
   },
   {
     id: 'streetBattle',
     nameKey: 'danceTags.streetBattle.name',
     icon: '⚡',
-    color: 'secondary'
+    color: 'secondary',
   },
   {
     id: 'socialDance',
     nameKey: 'danceTags.socialDance.name',
     icon: '👥',
-    color: 'tertiary'
+    color: 'tertiary',
   },
   {
     id: 'theatrical',
     nameKey: 'danceTags.theatrical.name',
     icon: '🎭',
-    color: 'primary'
+    color: 'primary',
   },
   {
     id: 'underground',
     nameKey: 'danceTags.underground.name',
     icon: '🔥',
-    color: 'secondary'
+    color: 'secondary',
   },
   {
     id: 'modernStreet',
     nameKey: 'danceTags.modernStreet.name',
     icon: '🌟',
-    color: 'tertiary'
-  }
+    color: 'tertiary',
+  },
 ];
 
 // Enhanced data structure - all user-visible content comes from translations
@@ -76,9 +76,7 @@ export const danceStyles: DanceStyle[] = [
     slug: 'breaking',
     shortDescriptionKey: 'danceStyles.shortDescriptions.breaking',
     fullDescriptionKey: 'styles.detailed.breaking.description',
-    era: '1970s',
     eraKey: 'styles.eras.1970s',
-    location: 'South Bronx, NYC',
     locationKey: 'styles.locations.southBronxNYC',
     eraIcon: '📅',
     locationIcon: '📍',
@@ -86,23 +84,25 @@ export const danceStyles: DanceStyle[] = [
     origins: {
       yearKey: 'styles.eras.1970s',
       locationKey: 'styles.locations.southBronxNYC',
-      cultureKey: 'styles.detailed.breaking.origins.culture'
+      cultureKey: 'styles.detailed.breaking.origins.culture',
     },
     characteristicsKey: 'styles.detailed.breaking.characteristics.items',
     keyMovesKey: 'styles.detailed.breaking.keyMoves.items',
     influentialArtistsKey: 'styles.detailed.breaking.influentialArtists.items',
-    musicGenresKey: 'styles.detailed.breaking.musicGenres.items',
+  // musicGenres items moved to structured `musicGenres` where applicable
     videosKey: 'styles.detailed.breaking.videos.items',
     timelineKey: 'styles.detailed.breaking.timeline.events',
+    featuredVideoId: 'breaking-documentary',
+    videoIds: ['locking-featured'], // Additional videos
     theme: {
       primary: '#E74C3C',
       secondary: '#C0392B',
       accent: '#F39C12',
       background: '#2C3E50',
       foreground: '#ECF0F1',
-      muted: '#7F8C8D'
+      muted: '#7F8C8D',
     },
-    relatedStyles: [DanceStyleId.HIP_HOP]
+    relatedStyles: [DanceStyleId.HIP_HOP],
   },
   {
     id: DanceStyleId.HIP_HOP,
@@ -110,9 +110,7 @@ export const danceStyles: DanceStyle[] = [
     slug: 'hip-hop',
     shortDescriptionKey: 'danceStyles.shortDescriptions.hipHop',
     fullDescriptionKey: 'styles.detailed.hipHop.description',
-    era: '1970s',
     eraKey: 'styles.eras.1970s',
-    location: 'New York City',
     locationKey: 'styles.locations.newYorkCity',
     eraIcon: '📅',
     locationIcon: '📍',
@@ -120,17 +118,23 @@ export const danceStyles: DanceStyle[] = [
     origins: {
       yearKey: 'styles.eras.1970s',
       locationKey: 'styles.locations.newYorkCity',
-      cultureKey: 'styles.detailed.hipHop.origins.culture'
+      cultureKey: 'styles.detailed.hipHop.origins.culture',
     },
+    featuredVideoId: '5-elements-of-hop-hop',
+    videoIds: ['dj-evolution', 'mcing-history', 'graffiti-art'],
     theme: {
       primary: '#FF6B35',
       secondary: '#F7931E',
       accent: '#FFD23F',
       background: '#1A1A1A',
       foreground: '#FFFFFF',
-      muted: '#4A4A4A'
+      muted: '#4A4A4A',
     },
-    relatedStyles: [DanceStyleId.BREAKING, DanceStyleId.POPPING, DanceStyleId.LOCKING]
+    relatedStyles: [
+      DanceStyleId.BREAKING,
+      DanceStyleId.POPPING,
+      DanceStyleId.LOCKING,
+    ],
   },
   {
     id: DanceStyleId.POPPING,
@@ -138,9 +142,7 @@ export const danceStyles: DanceStyle[] = [
     slug: 'popping',
     shortDescriptionKey: 'danceStyles.shortDescriptions.popping',
     fullDescriptionKey: 'styles.detailed.popping.description',
-    era: '1960s-1970s',
     eraKey: 'styles.eras.1960s1970s',
-    location: 'Fresno, CA',
     locationKey: 'styles.locations.fresnoCA',
     eraIcon: '📅',
     locationIcon: '📍',
@@ -148,7 +150,7 @@ export const danceStyles: DanceStyle[] = [
     origins: {
       yearKey: 'styles.eras.1960s1970s',
       locationKey: 'styles.locations.fresnoCA',
-      cultureKey: 'styles.detailed.popping.origins.culture'
+      cultureKey: 'styles.detailed.popping.origins.culture',
     },
     theme: {
       primary: '#9B59B6',
@@ -156,9 +158,9 @@ export const danceStyles: DanceStyle[] = [
       accent: '#E67E22',
       background: '#34495E',
       foreground: '#FFFFFF',
-      muted: '#95A5A6'
+      muted: '#95A5A6',
     },
-    relatedStyles: [DanceStyleId.LOCKING]
+    relatedStyles: [DanceStyleId.LOCKING],
   },
   {
     id: DanceStyleId.LOCKING,
@@ -166,9 +168,7 @@ export const danceStyles: DanceStyle[] = [
     slug: 'locking',
     shortDescriptionKey: 'danceStyles.shortDescriptions.locking',
     fullDescriptionKey: 'styles.detailed.locking.description',
-    era: '1960s-1970s',
     eraKey: 'styles.eras.1960s1970s',
-    location: 'Los Angeles, CA',
     locationKey: 'styles.locations.losAngelesCA',
     eraIcon: '📅',
     locationIcon: '📍',
@@ -176,60 +176,30 @@ export const danceStyles: DanceStyle[] = [
     origins: {
       yearKey: 'styles.eras.1960s1970s',
       locationKey: 'styles.locations.losAngelesCA',
-      cultureKey: 'styles.detailed.locking.origins.culture'
+      cultureKey: 'styles.detailed.locking.origins.culture',
     },
-    // Direct video data instead of relying only on translation keys
-    videos: [
-      {
-        id: 'locking-featured',
-        title: 'The Original Lockers - Locking Technique',
-        url: 'https://www.youtube.com/watch?v=LKFafJWpiyc',
-        type: 'tutorial',
-        description: 'Authentic locking technique demonstration by the original lockers',
-        artist: 'The Lockers',
-        year: '1970s'
-      },
-      {
-        id: 'don-campbell-story',
-        title: 'Don Campbell - Creator of Locking',
-        url: 'https://www.youtube.com/watch?v=abc123',
-        type: 'history',
-        description: 'The story of Don Campbell and the creation of Campbellock/Locking',
-        artist: 'Don Campbell',
-        year: '1970'
-      }
-    ],
-    // Direct artist data
-    influentialArtists: [
-      {
-        name: 'Don Campbell',
-        role: 'Creator of Locking',
-        bio: 'Born January 8th, 1951, Don "Campbellock" Campbell was a portrait artist who revolutionized dance in 1970. His improvisational spirit and artistic background shaped Locking\'s emphasis on individual expression and creativity.',
-      },
-      {
-        name: 'Toni Basil',
-        role: 'Pioneer & Original Locker',
-        bio: 'Choreographer, dancer, and member of The Lockers who helped popularize locking through TV appearances and performances.',
-      }
-    ],
-    // Key moves/techniques
-    keyMoves: [
-      'The Lock - Signature freeze that gives the dance its name',
-      'Points - Sharp hand gestures that emphasize rhythmic breaks', 
-      'Fast Legs - Quick leg movements contrasted with sudden stops',
-      'Pacing - Theatrical timing and showmanship'
-    ],
-    // Musical characteristics  
-    musicGenres: ['Funk', 'Soul', 'Early Hip-Hop'],
+  // Normalized entity references (LOCKING migrated)
+  featuredVideoId: 'locking-featured',
+  videoIds: ['dj-evolution'], // Additional videos
+  influentialArtistIds: ['don-campbell', 'toni-basil'],
+  crewIds: ['the-lockers'],
+  dancerIds: ['don-campbell', 'toni-basil'],
+  moveIds: ['the-lock', 'points'],
+  musicGenreIds: ['funk', 'soul'],
+  // Musical characteristics (structured above in `musicGenres`)
     theme: {
       primary: '#F1C40F',
       secondary: '#F39C12',
       accent: '#E67E22',
       background: '#2C3E50',
       foreground: '#2C3E50',
-      muted: '#7F8C8D'
+      muted: '#7F8C8D',
     },
-    relatedStyles: [DanceStyleId.POPPING, DanceStyleId.WAACKING, DanceStyleId.HIP_HOP]
+    relatedStyles: [
+      DanceStyleId.POPPING,
+      DanceStyleId.WAACKING,
+      DanceStyleId.HIP_HOP,
+    ],
   },
   {
     id: DanceStyleId.HOUSE,
@@ -237,9 +207,7 @@ export const danceStyles: DanceStyle[] = [
     slug: 'house',
     shortDescriptionKey: 'danceStyles.shortDescriptions.house',
     fullDescriptionKey: 'styles.detailed.house.description',
-    era: '1980s-1990s',
     eraKey: 'styles.eras.1980s1990s',
-    location: 'Chicago & NYC',
     locationKey: 'styles.locations.chicagoNYC',
     eraIcon: '📅',
     locationIcon: '📍',
@@ -247,7 +215,7 @@ export const danceStyles: DanceStyle[] = [
     origins: {
       yearKey: 'styles.eras.1980s1990s',
       locationKey: 'styles.locations.chicagoNYC',
-      cultureKey: 'styles.detailed.house.origins.culture'
+      cultureKey: 'styles.detailed.house.origins.culture',
     },
     theme: {
       primary: '#3498DB',
@@ -255,9 +223,9 @@ export const danceStyles: DanceStyle[] = [
       accent: '#1ABC9C',
       background: '#ECF0F1',
       foreground: '#2C3E50',
-      muted: '#BDC3C7'
+      muted: '#BDC3C7',
     },
-    relatedStyles: [DanceStyleId.VOGUING, DanceStyleId.WAACKING]
+    relatedStyles: [DanceStyleId.VOGUING, DanceStyleId.WAACKING],
   },
   {
     id: DanceStyleId.VOGUING,
@@ -265,9 +233,7 @@ export const danceStyles: DanceStyle[] = [
     slug: 'voguing',
     shortDescriptionKey: 'danceStyles.shortDescriptions.voguing',
     fullDescriptionKey: 'styles.detailed.voguing.description',
-    era: '1960s-1980s',
     eraKey: 'styles.eras.1960s1980s',
-    location: 'Harlem, NYC',
     locationKey: 'styles.locations.harlemNYC',
     eraIcon: '📅',
     locationIcon: '📍',
@@ -275,7 +241,7 @@ export const danceStyles: DanceStyle[] = [
     origins: {
       yearKey: 'styles.eras.1960s1980s',
       locationKey: 'styles.locations.harlemNYC',
-      cultureKey: 'styles.detailed.voguing.origins.culture'
+      cultureKey: 'styles.detailed.voguing.origins.culture',
     },
     theme: {
       primary: '#E91E63',
@@ -283,9 +249,9 @@ export const danceStyles: DanceStyle[] = [
       accent: '#FF5722',
       background: '#000000',
       foreground: '#FFFFFF',
-      muted: '#424242'
+      muted: '#424242',
     },
-    relatedStyles: [DanceStyleId.HOUSE, DanceStyleId.WAACKING]
+    relatedStyles: [DanceStyleId.HOUSE, DanceStyleId.WAACKING],
   },
   {
     id: DanceStyleId.WAACKING,
@@ -293,9 +259,7 @@ export const danceStyles: DanceStyle[] = [
     slug: 'waacking',
     shortDescriptionKey: 'danceStyles.shortDescriptions.waacking',
     fullDescriptionKey: 'styles.detailed.waacking.description',
-    era: '1970s',
     eraKey: 'styles.eras.1970s',
-    location: 'Los Angeles, CA',
     locationKey: 'styles.locations.losAngelesCA',
     eraIcon: '📅',
     locationIcon: '📍',
@@ -303,7 +267,7 @@ export const danceStyles: DanceStyle[] = [
     origins: {
       yearKey: 'styles.eras.1970s',
       locationKey: 'styles.locations.losAngelesCA',
-      cultureKey: 'styles.detailed.waacking.origins.culture'
+      cultureKey: 'styles.detailed.waacking.origins.culture',
     },
     theme: {
       primary: '#FF1744',
@@ -311,9 +275,9 @@ export const danceStyles: DanceStyle[] = [
       accent: '#FF5722',
       background: '#000000',
       foreground: '#FFFFFF',
-      muted: '#424242'
+      muted: '#424242',
     },
-    relatedStyles: [DanceStyleId.VOGUING, DanceStyleId.LOCKING]
+    relatedStyles: [DanceStyleId.VOGUING, DanceStyleId.LOCKING],
   },
   {
     id: DanceStyleId.KRUMPING,
@@ -321,9 +285,7 @@ export const danceStyles: DanceStyle[] = [
     slug: 'krumping',
     shortDescriptionKey: 'danceStyles.shortDescriptions.krumping',
     fullDescriptionKey: 'styles.detailed.krumping.description',
-    era: '2000s',
     eraKey: 'styles.eras.2000s',
-    location: 'South Central LA',
     locationKey: 'styles.locations.southCentralLA',
     eraIcon: '📅',
     locationIcon: '📍',
@@ -331,7 +293,7 @@ export const danceStyles: DanceStyle[] = [
     origins: {
       yearKey: 'styles.eras.2000s',
       locationKey: 'styles.locations.southCentralLA',
-      cultureKey: 'styles.detailed.krumping.origins.culture'
+      cultureKey: 'styles.detailed.krumping.origins.culture',
     },
     theme: {
       primary: '#FF4081',
@@ -339,9 +301,9 @@ export const danceStyles: DanceStyle[] = [
       accent: '#FF5722',
       background: '#000000',
       foreground: '#FFFFFF',
-      muted: '#424242'
+      muted: '#424242',
     },
-    relatedStyles: [DanceStyleId.HIP_HOP, DanceStyleId.BREAKING]
+    relatedStyles: [DanceStyleId.HIP_HOP, DanceStyleId.BREAKING],
   },
   {
     id: DanceStyleId.HUSTLE,
@@ -349,9 +311,7 @@ export const danceStyles: DanceStyle[] = [
     slug: 'hustle',
     shortDescriptionKey: 'danceStyles.shortDescriptions.hustle',
     fullDescriptionKey: 'styles.detailed.hustle.description',
-    era: '1970s',
     eraKey: 'styles.eras.1970s',
-    location: 'New York City',
     locationKey: 'styles.locations.newYorkCity',
     eraIcon: '📅',
     locationIcon: '📍',
@@ -359,7 +319,7 @@ export const danceStyles: DanceStyle[] = [
     origins: {
       yearKey: 'styles.eras.1970s',
       locationKey: 'styles.locations.newYorkCity',
-      cultureKey: 'styles.detailed.hustle.origins.culture'
+      cultureKey: 'styles.detailed.hustle.origins.culture',
     },
     theme: {
       primary: '#FF6B35',
@@ -367,9 +327,9 @@ export const danceStyles: DanceStyle[] = [
       accent: '#FFD23F',
       background: '#000000',
       foreground: '#FFFFFF',
-      muted: '#424242'
+      muted: '#424242',
     },
-    relatedStyles: [DanceStyleId.HOUSE]
+    relatedStyles: [DanceStyleId.HOUSE],
   },
   {
     id: DanceStyleId.PUNKING,
@@ -377,9 +337,7 @@ export const danceStyles: DanceStyle[] = [
     slug: 'punking',
     shortDescriptionKey: 'danceStyles.shortDescriptions.punking',
     fullDescriptionKey: 'styles.detailed.punking.description',
-    era: '1970s-1980s',
     eraKey: 'styles.eras.1970s1980s',
-    location: 'New York City',
     locationKey: 'styles.locations.newYorkCity',
     eraIcon: '📅',
     locationIcon: '📍',
@@ -387,17 +345,17 @@ export const danceStyles: DanceStyle[] = [
     origins: {
       yearKey: 'styles.eras.1970s1980s',
       locationKey: 'styles.locations.newYorkCity',
-      cultureKey: 'styles.detailed.punking.origins.culture'
+      cultureKey: 'styles.detailed.punking.origins.culture',
     },
     theme: {
       primary: '#E91E63',
-      secondary: '#AD1457', 
+      secondary: '#AD1457',
       accent: '#F06292',
       background: '#000000',
       foreground: '#FFFFFF',
-      muted: '#424242'
+      muted: '#424242',
     },
-    relatedStyles: [DanceStyleId.WAACKING, DanceStyleId.VOGUING]
+    relatedStyles: [DanceStyleId.WAACKING, DanceStyleId.VOGUING],
   },
   {
     id: DanceStyleId.TURFING,
@@ -405,9 +363,7 @@ export const danceStyles: DanceStyle[] = [
     slug: 'turfing',
     shortDescriptionKey: 'danceStyles.shortDescriptions.turfing',
     fullDescriptionKey: 'styles.detailed.turfing.description',
-    era: '2000s',
     eraKey: 'styles.eras.2000s',
-    location: 'Oakland, CA',
     locationKey: 'styles.locations.oaklandCA',
     eraIcon: '📅',
     locationIcon: '📍',
@@ -415,7 +371,7 @@ export const danceStyles: DanceStyle[] = [
     origins: {
       yearKey: 'styles.eras.2000s',
       locationKey: 'styles.locations.oaklandCA',
-      cultureKey: 'styles.detailed.turfing.origins.culture'
+      cultureKey: 'styles.detailed.turfing.origins.culture',
     },
     theme: {
       primary: '#1E88E5',
@@ -423,27 +379,35 @@ export const danceStyles: DanceStyle[] = [
       accent: '#FFC107',
       background: '#000000',
       foreground: '#FFFFFF',
-      muted: '#424242'
+      muted: '#424242',
     },
-    relatedStyles: [DanceStyleId.HIP_HOP, DanceStyleId.POPPING, DanceStyleId.BREAKING]
-  }
+    relatedStyles: [
+      DanceStyleId.HIP_HOP,
+      DanceStyleId.POPPING,
+      DanceStyleId.BREAKING,
+    ],
+  },
 ];
 
 // Helper functions for comprehensive data access
-export const getDanceStyleById = (id: DanceStyleId | string): DanceStyle | undefined => {
-  return danceStyles.find(style => style.id === id);
+export const getDanceStyleById = (
+  id: DanceStyleId | string
+): DanceStyle | undefined => {
+  return danceStyles.find((style) => style.id === id);
 };
 
 export const getDanceStyleBySlug = (slug: string): DanceStyle | undefined => {
-  return danceStyles.find(style => style.slug === slug);
+  return danceStyles.find((style) => style.slug === slug);
 };
 
-export const getRelatedStyles = (styleId: DanceStyleId | string): DanceStyle[] => {
+export const getRelatedStyles = (
+  styleId: DanceStyleId | string
+): DanceStyle[] => {
   const style = getDanceStyleById(styleId as DanceStyleId);
   if (!style) return [];
-  
+
   return style.relatedStyles
-    .map(relatedId => getDanceStyleById(relatedId))
+    .map((relatedId) => getDanceStyleById(relatedId))
     .filter((style): style is DanceStyle => style !== undefined);
 };
 
@@ -453,34 +417,45 @@ export const getAllDanceStyles = (): DanceStyle[] => {
 
 // Enhanced helper functions from categories
 export const getStylesByTag = (tagId: string): DanceStyle[] => {
-  return danceStyles.filter(style => style.tags.includes(tagId));
+  return danceStyles.filter((style) => style.tags.includes(tagId));
 };
 
 export const getTagById = (tagId: string): DanceStyleTag | undefined => {
-  return danceStyleTags.find(tag => tag.id === tagId);
+  return danceStyleTags.find((tag) => tag.id === tagId);
 };
 
-export const getStylesByEra = (era: string): DanceStyle[] => {
-  return danceStyles.filter(style => style.era === era);
+export const getStylesByEra = (eraKey: string): DanceStyle[] => {
+  // eraKey must be a translation key like 'styles.eras.1970s'
+  return danceStyles.filter((style) => style.eraKey === eraKey);
 };
 
-export const getStylesByLocation = (location: string): DanceStyle[] => {
-  return danceStyles.filter(style => 
-    style.location.toLowerCase().includes(location.toLowerCase())
-  );
+export const getStylesByLocation = (locationKey: string): DanceStyle[] => {
+  // locationKey must be a translation key like 'styles.locations.newYorkCity'
+  return danceStyles.filter((style) => style.locationKey === locationKey);
 };
 
-// Get all unique eras and locations for filtering
+// Get all unique era and location translation keys for filtering
 export const getAllEras = (): string[] => {
-  return [...new Set(danceStyles.map(style => style.era))].sort();
+  return [...new Set(danceStyles.map((style) => style.eraKey))].sort();
 };
 
 export const getAllLocations = (): string[] => {
-  return [...new Set(danceStyles.map(style => style.location))].sort();
+  return [...new Set(danceStyles.map((style) => style.locationKey))].sort();
+};
+
+// Convenience helpers: translate the keys into user-visible strings.
+// Accepts a translation function (such as the one returned by next-intl's useTranslations
+// or getTranslations) so this module stays platform-agnostic.
+export const getAllErasTranslated = (t: (key: string) => string): string[] => {
+  return getAllEras().map((k) => t(k));
+};
+
+export const getAllLocationsTranslated = (t: (key: string) => string): string[] => {
+  return getAllLocations().map((k) => t(k));
 };
 
 // Get all tags used by styles
 export const getAllUsedTags = (): DanceStyleTag[] => {
-  const usedTagIds = [...new Set(danceStyles.flatMap(style => style.tags))];
-  return danceStyleTags.filter(tag => usedTagIds.includes(tag.id));
+  const usedTagIds = [...new Set(danceStyles.flatMap((style) => style.tags))];
+  return danceStyleTags.filter((tag) => usedTagIds.includes(tag.id));
 };

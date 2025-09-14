@@ -14,6 +14,19 @@ import { VideoCarousel } from '@/components/VideoCarousel';
 import { ValueCards } from '@/components/ValueCards';
 import { Quote } from '@/components/Quote';
 import { CTAButton } from '@/components/ui/cta-button';
+import { PEOPLE } from '@/data/entities';
+import { VIDEOS } from '@/data/entities';
+
+// Helper function to get pioneers string from ids
+const getPioneersString = (pioneerIds: string[]) => {
+  return pioneerIds
+    .map((id) => {
+      const person = PEOPLE[id];
+      if (!person) return id;
+      return `${person.nameKey} (${person.roleKey})`;
+    })
+    .join(', ');
+};
 
 const compactTimeline = [
   {
@@ -166,7 +179,7 @@ const fiveElementsData = [
     subtitleKey: 'streetCulture.elements.djing.subtitle',
     descriptionKey: 'streetCulture.elements.djing.description',
     whyKey: 'streetCulture.elements.djing.why',
-    pioneersKey: 'streetCulture.elements.djing.pioneers',
+    pioneers: getPioneersString(['dj-kool-herc', 'grandmaster-flash', 'afrika-bambaataa']),
     historicalNoteKey: 'streetCulture.elements.djing.historicalNote',
     bgColor: 'bg-accent-primary/20',
     hoverColor: 'hover:bg-accent-primary/30',
@@ -179,7 +192,7 @@ const fiveElementsData = [
     subtitleKey: 'streetCulture.elements.mcing.subtitle',
     descriptionKey: 'streetCulture.elements.mcing.description',
     whyKey: 'streetCulture.elements.mcing.why',
-    pioneersKey: 'streetCulture.elements.mcing.pioneers',
+    pioneers: getPioneersString(['grandmaster-caz', 'melle-mel', 'kurtis-blow']),
     historicalNoteKey: 'streetCulture.elements.mcing.historicalNote',
     bgColor: 'bg-accent-secondary/20',
     hoverColor: 'hover:bg-accent-secondary/30',
@@ -192,7 +205,7 @@ const fiveElementsData = [
     subtitleKey: 'streetCulture.elements.breaking.subtitle',
     descriptionKey: 'streetCulture.elements.breaking.description',
     whyKey: 'streetCulture.elements.breaking.why',
-    pioneersKey: 'streetCulture.elements.breaking.pioneers',
+    pioneers: getPioneersString(['crazy-legs', 'ken-swift', 'baby-love']),
     historicalNoteKey: 'streetCulture.elements.breaking.historicalNote',
     bgColor: 'bg-accent-tertiary/20',
     hoverColor: 'hover:bg-accent-tertiary/30',
@@ -205,7 +218,7 @@ const fiveElementsData = [
     subtitleKey: 'streetCulture.elements.graffiti.subtitle',
     descriptionKey: 'streetCulture.elements.graffiti.description',
     whyKey: 'streetCulture.elements.graffiti.why',
-    pioneersKey: 'streetCulture.elements.graffiti.pioneers',
+    pioneers: getPioneersString(['darryl-cornbread-mc-cray', 'taki-183', 'phase-2', 'lady-pink']),
     historicalNoteKey: 'streetCulture.elements.graffiti.historicalNote',
     bgColor: 'bg-green-500/20',
     hoverColor: 'hover:bg-green-500/30',
@@ -218,11 +231,57 @@ const fiveElementsData = [
     subtitleKey: 'streetCulture.elements.knowledge.subtitle',
     descriptionKey: 'streetCulture.elements.knowledge.description',
     whyKey: 'streetCulture.elements.knowledge.why',
-    pioneersKey: 'streetCulture.elements.knowledge.pioneers',
+    pioneers: getPioneersString(['afrika-bambaataa', 'krs-one', 'grandmaster-flash']),
     historicalNoteKey: 'streetCulture.elements.knowledge.historicalNote',
     bgColor: 'bg-yellow-500/20',
     hoverColor: 'hover:bg-yellow-500/30',
     borderColor: 'border-yellow-500/30',
+  },
+];
+
+// Compact timeline data
+const compactTimelineData = [
+  {
+    year: '1973',
+    titleKey: 'origins.timeline.events.1973.title',
+    locationKey: 'origins.timeline.events.1973.location',
+    descriptionKey: 'origins.timeline.events.1973.description',
+    icon: '🎧',
+  },
+  {
+    year: '1975',
+    titleKey: 'origins.timeline.events.1975.title',
+    locationKey: 'origins.timeline.events.1975.location',
+    descriptionKey: 'origins.timeline.events.1975.description',
+    icon: '💫',
+  },
+  {
+    year: '1977',
+    titleKey: 'origins.timeline.events.1977.title',
+    locationKey: 'origins.timeline.events.1977.location',
+    descriptionKey: 'origins.timeline.events.1977.description',
+    icon: '👥',
+  },
+  {
+    year: '1982',
+    titleKey: 'origins.timeline.events.1982.title',
+    locationKey: 'origins.timeline.events.1982.location',
+    descriptionKey: 'origins.timeline.events.1982.description',
+    icon: '🎬',
+  },
+  {
+    year: '1990s',
+    titleKey: 'origins.timeline.events.1990s.title',
+    locationKey: 'origins.timeline.events.1990s.location',
+    descriptionKey: 'origins.timeline.events.1990s.description',
+    icon: '🌍',
+  },
+  {
+    year: '2024',
+    titleKey: 'origins.timeline.events.2024.title',
+    locationKey: 'origins.timeline.events.2024.location',
+    descriptionKey: 'origins.timeline.events.2024.description',
+    icon: '🏅',
   },
 ];
 
@@ -290,11 +349,11 @@ export default function OriginOfStreetDancePage() {
   // Video data with working YouTube URLs for Hip-Hop culture education
   const videoData = useMemo(
     () => [
-      { url: 'https://www.youtube.com/watch?v=_bOPlFICJAE' }, // 5 Elements of Hip-Hop
-      { url: 'https://www.youtube.com/watch?v=Q5L2PvkZbU0' }, // The Birth of DJ Culture
-      { url: 'https://www.youtube.com/watch?v=s9nEeyhld2E' }, // MCing Documentary
-      { url: 'https://www.youtube.com/watch?v=9TMBWCcYs3o' }, // Breaking Documentary
-      { url: 'https://www.youtube.com/watch?v=O0E2Y_R85c0' }, // Graffiti Documentary
+      { url: VIDEOS['5-elements-of-hop-hop'].url },
+      { url: VIDEOS['dj-evolution'].url },
+      { url: VIDEOS['mcing-history'].url },
+      { url: VIDEOS['breaking-documentary'].url },
+      { url: VIDEOS['graffiti-art'].url },
     ],
     []
   );
@@ -352,7 +411,7 @@ export default function OriginOfStreetDancePage() {
                   subtitle={t(element.subtitleKey)}
                   description={t(element.descriptionKey)}
                   why={t(element.whyKey)}
-                  pioneers={t(element.pioneersKey)}
+                  pioneers={element.pioneers}
                   historicalNote={t(element.historicalNoteKey)}
                   bgColor={element.bgColor}
                   hoverColor={element.hoverColor}

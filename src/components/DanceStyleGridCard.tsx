@@ -24,6 +24,8 @@ export function DanceStyleGridCard({
   index,
 }: DanceStyleGridCardProps) {
   const t = useTranslations('stylesPage');
+  // The page passes raw era/location for compatibility; prefer translation keys
+  // If the caller instead passes translation keys, they should already be translated
   const tTags = useTranslations('danceTags');
 
   return (

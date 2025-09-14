@@ -10,10 +10,11 @@ import { DanceStyleGridCard } from '@/components/DanceStyleGridCard';
 import { getAllDanceStyles } from '@/data/danceStyles';
 
 export default function StylesPage() {
-  const t = useTranslations('stylesPage');
+  const tPage = useTranslations('stylesPage');
   const tStyleNames = useTranslations('danceStyles.names');
   const tStyleDescriptions = useTranslations('danceStyles.shortDescriptions');
   const allStyles = getAllDanceStyles();
+  const tGlobal = useTranslations();
   
   // Create a map of style IDs to style objects for quick lookup
   // Get all styles sorted alphabetically by translated name
@@ -28,8 +29,8 @@ export default function StylesPage() {
       <MainNavigation />
       
       <Hero
-        title={`${t('hero.title.line1')} ${t('hero.title.line2')} ${t('hero.title.line3')}`}
-        subtitle={t('hero.subtitle')}
+        title={`${tPage('hero.title.line1')} ${tPage('hero.title.line2')} ${tPage('hero.title.line3')}`}
+        subtitle={tPage('hero.subtitle')}
         backgroundVariant="street"
       />
 
@@ -43,10 +44,10 @@ export default function StylesPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-header-lg font-black text-content-primary mb-6">
-              {t('overview.title')}
+              {tPage('overview.title')}
             </h2>
             <p className="text-body-lg text-content-secondary max-w-4xl mx-auto">
-              {t('overview.content')}
+              {tPage('overview.content')}
             </p>
           </motion.div>
         </div>
@@ -56,11 +57,11 @@ export default function StylesPage() {
       <Section className="py-16" background="primary">
         <div className="container mx-auto px-6">
           <div className="mb-12 text-center">
-            <h2 className="text-header-lg font-black text-content-primary mb-4">
-              {t('allStyles.title')}
+              <h2 className="text-header-lg font-black text-content-primary mb-4">
+              {tPage('allStyles.title')}
             </h2>
             <p className="text-body-md text-content-secondary max-w-2xl mx-auto">
-              {t('allStyles.description')}
+              {tPage('allStyles.description')}
             </p>
           </div>
 
@@ -76,8 +77,8 @@ export default function StylesPage() {
                   key={style.id}
                   name={tStyleNames(style.id)}
                   description={tStyleDescriptions(style.id)}
-                  era={style.era}
-                  location={style.location}
+                  era={tGlobal(style.eraKey)}
+                  location={tGlobal(style.locationKey)}
                   tags={style.tags}
                   slug={style.slug}
                   index={index}
@@ -99,13 +100,13 @@ export default function StylesPage() {
             className="space-y-8"
           >
             <h2 className="text-header-xl font-black text-content-primary">
-              {t('cta.title')}
+              {tPage('cta.title')}
             </h2>
             <p className="text-body-lg text-content-secondary max-w-2xl mx-auto">
-              {t('cta.description')}
+              {tPage('cta.description')}
             </p>
             <CTAButton href="/origins" variant="filled" size="lg">
-              {t('cta.button')}
+              {tPage('cta.button')}
             </CTAButton>
           </motion.div>
         </div>

@@ -24,10 +24,9 @@ export interface DanceStyle {
   fullDescription?: string;
   fullDescriptionKey?: string;
   // Additional metadata from categories
-  era: string; // e.g., "1970s", "1980s-1990s" 
-  eraKey?: string; // Translation key for era
-  location: string; // e.g., "South Bronx, NYC", "Chicago & NYC"
-  locationKey?: string; // Translation key for location
+  // All user-visible era/location values must be provided as translation keys.
+  eraKey: string; // Translation key for era (e.g. 'styles.eras.1970s')
+  locationKey: string; // Translation key for location (e.g. 'styles.locations.southBronxNYC')
   eraIcon: string;
   locationIcon: string;
   tags: string[]; // Array of tag IDs for flexible categorization
@@ -41,16 +40,23 @@ export interface DanceStyle {
   characteristicsKey?: string;
   keyMoves?: string[];
   keyMovesKey?: string;
-  influentialArtists?: Artist[];
+  // References to normalized entity records (use ids)
+  influentialArtistIds?: string[];
   influentialArtistsKey?: string;
-  musicGenres?: string[];
-  musicGenresKey?: string;
-  videos?: Video[];
+  featuredVideoId?: string; // Main featured video for the style
+  videoIds?: string[]; // Additional videos for the style
   videosKey?: string;
-  timeline?: TimelineEvent[];
+  timelineEventIds?: string[];
   timelineKey?: string;
   theme: ThemeColors;
   relatedStyles: DanceStyleId[]; // Use enum for related styles to prevent typos
+  // Structured performer and crew data
+  dancerIds?: string[];
+  crewIds?: string[];
+  // Named moves with translation keys
+  moveIds?: string[];
+  // Music genres as structured items (ids reference translation keys)
+  musicGenreIds?: string[];
 }
 
 export interface Artist {
@@ -65,6 +71,23 @@ export interface Artist {
   };
 }
 
+// More specific performer types for structured data
+export interface Dancer extends Artist {
+  // Optionally reference a crew id
+  crewId?: string;
+  // Primary era / active years (translation key)
+  eraKey?: string;
+}
+
+export interface Crew {
+  id: string;
+  nameKey: string; // translation key for crew name
+  foundedYear?: string;
+  originLocationKey?: string;
+  members?: string[]; // array of dancer names or ids
+  descriptionKey?: string;
+}
+
 export interface Video {
   id: string;
   title: string;
@@ -76,11 +99,27 @@ export interface Video {
   thumbnailUrl?: string;
 }
 
+export interface Move {
+  id: string;
+  nameKey: string; // translation key for move name
+  descriptionKey?: string; // translation key for move description
+  videos?: Video[]; // reference video examples
+  difficulty?: 'beginner' | 'intermediate' | 'advanced';
+}
+
+export interface MusicGenre {
+  id: string;
+  nameKey: string; // translation key for genre name
+  descriptionKey?: string;
+}
+
 export interface TimelineEvent {
-  year: string;
-  title: string;
-  description: string;
+  year: string; // e.g., '1973' or '1970s'
+  titleKey?: string; // translation key for title
+  descriptionKey?: string; // translation key for description
+  locationKey?: string; // translation key for event location
   significance: 'high' | 'medium' | 'low';
+  media?: Video[];
 }
 
 export interface ThemeColors {
@@ -90,6 +129,54 @@ export interface ThemeColors {
   background: string;
   foreground: string;
   muted: string;
+}
+
+// Entity records for a lightweight, file-based DB
+export interface PersonEntity {
+  id: string;
+  nameKey: string;
+  roleKey?: string;
+  bioKey?: string;
+  imageUrl?: string;
+  socialLinks?: {
+    instagram?: string;
+    youtube?: string;
+    website?: string;
+  };
+}
+
+export interface CrewEntity {
+  id: string;
+  nameKey: string;
+  foundedYear?: string;
+  originLocationKey?: string;
+  memberIds?: string[]; // person ids
+  descriptionKey?: string;
+}
+
+export interface VideoEntity {
+  id: string;
+  titleKey?: string;
+  url: string;
+  type: 'tutorial' | 'performance' | 'history' | 'battle';
+  descriptionKey?: string;
+  artistId?: string; // person or crew id
+  year?: string;
+  thumbnailUrl?: string;
+}
+
+export interface MoveEntity {
+  id: string;
+  nameKey: string;
+  descriptionKey?: string;
+  videoIds?: string[];
+  difficulty?: 'beginner' | 'intermediate' | 'advanced';
+}
+
+export interface MusicGenreEntity {
+  id: string;
+  nameKey: string;
+  descriptionKey?: string;
 }
 
 export interface Resource {

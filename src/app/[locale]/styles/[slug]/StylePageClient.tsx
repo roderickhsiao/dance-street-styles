@@ -13,6 +13,7 @@ import { DanceStyle } from '@/data/types';
 import { DanceStyleTag } from '@/data/danceStyles';
 import { ContentSection, PioneersSection, FeaturedVideoSection, TechniquesSection } from '@/components/DanceStyleContent';
 import { FeaturedVideo } from '@/components/FeaturedVideo';
+import { getVideoById } from '@/data/entities';
 import clsx from 'clsx';
 import { useInViewport } from 'react-in-viewport';
 
@@ -33,11 +34,13 @@ interface SectionConfig {
 // Create a wrapper component for each section to handle viewport detection
 interface ViewportSectionProps {
   section: SectionConfig;
+  // Notify parent when section enters/leaves viewport. Parent will compute element top when needed.
   onInViewport: (sectionId: string, inViewport: boolean) => void;
 }
 
 const ViewportSection = ({ section, onInViewport }: ViewportSectionProps) => {
   const ref = useRef<HTMLElement>(null);
+  const tGlobal = useTranslations();
   const { inViewport } = useInViewport(
     ref,
     {
@@ -84,7 +87,7 @@ const ViewportSection = ({ section, onInViewport }: ViewportSectionProps) => {
               <span className="text-sm md:text-base" role="img" aria-hidden="true">{section.icon}</span>
             </div>
             <h2 id={`${section.id}-heading`} className="text-header-xs md:text-header-sm font-bold text-content-primary">
-              {section.labelKey}
+              {section.labelKey && section.labelKey.includes('.') ? tGlobal(section.labelKey) : section.labelKey}
             </h2>
           </header>
           <div className="ml-9 md:ml-10">
@@ -100,21 +103,26 @@ export function StylePageClient({ danceStyle, relatedStyles, styleTags }: StyleP
   const { applyTheme, clearTheme } = useTheme();
   const [activeSection, setActiveSection] = useState('overview');
   const [isTocOpen, setIsTocOpen] = useState(false);
+  // Set of currently visible section IDs
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
   const tNames = useTranslations('danceStyles.names');
   const tDescriptions = useTranslations('danceStyles.shortDescriptions');
   const tTags = useTranslations('danceTags');
+  const tStyles = useTranslations();
 
-  // Handle viewport changes from sections
+  
+
+  // Handle viewport changes from sections; we store the element top so we can deterministically
+  // pick the visible section closest to the top of the viewport.
   const handleViewportChange = (sectionId: string, inViewport: boolean) => {
     setVisibleSections(prev => {
-      const newSet = new Set(prev);
+      const next = new Set(prev);
       if (inViewport) {
-        newSet.add(sectionId);
+        next.add(sectionId);
       } else {
-        newSet.delete(sectionId);
+        next.delete(sectionId);
       }
-      return newSet;
+      return next;
     });
   };
 
@@ -203,22 +211,30 @@ export function StylePageClient({ danceStyle, relatedStyles, styleTags }: StyleP
   // Update active section based on visible sections and scroll position
   useEffect(() => {
     if (visibleSections.size > 0) {
-      const sectionsArray = Array.from(visibleSections);
-      
       // Check if user has scrolled to the bottom of the page
       const isAtBottom = (window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 100);
-      
+
       if (isAtBottom && availableSections.length > 0) {
         // If at bottom, highlight the last section
         const lastSection = availableSections[availableSections.length - 1];
         setActiveSection(lastSection.id);
       } else {
-        // Otherwise, use the first visible section (topmost)
-        const sectionOrder = availableSections.map(s => s.id);
-        const orderedVisibleSections = sectionsArray.sort((a, b) => 
-          sectionOrder.indexOf(a) - sectionOrder.indexOf(b)
-        );
-        setActiveSection(orderedVisibleSections[0]);
+        // Pick the visible section whose top is smallest (closest to viewport top)
+        let topMostId: string | undefined = undefined;
+        let smallestTop = Infinity;
+
+        visibleSections.forEach((id) => {
+          const el = document.getElementById(id);
+          if (el) {
+            const top = el.getBoundingClientRect().top;
+            if (top < smallestTop) {
+              smallestTop = top;
+              topMostId = id;
+            }
+          }
+        });
+
+        if (topMostId) setActiveSection(topMostId);
       }
     }
   }, [visibleSections, availableSections]);
@@ -307,11 +323,11 @@ export function StylePageClient({ danceStyle, relatedStyles, styleTags }: StyleP
                 <div className="flex flex-wrap gap-4 text-body-sm">
                   <div className="flex items-center space-x-2">
                     <MapPin className="h-4 w-4 text-accent-primary" />
-                    <span>{danceStyle.location}</span>
+                    <span>{tStyles(danceStyle.locationKey)}</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Clock className="h-4 w-4 text-accent-secondary" />
-                    <span>{danceStyle.era}</span>
+                    <span>{tStyles(danceStyle.eraKey)}</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Zap className="h-4 w-4 text-accent-tertiary" />
@@ -343,7 +359,7 @@ export function StylePageClient({ danceStyle, relatedStyles, styleTags }: StyleP
 
               {/* Featured Media in Hero */}
               <div className="lg:block">
-                <FeaturedVideo styleId={danceStyle.slug} />
+                <FeaturedVideo video={danceStyle.featuredVideoId ? getVideoById(danceStyle.featuredVideoId) : undefined} />
               </div>
             </div>
 
@@ -377,7 +393,7 @@ export function StylePageClient({ danceStyle, relatedStyles, styleTags }: StyleP
                         )}
                       >
                         <span className="text-sm">{section.icon}</span>
-                        <span>{section.labelKey}</span>
+                        <span>{section.labelKey && section.labelKey.includes('.') ? tStyles(section.labelKey) : section.labelKey}</span>
                       </button>
                     ))}
                   </nav>
@@ -427,8 +443,8 @@ export function StylePageClient({ danceStyle, relatedStyles, styleTags }: StyleP
               "street dance",
               "hip hop culture",
               "dance style",
-              danceStyle.location,
-              danceStyle.era
+              tStyles(danceStyle.locationKey),
+              tStyles(danceStyle.eraKey)
             ].join(", ")
           })
         }}
@@ -458,7 +474,7 @@ export function StylePageClient({ danceStyle, relatedStyles, styleTags }: StyleP
                       aria-current={activeSection === section.id ? "page" : undefined}
                     >
                       <span className="text-sm" aria-hidden="true">{section.icon}</span>
-                      <span>{section.labelKey}</span>
+                      <span>{section.labelKey && section.labelKey.includes('.') ? tStyles(section.labelKey) : section.labelKey}</span>
                     </button>
                   ))}
                 </nav>

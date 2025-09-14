@@ -1,7 +1,8 @@
 import { useTranslations } from 'next-intl';
-import { DanceStyle } from '@/data/types';
+import { DanceStyle, PersonEntity, VideoEntity, MusicGenreEntity } from '@/data/types';
 import { PlayCircle, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { getPersonById, getVideoById, getMusicGenreById } from '@/data/entities';
 
 interface DanceStyleContentProps {
   danceStyle: DanceStyle;
@@ -74,36 +75,47 @@ export function HistorySection({ danceStyle, className = "" }: DanceStyleContent
 export function PioneersSection({ danceStyle, className = "" }: DanceStyleContentProps) {
   // Always call the hook, but we may not use its result
   const t = useTranslations(`styles.detailed.${danceStyle.slug}.pioneers`);
+  const tGlobal = useTranslations();
 
-  // First try to get data from config, fallback to translations
-  if (danceStyle.influentialArtists && danceStyle.influentialArtists.length > 0) {
+  // First try to get data from config (ids referencing normalized PersonEntity records)
+  if (danceStyle.influentialArtistIds && danceStyle.influentialArtistIds.length > 0) {
+    const artists: PersonEntity[] = danceStyle.influentialArtistIds
+      .map(id => getPersonById(id))
+      .filter(Boolean) as PersonEntity[];
+
     return (
       <div className={`space-y-2 md:space-y-3 ${className}`}>
-        {danceStyle.influentialArtists.map((artist, index) => (
-          <div
-            key={index}
-            className="bg-gradient-to-r from-surface-secondary/30 to-surface-secondary/10 rounded-xl p-2 md:p-3 border border-stroke-secondary/20 backdrop-blur-sm hover:from-surface-secondary/40 hover:to-surface-secondary/20 hover:border-accent-primary/30 transition-all duration-300 group"
-          >
-            <div className="flex items-start space-x-2 md:space-x-3 mb-2">
-              <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-accent-primary/30 to-accent-primary/10 rounded-xl flex items-center justify-center group-hover:from-accent-primary/40 group-hover:to-accent-primary/20 transition-all duration-300">
-                <span className="text-sm md:text-base font-bold text-accent-primary">
-                  {artist.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
-                </span>
-              </div>
-              <div className="flex-1">
-                <h4 className="text-body-sm md:text-body-md font-bold text-content-primary group-hover:text-accent-primary transition-colors mb-1">
-                  {artist.name}
-                </h4>
-                <p className="text-body-xs text-accent-primary font-medium mb-1 md:mb-2">
-                  {artist.role}
-                </p>
-                <p className="text-body-xs md:text-body-sm text-content-secondary leading-relaxed">
-                  {artist.bio}
-                </p>
+        {artists.map((artist, index) => {
+          const displayName = artist.nameKey ? tGlobal(artist.nameKey) : (artist.id || '');
+          const displayRole = artist.roleKey ? tGlobal(artist.roleKey) : artist.roleKey;
+          const displayBio = artist.bioKey ? tGlobal(artist.bioKey) : artist.bioKey;
+
+          return (
+            <div
+              key={artist.id || index}
+              className="bg-gradient-to-r from-surface-secondary/30 to-surface-secondary/10 rounded-xl p-2 md:p-3 border border-stroke-secondary/20 backdrop-blur-sm hover:from-surface-secondary/40 hover:to-surface-secondary/20 hover:border-accent-primary/30 transition-all duration-300 group"
+            >
+              <div className="flex items-start space-x-2 md:space-x-3 mb-2">
+                <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-accent-primary/30 to-accent-primary/10 rounded-xl flex items-center justify-center group-hover:from-accent-primary/40 group-hover:to-accent-primary/20 transition-all duration-300">
+                  <span className="text-sm md:text-base font-bold text-accent-primary">
+                    {displayName.split?.(' ').map((n: string) => n[0]).join('').slice(0, 2)}
+                  </span>
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-body-sm md:text-body-md font-bold text-content-primary group-hover:text-accent-primary transition-colors mb-1">
+                    {displayName}
+                  </h4>
+                  <p className="text-body-xs text-accent-primary font-medium mb-1 md:mb-2">
+                    {displayRole}
+                  </p>
+                  <p className="text-body-xs md:text-body-sm text-content-secondary leading-relaxed">
+                    {displayBio}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     );
   }
@@ -162,12 +174,13 @@ export function PioneersSection({ danceStyle, className = "" }: DanceStyleConten
 // Featured Video Section - Uses structured data from config
 export function FeaturedVideoSection({ danceStyle, className = "" }: DanceStyleContentProps) {
   // Always call the hook, but we may not use its result
-  const t = useTranslations(`styles.detailed.${danceStyle.slug}.media`);
+  const t = useTranslations(`styles.detailed.${danceStyle.slug}`);
   
-  // First try to get video from config data
-  if (danceStyle.videos && danceStyle.videos.length > 0) {
-    const featuredVideo = danceStyle.videos.find(v => v.type === 'tutorial' || v.type === 'performance') || danceStyle.videos[0];
-    
+  // First try to get video from config data (ids referencing normalized VideoEntity records)
+  if (danceStyle.videoIds && danceStyle.videoIds.length > 0) {
+  const vids = danceStyle.videoIds.map(id => getVideoById(id)).filter(Boolean) as VideoEntity[];
+    const featuredVideo = vids.find(v => v.type === 'tutorial' || v.type === 'performance') || vids[0];
+
     if (featuredVideo) {
       return (
         <div className={`bg-gradient-to-br from-surface-secondary/30 to-surface-secondary/5 rounded-2xl overflow-hidden border border-stroke-secondary/20 backdrop-blur-sm hover:border-accent-primary/30 transition-all duration-500 group ${className}`}>
@@ -180,14 +193,14 @@ export function FeaturedVideoSection({ danceStyle, className = "" }: DanceStyleC
             <div className="absolute inset-0 bg-gradient-to-t from-surface-primary/80 via-transparent to-transparent"></div>
             <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
               <h3 className="text-body-md md:text-header-sm font-bold text-content-primary mb-2">
-                {featuredVideo.title}
+                {featuredVideo.titleKey || featuredVideo.id}
               </h3>
               <p className="text-body-xs md:text-body-sm text-content-secondary leading-relaxed mb-2">
-                {featuredVideo.description}
+                {featuredVideo.descriptionKey}
               </p>
-              {(featuredVideo.artist || featuredVideo.year) && (
+              {(featuredVideo.artistId || featuredVideo.year) && (
                 <p className="text-body-xs text-accent-primary font-medium">
-                  {featuredVideo.artist} {featuredVideo.year && `• ${featuredVideo.year}`}
+                  {featuredVideo.artistId} {featuredVideo.year && `• ${featuredVideo.year}`}
                 </p>
               )}
             </div>
@@ -199,7 +212,7 @@ export function FeaturedVideoSection({ danceStyle, className = "" }: DanceStyleC
 
   // Fallback to translation-based media
   try {
-    const media = t.raw('') as Array<{
+  const media = t.raw('media') as Array<{
       title: string;
       type: string;
       url: string;
@@ -238,7 +251,7 @@ export function FeaturedVideoSection({ danceStyle, className = "" }: DanceStyleC
 // Techniques Section - Uses structured data from config
 export function TechniquesSection({ danceStyle, className = "" }: DanceStyleContentProps) {
   // Always call the hook, but we may not use its result
-  const t = useTranslations(`styles.detailed.${danceStyle.slug}.techniques`);
+  const tParent = useTranslations(`styles.detailed.${danceStyle.slug}`);
   
   // First try to get techniques from config data
   if (danceStyle.keyMoves && danceStyle.keyMoves.length > 0) {
@@ -284,7 +297,7 @@ export function TechniquesSection({ danceStyle, className = "" }: DanceStyleCont
 
   // Fallback to translation-based techniques
   try {
-    const techniques = t.raw('') as Array<{
+    const techniques = tParent.raw('techniques') as Array<{
       name: string;
       description: string;
     }>;
@@ -304,7 +317,7 @@ export function TechniquesSection({ danceStyle, className = "" }: DanceStyleCont
             <Zap className="w-5 h-5 md:w-6 md:h-6 text-content-primary" />
           </div>
           <h3 className="text-header-sm md:text-header-md font-bold text-content-primary">
-            {t('title')}
+            {tParent('techniques.title')}
           </h3>
         </div>
         
@@ -372,8 +385,8 @@ export function CultureSection({ danceStyle, className = "" }: DanceStyleContent
 export function MusicSection({ danceStyle, className = "" }: DanceStyleContentProps) {
   const t = useTranslations(`styles.detailed.${danceStyle.slug}.music`);
   
-  // Use structured data from config when available
-  const musicGenres = danceStyle.musicGenres || [];
+  // Use structured data from config when available (ids referencing MusicGenreEntity records)
+  const musicGenres = (danceStyle.musicGenreIds || []).map(id => getMusicGenreById(id)).filter(Boolean) as MusicGenreEntity[];
   
   try {
     const bpm = t('bpm');
@@ -415,7 +428,7 @@ export function MusicSection({ danceStyle, className = "" }: DanceStyleContentPr
             </div>
             <h3 className="text-body-xs md:text-body-sm font-bold text-content-primary mb-1">Music Genres</h3>
             <p className="text-body-sm md:text-header-xs font-bold text-accent-tertiary">
-              {musicGenres.length > 0 ? musicGenres.join(', ') : keyElements}
+              {musicGenres.length > 0 ? musicGenres.map(g => g.nameKey || g.id).join(', ') : keyElements}
             </p>
             <p className="text-body-xs text-content-tertiary">& rhythm</p>
           </div>

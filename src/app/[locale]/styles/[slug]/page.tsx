@@ -38,11 +38,15 @@ export async function generateMetadata({
   
   const title = `${styleName(danceStyle.id)} | Street Dance Culture`;
   const description = styleDesc(danceStyle.id);
+  // Resolve era/location using translations when available
+  const tGlobal = await getTranslations({ locale, namespace: undefined });
+  const resolvedLocation = tGlobal(danceStyle.locationKey);
+  const resolvedEra = tGlobal(danceStyle.eraKey);
 
   return {
     title,
     description,
-    keywords: `${styleName(danceStyle.id)}, street dance, dance style, ${danceStyle.location}, ${danceStyle.era}, urban dance, dance culture`,
+    keywords: `${styleName(danceStyle.id)}, street dance, dance style, ${resolvedLocation}, ${resolvedEra}, urban dance, dance culture`,
     openGraph: {
       title,
       description,
