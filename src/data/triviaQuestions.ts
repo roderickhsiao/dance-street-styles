@@ -33,10 +33,10 @@ export const triviaQuestions: TriviaQuestion[] = [
   },
   {
     id: 'locking-origin-2',
-    question: 'What was the original name for locking when it was first created?',
+    question: 'What was the original name for Campbellock (Locking) when it was first created?',
     options: ['Funking', 'Campbelling', 'Locking', 'Pointing'],
     correctAnswer: 1,
-    explanation: 'Locking was originally called "Campbelling" after its creator Don Campbell, before it became known as locking.',
+    explanation: 'Campbellock (Locking) was originally called "Campbelling" after its creator Don Campbell, before it became known as locking.',
     difficulty: 'hard',
     category: 'History',
     relatedStyle: 'locking'

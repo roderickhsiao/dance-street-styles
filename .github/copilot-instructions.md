@@ -38,7 +38,6 @@ export const Component = ({ children, className = "" }: ComponentProps) => {
 - **useTranslations hook**: Always use `const t = useTranslations('namespace')` hook for client components
 - **getTranslations**: Use `const t = await getTranslations('namespace')` for server components  
 - **Nested JSON structure**: Translation keys use nested objects, **never use dots in namespace keys**
-- **JSON-based translations**: All translation strings in `/src/i18n/messages/en.json` and `zh-Hant-TW.json`
 - **Both languages**: Always add keys to both language files
 - **Untranslatable terms**: Some terms like "Battle", "Cypher", "Freestyle" are commonly used as-is in Taiwan and should remain in English even in Chinese translations when culturally appropriate
 

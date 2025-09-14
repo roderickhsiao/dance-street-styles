@@ -1,117 +1,115 @@
-"use client";
+'use client';
 
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { MainNavigation } from '@/components/MainNavigation';
-import { DanceStyleCard } from '@/components/DanceStyleCard';
-import { LiquidGlassCard } from '@/components/LiquidGlassCard';
+import { Hero } from '@/components/Hero';
+import { Section } from '@/components/Section';
+import { CTAButton } from '@/components/ui/cta-button';
+import { DanceStyleGridCard } from '@/components/DanceStyleGridCard';
 import { getAllDanceStyles } from '@/data/danceStyles';
 
 export default function StylesPage() {
-  const danceStyles = getAllDanceStyles();
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
-  };
+  const t = useTranslations('stylesPage');
+  const tStyleNames = useTranslations('danceStyles.names');
+  const tStyleDescriptions = useTranslations('danceStyles.shortDescriptions');
+  const allStyles = getAllDanceStyles();
+  
+  // Create a map of style IDs to style objects for quick lookup
+  // Get all styles sorted alphabetically by translated name
+  const sortedStyles = allStyles.sort((a, b) => {
+    const nameA = tStyleNames(a.id);
+    const nameB = tStyleNames(b.id);
+    return nameA.localeCompare(nameB);
+  });
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-surface-primary">
       <MainNavigation />
       
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
-        <div className="container mx-auto px-4">
+      <Hero
+        title={`${t('hero.title.line1')} ${t('hero.title.line2')} ${t('hero.title.line3')}`}
+        subtitle={t('hero.subtitle')}
+        backgroundVariant="street"
+      />
+
+      {/* Overview Section */}
+      <Section className="py-16" background="secondary">
+        <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            viewport={{ once: true }}
           >
-            <LiquidGlassCard 
-              className="max-w-4xl mx-auto p-12" 
-              variant="regular" 
-              role="content"
-              theme="default"
-            >
-              <h1 className="text-5xl md:text-7xl font-black mb-6">
-                <span className="bg-gradient-to-r from-orange-400 via-red-500 to-yellow-400 bg-clip-text text-transparent">
-                  DANCE STYLES
-                </span>
-              </h1>
-              <p className="text-xl text-white max-w-2xl mx-auto leading-relaxed">
-                Explore the rich tapestry of street dance culture. Each style tells a story 
-                of community, creativity, and cultural revolution.
-              </p>
-            </LiquidGlassCard>
+            <h2 className="text-header-lg font-black text-content-primary mb-6">
+              {t('overview.title')}
+            </h2>
+            <p className="text-body-lg text-content-secondary max-w-4xl mx-auto">
+              {t('overview.content')}
+            </p>
           </motion.div>
         </div>
-      </section>
+      </Section>
 
-      {/* Dance Styles Grid */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
+      {/* All Dance Styles */}
+      <Section className="py-16" background="primary">
+        <div className="container mx-auto px-6">
+          <div className="mb-12 text-center">
+            <h2 className="text-header-lg font-black text-content-primary mb-4">
+              {t('allStyles.title')}
+            </h2>
+            <p className="text-body-md text-content-secondary max-w-2xl mx-auto">
+              {t('allStyles.description')}
+            </p>
+          </div>
+
           <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {danceStyles.map((style) => (
-              <motion.div key={style.id} variants={itemVariants}>
-                <DanceStyleCard
-                  title={style.name}
-                  description={style.shortDescription}
-                  origin={style.origins.location}
-                  year={style.origins.year.toString()}
-                  characteristics={style.characteristics}
-                  themeColor={style.theme.primary}
-                  onClick={() => window.location.href = `/styles/${style.slug}`}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {sortedStyles.map((style, index) => (
+                <DanceStyleGridCard
+                  key={style.id}
+                  name={tStyleNames(style.id)}
+                  description={tStyleDescriptions(style.id)}
+                  era={style.era}
+                  location={style.location}
+                  tags={style.tags}
+                  slug={style.slug}
+                  index={index}
                 />
-              </motion.div>
-            ))}
+              ))}
+            </div>
           </motion.div>
         </div>
-      </section>
+      </Section>
 
-      {/* Featured Quote Section */}
-      <section className="py-20 bg-gradient-to-r from-gray-900 to-black">
-        <div className="container mx-auto px-4">
+      {/* Call to Action */}
+      <Section className="py-20 text-center" background="elevated">
+        <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="space-y-8"
           >
-            <LiquidGlassCard 
-              theme="orange" 
-              className="max-w-4xl mx-auto p-12 text-center" 
-              variant="clear" 
-              role="content"
-            >
-              <blockquote className="text-3xl md:text-4xl font-light italic text-white mb-8">
-                &ldquo;Street dance is not just about movement—it&apos;s about telling the story 
-                of a community, a culture, a way of life.&rdquo;
-              </blockquote>
-              <div className="w-16 h-1 bg-gradient-to-r from-orange-500 to-yellow-400 mx-auto rounded-full"></div>
-            </LiquidGlassCard>
+            <h2 className="text-header-xl font-black text-content-primary">
+              {t('cta.title')}
+            </h2>
+            <p className="text-body-lg text-content-secondary max-w-2xl mx-auto">
+              {t('cta.description')}
+            </p>
+            <CTAButton href="/origins" variant="filled" size="lg">
+              {t('cta.button')}
+            </CTAButton>
           </motion.div>
         </div>
-      </section>
+      </Section>
     </div>
   );
 }

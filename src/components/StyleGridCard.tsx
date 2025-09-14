@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { Link } from '../i18n/navigation';
 import { useTranslations } from 'next-intl';
@@ -9,7 +9,9 @@ interface StyleGridCardProps {
   slug: string;
   shortDescription: string;
   origins: {
-    location: string;
+    yearKey?: string;
+    locationKey?: string;
+    cultureKey?: string;
   };
   theme: {
     primary: string;
@@ -30,22 +32,27 @@ export const StyleGridCard = ({
   shortDescription,
   origins,
   theme,
-  index
+  index,
 }: StyleGridCardProps) => {
   const t = useTranslations();
 
+  // Get location from translations if locationKey is provided, otherwise use static location
+  const location = origins.locationKey
+    ? t(origins.locationKey)
+    : origins.locationKey;
+
   return (
-    <div 
-      key={id} 
+    <div
+      key={id}
       className="group relative bg-gray-800 border border-gray-700 overflow-hidden hover:border-orange-500 transition-all duration-300 scroll-fade-in"
       style={{ '--delay': `${index * 100}ms` } as React.CSSProperties}
     >
       <Link href={`/styles/${slug}`}>
         <div className="cursor-pointer">
           {/* Style Header Image */}
-          <div 
+          <div
             className="relative aspect-[4/3] flex items-center justify-center text-white font-black text-xl overflow-hidden group-hover:scale-105 transition-transform duration-300"
-            style={{ 
+            style={{
               background: `linear-gradient(135deg, ${theme.primary} 0%, ${theme.secondary} 100%)`,
             }}
           >
@@ -59,11 +66,11 @@ export const StyleGridCard = ({
               </div>
             </div>
           </div>
-          
+
           {/* Content */}
           <div className="p-4 sm:p-6">
             <div className="text-orange-400 text-xs font-bold uppercase tracking-wider mb-2">
-              {origins.location}
+              {location}
             </div>
             <h3 className="text-lg sm:text-xl font-black text-white mb-3 group-hover:text-orange-400 transition-colors magazine-headline">
               {name}

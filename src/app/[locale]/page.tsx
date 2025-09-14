@@ -13,8 +13,9 @@ import { CTAButton } from '../../components/ui/cta-button';
 import { getAllDanceStyles } from '../../data/danceStyles';
 import { useFeatureCardsData } from '../../data/featureCards';
 
-export default function Home() {
+export default function HomePage() {
   const t = useTranslations();
+  const tDescriptions = useTranslations('danceStyleDescriptions');
   const danceStyles = getAllDanceStyles();
   const featureCardsData = useFeatureCardsData();
 
@@ -179,9 +180,9 @@ export default function Home() {
               <StyleGridCard
                 key={style.id}
                 id={style.id}
-                name={style.name}
+                name={style.nameKey ? t(style.nameKey) : style.name || style.id}
                 slug={style.slug}
-                shortDescription={style.shortDescription}
+                shortDescription={tDescriptions(style.id)}
                 origins={style.origins}
                 theme={style.theme}
                 index={index}

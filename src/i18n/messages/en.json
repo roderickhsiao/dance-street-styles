@@ -56,7 +56,7 @@
       },
       {
         "title": "THE MOVEMENT",
-        "description": "Breaking, popping, locking - these are the foundational styles that defined street dance."
+        "description": "Breaking, popping, Campbellock (Locking) - these are the foundational styles that defined street dance."
       }
     ]
   },
@@ -65,7 +65,172 @@
     "title": "EXPLORE",
     "titleAccent": "STYLES", 
     "subtitle": "Discover the foundational dance styles that built the culture",
-    "cardAction": "Explore Style →"
+    "cardAction": "Explore Style →",
+    "eras": {
+      "1960s1970s": "1960s-1970s",
+      "1960s1980s": "1960s-1980s",
+      "1970s": "1970s",
+      "1970s1980s": "1970s-1980s",
+      "1980s1990s": "1980s-1990s",
+      "2000s": "2000s"
+    },
+    "locations": {
+      "southBronxNYC": "South Bronx, NYC",
+      "newYorkCity": "New York City",
+      "fresnoCA": "Fresno, CA",
+      "losAngelesCA": "Los Angeles, CA",
+      "chicagoNYC": "Chicago & NYC",
+      "harlemNYC": "Harlem, NYC",
+      "southCentralLA": "South Central LA",
+      "oaklandCA": "Oakland, CA"
+    }
+  },
+
+  "danceCategories": {
+    "hipHopFoundation": {
+      "name": "Hip-Hop Foundation",
+      "description": "The original elements born from 1970s Bronx block parties - breaking, DJing, MCing, and the street dance styles that started it all."
+    },
+    "funkStyles": {
+      "name": "Funk Styles",
+      "description": "West Coast funk-driven styles like popping and Campbellock (Locking), born from the soul and groove of 1970s California dance culture."
+    },
+    "clubHouse": {
+      "name": "Club & House Culture", 
+      "description": "Underground club styles including house, footwork, hustle, and club dances that emerged from Chicago, NYC, and disco scenes from the 1970s-80s."
+    },
+    "ballroomCulture": {
+      "name": "Ballroom Culture",
+      "description": "The art of voguing, Wh/aacking, and punking from ballroom competitions, born from Harlem's LGBTQ+ ballroom community in the 1970s-80s."
+    },
+    "modernStreet": {
+      "name": "Modern Street",
+      "description": "Contemporary street styles influenced by social media, global connectivity, and the new generation of urban dancers."
+    },
+    "africanDiaspora": {
+      "name": "African Diaspora Roots",
+      "description": "Traditional and contemporary styles rooted in African diaspora cultures across the Caribbean, Latin America, and beyond."
+    }
+  },
+
+  "stylesPage": {
+    "masthead": "Issue #002 • Styles Edition",
+    "hero": {
+      "title": {
+        "line1": "DANCE",
+        "line2": "STYLES",
+        "line3": "ARCHIVE"
+      },
+      "subtitle": "From breaking to voguing, explore the rich tapestry of movement that defines street dance culture.",
+      "description": "Each style carries the DNA of its community, history, and innovation."
+    },
+    "overview": {
+      "title": "THE COMPLETE COLLECTION",
+      "description": "Dive deep into the authentic styles that shaped street dance culture. From the foundational to the revolutionary, each movement tells a story of creativity and community.",
+      "content": "These dance styles represent decades of cultural innovation, community building, and artistic expression. Each carries its own history, techniques, and values that continue to evolve with new generations of dancers."
+    },
+    "allStyles": {
+      "title": "DANCE STYLES",
+      "description": "Explore the styles in our comprehensive archive, organized alphabetically with cultural context and historical significance."
+    },
+    "styleCard": {
+      "origin": "Origin:",
+      "exploreStyle": "Explore Style →"
+    },
+    "cta": {
+      "title": "Start Your Journey",
+      "description": "Choose a style that speaks to you and begin exploring the rich world of street dance culture.",
+      "button": "Explore Origins"
+    },
+    "seo": {
+      "title": "Complete Street Dance Styles Archive - Hip-Hop to House",
+      "description": "Explore authentic street dance styles from breaking to voguing, popping to krumping. Discover the history, moves, and culture behind each dance style with video tutorials and community stories.",
+      "keywords": "street dance styles, hip hop dance, breaking b-boying, popping animation, campbellock locking funk styles, house dance, voguing ballroom, wh/aacking punking, krumping clowning, street dance history, urban dance culture, dance battles, freestyle dance, street dance tutorials, dance community"
+    }
+  },
+
+  "danceTags": {
+    "hipHopFoundation": {
+      "name": "Hip-Hop Foundation"
+    },
+    "funkStyles": {
+      "name": "Funk Styles"  
+    },
+    "clubCulture": {
+      "name": "Club Culture"
+    },
+    "ballroomCulture": {
+      "name": "Ballroom Culture"
+    },
+    "streetBattle": {
+      "name": "Street Battle"
+    },
+    "socialDance": {
+      "name": "Social Dance"
+    },
+    "theatrical": {
+      "name": "Theatrical"
+    },
+    "underground": {
+      "name": "Underground"
+    },
+    "modernStreet": {
+      "name": "Modern Street"
+    }
+  },  "danceStyles": {
+    "names": {
+      "breaking": "Breaking (B-Boying/B-Girling)",
+      "hipHop": "Hip-Hop Dance",
+      "popping": "Popping",
+      "locking": "Campbellock (Locking)",
+      "house": "House Dance",
+      "voguing": "Voguing",
+      "waacking": "Wh/aacking",
+      "krumping": "Krumping",
+      "hustle": "The Hustle",
+      "punking": "Punking",
+      "turfing": "Turfing"
+    },
+    "shortDescriptions": {
+      "breaking": "Athletic floor work combining toprock, footwork, power moves, and freezes.",
+      "hipHop": "The foundational street dance that emerged from Hip-Hop culture in the 1970s.",
+      "popping": "Street dance style based on quickly contracting and relaxing muscles.",
+      "locking": "Funk-based dance style characterized by distinctive arm and hand movements.",
+      "house": "Social dance style that emerged with house music in Chicago and New York.",
+      "voguing": "Ballroom culture dance inspired by fashion poses and Egyptian hieroglyphs.",
+      "waacking": "Expressive dance style emphasizing arm movements and poses, born from LA club culture.",
+      "krumping": "High-energy, expressive dance from LA characterized by free, expressive movements.",
+      "hustle": "Partner dance from 1970s disco era, featuring synchronized spins and turns.",
+      "punking": "NYC-originated style related to whacking, emphasizing dramatic poses and runway attitude.",
+      "turfing": "Oakland-born dance style combining acrobatics, storytelling, and precise footwork."
+    }
+  },
+
+  "danceStyleDescriptions": {
+    "hipHop": "The foundational street dance that emerged from Hip-Hop culture in the 1970s.",
+    "breaking": "Athletic floor work combining toprock, footwork, power moves, and freezes.",
+    "popping": "Sharp, rhythmic contractions and releases creating robotic and animated movements.",
+    "locking": "Funk-based dance style characterized by distinctive arm and hand movements.",
+    "house": "Fluid footwork and torso movements that emerged with Chicago house music.",
+    "voguing": "Fashion-inspired poses and runway walks from Harlem ballroom culture.",
+    "waacking": "Expressive dance style emphasizing arm movements and poses, born from LA club culture.",
+    "punking": "Theatrical dance style with dramatic gestures and poses.",
+    "krumping": "High-energy movement expressing raw emotions and spiritual connection.",
+    "clowning": "Playful dance style that evolved into krumping, emphasizing character and comedy.",
+    "juke-footwork": "Lightning-fast leg work synchronized to Chicago juke music.",
+    "flexing": "Bone-bending contortionist style from Brooklyn's underground scene.",
+    "litefeet": "New York street dance characterized by intricate footwork and upper body flow.",
+    "animation": "Robotic style emphasizing isolation and mechanical movements.",
+    "boogaloo": "Original style of the Electric Boogaloos crew with flowing, funky movements.",
+    "strutting": "Smooth, sophisticated funk style with emphasis on attitude and groove.",
+    "hustle": "Partner dance that became a popular social dance in the disco era.",
+    "chicago-footwork": "Fast-paced footwork style from Chicago's house music scene.",
+    "jersey-club": "High-energy dance from New Jersey's club music culture.",
+    "afrobeats": "Contemporary African dance styles influenced by traditional and modern music.",
+    "dancehall": "Jamaican dance style with strong cultural roots and social significance.",
+    "soca": "Caribbean dance celebrating life and culture through rhythmic movement.",
+    "capoeira": "Brazilian martial art that blends dance, acrobatics, and music.",
+    "turfing": "Oakland-born dance style combining acrobatics, storytelling, and precise footwork."
   },
   
   "navigation": {
@@ -352,7 +517,7 @@
   "meta": {
     "title": "Street Dance Culture Archive - History, Moves & Community",
     "description": "Discover the rich history, culture, and evolution of street dance styles from Hip-Hop to House, Breaking to Voguing. Learn about the artists, music, and communities that shaped urban movement.",
-    "keywords": "street dance, hip-hop, breaking, popping, locking, house dance, voguing, dance history, urban culture, dance archive",
+    "keywords": "street dance, hip-hop, breaking, popping, campbellock locking, house dance, voguing, dance history, urban culture, dance archive",
     "author": "Street Dance Culture Archive"
   }
 }

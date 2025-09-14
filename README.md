@@ -17,11 +17,11 @@ Explore in-depth documentation of foundational street dance styles:
 - **Hip-Hop** - The umbrella culture that started it all
 - **Breaking (B-Boying/B-Girling)** - Athletic floor work with toprock, footwork, power moves, and freezes
 - **Popping** - Sharp, robotic movements born in Fresno, California
-- **Locking** - Funk-based style with distinctive arm movements and comedic flair
+- **Campbellock (Locking)** - Funk-based style with distinctive arm movements and comedic flair
 - **House Dance** - Fluid footwork that emerged with Chicago house music
 - **Voguing** - Fashion-inspired poses from Harlem ballroom culture
-- **Waacking** - Expressive arm throwing from LA's underground gay club scene
-- **Krumping** - High-energy movement from South Central LA's spiritual expression
+- **Wh/aacking** - Expressive arm throwing from LA's underground gay club scene
+- **Krumping** - High-energy movement fro. m South Central LA's spiritual expression
 
 ### 👥 **Pioneers & Legends**
 Meet the visionaries who created these art forms:
@@ -29,7 +29,7 @@ Meet the visionaries who created these art forms:
 - **Afrika Bambaataa** - Universal Nation builder and the fifth element of Knowledge
 - **Crazy Legs** - Rock Steady Crew president and breaking ambassador
 - **Boogaloo Sam** - Electric Boogaloos founder and popping creator
-- **Don Campbell** - Inventor of locking and The Lockers crew founder
+- **Don Campbell** - Inventor of Campbellock (Locking) and The Lockers crew founder
 - **Willi Ninja** - The Godfather of Voguing
 
 ### 📅 **Cultural Timeline**
