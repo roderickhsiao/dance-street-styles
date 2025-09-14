@@ -1,0 +1,284 @@
+{
+  "hero": {
+    "masthead": "Issue #001 • Culture Edition",
+    "title": {
+      "line1": "STREET",
+      "line2": "DANCE", 
+      "line3": "CULTURE"
+    },
+    "subtitle": "From the Bronx blocks to global stages — the untold stories of movement, rhythm, and revolution that changed the world.",
+    "buttons": {
+      "primary": "Read Inside →",
+      "secondary": "The Timeline"
+    }
+  },
+  
+  "overview": {
+    "title": {
+      "main": "THE MOVEMENT",
+      "accent": "DOCUMENTED"
+    },
+    "description": "From breakbeats to global stages, explore the dance styles that shaped culture and connected communities worldwide.",
+    "stats": [
+      {
+        "value": "ALL",
+        "label": "Dance Styles"
+      },
+      {
+        "value": "50+",
+        "label": "Years Strong"
+      },
+      {
+        "value": "∞",
+        "label": "Battles Won"
+      },
+      {
+        "value": "1",
+        "label": "Language"
+      }
+    ]
+  },
+  
+  "streetSection": {
+    "title": {
+      "line1": "ORIGIN OF",
+      "line2": "STREET DANCE"
+    },
+    "subtitle": "From the streets of the Bronx to global stages, discover the authentic origins of the movement that revolutionized dance, music, and culture forever.",
+    "masthead": {
+      "foundation": "The Beginning"
+    },
+    "description": "Born in the Bronx in the 1970s, street dance emerged from block parties, street corners, and the creative spirit of young people.",
+    "button": "Discover the Origins",
+    "impact": {
+      "title": "THE IMPACT",
+      "description": "What started on the streets became a global phenomenon, influencing art, fashion, and society."
+    },
+    "cards": [
+      {
+        "title": "THE ORIGINS"
+      },
+      {
+        "title": "THE MOVEMENT",
+        "description": "Breaking, popping, locking - these are the foundational styles that defined street dance."
+      }
+    ]
+  },
+  
+  "styles": {
+    "title": "EXPLORE",
+    "titleAccent": "STYLES", 
+    "subtitle": "Discover the foundational dance styles that built the culture",
+    "cardAction": "Explore Style →"
+  },
+  
+  "navigation": {
+    "logo": {
+      "main": "STREET DANCE",
+      "accent": "CULTURE"
+    },
+    "links": {
+      "origins": "Origins",
+      "styles": "Styles",
+      "timeline": "Timeline", 
+      "trivia": "Trivia"
+    }
+  },
+  
+  "footer": {
+    "title": "STREET DANCE",
+    "description": "An independent publication documenting the stories, movements, and cultural impact of street dance from the streets to the global stage.",
+    "sections": {
+      "explore": {
+        "title": "Explore",
+        "links": [
+          "All Dance Styles",
+          "Cultural Timeline", 
+          "Test Your Knowledge"
+        ]
+      },
+      "connect": {
+        "title": "Connect",
+        "links": [
+          "About This Publication",
+          "Submit Your Story",
+          "Get in Touch"
+        ]
+      }
+    },
+    "copyright": "Street Dance Culture Magazine © {year} • Independent Publication",
+    "keepCultureAlive": "Keep the culture alive",
+    "established": {
+      "prefix": "Est.",
+      "year": "1973", 
+      "suffix": "From the Bronx to the World"
+    }
+  },
+  
+  "origins": {
+    "hero": {
+      "title": "ORIGIN OF STREET DANCE",
+      "subtitle": "From the South Bronx to global phenomenon — discover the authentic origins, pioneers, and cultural movements that transformed street dance into a worldwide language of expression and community."
+    }
+  },
+  
+  "streetCulture": {
+    "hero": {
+      "title": "STREET DANCE CULTURE",
+      "subtitle": "From the South Bronx to global phenomenon — discover the history, pioneers, and cultural movements that transformed street dance into a worldwide language of expression and community."
+    },
+    "insights": {
+      "exclusion": {
+        "title": "Born from Exclusion",
+        "description": "When mainstream dance studios excluded Black and Latino youth, the streets became their stage. Block parties transformed abandoned lots into creative sanctuaries."
+      },
+      "community": {
+        "title": "Community Power", 
+        "description": "Street dance created safe spaces where young people could express themselves, compete peacefully, and build community despite urban challenges."
+      },
+      "global": {
+        "title": "Global Movement",
+        "description": "From Bronx block parties to Olympic stages, street dance proved that authentic culture transcends boundaries and transforms lives worldwide."
+      }
+    },
+    "stats": {
+      "birthYear": "Birth Year",
+      "coreElements": "Core Elements", 
+      "countries": "Countries",
+      "olympics": "Olympics"
+    },
+    "whyStreets": {
+      "title": "Why the Streets?",
+      "exclusion": {
+        "title": "Exclusion from Studios",
+        "description": "Traditional dance studios and venues were largely inaccessible to Black and Latino youth due to economic barriers and social exclusion. The streets became their natural stage."
+      },
+      "blockParty": {
+        "title": "Block Party Culture",
+        "description": "DJ Kool Herc's legendary block parties turned neighborhood gatherings into cultural movements. These outdoor events were free, accessible, and celebrated community."
+      },
+      "rawExpression": {
+        "title": "Raw Expression",
+        "description": "Street dance captured unfiltered emotion and authentic experience. No formal training required—just passion, creativity, and the courage to express yourself."
+      }
+    },
+    "elements": {
+      "title": "The Five Elements Born on Streets",
+      "djing": {
+        "name": "DJing",
+        "subtitle": "Sound Systems",
+        "description": "The foundation of hip-hop culture. DJs manipulate records to create new sounds, extend break beats, and energize crowds.",
+        "why": "DJ Kool Herc noticed dancers got excited during drum breaks, so he used two turntables to extend these 'break beats' - creating the backbone for all hip-hop music.",
+        "pioneers": "DJ Kool Herc (The Father), Grandmaster Flash (Turntable Innovation), Afrika Bambaataa (Culture Builder)"
+      },
+      "mcing": {
+        "name": "MCing", 
+        "subtitle": "Street Poetry",
+        "description": "Masters of Ceremony who speak rhythmically over beats, tell stories, and engage the crowd with clever wordplay.",
+        "why": "Originally, MCs helped DJs by talking to the crowd and announcing songs. This evolved into complex rhythmic storytelling that reflected street life and community experiences.",
+        "pioneers": "Grandmaster Caz (Lyrical Innovation), Melle Mel (Social Commentary), Kurtis Blow (First Rap Record Deal)"
+      },
+      "breaking": {
+        "name": "Breaking",
+        "subtitle": "Floor Dancing",
+        "description": "Athletic dance combining toprock, footwork, freezes, and power moves. Dancers battle to show creativity and skill.",
+        "why": "B-boys and b-girls used dance battles as alternatives to gang violence. The competitive element channeled aggression into artistic expression and community building.",
+        "pioneers": "Crazy Legs (Rock Steady Crew), Ken Swift (Dynamic Innovation), Baby Love (Female Pioneer)"
+      },
+      "graffiti": {
+        "name": "Graffiti",
+        "subtitle": "Wall Art",
+        "description": "Visual art form using spray paint to create murals, tags, and elaborate pieces on walls and subway trains.",
+        "why": "In communities where youth felt invisible, graffiti became a way to declare 'I exist' and transform abandoned urban spaces into galleries of resistance and beauty.",
+        "pioneers": "TAKI 183 (First Famous Tag), Phase 2 (Bubble Letters), Lady Pink (Female Graffiti Pioneer)"
+      },
+      "knowledge": {
+        "name": "Knowledge",
+        "subtitle": "Cultural Wisdom",
+        "description": "Understanding hip-hop history, respecting pioneers, and passing down cultural values to preserve authenticity.",
+        "why": "Afrika Bambaataa added this fifth element to ensure hip-hop culture wouldn't just be entertainment, but a conscious movement that educates and uplifts communities.",
+        "pioneers": "Afrika Bambaataa (Universal Nation), KRS-One (Teacher), Grandmaster Flash (Technical Innovation)"
+      },
+      "sections": {
+        "description": "Description",
+        "whyItMatters": "Why It Matters",
+        "pioneers": "Pioneers"
+      }
+    },
+    "timeline": {
+      "title": "Key Moments",
+      "events": {
+        "1973": {
+          "title": "DJ Kool Herc's First Block Party",
+          "location": "South Bronx",
+          "description": "The birth of hip-hop culture at 1520 Sedgwick Avenue."
+        },
+        "1975": {
+          "title": "First B-Boys Emerge",
+          "location": "Bronx",
+          "description": "Dancers create breaking moves to extended breaks."
+        },
+        "1977": {
+          "title": "Rock Steady Crew Founded",
+          "location": "Bronx",
+          "description": "Legendary crew defines b-boy culture and battles."
+        },
+        "1982": {
+          "title": "Wild Style Documentary",
+          "location": "NYC",
+          "description": "Film introduces hip-hop to mainstream audiences."
+        },
+        "1990s": {
+          "title": "Global Expansion",
+          "location": "Worldwide",
+          "description": "Hip-hop culture spreads internationally."
+        },
+        "2024": {
+          "title": "Olympic Recognition",
+          "location": "Paris",
+          "description": "Breaking debuts at the Olympics."
+        }
+      }
+    },
+    "values": {
+      "title": "Street Values",
+      "authenticity": {
+        "title": "Authenticity",
+        "description": "Being true to yourself and honoring the culture's roots while adding your unique voice."
+      },
+      "community": {
+        "title": "Community",
+        "description": "Building connections, supporting fellow dancers, and creating inclusive spaces for all."
+      },
+      "respect": {
+        "title": "Respect", 
+        "description": "Honoring pioneers, understanding history, and recognizing contributions of all participants."
+      },
+      "peace": {
+        "title": "Peace",
+        "description": "Using dance battles and creativity as alternatives to violence and conflict."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Constantly pushing boundaries while respecting foundational elements and traditions."
+      },
+      "unity": {
+        "title": "Unity",
+        "description": "Bringing people together across cultural, racial, and economic boundaries through movement."
+      }
+    },
+    "cta": {
+      "title": "Keep the {culture} Alive",
+      "culture": "Culture",
+      "description": "Explore dance styles and become part of the continuing story.",
+      "exploreStyles": "Explore Dance Styles",
+      "backHome": "Back to Home"
+    }
+  },    
+  "meta": {
+    "title": "Street Dance Culture Archive - History, Moves & Community",
+    "description": "Discover the rich history, culture, and evolution of street dance styles from Hip-Hop to House, Breaking to Voguing. Learn about the artists, music, and communities that shaped urban movement.",
+    "keywords": "street dance, hip-hop, breaking, popping, locking, house dance, voguing, dance history, urban culture, dance archive",
+    "author": "Street Dance Culture Archive"
+  }
+}
