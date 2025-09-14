@@ -35,9 +35,6 @@ importers:
       country-emoji:
         specifier: ^1.5.6
         version: 1.5.6
-      country-flag-emoji:
-        specifier: ^1.0.3
-        version: 1.0.3
       country-flag-emoji-polyfill:
         specifier: ^0.1.8
         version: 0.1.8
@@ -1466,10 +1463,6 @@ packages:
 
   country-flag-emoji-polyfill@0.1.8:
     resolution: {integrity: sha512-Mbah52sADS3gshUYhK5142gtUuJpHYOXlXtLFI3Ly4RqgkmPMvhX9kMZSTqDM8P7UqtSW99eHKFphhQSGXA3Cg==}
-
-  country-flag-emoji@1.0.3:
-    resolution: {integrity: sha512-OVMltN9rF8Rd9fjDzcNAT376fslwlkTuu+BeqzY4Z+kr+nF/3u4Kod5SyEKuABxwvi6tWO7uszO3MgWzoevAuQ==}
-    engines: {node: '>=10.0.0'}
 
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
@@ -4744,8 +4737,6 @@ snapshots:
   country-emoji@1.5.6: {}
 
   country-flag-emoji-polyfill@0.1.8: {}
-
-  country-flag-emoji@1.0.3: {}
 
   cross-spawn@7.0.6:
     dependencies:

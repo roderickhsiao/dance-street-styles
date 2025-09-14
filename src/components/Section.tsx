@@ -35,10 +35,10 @@ export const Section = ({
 
   const paddingClasses = {
     none: '',
-    sm: 'py-10 px-4',
-    md: 'py-16 px-6',
-    lg: 'py-20 px-6',
-    xl: 'py-32 px-8'
+    sm: 'py-10 px-4 sm:px-6',
+    md: 'py-16 px-4 sm:px-6',
+    lg: 'py-20 px-4 sm:px-6',
+    xl: 'py-32 px-4 sm:px-8'
   };
 
   const content = (

@@ -74,7 +74,7 @@ export const danceStyles: DanceStyle[] = [
   },
   {
     id: 'breaking',
-    name: 'Breaking (B-Boying)',
+    name: 'Breaking (B-Boying/B-Girling)',
     slug: 'breaking',
     shortDescription: 'Athletic floor-based dance style featuring spins, freezes, and power moves.',
     fullDescription: 'Breaking, also called b-boying or b-girling, is a style of street dance that originated in the Bronx, New York City in the early 1970s. It is arguably the best known of the hip-hop dance styles.',

@@ -27,7 +27,7 @@ export const Timeline = ({ events, title, className = "" }: TimelineProps) => {
         )}
         
         <div className="relative">
-          {/* Timeline line - left-aligned on mobile, centered on desktop */}
+          {/* Timeline line - start-aligned on mobile, centered on desktop */}
           <div className="absolute start-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent-primary via-accent-secondary to-accent-tertiary z-0 md:start-1/2 md:-translate-x-0.5"></div>
           
           {events.map((event, index) => (
@@ -54,7 +54,7 @@ export const Timeline = ({ events, title, className = "" }: TimelineProps) => {
                           <span className="ms-2 text-content-primary font-bold text-body-md magazine-headline">
                             {event.year}
                           </span>
-                          <span className="text-content-tertiary text-body-sm magazine-sans font-medium">
+                          <span className="text-content-tertiary text-body-sm magazine-sans font-medium ms-2">
                             • {event.location}
                           </span>
                         </div>

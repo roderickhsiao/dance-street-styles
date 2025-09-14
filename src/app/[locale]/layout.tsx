@@ -3,6 +3,7 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Footer } from '../../components/Footer';
 import { locales } from '../../i18n/request';
+import { getOGLocale } from '../../i18n/locale-mappings';
 
 export async function generateMetadata({
   params,
@@ -21,7 +22,7 @@ export async function generateMetadata({
       title: t('title'),
       description: t('description'),
       type: 'website',
-      locale: locale === 'zh-Hant-TW' ? 'zh_TW' : 'en_US',
+      locale: getOGLocale(locale),
     },
     twitter: {
       card: 'summary_large_image',

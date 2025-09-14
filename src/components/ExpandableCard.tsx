@@ -4,29 +4,40 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
-interface FiveElementCardProps {
+// Helper function to extract YouTube video ID from URL
+const getYouTubeVideoId = (url: string): string | null => {
+  const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+  const match = url.match(regExp);
+  return match && match[7].length === 11 ? match[7] : null;
+};
+
+interface ExpandableCardProps {
   icon: string;
   title: string;
   subtitle: string;
   description: string;
   why: string;
   pioneers: string;
+  historicalNote: string;
   bgColor: string;
   hoverColor: string;
   borderColor: string;
+  videoUrl?: string;
 }
 
-export const FiveElementCard = ({
+export const ExpandableCard = ({
   icon,
   title,
   subtitle,
   description,
   why,
   pioneers,
+  historicalNote,
   bgColor,
   hoverColor,
-  borderColor
-}: FiveElementCardProps) => {
+  borderColor,
+  videoUrl
+}: ExpandableCardProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const t = useTranslations('streetCulture.elements.sections');
 
@@ -35,7 +46,7 @@ export const FiveElementCard = ({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className={`${bgColor} ${hoverColor} ${borderColor} backdrop-blur-sm p-6 rounded-2xl border transition-all duration-300 cursor-pointer`}
+      className={`${bgColor} ${hoverColor} ${borderColor} backdrop-blur-sm p-4 sm:p-6 rounded-2xl border transition-all duration-300 cursor-pointer`}
       onClick={() => setIsExpanded(!isExpanded)}
     >
       <div className="flex items-start justify-between">
@@ -96,6 +107,50 @@ export const FiveElementCard = ({
                     {pioneers}
                   </p>
                 </div>
+
+                <div>
+                  <h5 className="text-body-sm font-bold text-content-primary mb-2 magazine-headline">
+                    {t('historicalNote')}
+                  </h5>
+                  <p className="text-body-sm text-content-secondary magazine-sans leading-normal font-medium">
+                    {historicalNote}
+                  </p>
+                </div>
+
+                {videoUrl && (
+                  <div>
+                    <h5 className="text-body-sm font-bold text-content-primary mb-3 magazine-headline">
+                      {t('watchVideo')}
+                    </h5>
+                    <div className="aspect-video bg-surface-primary rounded-lg overflow-hidden">
+                      {(() => {
+                        const videoId = getYouTubeVideoId(videoUrl);
+                        return videoId ? (
+                          <iframe
+                            src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1`}
+                            title={`${title} Video`}
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            className="w-full h-full"
+                          />
+                        ) : (
+                          <a
+                            href={videoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center w-full h-full bg-accent-primary/10 hover:bg-accent-primary/20 transition-colors text-accent-primary font-bold text-body-sm magazine-sans"
+                          >
+                            <div className="text-center">
+                              <div className="text-2xl mb-1">▶</div>
+                              <div>Watch Video</div>
+                            </div>
+                          </a>
+                        );
+                      })()}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </motion.div>

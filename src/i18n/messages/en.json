@@ -6,11 +6,7 @@
       "line2": "DANCE", 
       "line3": "CULTURE"
     },
-    "subtitle": "From the Bronx blocks to global stages — the untold stories of movement, rhythm, and revolution that changed the world.",
-    "buttons": {
-      "primary": "Read Inside →",
-      "secondary": "The Timeline"
-    }
+    "subtitle": "From the Bronx blocks to global stages — the untold stories of movement, rhythm, and revolution that changed the world."
   },
   
   "overview": {
@@ -19,24 +15,24 @@
       "accent": "DOCUMENTED"
     },
     "description": "From breakbeats to global stages, explore the dance styles that shaped culture and connected communities worldwide.",
-    "stats": [
-      {
-        "value": "ALL",
+    "stats": {
+      "birthYear": {
+        "value": "1973",
+        "label": "Born in the Bronx"
+      },
+      "styles": {
+        "value": "20+",
         "label": "Dance Styles"
       },
-      {
-        "value": "50+",
-        "label": "Years Strong"
+      "countries": {
+        "value": "190+",
+        "label": "Countries Worldwide"
       },
-      {
-        "value": "∞",
-        "label": "Battles Won"
-      },
-      {
-        "value": "1",
-        "label": "Language"
+      "olympic": {
+        "value": "2024",
+        "label": "Olympic Debut"
       }
-    ]
+    }
   },
   
   "streetSection": {
@@ -116,9 +112,43 @@
   },
   
   "origins": {
+    "seo": {
+      "title": "Origins of Street Dance Culture - From Bronx to Global Movement",
+      "description": "Discover the authentic origins of street dance culture. From DJ Kool Herc's 1973 Bronx block parties to Olympic recognition, explore the Five Elements of Hip-Hop that revolutionized dance, music, and culture worldwide."
+    },
     "hero": {
       "title": "ORIGIN OF STREET DANCE",
-      "subtitle": "From the South Bronx to global phenomenon — discover the authentic origins, pioneers, and cultural movements that transformed street dance into a worldwide language of expression and community."
+      "subtitle": "From the South Bronx to global phenomenon — discover the authentic origins, pioneers, and cultural movements that transformed street dance into a worldwide language of expression and community.",
+      "badges": {
+        "location": "South Bronx • 1970s",
+        "movement": "Cultural Revolution",
+        "impact": "Global Movement"
+      }
+    },
+    "legacy": {
+      "title": "From Streets to Legacy",
+      "description": "The Five Elements evolved from neighborhood expression into Olympic recognition. Today's practitioners honor the past while innovating for future generations, ensuring this culture continues to inspire and unite.",
+      "foundation": {
+        "title": "Cultural Preservation",
+        "description": "Each generation of dancers, DJs, MCs, and writers becomes the keeper of traditions while adding their own voice to the story."
+      },
+      "globalImpact": {
+        "title": "Olympic Recognition", 
+        "description": "Breaking's inclusion in the 2024 Olympics represents decades of cultural validation and mainstream acceptance."
+      },
+      "futureForward": {
+        "title": "Next Generation",
+        "description": "Young artists worldwide are reimagining these elements, blending tradition with technology and social consciousness."
+      },
+      "quote": {
+        "text": "Hip-hop is not just entertainment, it's a way of life, it's a culture.",
+        "author": "Afrika Bambaataa",
+        "title": "Founder of Universal Zulu Nation"
+      },
+      "cta": {
+        "exploreStyles": "Explore Dance Styles", 
+        "backHome": "Back to Home"
+      }
     }
   },
   
@@ -155,7 +185,7 @@
       },
       "blockParty": {
         "title": "Block Party Culture",
-        "description": "DJ Kool Herc's legendary block parties turned neighborhood gatherings into cultural movements. These outdoor events were free, accessible, and celebrated community."
+        "description": "DJ Kool Herc’s legendary block parties turned neighborhood gatherings into cultural movements. These outdoor events were free, accessible, and celebrated community."
       },
       "rawExpression": {
         "title": "Raw Expression",
@@ -166,50 +196,94 @@
       "title": "The Five Elements Born on Streets",
       "djing": {
         "name": "DJing",
-        "subtitle": "Sound Systems",
-        "description": "The foundation of hip-hop culture. DJs manipulate records to create new sounds, extend break beats, and energize crowds.",
-        "why": "DJ Kool Herc noticed dancers got excited during drum breaks, so he used two turntables to extend these 'break beats' - creating the backbone for all hip-hop music.",
-        "pioneers": "DJ Kool Herc (The Father), Grandmaster Flash (Turntable Innovation), Afrika Bambaataa (Culture Builder)"
+        "subtitle": "Aural Element • Sound Systems",
+        "description": "The foundation of hip-hop culture. DJs manipulate records to create new sounds, extend break beats, and energize crowds using turntables and mixing techniques.",
+        "why": "DJ Kool Herc noticed dancers got excited during drum breaks, so he used two turntables to extend these ’break beats’ - creating the backbone for all hip-hop music. As Herc said: ’to DJ is to have the insight to motivate the crowd. To have the crowd at your fingertips.’",
+        "pioneers": "DJ Kool Herc (The Father of Hip-Hop, 1973), Grandmaster Flash (Turntable Innovation), Afrika Bambaataa (Culture Builder)",
+        "historicalNote": "DJ is short for disc jockey, a term dating back to the 1940s. In hip-hop, it evolved into an art form of creating music and beats that would accompany MCs with rhymes and vocals."
       },
       "mcing": {
         "name": "MCing", 
-        "subtitle": "Street Poetry",
-        "description": "Masters of Ceremony who speak rhythmically over beats, tell stories, and engage the crowd with clever wordplay.",
-        "why": "Originally, MCs helped DJs by talking to the crowd and announcing songs. This evolved into complex rhythmic storytelling that reflected street life and community experiences.",
-        "pioneers": "Grandmaster Caz (Lyrical Innovation), Melle Mel (Social Commentary), Kurtis Blow (First Rap Record Deal)"
+        "subtitle": "Oral Element • Street Poetry",
+        "description": "Masters of Ceremony who speak rhythmically over beats, tell stories, and engage the crowd with clever wordplay. MCing is the act of singing or rhythmically rhyming while a DJ plays beats.",
+        "why": "Originally, MCs helped DJs by talking to the crowd and announcing songs. This evolved into complex rhythmic storytelling that reflected street life and community experiences, tracing its origins back through African oral traditions and Jamaican toasting practices.",
+        "pioneers": "Grandmaster Caz (Lyrical Innovation), Melle Mel (Social Commentary), Kurtis Blow (First Rap Record Deal)",
+        "historicalNote": "MC is short for master of ceremonies, often written as emcee. MCing emerged in the 1970s but traces its roots through African culture and oral traditions."
       },
       "breaking": {
         "name": "Breaking",
-        "subtitle": "Floor Dancing",
-        "description": "Athletic dance combining toprock, footwork, freezes, and power moves. Dancers battle to show creativity and skill.",
-        "why": "B-boys and b-girls used dance battles as alternatives to gang violence. The competitive element channeled aggression into artistic expression and community building.",
-        "pioneers": "Crazy Legs (Rock Steady Crew), Ken Swift (Dynamic Innovation), Baby Love (Female Pioneer)"
+        "subtitle": "Physical Element • Floor Dancing",
+        "description": "The art of breakdancing, also known as breaking or b-boying/b-girling, is an energetic and acrobatic form of dance using elaborate choreography, footwork, and movements.",
+        "why": "The break in breakdancing refers to the breaks and breakbeats in music made by early hip-hop DJs like DJ Kool Herc. B-boys and b-girls used dance battles as alternatives to gang violence, channeling aggression into artistic expression and community building.",
+        "pioneers": "Crazy Legs (Rock Steady Crew), Ken Swift (Dynamic Innovation), Baby Love (Female Pioneer)",
+        "historicalNote": "Breaking originated in New York City during the late 1960s and early 1970s. It has reached mainstream acceptance to the point of being a 2024 Olympic event."
       },
       "graffiti": {
         "name": "Graffiti",
-        "subtitle": "Wall Art",
-        "description": "Visual art form using spray paint to create murals, tags, and elaborate pieces on walls and subway trains.",
-        "why": "In communities where youth felt invisible, graffiti became a way to declare 'I exist' and transform abandoned urban spaces into galleries of resistance and beauty.",
-        "pioneers": "TAKI 183 (First Famous Tag), Phase 2 (Bubble Letters), Lady Pink (Female Graffiti Pioneer)"
+        "subtitle": "Visual Element • Wall Art",
+        "description": "The act of writing or painting symbols, markings, and artistic expressions on walls and buildings. Modern artistic graffiti, also known as tagging or writing, creates what pioneers describe as a ’social uprising.’",
+        "why": "In communities where youth felt invisible, graffiti became a way to declare ’I exist’ and transform abandoned urban spaces into galleries of resistance and beauty. As Darryl ’Cornbread’ McCray states: ’There is no hip-hop artist before me... the foundations were already established.’",
+        "pioneers": "Darryl ’Cornbread’ McCray (Philadelphia Pioneer, 1960s), TAKI 183 (First Famous Tag), Phase 2 (Bubble Letters), Lady Pink (Female Graffiti Pioneer)",
+        "historicalNote": "Modern artistic graffiti dates back to the 1960s in Philadelphia, then spread to New York City where it combined with other hip-hop elements. McCray emphasizes tagging as the oldest, most important element of hip-hop."
       },
       "knowledge": {
         "name": "Knowledge",
-        "subtitle": "Cultural Wisdom",
-        "description": "Understanding hip-hop history, respecting pioneers, and passing down cultural values to preserve authenticity.",
-        "why": "Afrika Bambaataa added this fifth element to ensure hip-hop culture wouldn't just be entertainment, but a conscious movement that educates and uplifts communities.",
-        "pioneers": "Afrika Bambaataa (Universal Nation), KRS-One (Teacher), Grandmaster Flash (Technical Innovation)"
+        "subtitle": "Mental Element • Cultural Wisdom",
+        "description": "Understanding hip-hop history, respecting pioneers, and passing down cultural values to preserve authenticity. Knowledge refers both to technical skills and to broader social and political awareness.",
+        "why": "Afrika Bambaataa added this fifth element to ensure hip-hop culture wouldn’t just be entertainment, but a conscious movement that educates and uplifts communities. As he states, knowledge is the most important element that ’brings it all together’ - you cannot MC, DJ, breakdance, or make graffiti without knowledge.",
+        "pioneers": "Afrika Bambaataa (Universal Nation, Fifth Element Originator), KRS-One (Teacher), Grandmaster Flash (Technical Innovation)",
+        "historicalNote": "Knowledge encompasses straightforward technical knowledge of the four physical elements, plus self-knowledge and awareness of social and political issues. Hip-hop is often used for social change and giving voice to oppressed peoples."
       },
       "sections": {
         "description": "Description",
         "whyItMatters": "Why It Matters",
-        "pioneers": "Pioneers"
+        "pioneers": "Pioneers",
+        "historicalNote": "Historical Context",
+        "watchVideo": "Watch Video"
+      },
+      "videos": {
+        "title": "Learn Through Video",
+        "subtitle": "Watch documentaries and educational content about the Five Elements of Hip-Hop",
+        "watchVideo": "Watch Video",
+        "videoTitle": "Hip-Hop Culture Video {number}",
+        "thumbnailAlt": "Video {number} thumbnail",
+        "previousVideo": "Previous video",
+        "nextVideo": "Next video",
+        "videoLabel": "Video",
+        "items": [
+          {
+            "title": "Hip Hop Evolution: The Birth of Hip Hop",
+            "description": "A comprehensive documentary exploring how hip-hop culture emerged from the South Bronx in the 1970s",
+            "url": "https://www.youtube.com/watch?v=26ve5UYRCxo"
+          },
+          {
+            "title": "DJ Techniques & Turntablism",
+            "description": "Learn about the foundational DJ techniques that created hip-hop music and culture",
+            "url": "https://www.youtube.com/watch?v=Q5L2PvkZbU0"
+          },
+          {
+            "title": "The History of MCing and Rap", 
+            "description": "Discover how MCing evolved from party hosting into the powerful art of rap and storytelling",
+            "url": "https://www.youtube.com/watch?v=s9nEeyhld2E"
+          },
+          {
+            "title": "Breakdancing: From Streets to Olympics",
+            "description": "The complete story of breaking from underground dance battles to Olympic recognition", 
+            "url": "https://www.youtube.com/watch?v=9TMBWCcYs3o"
+          },
+          {
+            "title": "Graffiti Art & Urban Expression",
+            "description": "Explore how graffiti became a vital form of artistic expression in hip-hop culture",
+            "url": "https://www.youtube.com/watch?v=O0E2Y_R85c0"
+          }
+        ]
       }
     },
     "timeline": {
       "title": "Key Moments",
       "events": {
         "1973": {
-          "title": "DJ Kool Herc's First Block Party",
+          "title": "DJ Kool Herc’s First Block Party",
           "location": "South Bronx",
           "description": "The birth of hip-hop culture at 1520 Sedgwick Avenue."
         },
@@ -244,7 +318,7 @@
       "title": "Street Values",
       "authenticity": {
         "title": "Authenticity",
-        "description": "Being true to yourself and honoring the culture's roots while adding your unique voice."
+        "description": "Being true to yourself and honoring the culture’s roots while adding your unique voice."
       },
       "community": {
         "title": "Community",

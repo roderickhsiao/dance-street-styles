@@ -2,7 +2,7 @@
 
 import { Link } from '../i18n/navigation';
 import { useTranslations } from 'next-intl';
-import { LanguageSwitcher } from './LanguageSwitcherNew';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 export function MainNavigation() {
   const t = useTranslations('navigation');

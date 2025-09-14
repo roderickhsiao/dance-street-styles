@@ -1,4 +1,5 @@
 import { locales, type Locale } from './constants';
+import { getNativeName } from './locale-mappings';
 
 /**
  * Utility functions for using the native Intl API with our supported locales
@@ -11,8 +12,7 @@ import { locales, type Locale } from './constants';
  * @returns The display name of the locale
  */
 export function getLocaleDisplayName(locale: Locale, targetLocale: Locale): string {
-  const displayNames = new Intl.DisplayNames([targetLocale], { type: 'language' });
-  return displayNames.of(locale) ?? locale;
+  return getNativeName(locale, targetLocale);
 }
 
 /**
@@ -23,8 +23,8 @@ export function getLocaleDisplayName(locale: Locale, targetLocale: Locale): stri
 export function getAvailableLocales(targetLocale: Locale) {
   return locales.map(locale => ({
     code: locale,
-    name: getLocaleDisplayName(locale, targetLocale),
-    nativeName: getLocaleDisplayName(locale, locale),
+    name: getNativeName(locale, targetLocale),
+    nativeName: getNativeName(locale, locale),
   }));
 }
 
