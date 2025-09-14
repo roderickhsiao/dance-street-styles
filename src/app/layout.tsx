@@ -1,3 +1,4 @@
+import { NextIntlClientProvider } from 'next-intl';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { polyfillCountryFlagEmojis } from 'country-flag-emoji-polyfill';
@@ -18,7 +19,7 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased font-sans`}>
-        {children}
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
   );

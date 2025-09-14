@@ -83,6 +83,92 @@
       "harlemNYC": "Harlem, NYC",
       "southCentralLA": "South Central LA",
       "oaklandCA": "Oakland, CA"
+    },
+    "detailed": {
+      "locking": {
+        "overview": {
+          "content": [
+            "The Campbellock, a.k.a. Locking, is an improvisational performance dance created by Don Campbell in 1970 at LA Trade Technical College in Downtown Los Angeles. Originally attempting to do a dance called 'The Robot Shuffle,' Don's unique interpretation evolved into something completely revolutionary.",
+            "Locking is characterized by distinctive 'locks' — sudden freezes from fast movements, creating a rhythmic contrast that defines the style. The dance is based on individual expression, with 'The Lock' serving as the foundational movement from which everything flows."
+          ],
+          "source": "Historical information, techniques, and timeline adapted from campbellock.dance — the official website dedicated to preserving the authentic history of Locking/Campbellock, founded by Don Campbell himself."
+        },
+        "history": {
+          "title": "The Birth of Campbellock (1970)",
+          "content": [
+            "Donald Odell Campbell was born January 8th, 1951. In 1970, at just 19 years old, Don Campbell created the dance 'The Campbellock' at LA Trade Technical College in Downtown LA.",
+            "Don was first and foremost an artist — a portrait artist who understood how art could garner expression and move people. When he tried to do a dance called 'The Robot Shuffle' but couldn't execute it properly, his unique 'mistakes' became the foundation of something revolutionary.",
+            "Like 'The Lock' itself, all of Don's moves were never premeditated. They were the result of improvisation and interaction with others, dictated by the feel of the music and individual expression."
+          ],
+          "source": "Historical information, techniques, and timeline adapted from campbellock.dance — the official website dedicated to preserving the authentic history of Locking/Campbellock, founded by Don Campbell himself."
+        },
+        "pioneers": [
+          {
+            "name": "Don Campbell",
+            "title": "Creator of Campbellock/Locking",
+            "years": "1951–2020",
+            "initials": "DC",
+            "description": "Born January 8th, 1951, Don 'Campbellock' Campbell was a portrait artist who revolutionized dance in 1970. His improvisational spirit and artistic background shaped Locking's emphasis on individual expression and creativity."
+          },
+          {
+            "name": "The Lockers",
+            "title": "Original Crew",
+            "type": "crew",
+            "description": "The original crew that helped popularize Locking through TV appearances and performances, including members like Toni Basil, Rerun (Fred Berry), and other pioneers who brought the style to mainstream recognition."
+          }
+        ],
+        "culture": {
+          "content": [
+            "Locking emerged from the funk era of the early 1970s, embodying the spirit of individual expression and creative freedom that defined the era.",
+            "The dance became a powerful form of self-expression, allowing dancers to showcase their personality and creativity through improvised movements."
+          ],
+          "source": "Historical information, techniques, and timeline adapted from campbellock.dance — the official website dedicated to preserving the authentic history of Locking/Campbellock, founded by Don Campbell himself."
+        },
+        "music": {
+          "bpm": "100–120",
+          "timeSignature": "4/4",
+          "keyElements": "Funk & Soul",
+          "description": "Locking is performed to funk music with strong, steady beats that provide the rhythmic foundation for the characteristic 'lock' movements. The music's emphasis on groove and rhythm allows dancers to play with timing and express their individual style.",
+          "artists": [
+            {
+              "name": "James Brown",
+              "type": "Funk Pioneer",
+              "contribution": "The Godfather of Soul's rhythmic innovations provided the musical foundation that inspired early Locking dancers."
+            },
+            {
+              "name": "Parliament-Funkadelic",
+              "type": "Funk Collective",
+              "contribution": "George Clinton's funk empire created the groove-heavy soundscapes that became synonymous with West Coast funk styles."
+            }
+          ],
+          "playlist": "Curated playlist of tracks that define Locking's musical heritage and contemporary evolution."
+        },
+        "techniques": {
+          "content": [
+            "The fundamental 'Lock' — the signature freeze that gives the dance its name",
+            "Points and hand gestures that emphasize the rhythmic breaks",
+            "Fast leg movements contrasted with sudden stops",
+            "Theatrical expressions and showmanship"
+          ],
+          "source": "Historical information, techniques, and timeline adapted from campbellock.dance — the official website dedicated to preserving the authentic history of Locking/Campbellock, founded by Don Campbell himself."
+        },
+        "resources": [
+          {
+            "name": "Campbell Lock Dance",
+            "url": "https://campbellock.dance",
+            "type": "website",
+            "description": "Official website preserving the authentic history of Locking/Campbellock"
+          }
+        ],
+        "media": [
+          {
+            "title": "Featured Video",
+            "type": "video",
+            "url": "https://www.youtube.com/watch?v=LKFafJWpiyc",
+            "description": "Showcase video demonstrating key Locking moves and techniques"
+          }
+        ]
+      }
     }
   },
 
@@ -101,7 +187,7 @@
     },
     "ballroomCulture": {
       "name": "Ballroom Culture",
-      "description": "The art of voguing, Wh/aacking, and punking from ballroom competitions, born from Harlem's LGBTQ+ ballroom community in the 1970s-80s."
+      "description": "The art of voguing, Wh/aacking, and punking from ballroom competitions, born from Harlem’s LGBTQ+ ballroom community in the 1970s-80s."
     },
     "modernStreet": {
       "name": "Modern Street",
@@ -218,14 +304,14 @@
     "krumping": "High-energy movement expressing raw emotions and spiritual connection.",
     "clowning": "Playful dance style that evolved into krumping, emphasizing character and comedy.",
     "juke-footwork": "Lightning-fast leg work synchronized to Chicago juke music.",
-    "flexing": "Bone-bending contortionist style from Brooklyn's underground scene.",
+    "flexing": "Bone-bending contortionist style from Brooklyn’s underground scene.",
     "litefeet": "New York street dance characterized by intricate footwork and upper body flow.",
     "animation": "Robotic style emphasizing isolation and mechanical movements.",
     "boogaloo": "Original style of the Electric Boogaloos crew with flowing, funky movements.",
     "strutting": "Smooth, sophisticated funk style with emphasis on attitude and groove.",
     "hustle": "Partner dance that became a popular social dance in the disco era.",
-    "chicago-footwork": "Fast-paced footwork style from Chicago's house music scene.",
-    "jersey-club": "High-energy dance from New Jersey's club music culture.",
+    "chicago-footwork": "Fast-paced footwork style from Chicago’s house music scene.",
+    "jersey-club": "High-energy dance from New Jersey’s club music culture.",
     "afrobeats": "Contemporary African dance styles influenced by traditional and modern music.",
     "dancehall": "Jamaican dance style with strong cultural roots and social significance.",
     "soca": "Caribbean dance celebrating life and culture through rhythmic movement.",
@@ -279,7 +365,7 @@
   "origins": {
     "seo": {
       "title": "Origins of Street Dance Culture - From Bronx to Global Movement",
-      "description": "Discover the authentic origins of street dance culture. From DJ Kool Herc's 1973 Bronx block parties to Olympic recognition, explore the Five Elements of Hip-Hop that revolutionized dance, music, and culture worldwide."
+      "description": "Discover the authentic origins of street dance culture. From DJ Kool Herc’s 1973 Bronx block parties to Olympic recognition, explore the Five Elements of Hip-Hop that revolutionized dance, music, and culture worldwide."
     },
     "hero": {
       "title": "ORIGIN OF STREET DANCE",
@@ -292,21 +378,21 @@
     },
     "legacy": {
       "title": "From Streets to Legacy",
-      "description": "The Five Elements evolved from neighborhood expression into Olympic recognition. Today's practitioners honor the past while innovating for future generations, ensuring this culture continues to inspire and unite.",
+      "description": "The Five Elements evolved from neighborhood expression into Olympic recognition. Today’s practitioners honor the past while innovating for future generations, ensuring this culture continues to inspire and unite.",
       "foundation": {
         "title": "Cultural Preservation",
         "description": "Each generation of dancers, DJs, MCs, and writers becomes the keeper of traditions while adding their own voice to the story."
       },
       "globalImpact": {
         "title": "Olympic Recognition", 
-        "description": "Breaking's inclusion in the 2024 Olympics represents decades of cultural validation and mainstream acceptance."
+        "description": "Breaking’s inclusion in the 2024 Olympics represents decades of cultural validation and mainstream acceptance."
       },
       "futureForward": {
         "title": "Next Generation",
         "description": "Young artists worldwide are reimagining these elements, blending tradition with technology and social consciousness."
       },
       "quote": {
-        "text": "Hip-hop is not just entertainment, it's a way of life, it's a culture.",
+        "text": "Hip-hop is not just entertainment, it’s a way of life, it’s a culture.",
         "author": "Afrika Bambaataa",
         "title": "Founder of Universal Zulu Nation"
       },

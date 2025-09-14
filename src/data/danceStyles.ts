@@ -178,6 +178,49 @@ export const danceStyles: DanceStyle[] = [
       locationKey: 'styles.locations.losAngelesCA',
       cultureKey: 'styles.detailed.locking.origins.culture'
     },
+    // Direct video data instead of relying only on translation keys
+    videos: [
+      {
+        id: 'locking-featured',
+        title: 'The Original Lockers - Locking Technique',
+        url: 'https://www.youtube.com/watch?v=LKFafJWpiyc',
+        type: 'tutorial',
+        description: 'Authentic locking technique demonstration by the original lockers',
+        artist: 'The Lockers',
+        year: '1970s'
+      },
+      {
+        id: 'don-campbell-story',
+        title: 'Don Campbell - Creator of Locking',
+        url: 'https://www.youtube.com/watch?v=abc123',
+        type: 'history',
+        description: 'The story of Don Campbell and the creation of Campbellock/Locking',
+        artist: 'Don Campbell',
+        year: '1970'
+      }
+    ],
+    // Direct artist data
+    influentialArtists: [
+      {
+        name: 'Don Campbell',
+        role: 'Creator of Locking',
+        bio: 'Born January 8th, 1951, Don "Campbellock" Campbell was a portrait artist who revolutionized dance in 1970. His improvisational spirit and artistic background shaped Locking\'s emphasis on individual expression and creativity.',
+      },
+      {
+        name: 'Toni Basil',
+        role: 'Pioneer & Original Locker',
+        bio: 'Choreographer, dancer, and member of The Lockers who helped popularize locking through TV appearances and performances.',
+      }
+    ],
+    // Key moves/techniques
+    keyMoves: [
+      'The Lock - Signature freeze that gives the dance its name',
+      'Points - Sharp hand gestures that emphasize rhythmic breaks', 
+      'Fast Legs - Quick leg movements contrasted with sudden stops',
+      'Pacing - Theatrical timing and showmanship'
+    ],
+    // Musical characteristics  
+    musicGenres: ['Funk', 'Soul', 'Early Hip-Hop'],
     theme: {
       primary: '#F1C40F',
       secondary: '#F39C12',

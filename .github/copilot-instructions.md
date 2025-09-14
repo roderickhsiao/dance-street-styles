@@ -37,6 +37,9 @@ export const Component = ({ children, className = "" }: ComponentProps) => {
 - **Use next-intl**: We use `next-intl` for server-side i18n with URL-based routing
 - **useTranslations hook**: Always use `const t = useTranslations('namespace')` hook for client components
 - **getTranslations**: Use `const t = await getTranslations('namespace')` for server components  
+- **Copy guildline**:
+- Always use curly quote like ’ not staight ' (same for double quote)
+- Mindful about dash/em dash usage.
 - **Nested JSON structure**: Translation keys use nested objects, **never use dots in namespace keys**
 - **Both languages**: Always add keys to both language files
 - **Untranslatable terms**: Some terms like "Battle", "Cypher", "Freestyle" are commonly used as-is in Taiwan and should remain in English even in Chinese translations when culturally appropriate

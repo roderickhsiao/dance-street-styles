@@ -1,4 +1,3 @@
-import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Footer } from '../../components/Footer';
@@ -40,7 +39,7 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  
+
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale as (typeof locales)[number])) {
     notFound();
@@ -50,9 +49,9 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <NextIntlClientProvider messages={messages}>
+    <>
       {children}
       <Footer />
-    </NextIntlClientProvider>
+    </>
   );
 }
