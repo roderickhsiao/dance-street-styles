@@ -14,8 +14,7 @@ export function OverviewSection({ danceStyle, className = "" }: DanceStyleConten
   const t = useTranslations(`styles.detailed.${danceStyle.slug}.overview`);
   
   try {
-    const content = t.raw('content') as string[];
-    const source = t('source');
+  const content = t.raw('content') as string[];
     
     if (!content || content.length === 0) return null;
 
@@ -26,13 +25,7 @@ export function OverviewSection({ danceStyle, className = "" }: DanceStyleConten
             {paragraph}
           </p>
         ))}
-        {source && (
-          <div className="bg-gradient-to-r from-surface-secondary/20 to-surface-secondary/10 rounded-xl p-2 md:p-3 border border-stroke-secondary/20 backdrop-blur-sm mt-2 md:mt-3">
-            <p className="text-body-xs md:text-body-sm text-content-tertiary italic">
-              <span className="font-semibold text-accent-primary">Source:</span> {source}
-            </p>
-          </div>
-        )}
+  {/* Source shown at page-level; removed per-section duplication */}
       </div>
     );
   } catch {
@@ -45,8 +38,7 @@ export function HistorySection({ danceStyle, className = "" }: DanceStyleContent
   const t = useTranslations(`styles.detailed.${danceStyle.slug}.history`);
   
   try {
-    const content = t.raw('content') as string[];
-    const source = t('source');
+  const content = t.raw('content') as string[];
     
     if (!content || content.length === 0) return null;
 
@@ -57,13 +49,7 @@ export function HistorySection({ danceStyle, className = "" }: DanceStyleContent
             {paragraph}
           </p>
         ))}
-        {source && (
-          <div className="bg-gradient-to-r from-surface-secondary/20 to-surface-secondary/10 rounded-xl p-2 md:p-3 border border-stroke-secondary/20 backdrop-blur-sm mt-2 md:mt-3">
-            <p className="text-body-xs md:text-body-sm text-content-tertiary italic">
-              <span className="font-semibold text-accent-primary">Source:</span> {source}
-            </p>
-          </div>
-        )}
+  {/* Source shown at page-level; removed per-section duplication */}
       </div>
     );
   } catch {
@@ -356,7 +342,7 @@ export function CultureSection({ danceStyle, className = "" }: DanceStyleContent
   
   try {
     const content = t.raw('content') as string[];
-    const source = t('source');
+    
     
     if (!content || content.length === 0) return null;
 
@@ -367,13 +353,7 @@ export function CultureSection({ danceStyle, className = "" }: DanceStyleContent
             {paragraph}
           </p>
         ))}
-        {source && (
-          <div className="bg-gradient-to-r from-surface-secondary/20 to-surface-secondary/10 rounded-xl p-2 md:p-3 border border-stroke-secondary/20 backdrop-blur-sm mt-2 md:mt-3">
-            <p className="text-body-xs md:text-body-sm text-content-tertiary italic">
-              <span className="font-semibold text-accent-primary">Source:</span> {source}
-            </p>
-          </div>
-        )}
+  {/* Source shown at page-level; removed per-section duplication */}
       </div>
     );
   } catch {
@@ -517,9 +497,7 @@ export function ContentSection({ danceStyle, sectionKey, className = "" }: Dance
   try {
     const content = t.raw('content') as string[];
     if (!content || content.length === 0) return null;
-    
-    const source = t('source');
-    
+        
     return (
       <div className={`space-y-2 md:space-y-3 ${className}`}>
         {content.map((paragraph, index) => (
@@ -527,13 +505,6 @@ export function ContentSection({ danceStyle, sectionKey, className = "" }: Dance
             {paragraph}
           </p>
         ))}
-        {source && (
-          <div className="bg-gradient-to-r from-surface-secondary/20 to-surface-secondary/10 rounded-xl p-2 md:p-3 border border-stroke-secondary/20 backdrop-blur-sm mt-2 md:mt-3">
-            <p className="text-body-xs md:text-body-sm text-content-tertiary italic">
-              <span className="font-semibold text-accent-primary">Source:</span> {source}
-            </p>
-          </div>
-        )}
       </div>
     );
   } catch {

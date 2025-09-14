@@ -90,8 +90,7 @@
           "content": [
             "The Campbellock, a.k.a. Locking, is an improvisational performance dance created by Don Campbell in 1970 at LA Trade Technical College in Downtown Los Angeles. Originally attempting to do a dance called 'The Robot Shuffle,' Don's unique interpretation evolved into something completely revolutionary.",
             "Locking is characterized by distinctive 'locks' — sudden freezes from fast movements, creating a rhythmic contrast that defines the style. The dance is based on individual expression, with 'The Lock' serving as the foundational movement from which everything flows."
-          ],
-          "source": "Historical information, techniques, and timeline adapted from campbellock.dance — the official website dedicated to preserving the authentic history of Locking/Campbellock, founded by Don Campbell himself."
+          ]
         },
         "history": {
           "title": "The Birth of Campbellock (1970)",
@@ -99,8 +98,7 @@
             "Donald Odell Campbell was born January 8th, 1951. In 1970, at just 19 years old, Don Campbell created the dance 'The Campbellock' at LA Trade Technical College in Downtown LA.",
             "Don was first and foremost an artist — a portrait artist who understood how art could garner expression and move people. When he tried to do a dance called 'The Robot Shuffle' but couldn't execute it properly, his unique 'mistakes' became the foundation of something revolutionary.",
             "Like 'The Lock' itself, all of Don's moves were never premeditated. They were the result of improvisation and interaction with others, dictated by the feel of the music and individual expression."
-          ],
-          "source": "Historical information, techniques, and timeline adapted from campbellock.dance — the official website dedicated to preserving the authentic history of Locking/Campbellock, founded by Don Campbell himself."
+          ]
         },
         "pioneers": [
           {
@@ -121,8 +119,7 @@
           "content": [
             "Locking emerged from the funk era of the early 1970s, embodying the spirit of individual expression and creative freedom that defined the era.",
             "The dance became a powerful form of self-expression, allowing dancers to showcase their personality and creativity through improvised movements."
-          ],
-          "source": "Historical information, techniques, and timeline adapted from campbellock.dance — the official website dedicated to preserving the authentic history of Locking/Campbellock, founded by Don Campbell himself."
+          ]
         },
         "music": {
           "bpm": "100–120",
@@ -150,8 +147,7 @@
             "Points and hand gestures that emphasize the rhythmic breaks",
             "Fast leg movements contrasted with sudden stops",
             "Theatrical expressions and showmanship"
-          ],
-          "source": "Historical information, techniques, and timeline adapted from campbellock.dance — the official website dedicated to preserving the authentic history of Locking/Campbellock, founded by Don Campbell himself."
+          ]
         },
         "resources": [
           {
@@ -233,6 +229,15 @@
       "title": "Complete Street Dance Styles Archive - Hip-Hop to House",
       "description": "Explore authentic street dance styles from breaking to voguing, popping to krumping. Discover the history, moves, and culture behind each dance style with video tutorials and community stories.",
       "keywords": "street dance styles, hip hop dance, breaking b-boying, popping animation, campbellock locking funk styles, house dance, voguing ballroom, wh/aacking punking, krumping clowning, street dance history, urban dance culture, dance battles, freestyle dance, street dance tutorials, dance community"
+    },
+    "sections": {
+      "overview": "Overview",
+      "history": "History & Origins",
+      "pioneers": "Pioneers & Artists",
+      "culture": "Cultural Impact",
+      "featuredVideo": "Featured Video",
+      "techniques": "Key Techniques",
+      "related": "Related Styles"
     }
   },
 
@@ -331,6 +336,16 @@
       "timeline": "Timeline", 
       "trivia": "Trivia"
     }
+  },
+  "ui": {
+    "breadcrumbs": {
+      "styles": "Styles"
+    },
+    "tableOfContents": "Table of Contents",
+    "tags": {
+      "streetDance": "Street Dance"
+    },
+    "sourceLabel": "Source:"
   },
   
   "footer": {
@@ -668,12 +683,8 @@
   "videos": {
     "locking": {
       "lockingFeatured": {
-        "title": "The Original Lockers - Locking Technique",
-        "description": "Authentic Locking technique demonstration from The Lockers, highlighting the signature 'lock' freezes and groove-based phrasing."
-      },
-      "donCampbell": {
-        "title": "Don Campbell - Creator of Locking",
-        "description": "A historical overview and interview covering Don Campbell's early experiments and the birth of Campbellock/Locking."
+        "title": "Time Travel: A Tribute to Don \"Campbellock\" Campbell",
+        "description": "Directed, edited, and animated by Mathilde Chamussy. Using live footage of Don Campbellock Campbell."
       }
     },
     "5ElementsOfHipHop": {

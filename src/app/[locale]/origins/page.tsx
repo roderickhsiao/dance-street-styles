@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { useMemo } from 'react';
+import { useIntl } from '@/i18n/hooks';
 import { MainNavigation } from '@/components/MainNavigation';
 import { ExpandableCard } from '@/components/ExpandableCard';
 import { Timeline } from '@/components/Timeline';
@@ -16,17 +17,6 @@ import { Quote } from '@/components/Quote';
 import { CTAButton } from '@/components/ui/cta-button';
 import { PEOPLE } from '@/data/entities';
 import { VIDEOS } from '@/data/entities';
-
-// Helper function to get pioneers string from ids
-const getPioneersString = (pioneerIds: string[]) => {
-  return pioneerIds
-    .map((id) => {
-      const person = PEOPLE[id];
-      if (!person) return id;
-      return `${person.nameKey} (${person.roleKey})`;
-    })
-    .join(', ');
-};
 
 const compactTimeline = [
   {
@@ -179,7 +169,7 @@ const fiveElementsData = [
     subtitleKey: 'streetCulture.elements.djing.subtitle',
     descriptionKey: 'streetCulture.elements.djing.description',
     whyKey: 'streetCulture.elements.djing.why',
-    pioneers: getPioneersString(['dj-kool-herc', 'grandmaster-flash', 'afrika-bambaataa']),
+    pioneers: ['dj-kool-herc', 'grandmaster-flash', 'afrika-bambaataa'],
     historicalNoteKey: 'streetCulture.elements.djing.historicalNote',
     bgColor: 'bg-accent-primary/20',
     hoverColor: 'hover:bg-accent-primary/30',
@@ -192,7 +182,7 @@ const fiveElementsData = [
     subtitleKey: 'streetCulture.elements.mcing.subtitle',
     descriptionKey: 'streetCulture.elements.mcing.description',
     whyKey: 'streetCulture.elements.mcing.why',
-    pioneers: getPioneersString(['grandmaster-caz', 'melle-mel', 'kurtis-blow']),
+    pioneers: ['grandmaster-caz', 'melle-mel', 'kurtis-blow'],
     historicalNoteKey: 'streetCulture.elements.mcing.historicalNote',
     bgColor: 'bg-accent-secondary/20',
     hoverColor: 'hover:bg-accent-secondary/30',
@@ -205,7 +195,7 @@ const fiveElementsData = [
     subtitleKey: 'streetCulture.elements.breaking.subtitle',
     descriptionKey: 'streetCulture.elements.breaking.description',
     whyKey: 'streetCulture.elements.breaking.why',
-    pioneers: getPioneersString(['crazy-legs', 'ken-swift', 'baby-love']),
+    pioneers: ['crazy-legs', 'ken-swift', 'baby-love'],
     historicalNoteKey: 'streetCulture.elements.breaking.historicalNote',
     bgColor: 'bg-accent-tertiary/20',
     hoverColor: 'hover:bg-accent-tertiary/30',
@@ -218,7 +208,7 @@ const fiveElementsData = [
     subtitleKey: 'streetCulture.elements.graffiti.subtitle',
     descriptionKey: 'streetCulture.elements.graffiti.description',
     whyKey: 'streetCulture.elements.graffiti.why',
-    pioneers: getPioneersString(['darryl-cornbread-mc-cray', 'taki-183', 'phase-2', 'lady-pink']),
+    pioneers: ['darryl-cornbread-mc-cray', 'taki-183', 'phase-2', 'lady-pink'],
     historicalNoteKey: 'streetCulture.elements.graffiti.historicalNote',
     bgColor: 'bg-green-500/20',
     hoverColor: 'hover:bg-green-500/30',
@@ -231,7 +221,7 @@ const fiveElementsData = [
     subtitleKey: 'streetCulture.elements.knowledge.subtitle',
     descriptionKey: 'streetCulture.elements.knowledge.description',
     whyKey: 'streetCulture.elements.knowledge.why',
-    pioneers: getPioneersString(['afrika-bambaataa', 'krs-one', 'grandmaster-flash']),
+    pioneers: ['afrika-bambaataa', 'krs-one', 'grandmaster-flash'],
     historicalNoteKey: 'streetCulture.elements.knowledge.historicalNote',
     bgColor: 'bg-yellow-500/20',
     hoverColor: 'hover:bg-yellow-500/30',
@@ -239,54 +229,42 @@ const fiveElementsData = [
   },
 ];
 
-// Compact timeline data
-const compactTimelineData = [
-  {
-    year: '1973',
-    titleKey: 'origins.timeline.events.1973.title',
-    locationKey: 'origins.timeline.events.1973.location',
-    descriptionKey: 'origins.timeline.events.1973.description',
-    icon: '🎧',
-  },
-  {
-    year: '1975',
-    titleKey: 'origins.timeline.events.1975.title',
-    locationKey: 'origins.timeline.events.1975.location',
-    descriptionKey: 'origins.timeline.events.1975.description',
-    icon: '💫',
-  },
-  {
-    year: '1977',
-    titleKey: 'origins.timeline.events.1977.title',
-    locationKey: 'origins.timeline.events.1977.location',
-    descriptionKey: 'origins.timeline.events.1977.description',
-    icon: '👥',
-  },
-  {
-    year: '1982',
-    titleKey: 'origins.timeline.events.1982.title',
-    locationKey: 'origins.timeline.events.1982.location',
-    descriptionKey: 'origins.timeline.events.1982.description',
-    icon: '🎬',
-  },
-  {
-    year: '1990s',
-    titleKey: 'origins.timeline.events.1990s.title',
-    locationKey: 'origins.timeline.events.1990s.location',
-    descriptionKey: 'origins.timeline.events.1990s.description',
-    icon: '🌍',
-  },
-  {
-    year: '2024',
-    titleKey: 'origins.timeline.events.2024.title',
-    locationKey: 'origins.timeline.events.2024.location',
-    descriptionKey: 'origins.timeline.events.2024.description',
-    icon: '🏅',
-  },
-];
+// (compactTimeline is used above)
 
 export default function OriginOfStreetDancePage() {
   const t = useTranslations();
+  const intl = useIntl();
+
+  // Translate pioneers arrays into localized, formatted lists
+  const translatedFiveElements = useMemo(() => {
+    return fiveElementsData.map((el) => {
+      const pioneerNames = el.pioneers.map((id: string) => {
+        const person = PEOPLE[id];
+        if (!person) return id;
+        // person.nameKey contains the i18n key for the person's name
+        const name = t(person.nameKey);
+        // roleKey may be present; include it in parentheses if available
+        let labeledName = name;
+        try {
+          if (person.roleKey) {
+            const role = t(person.roleKey);
+            labeledName = `${name} (${role})`;
+          }
+        } catch {
+          // if role translation fails or missing, ignore and keep name only
+        }
+        return labeledName;
+      });
+
+      // use our intl helper to format lists (conjunction style)
+      const pioneers = intl.formatConjunctionList(pioneerNames);
+
+      return {
+        ...el,
+        pioneers,
+      };
+    });
+  }, [t, intl]);
 
   // Memoize translated badges
   const heroBadges = useMemo(
@@ -403,7 +381,7 @@ export default function OriginOfStreetDancePage() {
               {t('streetCulture.elements.title')}
             </h3>
             <div className="space-y-6">
-              {fiveElementsData.map((element, index) => (
+              {translatedFiveElements.map((element, index) => (
                 <ExpandableCard
                   key={index}
                   icon={element.icon}
@@ -424,12 +402,15 @@ export default function OriginOfStreetDancePage() {
         </div>
       </Section>
 
-      <Timeline events={translatedTimelineEvents} title={t('streetCulture.timeline.title')} />
+      <Timeline
+        events={translatedTimelineEvents}
+        title={t('streetCulture.timeline.title')}
+      />
 
       <VideoCarousel videos={videoData} className="bg-surface-secondary" />
 
       <Section background="primary" padding="none">
-        <ValueCards 
+        <ValueCards
           values={translatedStreetValues}
           title={t('streetCulture.values.title')}
         />
@@ -503,14 +484,14 @@ export default function OriginOfStreetDancePage() {
           </div>
 
           <div className="text-center">
-            <Quote 
+            <Quote
               quote={t('origins.legacy.quote.text')}
               author={t('origins.legacy.quote.author')}
               authorTitle={t('origins.legacy.quote.title')}
               variant="featured"
               className="mb-8"
             />
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -526,11 +507,7 @@ export default function OriginOfStreetDancePage() {
               >
                 {t('origins.legacy.cta.exploreStyles')}
               </CTAButton>
-              <CTAButton
-                href="/"
-                variant="outline"
-                size="default"
-              >
+              <CTAButton href="/" variant="outline" size="default">
                 {t('origins.legacy.cta.backHome')}
               </CTAButton>
             </motion.div>

@@ -34,14 +34,14 @@ interface SectionConfig {
 // Create a wrapper component for each section to handle viewport detection
 interface ViewportSectionProps {
   section: SectionConfig;
-  // Notify parent when section enters/leaves viewport. Parent will compute element top when needed.
-  onInViewport: (sectionId: string, inViewport: boolean) => void;
+  // Notify parent when section becomes visible (enter). Parent uses this to set activeSection.
+  onEnter: (sectionId: string) => void;
 }
 
-const ViewportSection = ({ section, onInViewport }: ViewportSectionProps) => {
+const ViewportSection = ({ section, onEnter }: ViewportSectionProps) => {
   const ref = useRef<HTMLElement>(null);
   const tGlobal = useTranslations();
-  const { inViewport } = useInViewport(
+  const { inViewport, enterCount } = useInViewport(
     ref,
     {
       rootMargin: '-20% 0px -60% 0px', // Trigger when section is 20% from top, 60% from bottom
@@ -50,8 +50,11 @@ const ViewportSection = ({ section, onInViewport }: ViewportSectionProps) => {
   );
 
   useEffect(() => {
-    onInViewport(section.id, inViewport);
-  }, [inViewport, section.id, onInViewport]);
+    // When the section becomes visible (enterCount increases), notify parent
+    if (inViewport && enterCount > 0) {
+      onEnter(section.id);
+    }
+  }, [inViewport, enterCount, section.id, onEnter]);
 
   const getAccentClasses = (color: 'primary' | 'secondary' | 'tertiary') => {
     switch (color) {
@@ -78,7 +81,7 @@ const ViewportSection = ({ section, onInViewport }: ViewportSectionProps) => {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <div className="bg-surface-elevated/30 border border-stroke-secondary/40 rounded-2xl p-3 md:p-4 shadow-sm hover:bg-surface-elevated/50 hover:border-stroke-secondary/60 hover:shadow-md transition-all duration-300">
+  <div className="bg-surface-elevated/30 border border-stroke-secondary/40 rounded-lg p-3 md:p-4 shadow-sm hover:bg-surface-elevated/50 hover:border-stroke-secondary/60 hover:shadow-md transition-all duration-300">
           <header className="flex items-center space-x-3 mb-2 md:mb-3 pb-2 border-b border-stroke-secondary/20">
             <div className={clsx(
               "w-8 h-8 md:w-9 md:h-9 rounded-xl bg-gradient-to-br flex items-center justify-center transition-all duration-300",
@@ -90,7 +93,7 @@ const ViewportSection = ({ section, onInViewport }: ViewportSectionProps) => {
               {section.labelKey && section.labelKey.includes('.') ? tGlobal(section.labelKey) : section.labelKey}
             </h2>
           </header>
-          <div className="ml-9 md:ml-10">
+          <div className="md:ml-10">
             {section.component}
           </div>
         </div>
@@ -103,27 +106,18 @@ export function StylePageClient({ danceStyle, relatedStyles, styleTags }: StyleP
   const { applyTheme, clearTheme } = useTheme();
   const [activeSection, setActiveSection] = useState('overview');
   const [isTocOpen, setIsTocOpen] = useState(false);
-  // Set of currently visible section IDs
-  const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
+  // We will rely on per-section `onEnter` callbacks from useInViewport
   const tNames = useTranslations('danceStyles.names');
   const tDescriptions = useTranslations('danceStyles.shortDescriptions');
   const tTags = useTranslations('danceTags');
   const tStyles = useTranslations();
+  const tUi = useTranslations('ui');
 
   
 
-  // Handle viewport changes from sections; we store the element top so we can deterministically
-  // pick the visible section closest to the top of the viewport.
-  const handleViewportChange = (sectionId: string, inViewport: boolean) => {
-    setVisibleSections(prev => {
-      const next = new Set(prev);
-      if (inViewport) {
-        next.add(sectionId);
-      } else {
-        next.delete(sectionId);
-      }
-      return next;
-    });
+  // Handle section enter events from ViewportSection
+  const handleSectionEnter = (sectionId: string) => {
+    setActiveSection(sectionId);
   };
 
   // Helper function to check if content exists
@@ -136,42 +130,42 @@ export function StylePageClient({ danceStyle, relatedStyles, styleTags }: StyleP
   const allSections: SectionConfig[] = [
     {
       id: 'overview',
-      labelKey: 'Overview',
+      labelKey: 'stylesPage.sections.overview',
       icon: '📖',
       accentColor: 'primary',
       component: <ContentSection danceStyle={danceStyle} sectionKey="overview" />
     },
     {
       id: 'history',
-      labelKey: 'History & Origins',
+      labelKey: 'stylesPage.sections.history',
       icon: '⏰',
       accentColor: 'secondary',
       component: <ContentSection danceStyle={danceStyle} sectionKey="history" />
     },
     {
       id: 'pioneers',
-      labelKey: 'Pioneers & Artists',
+      labelKey: 'stylesPage.sections.pioneers',
       icon: '⭐',
       accentColor: 'tertiary',
       component: <PioneersSection danceStyle={danceStyle} />
     },
     {
       id: 'culture',
-      labelKey: 'Cultural Impact',
+      labelKey: 'stylesPage.sections.culture',
       icon: '🌍',
       accentColor: 'primary',
       component: <ContentSection danceStyle={danceStyle} sectionKey="culture" />
     },
     {
       id: 'featured-video',
-      labelKey: 'Featured Video',
+      labelKey: 'stylesPage.sections.featuredVideo',
       icon: '🎬',
       accentColor: 'tertiary',
       component: <FeaturedVideoSection danceStyle={danceStyle} />
     },
     {
       id: 'techniques',
-      labelKey: 'Key Techniques',
+      labelKey: 'stylesPage.sections.techniques',
       icon: '⚡',
       accentColor: 'secondary',
       component: <TechniquesSection danceStyle={danceStyle} />
@@ -208,36 +202,19 @@ export function StylePageClient({ danceStyle, relatedStyles, styleTags }: StyleP
     });
   }
 
-  // Update active section based on visible sections and scroll position
+  // Keep last-section highlighting when user scrolls to bottom
   useEffect(() => {
-    if (visibleSections.size > 0) {
-      // Check if user has scrolled to the bottom of the page
+    const onScroll = () => {
       const isAtBottom = (window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 100);
-
       if (isAtBottom && availableSections.length > 0) {
-        // If at bottom, highlight the last section
         const lastSection = availableSections[availableSections.length - 1];
         setActiveSection(lastSection.id);
-      } else {
-        // Pick the visible section whose top is smallest (closest to viewport top)
-        let topMostId: string | undefined = undefined;
-        let smallestTop = Infinity;
-
-        visibleSections.forEach((id) => {
-          const el = document.getElementById(id);
-          if (el) {
-            const top = el.getBoundingClientRect().top;
-            if (top < smallestTop) {
-              smallestTop = top;
-              topMostId = id;
-            }
-          }
-        });
-
-        if (topMostId) setActiveSection(topMostId);
       }
-    }
-  }, [visibleSections, availableSections]);
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [availableSections]);
 
   useEffect(() => {
     if (danceStyle) {
@@ -300,7 +277,7 @@ export function StylePageClient({ danceStyle, relatedStyles, styleTags }: StyleP
               </Link>
               <span>/</span>
               <Link href="/styles" className="hover:text-accent-primary transition-colors">
-                Dance Styles
+                {tUi('breadcrumbs.styles')}
               </Link>
               <span>/</span>
               <span className="text-content-secondary">{tNames(danceStyle.id)}</span>
@@ -331,7 +308,7 @@ export function StylePageClient({ danceStyle, relatedStyles, styleTags }: StyleP
                   </div>
                   <div className="flex items-center space-x-2">
                     <Zap className="h-4 w-4 text-accent-tertiary" />
-                    <span>Street Dance</span>
+                    <span>{tUi('tags.streetDance')}</span>
                   </div>
                 </div>
 
@@ -369,7 +346,7 @@ export function StylePageClient({ danceStyle, relatedStyles, styleTags }: StyleP
                 onClick={() => setIsTocOpen(!isTocOpen)}
                 className="w-full flex items-center justify-between px-4 py-3 bg-surface-elevated border border-stroke-secondary rounded-xl text-content-primary hover:border-accent-primary/50 transition-colors"
               >
-                <span className="font-medium">Table of Contents</span>
+                <span className="font-medium">{tUi('tableOfContents')}</span>
                 <ChevronRight className={clsx("h-4 w-4 transition-transform", isTocOpen && "rotate-90")} />
               </button>
               
@@ -456,9 +433,9 @@ export function StylePageClient({ danceStyle, relatedStyles, styleTags }: StyleP
           {/* Desktop Sidebar TOC */}
           <aside className="hidden lg:block" role="navigation" aria-label="Table of contents">
             <div className="sticky top-24">
-              <div className="bg-gradient-to-b from-surface-elevated/80 to-surface-elevated/40 backdrop-blur-sm border border-stroke-secondary/30 rounded-2xl p-6">
+              <div className="bg-gradient-to-b from-surface-elevated/80 to-surface-elevated/40 backdrop-blur-sm border border-stroke-secondary/30 rounded-lg p-6">
                 <h3 className="text-header-xs font-bold text-content-primary mb-4">
-                  Table of Contents
+                  {tUi('tableOfContents')}
                 </h3>
                 <nav className="space-y-1">
                   {availableSections.map((section) => (
@@ -486,12 +463,13 @@ export function StylePageClient({ danceStyle, relatedStyles, styleTags }: StyleP
           <main className="lg:col-span-3" role="main">
             <article className="space-y-4 md:space-y-6">
               {availableSections.map((section) => (
-                <ViewportSection 
-                  key={section.id}
-                  section={section}
-                  onInViewport={handleViewportChange}
-                />
-              ))}
+                  <ViewportSection 
+                    key={section.id}
+                    section={section}
+                    onEnter={handleSectionEnter}
+                  />
+                ))}
+          
             </article>
           </main>
         </div>

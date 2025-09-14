@@ -60,7 +60,7 @@ export function DanceStyleSection({
               {title}
             </h2>
           </header>
-          <div className="ml-9 md:ml-10">
+          <div className="md:ml-10">
             {children}
           </div>
         </div>
