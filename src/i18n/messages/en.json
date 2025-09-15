@@ -410,14 +410,14 @@
       "breaking": {
         "overview": {
           "content": [
-            "Breaking (B-Boying/B-Girling) is an athletic street dance style featuring toprock, footwork, power moves, and freezes. Dancers combine acrobatics, musicality, and improvisation to create dynamic performances that push physical boundaries.",
-            "Originating in the South Bronx, breaking became a symbol of creativity, resilience, and community, inspiring generations of dancers worldwide."
+            "Breaking (B-Boying/B-Girling) combines athletic floor work with rhythmic footwork, explosive power moves, and dynamic freezes. Born in 1973 Bronx block parties, breakers battle in cyphers using toprock, downrock, power, and freeze combinations.",
+            "Each breaking battle tells a story through movement, with dancers showcasing technical mastery, originality, and respect for hip-hop's foundational culture."
           ]
         },
         "history": {
           "summary": [
-            "Breaking emerged in the early 1970s at Bronx block parties, where young dancers developed new moves to the breakbeats spun by pioneering DJs.",
-            "The style quickly spread, evolving through battles, cyphers, and the influence of crews like the Rock Steady Crew and New York City Breakers."
+            "Breaking emerged at DJ Kool Herc's 1973 block parties when dancers began responding to drum breaks with innovative floor work and acrobatic moves.",
+            "Pioneering crews like Rock Steady Crew and New York City Breakers developed the vocabulary of toprock, footwork, power moves, and freezes that define breaking today."
           ],
           "content": [
             "Breaking’s roots trace back to DJ Kool Herc’s legendary parties in 1973, where dancers responded to extended drum breaks with innovative footwork and acrobatics.",
@@ -584,18 +584,18 @@
       "litefeet": {
         "overview": {
           "content": [
-            "Litefeet, also known as 'getting lite,' is a dynamic street dance style from Harlem characterized by intricate footwork and weightless movement that makes dancers appear to have 'light feet.'",
-            "The style emerged from New York's subway culture where dancers perform 'Showtime' on moving trains, combining athletic skill with urban storytelling."
+            "Litefeet, also known as ’getting lite,’ is a dynamic street dance style from Harlem characterized by intricate footwork and weightless movement that makes dancers appear to have ’light feet.’",
+            "The style emerged from New York’s subway culture where dancers perform ’Showtime’ on moving trains, combining athletic skill with urban storytelling."
           ]
         },
         "history": {
           "summary": [
             "Litefeet emerged from Harlem in the early 2000s (established in 2006), growing from subway performances and street culture.",
-            "The style gained recognition through viral videos and the unique 'Showtime' performances on NYC subway cars."
+            "The style gained recognition through viral videos and the unique ’Showtime’ performances on NYC subway cars."
           ],
           "content": [
             "Litefeet developed as a response to urban life, with dancers creating a weightless, fluid style that could be performed in confined spaces like subway cars.",
-            "The dance became a symbol of Harlem's resilient street culture, spreading through social media and underground dance battles."
+            "The dance became a symbol of Harlem’s resilient street culture, spreading through social media and underground dance battles."
           ]
         }
       },
@@ -608,12 +608,12 @@
         },
         "history": {
           "summary": [
-            "Chicago Footwork originated in the mid-1980s from ghetto house culture, with key developments by House-O-Matic's and later by Anthony 'Ant' Brown.",
+            "Chicago Footwork originated in the mid-1980s from ghetto house culture, with key developments by House-O-Matic’s and later by Anthony ’Ant’ Brown.",
             "The juke/footwork style evolved from individual moves to complex combinations, with battle groups like Wolfpak and The Phirm emerging in the 1990s."
           ],
           "content": [
-            "Footwork traces back to the legendary dance group House-O-Matic's on Chicago's Southside, where dancers like Calvin, Goose, and Michael Stamps developed 'Dance Group Footwork' in 1988-1989.",
-            "Anthony 'Ant' Brown created the foundational 'Erk N Jerkz' step in the early 1990s, training dancers in 'The Dungeon' basement and revolutionizing the juke style into the intricate combinations we know today."
+            "Footwork traces back to the legendary dance group House-O-Matic’s on Chicago’s Southside, where dancers like Calvin, Goose, and Michael Stamps developed ’Dance Group Footwork’ in 1988-1989.",
+            "Anthony ’Ant’ Brown created the foundational ’Erk N Jerkz’ step in the early 1990s, training dancers in ’The Dungeon’ basement and revolutionizing the juke style into the intricate combinations we know today."
           ]
         }
       },
@@ -626,12 +626,30 @@
         },
         "history": {
           "summary": [
-            "Detroit Jit began in the 1970s with the Jitterbugs and developed alongside Detroit's electronic music scene, particularly ghettotech.",
-            "The style represents Detroit's unique urban dance culture, with battle crews competing against each other and Chicago Footwork dancers."
+            "Detroit Jit began in the 1970s with the Jitterbugs and developed alongside Detroit’s electronic music scene, particularly ghettotech.",
+            "The style represents Detroit’s unique urban dance culture, with battle crews competing against each other and Chicago Footwork dancers."
           ],
           "content": [
-            "Jit emerged from Detroit's street culture in the 1970s, developing its distinctive style of explosive, fast-paced movements that make dancers appear to defy gravity.",
-            "The dance culture struggled with mainstream recognition, as noted by promoter Martez Claybren, but maintains a strong underground scene and remains central to Detroit's annual music festivals."
+            "Jit emerged from Detroit’s street culture in the 1970s, developing its distinctive style of explosive, fast-paced movements that make dancers appear to defy gravity.",
+            "The dance culture struggled with mainstream recognition, as noted by promoter Martez Claybren, but maintains a strong underground scene and remains central to Detroit’s annual music festivals."
+          ]
+        }
+      },
+      "soul": {
+        "overview": {
+          "content": [
+            "Soul Dance (also known as Soul Step) is a Japanese party-oriented dance style that emerged from inspiration by the US television show Soul Train and the broader soul music culture.",
+            "The style was popularized by influential Japanese dancers like MOGA and Yoshie, who adapted the energetic, individual expression of Soul Train dancing for Japanese club and party scenes."
+          ]
+        },
+        "history": {
+          "summary": [
+            "Soul Dance developed in Japan as dancers were inspired by Soul Train’s vibrant dance culture, creating their own interpretation of the energetic, freestyle party dancing.",
+            "Key figures like MOGA and Yoshie became prominent ambassadors of the style, helping establish Soul Dance as a distinct element of Japanese street dance culture."
+          ],
+          "content": [
+            "The Japanese Soul Dance scene emerged as dancers drew inspiration from the iconic American TV show Soul Train, adapting its celebratory, individual expression style for Japanese audiences.",
+            "While connected to Japan’s broader underground Northern Soul scene in cities like Kobe, Soul Dance became its own distinct party-oriented style emphasizing fun, energy, and personal expression."
           ]
         }
       }
@@ -741,6 +759,12 @@
     },
     "modernStreet": {
       "name": "Modern Street"
+    },
+    "party": {
+      "name": "Party"
+    },
+    "japanese": {
+      "name": "Japanese"
     }
   },
   "danceStyles": {
@@ -758,7 +782,8 @@
       "turfing": "Turfing",
       "litefeet": "Litefeet",
       "footwork": "Chicago Footwork",
-      "jit": "Detroit Jit"
+      "jit": "Detroit Jit",
+      "soul": "Soul Dance"
     },
     "shortDescriptions": {
       "breaking": "Athletic floor work combining toprock, footwork, power moves, and freezes.",
@@ -774,7 +799,8 @@
       "turfing": "Oakland-born dance style combining acrobatics, storytelling, and precise footwork.",
       "litefeet": "Harlem street dance with intricate footwork and weightless movement, popularized on NYC subways.",
       "footwork": "Chicago juke/footwork culture that evolved from ghetto house in the mid-1980s, featuring intricate footwork combinations performed at 160 BPM.",
-      "jit": "Detroit street dance originating in the 1970s with the Jitterbugs, emphasizing feet hitting the air with explosive, fast-paced movements to ghettotech music."
+      "jit": "Detroit street dance originating in the 1970s with the Jitterbugs, emphasizing feet hitting the air with explosive, fast-paced movements to ghettotech music.",
+      "soul": "Japanese party dance style inspired by Soul Train, popularized by dancers like MOGA and Yoshie, featuring energetic movements and individual expression."
     },
     "video": {
       "locking": {
@@ -796,7 +822,7 @@
       "waacking": {
         "tyroneProctor": {
           "title": "Interview with Tyrone Proctor - Rest In Power Tyrone",
-          "description": "An interview with Tyrone Proctor, one of the Pioneers of Waacking and an original Soul Train Dancer. Interview courtesy of Rennie Harris and the American Street Dance Archives. Filmed at Destiny Arts Center in Oakland, CA during Rennie Harris' Illadelph Legends Hip Hop Festival Bay Area, presented by Embodiment Project."
+          "description": "An interview with Tyrone Proctor, one of the Pioneers of Waacking and an original Soul Train Dancer. Interview courtesy of Rennie Harris and the American Street Dance Archives. Filmed at Destiny Arts Center in Oakland, CA during Rennie Harris’ Illadelph Legends Hip Hop Festival Bay Area, presented by Embodiment Project."
         }
       },
       "house": {
@@ -808,11 +834,11 @@
       "turfing": {
         "scorpionLopez": {
           "title": "Scorpion - On Lopez Tonight",
-          "description": "Scorpion showcases his incredible turfing skills on Lopez Tonight, demonstrating the athleticism and storytelling power of Oakland's signature dance style."
+          "description": "Scorpion showcases his incredible turfing skills on Lopez Tonight, demonstrating the athleticism and storytelling power of Oakland’s signature dance style."
         },
         "liquidFlow": {
           "title": "Liquid Flow - A Viral Moment, Born From Grief: The Story of the TURF FEINZ",
-          "description": "In \"Liquid Flow,\" a 2019 mini-documentary produced for the Oakland Museum of California (OMCA) featuring the Turf Feinz and directed by YAK Films, Darrell \"D-Real\" Armstead says, \"Oakland is a city of artists. Layer on layer. That pressure, the need to express yourself? It's everywhere. Homicide. Housing. Money flowing out but never in. Somebody you know dead. Some people say all this, that we do now, came from all that.\""
+          "description": "In \"Liquid Flow,\" a 2019 mini-documentary produced for the Oakland Museum of California (OMCA) featuring the Turf Feinz and directed by YAK Films, Darrell \"D-Real\" Armstead says, \"Oakland is a city of artists. Layer on layer. That pressure, the need to express yourself? It’s everywhere. Homicide. Housing. Money flowing out but never in. Somebody you know dead. Some people say all this, that we do now, came from all that.\""
         }
       },
       "hipHop": {
@@ -824,19 +850,19 @@
       "popping": {
         "interview": {
           "title": "Interview with Popin Pete & Suga Pop",
-          "description": "The EB's were born in 1977 when Boogaloo Sam founded the Electronic Boogaloo Lockers - Dance Channel TV interviews Popin Pete & Suga Pop."
+          "description": "The EB’s were born in 1977 when Boogaloo Sam founded the Electronic Boogaloo Lockers - Dance Channel TV interviews Popin Pete & Suga Pop."
         }
       },
       "voguing": {
         "lgbtqHistory": {
           "title": "How the LGBTQ community created voguing",
-          "description": "Vogue, the dance, not the magazine. Explore the origins of voguing in the LGBTQ ballroom community and how this powerful form of expression emerged from Harlem's underground scene."
+          "description": "Vogue, the dance, not the magazine. Explore the origins of voguing in the LGBTQ ballroom community and how this powerful form of expression emerged from Harlem’s underground scene."
         }
       },
       "footwork": {
         "featured": {
           "title": "Chicago Footwork Dance Battle",
-          "description": "Witness the explosive energy and intricate footwork combinations of Chicago's juke/footwork culture in this intense dance battle showcase."
+          "description": "Witness the explosive energy and intricate footwork combinations of Chicago’s juke/footwork culture in this intense dance battle showcase."
         },
         "letMeSee": {
           "title": "Let Me See Your Footwork",
@@ -845,8 +871,26 @@
       },
       "jit": {
         "pioneers": {
-          "title": "Detroit OG's - Pioneers of the Jit: The Jitterbugs (Trailer)",
+          "title": "Detroit OG’s - Pioneers of the Jit: The Jitterbugs (Trailer)",
           "description": "A documentary trailer exploring the pioneers of Detroit Jit, tracing the origins back to the Jitterbugs and the evolution of this unique Motor City dance style."
+        }
+      },
+      "krumping": {
+        "tommyClown": {
+          "title": "History of Tommy the Clown - The Godfather of Krumping",
+          "description": "Get to know Thomas Johnson, the king of clowning, the godfather of krumping, and the leader of the T-Squad."
+        }
+      },
+      "hustle": {
+        "latinOrigins": {
+          "title": "The Latin Hustle Origins",
+          "description": "Puerto Rican teenagers from the South Bronx created the Latin Hustle in 1972, establishing a foundational partner dance that would define the disco era."
+        }
+      },
+      "soul": {
+        "yoshieFeatured": {
+          "title": "YOSHIE - SOUL DANCE \"Inner City Blues / Make Me Wanna Holler\" 【DANCEWORKS】",
+          "description": "A masterful performance by YOSHIE, one of the key figures in Japanese Soul Dance, showcasing the style's energetic expression to classic soul music."
         }
       }
     }
@@ -1012,6 +1056,7 @@
     "detroitMI": "Detroit, MI",
     "harlemNYC": "Harlem, NYC",
     "southCentralLA": "South Central LA",
-    "oaklandCA": "Oakland, CA"
+    "oaklandCA": "Oakland, CA",
+    "japan": "Japan"
   }
 }

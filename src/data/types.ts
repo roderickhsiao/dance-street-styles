@@ -1,19 +1,20 @@
 // Dance Style ID enum to prevent typos and ensure consistency
 export enum DanceStyleId {
   BREAKING = 'breaking',
+  FOOTWORK = 'footwork',
   HIP_HOP = 'hipHop',
-  POPPING = 'popping',
-  LOCKING = 'locking',
   HOUSE = 'house',
+  HUSTLE = 'hustle',
+  JIT = 'jit',
+  KRUMPING = 'krumping',
+  LITEFEET = 'litefeet',
+  LOCKING = 'locking',
+  POPPING = 'popping',
+  PUNKING = 'punking',
+  SOUL = 'soul',
+  TURFING = 'turfing',
   VOGUING = 'voguing',
   WAACKING = 'waacking',
-  KRUMPING = 'krumping',
-  HUSTLE = 'hustle',
-  PUNKING = 'punking',
-  TURFING = 'turfing',
-  LITEFEET = 'litefeet',
-  FOOTWORK = 'footwork',
-  JIT = 'jit'
 }
 
 export interface DanceStyle {

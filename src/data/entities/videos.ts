@@ -152,6 +152,32 @@ export const VIDEOS: Record<string, VideoEntity> = {
     type: 'history',
     descriptionKey: 'danceStyles.video.jit.pioneers.description',
     thumbnailUrl: 'https://img.youtube.com/vi/JQP_YLTmJ2k/hqdefault.jpg',
+  },
+  'krumping-tommy-clown': {
+    id: 'krumping-tommy-clown',
+    titleKey: 'danceStyles.video.krumping.tommyClown.title',
+    url: 'https://www.youtube.com/watch?v=M0-3QHN2xBQ',
+    type: 'history',
+    descriptionKey: 'danceStyles.video.krumping.tommyClown.description',
+    artistId: 'tommy-the-clown',
+    thumbnailUrl: 'https://img.youtube.com/vi/M0-3QHN2xBQ/hqdefault.jpg',
+  },
+  'hustle-latin-origins': {
+    id: 'hustle-latin-origins',
+    titleKey: 'danceStyles.video.hustle.latinOrigins.title',
+    url: 'https://www.youtube.com/watch?v=Glqp-LQ0bKg',
+    type: 'history',
+    descriptionKey: 'danceStyles.video.hustle.latinOrigins.description',
+    thumbnailUrl: 'https://img.youtube.com/vi/Glqp-LQ0bKg/hqdefault.jpg',
+  },
+  'soul-yoshie-featured': {
+    id: 'soul-yoshie-featured',
+    titleKey: 'danceStyles.video.soul.yoshieFeatured.title',
+    url: 'https://www.youtube.com/watch?v=7qG-u6S75OI',
+    type: 'performance',
+    descriptionKey: 'danceStyles.video.soul.yoshieFeatured.description',
+    artistId: 'yoshie',
+    thumbnailUrl: 'https://img.youtube.com/vi/7qG-u6S75OI/hqdefault.jpg',
   }
 };
 

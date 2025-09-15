@@ -66,6 +66,18 @@ export const danceStyleTags: DanceStyleTag[] = [
     icon: '🌟',
     color: 'tertiary',
   },
+  {
+    id: 'party',
+    nameKey: 'danceTags.party.name',
+    icon: '🎉',
+    color: 'primary',
+  },
+  {
+    id: 'japanese',
+    nameKey: 'danceTags.japanese.name',
+    icon: '🇯🇵',
+    color: 'secondary',
+  },
 ];
 
 // Enhanced data structure - all user-visible content comes from translations
@@ -302,6 +314,7 @@ export const danceStyles: DanceStyle[] = [
       foreground: '#FFFFFF',
       muted: '#424242',
     },
+    featuredVideoId: 'krumping-tommy-clown',
     relatedStyles: [DanceStyleId.HIP_HOP, DanceStyleId.BREAKING, DanceStyleId.TURFING],
   },
   {
@@ -328,6 +341,7 @@ export const danceStyles: DanceStyle[] = [
       foreground: '#FFFFFF',
       muted: '#424242',
     },
+    featuredVideoId: 'hustle-latin-origins',
     relatedStyles: [DanceStyleId.HOUSE, DanceStyleId.HIP_HOP],
   },
   {
@@ -478,6 +492,33 @@ export const danceStyles: DanceStyle[] = [
     },
     featuredVideoId: 'jit-pioneers',
     relatedStyles: [DanceStyleId.FOOTWORK, DanceStyleId.HOUSE, DanceStyleId.HIP_HOP],
+  },
+  {
+    id: DanceStyleId.SOUL,
+    nameKey: 'danceStyles.names.soul',
+    slug: 'soul',
+    shortDescriptionKey: 'danceStyles.shortDescriptions.soul',
+    fullDescriptionKey: 'styles.detailed.soul.description',
+    eraKey: 'eras.1980s1990s',
+    locationKey: 'locations.japan',
+    eraIcon: '📅',
+    locationIcon: '📍',
+    tags: ['socialDance', 'clubCulture', 'party', 'japanese'],
+    origins: {
+      yearKey: 'eras.1980s1990s',
+      locationKey: 'locations.japan',
+      cultureKey: 'styles.detailed.soul.origins.culture',
+    },
+    theme: {
+      primary: '#9C27B0',
+      secondary: '#7B1FA2',
+      accent: '#E1BEE7',
+      background: '#000000',
+      foreground: '#FFFFFF',
+      muted: '#424242',
+    },
+    featuredVideoId: 'soul-yoshie-featured',
+    relatedStyles: [DanceStyleId.HOUSE, DanceStyleId.HIP_HOP],
   },
 ].sort((a, b) => a.id.localeCompare(b.id)); // Sort alphabetically by id
 

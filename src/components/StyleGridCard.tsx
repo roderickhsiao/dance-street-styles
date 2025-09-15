@@ -46,6 +46,7 @@ const getStyleEmoji = (id: string): string => {
     litefeet: '⚡', // Lightning for litefeet's quick movements
     footwork: '💫', // Shooting star for Chicago footwork's fast, dynamic movement
     jit: '🚗', // Car for Detroit jit (Motor City connection)
+    soul: '🎵', // Musical note for soul dance's connection to soul music
   };
   return emojiMap[id] || '🎪';
 };
