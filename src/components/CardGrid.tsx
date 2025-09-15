@@ -90,7 +90,7 @@ export const CardGrid = ({
   };
 
   return (
-    <section className={`py-20 px-6 bg-surface-secondary ${className}`}>
+    <section className={`md:py-20 md:px-6 bg-surface-secondary ${className}`}>
       <div className="max-w-7xl mx-auto">
         {title && (
           <motion.h2 

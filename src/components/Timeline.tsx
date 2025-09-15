@@ -18,7 +18,7 @@ interface TimelineProps {
 
 export const Timeline = ({ events, title, className = "" }: TimelineProps) => {
   return (
-    <section className={`py-20 px-6 bg-surface-secondary ${className}`}>
+    <section className={`py-20 px-2 md:px-6 bg-surface-secondary ${className}`}>
       <div className="max-w-5xl mx-auto">
         {title && (
           <h2 className="text-header-lg font-black mb-16 text-center text-content-primary magazine-headline">

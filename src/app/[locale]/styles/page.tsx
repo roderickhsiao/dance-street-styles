@@ -38,7 +38,7 @@ export default function StylesPage() {
 
       {/* Overview Section */}
       <Section className="py-16" background="secondary">
-        <div className="container mx-auto px-6 text-center">
+        <div className="container mx-auto md:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -57,7 +57,7 @@ export default function StylesPage() {
 
       {/* All Dance Styles */}
       <Section className="py-16" background="primary">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto md:px-6">
           <div className="mb-12 text-center">
             <h2 className="text-header-lg font-black text-content-primary mb-4">
               {tPage('allStyles.title')}
@@ -93,7 +93,7 @@ export default function StylesPage() {
 
       {/* Call to Action */}
       <Section className="py-20 text-center" background="elevated">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

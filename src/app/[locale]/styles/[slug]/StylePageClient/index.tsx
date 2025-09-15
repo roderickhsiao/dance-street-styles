@@ -449,7 +449,7 @@ export function StylePageClient({
           />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 pt-20 pb-6">
+        <div className="relative max-w-7xl mx-auto md:px-6 pt-20 pb-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -639,7 +639,7 @@ export function StylePageClient({
       />
 
       {/* Main Content Layout */}
-      <div className="max-w-7xl mx-auto px-6 py-8">
+      <div className="max-w-7xl mx-auto md:px-6 py-8">
         <div className="grid lg:grid-cols-4 gap-8">
           {/* Desktop Sidebar TOC */}
           <aside
