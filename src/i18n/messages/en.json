@@ -580,6 +580,24 @@
             "The dance continues to evolve, inspiring new generations to push creative boundaries and tell their stories."
           ]
         }
+      },
+      "litefeet": {
+        "overview": {
+          "content": [
+            "Litefeet, also known as 'getting lite,' is a dynamic street dance style from Harlem characterized by intricate footwork and weightless movement that makes dancers appear to have 'light feet.'",
+            "The style emerged from New York's subway culture where dancers perform 'Showtime' on moving trains, combining athletic skill with urban storytelling."
+          ]
+        },
+        "history": {
+          "summary": [
+            "Litefeet emerged from Harlem in the early 2000s (established in 2006), growing from subway performances and street culture.",
+            "The style gained recognition through viral videos and the unique 'Showtime' performances on NYC subway cars."
+          ],
+          "content": [
+            "Litefeet developed as a response to urban life, with dancers creating a weightless, fluid style that could be performed in confined spaces like subway cars.",
+            "The dance became a symbol of Harlem's resilient street culture, spreading through social media and underground dance battles."
+          ]
+        }
       }
     }
   },
@@ -700,7 +718,8 @@
       "krumping": "Krumping",
       "hustle": "The Hustle",
       "punking": "Punking",
-      "turfing": "Turfing"
+      "turfing": "Turfing",
+      "litefeet": "Litefeet"
     },
     "shortDescriptions": {
       "breaking": "Athletic floor work combining toprock, footwork, power moves, and freezes.",
@@ -713,7 +732,8 @@
       "krumping": "High-energy, expressive dance from LA characterized by free, expressive movements.",
       "hustle": "Partner dance from 1970s disco era, featuring synchronized spins and turns.",
       "punking": "LA-originated style from the underground gay community, the foundation that evolved into whacking/waacking.",
-      "turfing": "Oakland-born dance style combining acrobatics, storytelling, and precise footwork."
+      "turfing": "Oakland-born dance style combining acrobatics, storytelling, and precise footwork.",
+      "litefeet": "Harlem street dance with intricate footwork and weightless movement, popularized on NYC subways."
     },
     "video": {
       "locking": {

@@ -387,6 +387,41 @@ export const danceStyles: DanceStyle[] = [
       DanceStyleId.BREAKING,
     ],
   },
+  {
+    id: DanceStyleId.LITEFEET,
+    nameKey: 'danceStyles.names.litefeet',
+    slug: 'litefeet',
+    shortDescriptionKey: 'danceStyles.shortDescriptions.litefeet',
+    fullDescriptionKey: 'styles.detailed.litefeet.description',
+    eraKey: 'eras.2000s',
+    locationKey: 'locations.harlemNYC',
+    eraIcon: '📅',
+    locationIcon: '📍',
+    tags: ['hipHopFoundation', 'socialDance', 'modernStreet'],
+    origins: {
+      yearKey: 'eras.2000s',
+      locationKey: 'locations.harlemNYC',
+      cultureKey: 'styles.detailed.litefeet.origins.culture',
+    },
+    characteristicsKey: 'styles.detailed.litefeet.characteristics.items',
+    keyMovesKey: 'styles.detailed.litefeet.keyMoves.items',
+    influentialArtistsKey: 'styles.detailed.litefeet.influentialArtists.items',
+    videosKey: 'styles.detailed.litefeet.videos.items',
+    timelineKey: 'styles.detailed.litefeet.timeline.events',
+    theme: {
+      primary: '#FF6B35',
+      secondary: '#F7931E',
+      accent: '#FFD23F',
+      background: '#000000',
+      foreground: '#FFFFFF',
+      muted: '#424242',
+    },
+    relatedStyles: [
+      DanceStyleId.HIP_HOP,
+      DanceStyleId.HOUSE,
+      DanceStyleId.BREAKING,
+    ],
+  },
 ];
 
 // Helper functions for comprehensive data access

@@ -10,7 +10,8 @@ export enum DanceStyleId {
   KRUMPING = 'krumping',
   HUSTLE = 'hustle',
   PUNKING = 'punking',
-  TURFING = 'turfing'
+  TURFING = 'turfing',
+  LITEFEET = 'litefeet'
 }
 
 export interface DanceStyle {
