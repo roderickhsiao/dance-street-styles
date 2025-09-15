@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion } from '@/lib/motion';
 import { useTranslations } from 'next-intl';
 import { useMemo } from 'react';
 import { MainNavigation } from '../../components/MainNavigation';

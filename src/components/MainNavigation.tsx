@@ -2,7 +2,8 @@
 import { Link, usePathname } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
+import { motion } from '@/lib/motion';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
 export function MainNavigation() {

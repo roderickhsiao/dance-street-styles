@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from '@/lib/motion';
 import { useTranslations } from 'next-intl';
 import { useState, useRef } from 'react';
 import Image from 'next/image';

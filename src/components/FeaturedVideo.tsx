@@ -2,7 +2,8 @@ import { PlayCircle } from 'lucide-react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
+import { motion } from '@/lib/motion';
 import { VideoEntity } from '@/data/types';
 
 interface FeaturedVideoProps {

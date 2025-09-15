@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { polyfillCountryFlagEmojis } from 'country-flag-emoji-polyfill';
+import { MotionProvider } from '@/components/MotionProvider';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -51,7 +52,11 @@ export default function RootLayout({ children }: Props) {
             />
           </filter>
         </svg>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <MotionProvider>
+            {children}
+          </MotionProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

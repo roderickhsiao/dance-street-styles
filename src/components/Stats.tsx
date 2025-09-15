@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
+import { motion } from '@/lib/motion';
 
 interface StatItem {
   value: string;

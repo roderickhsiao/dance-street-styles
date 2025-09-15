@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from '@/lib/motion';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { MainNavigation } from '@/components/MainNavigation';
