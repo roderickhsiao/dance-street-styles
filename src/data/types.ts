@@ -11,7 +11,9 @@ export enum DanceStyleId {
   HUSTLE = 'hustle',
   PUNKING = 'punking',
   TURFING = 'turfing',
-  LITEFEET = 'litefeet'
+  LITEFEET = 'litefeet',
+  FOOTWORK = 'footwork',
+  JIT = 'jit'
 }
 
 export interface DanceStyle {

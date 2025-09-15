@@ -598,6 +598,42 @@
             "The dance became a symbol of Harlem's resilient street culture, spreading through social media and underground dance battles."
           ]
         }
+      },
+      "footwork": {
+        "overview": {
+          "content": [
+            "Chicago Footwork, also known as juke in its earlier development, is a dance culture and electronic music genre that emerged in Chicago in the mid-1980s, originally performed to ghetto house music.",
+            "By the early 1990s, footwork had evolved to be performed at 160 beats per minute, featuring intricate juke-style combinations and explosive movements that define the genre."
+          ]
+        },
+        "history": {
+          "summary": [
+            "Chicago Footwork originated in the mid-1980s from ghetto house culture, with key developments by House-O-Matic's and later by Anthony 'Ant' Brown.",
+            "The juke/footwork style evolved from individual moves to complex combinations, with battle groups like Wolfpak and The Phirm emerging in the 1990s."
+          ],
+          "content": [
+            "Footwork traces back to the legendary dance group House-O-Matic's on Chicago's Southside, where dancers like Calvin, Goose, and Michael Stamps developed 'Dance Group Footwork' in 1988-1989.",
+            "Anthony 'Ant' Brown created the foundational 'Erk N Jerkz' step in the early 1990s, training dancers in 'The Dungeon' basement and revolutionizing the juke style into the intricate combinations we know today."
+          ]
+        }
+      },
+      "jit": {
+        "overview": {
+          "content": [
+            "Detroit Jit is a street dance style originating in the 1970s with the Jitterbugs, characterized by explosive footwork that emphasizes feet hitting the air rather than the dancefloor.",
+            "The style features quick, jerky movements with restricted upper body motion, performed to ghettotech music at around 150 BPM."
+          ]
+        },
+        "history": {
+          "summary": [
+            "Detroit Jit began in the 1970s with the Jitterbugs and developed alongside Detroit's electronic music scene, particularly ghettotech.",
+            "The style represents Detroit's unique urban dance culture, with battle crews competing against each other and Chicago Footwork dancers."
+          ],
+          "content": [
+            "Jit emerged from Detroit's street culture in the 1970s, developing its distinctive style of explosive, fast-paced movements that make dancers appear to defy gravity.",
+            "The dance culture struggled with mainstream recognition, as noted by promoter Martez Claybren, but maintains a strong underground scene and remains central to Detroit's annual music festivals."
+          ]
+        }
       }
     }
   },
@@ -653,7 +689,8 @@
       "tags": {
         "streetDance": "Street Dance"
       },
-      "sourceLabel": "Source:"
+      "sourceLabel": "Source:",
+      "relatedStyles": "Related Styles"
     }
   },
   "moves": {
@@ -719,7 +756,9 @@
       "hustle": "The Hustle",
       "punking": "Punking",
       "turfing": "Turfing",
-      "litefeet": "Litefeet"
+      "litefeet": "Litefeet",
+      "footwork": "Chicago Footwork",
+      "jit": "Detroit Jit"
     },
     "shortDescriptions": {
       "breaking": "Athletic floor work combining toprock, footwork, power moves, and freezes.",
@@ -733,7 +772,9 @@
       "hustle": "Partner dance from 1970s disco era, featuring synchronized spins and turns.",
       "punking": "LA-originated style from the underground gay community, the foundation that evolved into whacking/waacking.",
       "turfing": "Oakland-born dance style combining acrobatics, storytelling, and precise footwork.",
-      "litefeet": "Harlem street dance with intricate footwork and weightless movement, popularized on NYC subways."
+      "litefeet": "Harlem street dance with intricate footwork and weightless movement, popularized on NYC subways.",
+      "footwork": "Chicago juke/footwork culture that evolved from ghetto house in the mid-1980s, featuring intricate footwork combinations performed at 160 BPM.",
+      "jit": "Detroit street dance originating in the 1970s with the Jitterbugs, emphasizing feet hitting the air with explosive, fast-paced movements to ghettotech music."
     },
     "video": {
       "locking": {
@@ -790,6 +831,22 @@
         "lgbtqHistory": {
           "title": "How the LGBTQ community created voguing",
           "description": "Vogue, the dance, not the magazine. Explore the origins of voguing in the LGBTQ ballroom community and how this powerful form of expression emerged from Harlem's underground scene."
+        }
+      },
+      "footwork": {
+        "featured": {
+          "title": "Chicago Footwork Dance Battle",
+          "description": "Witness the explosive energy and intricate footwork combinations of Chicago's juke/footwork culture in this intense dance battle showcase."
+        },
+        "letMeSee": {
+          "title": "Let Me See Your Footwork",
+          "description": "A dynamic demonstration of Chicago footwork techniques and the cultural significance of juke music in the dance community."
+        }
+      },
+      "jit": {
+        "pioneers": {
+          "title": "Detroit OG's - Pioneers of the Jit: The Jitterbugs (Trailer)",
+          "description": "A documentary trailer exploring the pioneers of Detroit Jit, tracing the origins back to the Jitterbugs and the evolution of this unique Motor City dance style."
         }
       }
     }
@@ -942,6 +999,7 @@
     "1970s": "1970s",
     "1970s1980s": "1970s-1980s",
     "1980s1990s": "1980s-1990s",
+    "1990s2000s": "1990s-2000s",
     "2000s": "2000s"
   },
   "locations": {
@@ -950,6 +1008,8 @@
     "fresnoCA": "Fresno, CA",
     "losAngelesCA": "Los Angeles, CA",
     "chicagoNYC": "Chicago & NYC",
+    "chicagoIL": "Chicago, IL",
+    "detroitMI": "Detroit, MI",
     "harlemNYC": "Harlem, NYC",
     "southCentralLA": "South Central LA",
     "oaklandCA": "Oakland, CA"

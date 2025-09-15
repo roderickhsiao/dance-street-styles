@@ -128,6 +128,30 @@ export const VIDEOS: Record<string, VideoEntity> = {
     type: 'history',
     descriptionKey: 'danceStyles.video.voguing.lgbtqHistory.description',
     thumbnailUrl: 'https://img.youtube.com/vi/XJ6fqQX_e9U/hqdefault.jpg',
+  },
+  'footwork-featured': {
+    id: 'footwork-featured',
+    titleKey: 'danceStyles.video.footwork.featured.title',
+    url: 'https://www.youtube.com/watch?v=HQ5DjsSbzz0',
+    type: 'performance',
+    descriptionKey: 'danceStyles.video.footwork.featured.description',
+    thumbnailUrl: 'https://img.youtube.com/vi/HQ5DjsSbzz0/hqdefault.jpg',
+  },
+  'footwork-let-me-see': {
+    id: 'footwork-let-me-see',
+    titleKey: 'danceStyles.video.footwork.letMeSee.title',
+    url: 'https://www.youtube.com/watch?v=TVIvzFKY0Ps',
+    type: 'performance',
+    descriptionKey: 'danceStyles.video.footwork.letMeSee.description',
+    thumbnailUrl: 'https://img.youtube.com/vi/TVIvzFKY0Ps/hqdefault.jpg',
+  },
+  'jit-pioneers': {
+    id: 'jit-pioneers',
+    titleKey: 'danceStyles.video.jit.pioneers.title',
+    url: 'https://www.youtube.com/watch?v=JQP_YLTmJ2k',
+    type: 'history',
+    descriptionKey: 'danceStyles.video.jit.pioneers.description',
+    thumbnailUrl: 'https://img.youtube.com/vi/JQP_YLTmJ2k/hqdefault.jpg',
   }
 };
 

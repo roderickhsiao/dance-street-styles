@@ -351,41 +351,54 @@ export function StylePageClient({
   // Filter sections based on content availability
   const availableSections = allSections.filter(() => hasContent());
 
-  // Always show related styles if available
-  // if (relatedStyles && relatedStyles.length > 0) {
-  //   allSections.push({
-  //     id: 'related',
-  //     labelKey: tUi('relatedStyles'),
-  //     icon: '🤝',
-  //     accentColor: 'secondary',
-  //     component: (
-  //       <DanceStyleSectionLayout
-  //         id="related"
-  //         title={tUi('relatedStyles')}
-  //         emoji="🤝"
-  //         accentColor="secondary"
-  //       >
-  //         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3">
-  //           {relatedStyles.map((relatedStyle) => (
-  //             <div
-  //               key={relatedStyle.slug}
-  //               className="bg-surface-secondary/30 border border-stroke-secondary/30 rounded-xl p-2 md:p-3 hover:bg-surface-secondary/50 hover:border-stroke-secondary/50 transition-all duration-300 group"
-  //             >
-  //               <h3 className="text-body-sm md:text-body-md font-semibold text-content-primary mb-1">
-  //                 {relatedStyle.name}
-  //               </h3>
-  //               <p className="text-body-xs text-content-tertiary">
-  //                 {relatedStyle.shortDescription}
-  //               </p>
-  //             </div>
-  //           ))}
-  //         </div>
-  //       </DanceStyleSectionLayout>
-  //     ),
-  //   });
-  // }
-
-  // Removed scroll listener logic to avoid conflict with viewport detection
+  if (relatedStyles?.length) {
+    availableSections.push({
+      id: 'related',
+      labelKey: tUi('relatedStyles'),
+      icon: '🤝',
+      accentColor: 'secondary',
+      component: (
+        <DanceStyleSectionLayout
+          id="related"
+          title={tUi('relatedStyles')}
+          emoji="🤝"
+          accentColor="secondary"
+        >
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+            {relatedStyles.map((relatedStyle) => (
+              <Link
+                key={relatedStyle.slug}
+                href={`/styles/${relatedStyle.slug}`}
+                className="group block bg-surface-elevated/50 border border-stroke-secondary/40 rounded-lg p-4 hover:border-accent-primary/50 hover:bg-surface-elevated/70 transition-all duration-200"
+              >
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-body-md font-semibold text-content-primary group-hover:text-accent-primary transition-colors">
+                    {tNames(relatedStyle.id)}
+                  </h3>
+                  <ChevronRight className="h-4 w-4 text-content-tertiary group-hover:text-accent-primary transition-colors flex-shrink-0 ml-2" />
+                </div>
+                
+                <p className="text-body-sm text-content-secondary mb-3 leading-relaxed">
+                  {tDescriptions(relatedStyle.id)}
+                </p>
+                
+                <div className="flex items-center gap-3 text-body-xs text-content-tertiary">
+                  <div className="flex items-center gap-1">
+                    <MapPin className="h-3 w-3" />
+                    <span>{tStyles(relatedStyle.locationKey)}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Clock className="h-3 w-3" />
+                    <span>{tStyles(relatedStyle.eraKey)}</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </DanceStyleSectionLayout>
+      ),
+    });
+  }
 
   useEffect(() => {
     if (danceStyle) {
@@ -449,7 +462,7 @@ export function StylePageClient({
           />
         </div>
 
-        <div className="relative max-w-7xl mx-auto md:px-6 pt-20 pb-6">
+        <div className="relative max-w-7xl mx-auto px-4 md:px-6 pt-20 pb-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

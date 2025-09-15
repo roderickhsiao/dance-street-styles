@@ -44,6 +44,8 @@ const getStyleEmoji = (id: string): string => {
     punking: '🎭', // Theater mask for punking's theatricality
     turfing: '🌉', // Bridge for Oakland/Bay Area turfing
     litefeet: '⚡', // Lightning for litefeet's quick movements
+    footwork: '💫', // Shooting star for Chicago footwork's fast, dynamic movement
+    jit: '🚗', // Car for Detroit jit (Motor City connection)
   };
   return emojiMap[id] || '🎪';
 };

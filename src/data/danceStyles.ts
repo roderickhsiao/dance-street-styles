@@ -101,7 +101,7 @@ export const danceStyles: DanceStyle[] = [
       foreground: '#ECF0F1',
       muted: '#7F8C8D',
     },
-    relatedStyles: [DanceStyleId.HIP_HOP],
+    relatedStyles: [DanceStyleId.HIP_HOP, DanceStyleId.POPPING, DanceStyleId.LOCKING],
   },
   {
     id: DanceStyleId.HIP_HOP,
@@ -129,11 +129,7 @@ export const danceStyles: DanceStyle[] = [
       foreground: '#FFFFFF',
       muted: '#4A4A4A',
     },
-    relatedStyles: [
-      DanceStyleId.BREAKING,
-      DanceStyleId.POPPING,
-      DanceStyleId.LOCKING,
-    ],
+    relatedStyles: [DanceStyleId.BREAKING, DanceStyleId.POPPING, DanceStyleId.LOCKING, DanceStyleId.KRUMPING],
   },
   {
     id: DanceStyleId.POPPING,
@@ -160,7 +156,7 @@ export const danceStyles: DanceStyle[] = [
       foreground: '#FFFFFF',
       muted: '#95A5A6',
     },
-    relatedStyles: [DanceStyleId.LOCKING],
+    relatedStyles: [DanceStyleId.LOCKING, DanceStyleId.BREAKING, DanceStyleId.HIP_HOP],
   },
   {
     id: DanceStyleId.LOCKING,
@@ -198,6 +194,7 @@ export const danceStyles: DanceStyle[] = [
       DanceStyleId.POPPING,
       DanceStyleId.WAACKING,
       DanceStyleId.HIP_HOP,
+      DanceStyleId.BREAKING,
     ],
   },
   {
@@ -225,7 +222,7 @@ export const danceStyles: DanceStyle[] = [
       foreground: '#2C3E50',
       muted: '#BDC3C7',
     },
-    relatedStyles: [DanceStyleId.VOGUING, DanceStyleId.WAACKING],
+    relatedStyles: [DanceStyleId.HIP_HOP, DanceStyleId.LITEFEET, DanceStyleId.HUSTLE, DanceStyleId.FOOTWORK],
   },
   {
     id: DanceStyleId.VOGUING,
@@ -252,7 +249,7 @@ export const danceStyles: DanceStyle[] = [
       foreground: '#FFFFFF',
       muted: '#424242',
     },
-    relatedStyles: [DanceStyleId.HOUSE, DanceStyleId.WAACKING],
+    relatedStyles: [DanceStyleId.WAACKING, DanceStyleId.PUNKING, DanceStyleId.HOUSE],
   },
   {
     id: DanceStyleId.WAACKING,
@@ -279,7 +276,7 @@ export const danceStyles: DanceStyle[] = [
       foreground: '#FFFFFF',
       muted: '#424242',
     },
-    relatedStyles: [DanceStyleId.VOGUING, DanceStyleId.LOCKING],
+    relatedStyles: [DanceStyleId.VOGUING, DanceStyleId.LOCKING, DanceStyleId.PUNKING],
   },
   {
     id: DanceStyleId.KRUMPING,
@@ -305,7 +302,7 @@ export const danceStyles: DanceStyle[] = [
       foreground: '#FFFFFF',
       muted: '#424242',
     },
-    relatedStyles: [DanceStyleId.HIP_HOP, DanceStyleId.BREAKING],
+    relatedStyles: [DanceStyleId.HIP_HOP, DanceStyleId.BREAKING, DanceStyleId.TURFING],
   },
   {
     id: DanceStyleId.HUSTLE,
@@ -331,7 +328,7 @@ export const danceStyles: DanceStyle[] = [
       foreground: '#FFFFFF',
       muted: '#424242',
     },
-    relatedStyles: [DanceStyleId.HOUSE],
+    relatedStyles: [DanceStyleId.HOUSE, DanceStyleId.HIP_HOP],
   },
   {
     id: DanceStyleId.PUNKING,
@@ -358,7 +355,7 @@ export const danceStyles: DanceStyle[] = [
       foreground: '#FFFFFF',
       muted: '#424242',
     },
-    relatedStyles: [DanceStyleId.WAACKING, DanceStyleId.VOGUING],
+    relatedStyles: [DanceStyleId.WAACKING, DanceStyleId.VOGUING, DanceStyleId.LOCKING],
   },
   {
     id: DanceStyleId.TURFING,
@@ -389,7 +386,7 @@ export const danceStyles: DanceStyle[] = [
     relatedStyles: [
       DanceStyleId.HIP_HOP,
       DanceStyleId.POPPING,
-      DanceStyleId.BREAKING,
+      DanceStyleId.KRUMPING,
     ],
   },
   {
@@ -424,8 +421,63 @@ export const danceStyles: DanceStyle[] = [
     relatedStyles: [
       DanceStyleId.HIP_HOP,
       DanceStyleId.HOUSE,
-      DanceStyleId.BREAKING,
+      DanceStyleId.HUSTLE,
     ],
+  },
+  {
+    id: DanceStyleId.FOOTWORK,
+    nameKey: 'danceStyles.names.footwork',
+    slug: 'footwork',
+    shortDescriptionKey: 'danceStyles.shortDescriptions.footwork',
+    fullDescriptionKey: 'styles.detailed.footwork.description',
+    eraKey: 'eras.1980s1990s',
+    locationKey: 'locations.chicagoIL',
+    eraIcon: '📅',
+    locationIcon: '📍',
+    tags: ['clubCulture', 'streetBattle', 'modernStreet', 'underground'],
+    origins: {
+      yearKey: 'eras.1980s1990s',
+      locationKey: 'locations.chicagoIL',
+      cultureKey: 'styles.detailed.footwork.origins.culture',
+    },
+    theme: {
+      primary: '#FF6F00',
+      secondary: '#FF8F00',
+      accent: '#FFC107',
+      background: '#000000',
+      foreground: '#FFFFFF',
+      muted: '#424242',
+    },
+    featuredVideoId: 'footwork-featured',
+    videoIds: ['footwork-let-me-see'],
+    relatedStyles: [DanceStyleId.HOUSE, DanceStyleId.JIT, DanceStyleId.HIP_HOP],
+  },
+  {
+    id: DanceStyleId.JIT,
+    nameKey: 'danceStyles.names.jit',
+    slug: 'jit',
+    shortDescriptionKey: 'danceStyles.shortDescriptions.jit',
+    fullDescriptionKey: 'styles.detailed.jit.description',
+    eraKey: 'eras.1970s1980s',
+    locationKey: 'locations.detroitMI',
+    eraIcon: '📅',
+    locationIcon: '📍',
+    tags: ['clubCulture', 'socialDance', 'modernStreet', 'underground'],
+    origins: {
+      yearKey: 'eras.1970s1980s',
+      locationKey: 'locations.detroitMI',
+      cultureKey: 'styles.detailed.jit.origins.culture',
+    },
+    theme: {
+      primary: '#4CAF50',
+      secondary: '#388E3C',
+      accent: '#8BC34A',
+      background: '#000000',
+      foreground: '#FFFFFF',
+      muted: '#424242',
+    },
+    featuredVideoId: 'jit-pioneers',
+    relatedStyles: [DanceStyleId.FOOTWORK, DanceStyleId.HOUSE, DanceStyleId.HIP_HOP],
   },
 ].sort((a, b) => a.id.localeCompare(b.id)); // Sort alphabetically by id
 
