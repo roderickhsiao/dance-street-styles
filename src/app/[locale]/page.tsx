@@ -200,8 +200,13 @@ export default function HomePage() {
       </section>
 
       {/* Dance Styles Grid */}
-      <section id="styles" className="py-12 sm:py-16 bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section id="styles" className="py-12 sm:py-16 bg-gradient-to-br from-gray-950 via-black to-gray-900 relative overflow-hidden">
+        {/* Elite backdrop effects */}
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-transparent to-purple-600/5"></div>
+        <div className="absolute top-0 start-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 end-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="text-center mb-8 sm:mb-10 scroll-fade-in">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-3 magazine-headline">
               {t.rich('styles.titleFull', {
@@ -218,7 +223,7 @@ export default function HomePage() {
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
             id="styles"
           >
-            {danceStyles.slice(1).map((style, index) => (
+            {danceStyles.map((style, index) => (
               <StyleGridCard
                 key={style.id}
                 id={style.id}

@@ -422,7 +422,7 @@ export const danceStyles: DanceStyle[] = [
       DanceStyleId.BREAKING,
     ],
   },
-];
+].sort((a, b) => a.id.localeCompare(b.id)); // Sort alphabetically by id
 
 // Helper functions for comprehensive data access
 export const getDanceStyleById = (

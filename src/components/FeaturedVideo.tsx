@@ -86,7 +86,7 @@ export function FeaturedVideo({ video, className = '' }: FeaturedVideoProps) {
               )}
 
               {/* dark gradient overlay at bottom for title/description */}
-              <div className="absolute left-0 right-0 bottom-0 p-4 bg-gradient-to-t from-black/60 via-black/30 to-transparent">
+              <div className="absolute start-0 end-0 bottom-0 p-4 bg-gradient-to-t from-black/60 via-black/30 to-transparent">
                 <div className="flex items-center justify-between gap-4">
                   <div className="text-left">
                     <h3 className="text-body-sm md:text-body-md font-bold text-white leading-tight">

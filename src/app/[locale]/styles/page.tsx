@@ -6,7 +6,7 @@ import { MainNavigation } from '@/components/MainNavigation';
 import { Hero } from '@/components/Hero';
 import { Section } from '@/components/Section';
 import { CTAButton } from '@/components/ui/cta-button';
-import { DanceStyleGridCard } from '@/app/[locale]/styles/parts/DanceStyleGridCard';
+import { StyleGridCard } from '@/components/StyleGridCard';
 import { getAllDanceStyles } from '@/data/danceStyles';
 
 export default function StylesPage() {
@@ -75,15 +75,20 @@ export default function StylesPage() {
           >
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {sortedStyles.map((style, index) => (
-                <DanceStyleGridCard
+                <StyleGridCard
                   key={style.id}
+                  id={style.id}
                   name={tStyleNames(style.id)}
-                  description={tStyleDescriptions(style.id)}
+                  slug={style.slug}
+                  shortDescription={tStyleDescriptions(style.id)}
+                  origins={{ locationKey: style.locationKey }}
+                  index={index}
+                  tags={style.tags}
                   era={tGlobal(style.eraKey)}
                   location={tGlobal(style.locationKey)}
-                  tags={style.tags}
-                  slug={style.slug}
-                  index={index}
+                  useMotion={true}
+                  showTags={true}
+                  showEra={true}
                 />
               ))}
             </div>
