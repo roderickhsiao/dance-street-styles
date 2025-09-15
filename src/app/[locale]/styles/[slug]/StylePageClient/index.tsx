@@ -37,16 +37,42 @@ interface SectionConfig {
   component: React.ReactNode;
 }
 
+// Helper to render paragraphs for section content
+function RenderParagraphs({
+  paragraphs,
+  className,
+}: {
+  paragraphs: string[];
+  className?: string;
+}) {
+  if (!paragraphs || paragraphs.length === 0) return null;
+  return (
+    <div className="space-y-2 md:space-y-3">
+      {paragraphs.map((paragraph, idx) => (
+        <p key={idx} className={className}>
+          {paragraph}
+        </p>
+      ))}
+    </div>
+  );
+}
+
 // Create a wrapper component for each section to handle viewport detection
 interface ViewportSectionProps {
   section: SectionConfig;
   // Notify parent when section becomes visible (enter). Parent uses this to set activeSection.
   onEnter: (sectionId: string) => void;
+  // Notify parent when section leaves viewport
+  onLeave?: (sectionId: string) => void;
 }
 
-const ViewportSection = ({ section, onEnter }: ViewportSectionProps) => {
+const ViewportSection = ({
+  section,
+  onEnter,
+  onLeave,
+}: ViewportSectionProps) => {
   const ref = useRef<HTMLDivElement>(null);
-  const { inViewport, enterCount } = useInViewport(ref, {
+  const { inViewport, enterCount, leaveCount } = useInViewport(ref, {
     rootMargin: '-20% 0px -60% 0px', // Trigger when section is 20% from top, 60% from bottom
     threshold: 0.1,
   });
@@ -56,9 +82,11 @@ const ViewportSection = ({ section, onEnter }: ViewportSectionProps) => {
     if (inViewport && enterCount > 0) {
       onEnter(section.id);
     }
-  }, [inViewport, enterCount, section.id, onEnter]);
-
-  // Removed unused getAccentClasses
+    // When the section leaves viewport, notify parent
+    if (!inViewport && leaveCount > 0 && typeof onLeave === 'function') {
+      onLeave(section.id);
+    }
+  }, [inViewport, enterCount, leaveCount, section.id, onEnter, onLeave]);
 
   return (
     <div ref={ref} id={section.id}>
@@ -75,26 +103,41 @@ export function StylePageClient({
   const { applyTheme, clearTheme } = useTheme();
   const [activeSection, setActiveSection] = useState('overview');
   const [isTocOpen, setIsTocOpen] = useState(false);
-  // We will rely on per-section `onEnter` callbacks from useInViewport
+  const visibleSectionsRef = useRef<string[]>([]);
   const tNames = useTranslations('danceStyles.names');
   const tDescriptions = useTranslations('danceStyles.shortDescriptions');
   const tTags = useTranslations('danceTags');
   const tStyles = useTranslations();
-  const tUi = useTranslations('ui');
-  const tOverview = useTranslations(`styles.detailed.${danceStyle.slug}.overview`);
-  const tHistory = useTranslations(`styles.detailed.${danceStyle.slug}.history`);
+  const tUi = useTranslations('stylesPage.ui');
+  const tOverview = useTranslations(
+    `styles.detailed.${danceStyle.slug}.overview`
+  );
+  const tHistory = useTranslations(
+    `styles.detailed.${danceStyle.slug}.history`
+  );
 
-  // Handle section enter events from ViewportSection
+  // Track visible sections and set activeSection to the last visible one
   const handleSectionEnter = (sectionId: string) => {
-    setActiveSection(sectionId);
+    const current = visibleSectionsRef.current;
+    if (!current.includes(sectionId)) {
+      visibleSectionsRef.current = [...current, sectionId];
+      const nextActive = visibleSectionsRef.current[visibleSectionsRef.current.length - 1];
+      if (activeSection !== nextActive) {
+        setActiveSection(nextActive);
+      }
+    }
   };
-
-  // Helper function to check if content exists
-  const hasContent = (): boolean => {
-    // For now, we'll include all sections and let the components handle empty states
-    return true;
+  const handleSectionLeave = (sectionId: string) => {
+    const current = visibleSectionsRef.current;
+    visibleSectionsRef.current = current.filter((id) => id !== sectionId);
+    const nextActive = visibleSectionsRef.current.length > 0
+      ? visibleSectionsRef.current[visibleSectionsRef.current.length - 1]
+      : 'overview';
+    if (activeSection !== nextActive) {
+      setActiveSection(nextActive);
+    }
   };
-
+  const hasContent = (): boolean => true;
   // Format all section data and translations here
   const allSections: SectionConfig[] = [
     {
@@ -109,22 +152,16 @@ export function StylePageClient({
           emoji="📖"
           accentColor="primary"
         >
-          {(() => {
-            let paragraphs: string[] = [];
-            try {
-              paragraphs = tOverview.raw('content') as string[];
-            } catch {}
-            if (!paragraphs || paragraphs.length === 0) return null;
-            return (
-              <div className="space-y-2 md:space-y-3">
-                {paragraphs.map((paragraph, idx) => (
-                  <p key={idx} className="text-body-sm md:text-body-md text-content-secondary leading-relaxed">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-            );
-          })()}
+          <RenderParagraphs
+            paragraphs={(() => {
+              try {
+                return tOverview.raw('content') as string[];
+              } catch {
+                return [];
+              }
+            })()}
+            className="text-body-sm md:text-body-md text-content-secondary leading-relaxed"
+          />
         </DanceStyleSectionLayout>
       ),
     },
@@ -140,66 +177,21 @@ export function StylePageClient({
           emoji="⏰"
           accentColor="secondary"
         >
-          {/* Render translated summary above timeline */}
           <div className="mb-8">
-            {(() => {
-              let paragraphs: string[] = [];
-              try {
-                paragraphs = tHistory.raw('summary') as string[];
-              } catch {}
-              if (!paragraphs || paragraphs.length === 0) return null;
-              return (
-                <div className="space-y-2 md:space-y-3">
-                  {paragraphs.map((paragraph, idx) => (
-                    <p key={idx} className="text-body-md text-content-secondary leading-relaxed">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              );
-            })()}
+            <RenderParagraphs
+              paragraphs={(() => {
+                try {
+                  return tHistory.raw('summary') as string[];
+                } catch {
+                  return [];
+                }
+              })()}
+              className="text-body-md text-content-secondary leading-relaxed"
+            />
           </div>
         </DanceStyleSectionLayout>
       ),
     },
-    // {
-    //   id: 'pioneers',
-    //   labelKey: tStyles('stylesPage.sections.pioneers'),
-    //   icon: '⭐',
-    //   accentColor: 'tertiary',
-    //   component: (
-    //     <DanceStyleSectionLayout
-    //       id="pioneers"
-    //       title={tStyles('stylesPage.sections.pioneers')}
-    //       emoji="⭐"
-    //       accentColor="tertiary"
-    //     >
-    //       {/* Example: list of formatted pioneers */}
-    //       <ul>
-    //         {Array.isArray(
-    //           (danceStyle as { pioneers?: Pioneer[] }).pioneers
-    //         ) ? (
-    //           (danceStyle as { pioneers?: Pioneer[] }).pioneers!.map(
-    //             (pioneer) => (
-    //               <li key={pioneer.id} className="mb-2">
-    //                 <span className="font-bold text-content-primary">
-    //                   {pioneer.name}
-    //                 </span>
-    //                 {pioneer.description && (
-    //                   <span className="text-content-secondary ml-2">
-    //                     {pioneer.description}
-    //                   </span>
-    //                 )}
-    //               </li>
-    //             )
-    //           )
-    //         ) : (
-    //           <li className="text-content-tertiary">No pioneers listed.</li>
-    //         )}
-    //       </ul>
-    //     </DanceStyleSectionLayout>
-    //   ),
-    // },
     // {
     //   id: 'culture',
     //   labelKey: tStyles('stylesPage.sections.culture'),
@@ -229,6 +221,7 @@ export function StylePageClient({
     //       accentColor="tertiary"
     //     >
     //       <FeaturedVideo
+    //              onLeave={handleSectionLeave}
     //         video={
     //           danceStyle.featuredVideoId
     //             ? getVideoById(danceStyle.featuredVideoId)
@@ -243,6 +236,7 @@ export function StylePageClient({
     //   labelKey: tStyles('stylesPage.sections.techniques'),
     //   icon: '⚡',
     //   accentColor: 'secondary',
+    // Notify parent when section leaves viewport
     //   component: (
     //     <DanceStyleSectionLayout
     //       id="techniques"
@@ -255,6 +249,104 @@ export function StylePageClient({
     //   ),
     // },
   ];
+
+  // Filter sections based on content availability
+  // const availableSections = allSections.filter(() => hasContent());
+
+  // Always show related styles if available
+  // if (relatedStyles && relatedStyles.length > 0) {
+  //   allSections.push({
+  //   labelKey: tStyles('stylesPage.sections.pioneers'),
+  //   icon: '⭐',
+  //   accentColor: 'tertiary',
+  //   component: (
+  //     <DanceStyleSectionLayout
+  //       id="pioneers"
+  //       title={tStyles('stylesPage.sections.pioneers')}
+  //       emoji="⭐"
+  //       accentColor="tertiary"
+  //     >
+  //       {/* Example: list of formatted pioneers */}
+  //       <ul>
+  //         {Array.isArray(
+  //           (danceStyle as { pioneers?: Pioneer[] }).pioneers
+  //         ) ? (
+  //           (danceStyle as { pioneers?: Pioneer[] }).pioneers!.map(
+  //             (pioneer) => (
+  //               <li key={pioneer.id} className="mb-2">
+  //                 <span className="font-bold text-content-primary">
+  //                   {pioneer.name}
+  //                 </span>
+  //                 {pioneer.description && (
+  //                   <span className="text-content-secondary ml-2">
+  //                     {pioneer.description}
+  //                   </span>
+  //                 )}
+  //               </li>
+  //             )
+  //           )
+  //         ) : (
+  //           <li className="text-content-tertiary">No pioneers listed.</li>
+  //         )}
+  //       </ul>
+  //     </DanceStyleSectionLayout>
+  //   ),
+  // },
+  // {
+  //   id: 'culture',
+  //   labelKey: tStyles('stylesPage.sections.culture'),
+  //   icon: '🌍',
+  //   accentColor: 'primary',
+  //   component: (
+  //     <DanceStyleSectionLayout
+  //       id="culture"
+  //       title={tStyles('stylesPage.sections.culture')}
+  //       emoji="🌍"
+  //       accentColor="primary"
+  //     >
+  //       <p>{tStyles(`${danceStyle.id}.culture`)}</p>
+  //     </DanceStyleSectionLayout>
+  //   ),
+  // },
+  // {
+  //   id: 'featured-video',
+  //   labelKey: tStyles('stylesPage.sections.featuredVideo'),
+  //   icon: '🎬',
+  //   accentColor: 'tertiary',
+  //   component: (
+  //     <DanceStyleSectionLayout
+  //       id="featured-video"
+  //       title={tStyles('stylesPage.sections.featuredVideo')}
+  //       emoji="🎬"
+  //       accentColor="tertiary"
+  //     >
+  //       <FeaturedVideo
+  //         video={
+  //           danceStyle.featuredVideoId
+  //             ? getVideoById(danceStyle.featuredVideoId)
+  //             : undefined
+  //         }
+  //       />
+  //     </DanceStyleSectionLayout>
+  //   ),
+  // },
+  // {
+  //   id: 'techniques',
+  //   labelKey: tStyles('stylesPage.sections.techniques'),
+  //   icon: '⚡',
+  //   accentColor: 'secondary',
+  //   component: (
+  //     <DanceStyleSectionLayout
+  //       id="techniques"
+  //       title={tStyles('stylesPage.sections.techniques')}
+  //       emoji="⚡"
+  //       accentColor="secondary"
+  //     >
+  //       <p>{tStyles(`${danceStyle.id}.techniques`)}</p>
+  //     </DanceStyleSectionLayout>
+  //   ),
+  // },
+  // ];
 
   // Filter sections based on content availability
   const availableSections = allSections.filter(() => hasContent());
@@ -293,21 +385,7 @@ export function StylePageClient({
   //   });
   // }
 
-  // Keep last-section highlighting when user scrolls to bottom
-  useEffect(() => {
-    const onScroll = () => {
-      const isAtBottom =
-        window.innerHeight + window.scrollY >=
-        document.documentElement.scrollHeight - 100;
-      if (isAtBottom && availableSections.length > 0) {
-        const lastSection = availableSections[availableSections.length - 1];
-        setActiveSection(lastSection.id);
-      }
-    };
-
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, [availableSections]);
+  // Removed scroll listener logic to avoid conflict with viewport detection
 
   useEffect(() => {
     if (danceStyle) {
@@ -612,6 +690,7 @@ export function StylePageClient({
                   key={section.id}
                   section={section}
                   onEnter={handleSectionEnter}
+                  onLeave={handleSectionLeave}
                 />
               ))}
             </article>

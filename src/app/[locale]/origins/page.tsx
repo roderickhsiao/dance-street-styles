@@ -232,7 +232,8 @@ const fiveElementsData = [
 // (compactTimeline is used above)
 
 export default function OriginOfStreetDancePage() {
-  const t = useTranslations();
+  const t = useTranslations('origins');
+  const tGloblal = useTranslations();
   const intl = useIntl();
 
   // Translate pioneers arrays into localized, formatted lists
@@ -242,12 +243,12 @@ export default function OriginOfStreetDancePage() {
         const person = PEOPLE[id];
         if (!person) return id;
         // person.nameKey contains the i18n key for the person's name
-        const name = t(person.nameKey);
+        const name = tGloblal(person.nameKey);
         // roleKey may be present; include it in parentheses if available
         let labeledName = name;
         try {
           if (person.roleKey) {
-            const role = t(person.roleKey);
+            const role = tGloblal(person.roleKey);
             labeledName = `${name} (${role})`;
           }
         } catch {
@@ -269,9 +270,9 @@ export default function OriginOfStreetDancePage() {
   // Memoize translated badges
   const heroBadges = useMemo(
     () => [
-      t('origins.hero.badges.location'),
-      t('origins.hero.badges.movement'),
-      t('origins.hero.badges.impact'),
+      t('hero.badges.location'),
+      t('hero.badges.movement'),
+      t('hero.badges.impact'),
     ],
     [t]
   );
@@ -342,8 +343,8 @@ export default function OriginOfStreetDancePage() {
 
       <Hero
         backgroundVariant="magazine"
-        title={t('origins.hero.title')}
-        subtitle={t('origins.hero.subtitle')}
+        title={t('hero.title')}
+        subtitle={t('hero.subtitle')}
         badges={heroBadges}
       />
 
@@ -426,10 +427,10 @@ export default function OriginOfStreetDancePage() {
             className="text-center mb-16"
           >
             <h2 className="text-header-xl font-black mb-6 text-content-primary magazine-headline">
-              {t('origins.legacy.title')}
+              {t('legacy.title')}
             </h2>
             <p className="text-content-secondary text-body-lg max-w-4xl mx-auto leading-relaxed magazine-body">
-              {t('origins.legacy.description')}
+              {t('legacy.description')}
             </p>
           </motion.div>
 
@@ -443,10 +444,10 @@ export default function OriginOfStreetDancePage() {
             >
               <div className="text-4xl mb-4">🎯</div>
               <h3 className="text-header-sm font-black mb-4 text-content-primary magazine-headline">
-                {t('origins.legacy.foundation.title')}
+                {t('legacy.foundation.title')}
               </h3>
               <p className="text-content-secondary text-body-sm leading-relaxed magazine-body">
-                {t('origins.legacy.foundation.description')}
+                {t('legacy.foundation.description')}
               </p>
             </motion.div>
 
@@ -459,10 +460,10 @@ export default function OriginOfStreetDancePage() {
             >
               <div className="text-4xl mb-4">🌍</div>
               <h3 className="text-header-sm font-black mb-4 text-content-primary magazine-headline">
-                {t('origins.legacy.globalImpact.title')}
+                {t('legacy.globalImpact.title')}
               </h3>
               <p className="text-content-secondary text-body-sm leading-relaxed magazine-body">
-                {t('origins.legacy.globalImpact.description')}
+                {t('legacy.globalImpact.description')}
               </p>
             </motion.div>
 
@@ -475,19 +476,19 @@ export default function OriginOfStreetDancePage() {
             >
               <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-header-sm font-black mb-4 text-content-primary magazine-headline">
-                {t('origins.legacy.futureForward.title')}
+                {t('legacy.futureForward.title')}
               </h3>
               <p className="text-content-secondary text-body-sm leading-relaxed magazine-body">
-                {t('origins.legacy.futureForward.description')}
+                {t('legacy.futureForward.description')}
               </p>
             </motion.div>
           </div>
 
           <div className="text-center">
             <Quote
-              quote={t('origins.legacy.quote.text')}
-              author={t('origins.legacy.quote.author')}
-              authorTitle={t('origins.legacy.quote.title')}
+              quote={t('legacy.quote.text')}
+              author={t('legacy.quote.author')}
+              authorTitle={t('legacy.quote.title')}
               variant="featured"
               className="mb-8"
             />
@@ -505,10 +506,10 @@ export default function OriginOfStreetDancePage() {
                 size="default"
                 showArrow={true}
               >
-                {t('origins.legacy.cta.exploreStyles')}
+                {t('legacy.cta.exploreStyles')}
               </CTAButton>
               <CTAButton href="/" variant="outline" size="default">
-                {t('origins.legacy.cta.backHome')}
+                {t('legacy.cta.backHome')}
               </CTAButton>
             </motion.div>
           </div>

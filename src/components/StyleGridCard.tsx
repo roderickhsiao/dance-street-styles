@@ -34,11 +34,11 @@ export const StyleGridCard = ({
   theme,
   index,
 }: StyleGridCardProps) => {
-  const t = useTranslations();
+  const tGlobal = useTranslations();
 
   // Get location from translations if locationKey is provided, otherwise use static location
   const location = origins.locationKey
-    ? t(origins.locationKey)
+    ? tGlobal(origins.locationKey)
     : origins.locationKey;
 
   return (
@@ -79,7 +79,7 @@ export const StyleGridCard = ({
               {shortDescription}
             </p>
             <div className="text-orange-400 text-xs sm:text-sm font-bold uppercase tracking-wider group-hover:text-orange-300 magazine-sans">
-              {t('styles.cardAction')}
+              {tGlobal('styles.cardAction')}
             </div>
           </div>
         </div>

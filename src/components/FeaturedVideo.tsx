@@ -12,7 +12,8 @@ interface FeaturedVideoProps {
 
 function getYouTubeId(url?: string | null) {
   if (!url) return null;
-  const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+  const regExp =
+    /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
   const match = url.match(regExp);
   return match && match[7].length === 11 ? match[7] : null;
 }
@@ -26,14 +27,8 @@ export function FeaturedVideo({ video, className = '' }: FeaturedVideoProps) {
     return (
       <div className={className}>
         <div className="aspect-video bg-surface-elevated border border-stroke-secondary rounded-xl flex items-center justify-center group transition-colors">
-            <div className="text-center">
+          <div className="text-center">
             <PlayCircle className="h-10 w-10 md:h-12 md:w-12 text-accent-primary mx-auto mb-2 md:mb-3" />
-            <h3 className="text-body-sm md:text-body-md font-bold text-content-primary mb-1 md:mb-2">
-              {t('featuredVideo.placeholderTitle')}
-            </h3>
-            <p className="text-body-xs md:text-body-sm text-content-tertiary">
-              {t('featuredVideo.placeholderDescription')}
-            </p>
           </div>
         </div>
       </div>
@@ -62,12 +57,19 @@ export function FeaturedVideo({ video, className = '' }: FeaturedVideoProps) {
                 <div className="w-full h-full relative overflow-hidden">
                   <motion.div
                     className="w-full h-full"
-                    whileHover={{ scale: 1.02, filter: 'brightness(1.04) grayscale(0%)' }}
+                    whileHover={{
+                      scale: 1.02,
+                      filter: 'brightness(1.04) grayscale(0%)',
+                    }}
                     transition={{ duration: 0.25, ease: 'easeOut' }}
                   >
                     <Image
                       src={video.thumbnailUrl}
-                      alt={video.titleKey ? t(video.titleKey) : t('featuredVideo.placeholderAlt')}
+                      alt={
+                        video.titleKey
+                          ? t(video.titleKey)
+                          : t('featuredVideo.placeholderAlt')
+                      }
                       className="w-full h-full object-cover filter grayscale-30"
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -87,15 +89,23 @@ export function FeaturedVideo({ video, className = '' }: FeaturedVideoProps) {
                 <div className="flex items-center justify-between gap-4">
                   <div className="text-left">
                     <h3 className="text-body-sm md:text-body-md font-bold text-white leading-tight">
-                      {video.titleKey ? t(video.titleKey) : t('featuredVideo.title')}
+                      {video.titleKey
+                        ? t(video.titleKey)
+                        : t('featuredVideo.title')}
                     </h3>
                     <p className="text-body-xs md:text-body-sm text-white/80 mt-1">
-                      {video.descriptionKey ? t(video.descriptionKey) : t('featuredVideo.description')}
+                      {video.descriptionKey
+                        ? t(video.descriptionKey)
+                        : t('featuredVideo.description')}
                     </p>
                   </div>
 
                   <div className="ms-auto">
-                    <motion.div className="bg-accent-primary/80 rounded-full p-3 shadow-lg" whileHover={{ scale: 1.05 }} transition={{ duration: 0.18 }}>
+                    <motion.div
+                      className="bg-accent-primary/80 rounded-full p-3 shadow-lg"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.18 }}
+                    >
                       <PlayCircle className="h-8 w-8 text-white" />
                     </motion.div>
                   </div>
@@ -118,7 +128,6 @@ export function FeaturedVideo({ video, className = '' }: FeaturedVideoProps) {
                   className="w-full h-full border-0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                  
                 />
               ) : (
                 <iframe

@@ -39,7 +39,7 @@ export const ExpandableCard = ({
   videoUrl
 }: ExpandableCardProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const t = useTranslations('streetCulture.elements.sections');
+  const t = useTranslations('origins.streetCulture.elements.sections');
 
   return (
     <motion.div

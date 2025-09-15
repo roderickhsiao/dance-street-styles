@@ -1,18 +1,265 @@
 {
-  "hero": {
-    "masthead": "Issue #001 • Culture Edition",
-    "title": {
-      "line1": "STREET",
-      "line2": "DANCE", 
-      "line3": "CULTURE"
-    },
-    "subtitle": "From the Bronx blocks to global stages — the untold stories of movement, rhythm, and revolution that changed the world."
+  "meta": {
+    "title": "Street Dance Culture Archive - History, Moves & Community",
+    "description": "Discover the rich history, culture, and evolution of street dance styles from Hip-Hop to House, Breaking to Voguing. Learn about the artists, music, and communities that shaped urban movement.",
+    "keywords": "street dance, hip-hop, breaking, popping, campbellock locking, house dance, voguing, dance history, urban culture, dance archive",
+    "author": "Street Dance Culture Archive"
   },
-  
+  "navigation": {
+    "logo": {
+      "main": "STREET DANCE",
+      "accent": "CULTURE"
+    },
+    "links": {
+      "origins": "Origins",
+      "styles": "Styles",
+      "timeline": "Timeline",
+      "trivia": "Trivia"
+    }
+  },
+  "footer": {
+    "title": "STREET DANCE",
+    "description": "An independent publication documenting the stories, movements, and cultural impact of street dance from the streets to the global stage.",
+    "sections": {
+      "explore": {
+        "title": "Explore",
+        "links": [
+          "All Dance Styles",
+          "Cultural Timeline",
+          "Test Your Knowledge"
+        ]
+      },
+      "connect": {
+        "title": "Connect",
+        "links": ["About This Publication", "Submit Your Story", "Get in Touch"]
+      }
+    },
+    "copyright": "Street Dance Culture Magazine © {year} • Independent Publication",
+    "keepCultureAlive": "Keep the culture alive",
+    "established": {
+      "prefix": "Est.",
+      "year": "1973",
+      "suffix": "From the Bronx to the World"
+    }
+  },
+
+  "origins": {
+    "seo": {
+      "title": "Origins of Street Dance Culture - From Bronx to Global Movement",
+      "description": "Discover the authentic origins of street dance culture. From DJ Kool Herc’s 1973 Bronx block parties to Olympic recognition, explore the Five Elements of Hip-Hop that revolutionized dance, music, and culture worldwide."
+    },
+    "hero": {
+      "title": "ORIGIN OF STREET DANCE",
+      "subtitle": "From the South Bronx to global phenomenon — discover the authentic origins, pioneers, and cultural movements that transformed street dance into a worldwide language of expression and community.",
+      "badges": {
+        "location": "South Bronx • 1970s",
+        "movement": "Cultural Revolution",
+        "impact": "Global Movement"
+      }
+    },
+    "legacy": {
+      "title": "From Streets to Legacy",
+      "description": "The Five Elements evolved from neighborhood expression into Olympic recognition. Today’s practitioners honor the past while innovating for future generations, ensuring this culture continues to inspire and unite.",
+      "foundation": {
+        "title": "Cultural Preservation",
+        "description": "Each generation of dancers, DJs, MCs, and writers becomes the keeper of traditions while adding their own voice to the story."
+      },
+      "globalImpact": {
+        "title": "Olympic Recognition",
+        "description": "Breaking’s inclusion in the 2024 Olympics represents decades of cultural validation and mainstream acceptance."
+      },
+      "futureForward": {
+        "title": "Next Generation",
+        "description": "Young artists worldwide are reimagining these elements, blending tradition with technology and social consciousness."
+      },
+      "quote": {
+        "text": "Hip-hop is not just entertainment, it’s a way of life, it’s a culture.",
+        "author": "Afrika Bambaataa",
+        "title": "Founder of Universal Zulu Nation"
+      },
+      "cta": {
+        "exploreStyles": "Explore Dance Styles",
+        "backHome": "Back to Home"
+      }
+    },
+    "streetCulture": {
+      "hero": {
+        "title": "STREET DANCE CULTURE",
+        "subtitle": "From the South Bronx to global phenomenon — discover the history, pioneers, and cultural movements that transformed street dance into a worldwide language of expression and community."
+      },
+      "insights": {
+        "exclusion": {
+          "title": "Born from Exclusion",
+          "description": "When mainstream dance studios excluded Black and Latino youth, the streets became their stage. Block parties transformed abandoned lots into creative sanctuaries."
+        },
+        "community": {
+          "title": "Community Power",
+          "description": "Street dance created safe spaces where young people could express themselves, compete peacefully, and build community despite urban challenges."
+        },
+        "global": {
+          "title": "Global Movement",
+          "description": "From Bronx block parties to Olympic stages, street dance proved that authentic culture transcends boundaries and transforms lives worldwide."
+        }
+      },
+      "stats": {
+        "birthYear": "Birth Year",
+        "coreElements": "Core Elements",
+        "countries": "Countries",
+        "olympics": "Olympics"
+      },
+      "whyStreets": {
+        "title": "Why the Streets?",
+        "exclusion": {
+          "title": "Exclusion from Studios",
+          "description": "Traditional dance studios and venues were largely inaccessible to Black and Latino youth due to economic barriers and social exclusion. The streets became their natural stage."
+        },
+        "blockParty": {
+          "title": "Block Party Culture",
+          "description": "DJ Kool Herc’s legendary block parties turned neighborhood gatherings into cultural movements. These outdoor events were free, accessible, and celebrated community."
+        },
+        "rawExpression": {
+          "title": "Raw Expression",
+          "description": "Street dance captured unfiltered emotion and authentic experience. No formal training required—just passion, creativity, and the courage to express yourself."
+        }
+      },
+      "elements": {
+        "title": "The Five Elements Born on Streets",
+        "djing": {
+          "name": "DJing",
+          "subtitle": "Aural Element • Sound Systems",
+          "description": "The foundation of hip-hop culture. DJs manipulate records to create new sounds, extend break beats, and energize crowds using turntables and mixing techniques.",
+          "why": "DJ Kool Herc noticed dancers got excited during drum breaks, so he used two turntables to extend these ’break beats’ - creating the backbone for all hip-hop music. As Herc said: ’to DJ is to have the insight to motivate the crowd. To have the crowd at your fingertips.’",
+          "pioneers": "streetCulture.elements.djing.pioneers",
+          "historicalNote": "DJ is short for disc jockey, a term dating back to the 1940s. In hip-hop, it evolved into an art form of creating music and beats that would accompany MCs with rhymes and vocals."
+        },
+        "mcing": {
+          "name": "MCing",
+          "subtitle": "Oral Element • Street Poetry",
+          "description": "Masters of Ceremony who speak rhythmically over beats, tell stories, and engage the crowd with clever wordplay. MCing is the act of singing or rhythmically rhyming while a DJ plays beats.",
+          "why": "Originally, MCs helped DJs by talking to the crowd and announcing songs. This evolved into complex rhythmic storytelling that reflected street life and community experiences, tracing its origins back through African oral traditions and Jamaican toasting practices.",
+          "historicalNote": "MC is short for master of ceremonies, often written as emcee. MCing emerged in the 1970s but traces its roots through African culture and oral traditions."
+        },
+        "breaking": {
+          "name": "Breaking",
+          "subtitle": "Physical Element • Floor Dancing",
+          "description": "The art of breakdancing, also known as breaking or b-boying/b-girling, is an energetic and acrobatic form of dance using elaborate choreography, footwork, and movements.",
+          "why": "The break in breakdancing refers to the breaks and breakbeats in music made by early hip-hop DJs like DJ Kool Herc. B-boys and b-girls used dance battles as alternatives to gang violence, channeling aggression into artistic expression and community building.",
+          "historicalNote": "Breaking originated in New York City during the late 1960s and early 1970s. It has reached mainstream acceptance to the point of being a 2024 Olympic event."
+        },
+        "graffiti": {
+          "name": "Graffiti",
+          "subtitle": "Visual Element • Wall Art",
+          "description": "The act of writing or painting symbols, markings, and artistic expressions on walls and buildings. Modern artistic graffiti, also known as tagging or writing, creates what pioneers describe as a ’social uprising.’",
+          "why": "In communities where youth felt invisible, graffiti became a way to declare ’I exist’ and transform abandoned urban spaces into galleries of resistance and beauty. As Darryl ’Cornbread’ McCray states: ’There is no hip-hop artist before me... the foundations were already established.’",
+          "pioneers": "Darryl ’Cornbread’ McCray (Philadelphia Pioneer, 1960s), TAKI 183 (First Famous Tag), Phase 2 (Bubble Letters), Lady Pink (Female Graffiti Pioneer)",
+          "historicalNote": "Modern artistic graffiti dates back to the 1960s in Philadelphia, then spread to New York City where it combined with other hip-hop elements. McCray emphasizes tagging as the oldest, most important element of hip-hop."
+        },
+        "knowledge": {
+          "name": "Knowledge",
+          "subtitle": "Mental Element • Cultural Wisdom",
+          "description": "Understanding hip-hop history, respecting pioneers, and passing down cultural values to preserve authenticity. Knowledge refers both to technical skills and to broader social and political awareness.",
+          "why": "Afrika Bambaataa added this fifth element to ensure hip-hop culture wouldn’t just be entertainment, but a conscious movement that educates and uplifts communities. As he states, knowledge is the most important element that ’brings it all together’ - you cannot MC, DJ, breakdance, or make graffiti without knowledge.",
+          "pioneers": "Afrika Bambaataa (Universal Nation, Fifth Element Originator), KRS-One (Teacher), Grandmaster Flash (Technical Innovation)",
+          "historicalNote": "Knowledge encompasses straightforward technical knowledge of the four physical elements, plus self-knowledge and awareness of social and political issues. Hip-hop is often used for social change and giving voice to oppressed peoples."
+        },
+        "sections": {
+          "description": "Description",
+          "whyItMatters": "Why It Matters",
+          "pioneers": "Pioneers",
+          "historicalNote": "Historical Context",
+          "watchVideo": "Watch Video"
+        },
+        "videos": {
+          "title": "Learn Through Video",
+          "subtitle": "Watch documentaries and educational content about the Five Elements of Hip-Hop.",
+          "watchVideo": "Watch Video",
+          "videoTitle": "Hip-Hop Culture Video {number}",
+          "thumbnailAlt": "Video {number} thumbnail",
+          "previousVideo": "Previous video",
+          "nextVideo": "Next video",
+          "videoLabel": "Video"
+        }
+      },
+      "timeline": {
+        "title": "Key Moments",
+        "events": {
+          "1973": {
+            "title": "DJ Kool Herc’s First Block Party",
+            "location": "South Bronx",
+            "description": "The birth of hip-hop culture at 1520 Sedgwick Avenue."
+          },
+          "1975": {
+            "title": "First B-Boys Emerge",
+            "location": "Bronx",
+            "description": "Dancers create breaking moves to extended breaks."
+          },
+          "1977": {
+            "title": "Rock Steady Crew Founded",
+            "location": "Bronx",
+            "description": "Legendary crew defines b-boy culture and battles."
+          },
+          "1982": {
+            "title": "Wild Style Documentary",
+            "location": "NYC",
+            "description": "Film introduces hip-hop to mainstream audiences."
+          },
+          "1990s": {
+            "title": "Global Expansion",
+            "location": "Worldwide",
+            "description": "Hip-hop culture spreads internationally."
+          },
+          "2024": {
+            "title": "Olympic Recognition",
+            "location": "Paris",
+            "description": "Breaking debuts at the Olympics."
+          }
+        }
+      },
+      "values": {
+        "title": "Street Values",
+        "authenticity": {
+          "title": "Authenticity",
+          "description": "Being true to yourself and honoring the culture’s roots while adding your unique voice."
+        },
+        "community": {
+          "title": "Community",
+          "description": "Building connections, supporting fellow dancers, and creating inclusive spaces for all."
+        },
+        "respect": {
+          "title": "Respect",
+          "description": "Honoring pioneers, understanding history, and recognizing contributions of all participants."
+        },
+        "peace": {
+          "title": "Peace",
+          "description": "Using dance battles and creativity as alternatives to violence and conflict."
+        },
+        "innovation": {
+          "title": "Innovation",
+          "description": "Constantly pushing boundaries while respecting foundational elements and traditions."
+        },
+        "unity": {
+          "title": "Unity",
+          "description": "Bringing people together across cultural, racial, and economic boundaries through movement."
+        }
+      },
+      "cta": {
+        "title": "Keep the {culture} Alive",
+        "culture": "Culture",
+        "description": "Explore dance styles and become part of the continuing story.",
+        "exploreStyles": "Explore Dance Styles",
+        "backHome": "Back to Home"
+      }
+    }
+  },
+
   "overview": {
+    "hero": {
+      "masthead": "Issue #001 • Culture Edition",
+      "titleFull": "<accent1>STREET</accent1> <accent2>DANCE</accent2> <accent3>CULTURE</accent3>",
+      "subtitle": "From the Bronx blocks to global stages — the untold stories of movement, rhythm, and revolution that changed the world."
+    },
     "title": {
-      "main": "THE MOVEMENT",
-      "accent": "DOCUMENTED"
+      "titleFull": "THE MOVEMENT<dot>.</dot><accent>DOCUMENTED</accent>"
     },
     "description": "From breakbeats to global stages, explore the dance styles that shaped culture and connected communities worldwide.",
     "stats": {
@@ -32,58 +279,64 @@
         "value": "2024",
         "label": "Olympic Debut"
       }
+    },
+
+    "streetSection": {
+      "titleFull": "<accent1>ORIGIN OF</accent1>\n<accent2>STREET DANCE</accent2>",
+      "subtitle": "From the streets of the Bronx to global stages, discover the authentic origins of the movement that revolutionized dance, music, and culture forever.",
+      "masthead": {
+        "foundation": "The Beginning"
+      },
+      "description": "Born in the Bronx in the 1970s, street dance emerged from block parties, street corners, and the creative spirit of young people.",
+      "button": "Discover the Origins",
+      "impact": {
+        "title": "THE IMPACT",
+        "description": "What started on the streets became a global phenomenon, influencing art, fashion, and society."
+      },
+      "cards": [
+        {
+          "title": "THE ORIGINS"
+        },
+        {
+          "title": "THE MOVEMENT",
+          "description": "Breaking, popping, Campbellock (Locking) - these are the foundational styles that defined street dance."
+        }
+      ]
     }
   },
-  
-  "streetSection": {
-    "title": {
-      "line1": "ORIGIN OF",
-      "line2": "STREET DANCE"
+
+  "danceCategories": {
+    "hipHopFoundation": {
+      "name": "Hip-Hop Foundation",
+      "description": "The original elements born from 1970s Bronx block parties - breaking, DJing, MCing, and the street dance styles that started it all."
     },
-    "subtitle": "From the streets of the Bronx to global stages, discover the authentic origins of the movement that revolutionized dance, music, and culture forever.",
-    "masthead": {
-      "foundation": "The Beginning"
+    "funkStyles": {
+      "name": "Funk Styles",
+      "description": "West Coast funk-driven styles like popping and Campbellock (Locking), born from the soul and groove of 1970s California dance culture."
     },
-    "description": "Born in the Bronx in the 1970s, street dance emerged from block parties, street corners, and the creative spirit of young people.",
-    "button": "Discover the Origins",
-    "impact": {
-      "title": "THE IMPACT",
-      "description": "What started on the streets became a global phenomenon, influencing art, fashion, and society."
+    "clubHouse": {
+      "name": "Club & House Culture",
+      "description": "Underground club styles including house, footwork, hustle, and club dances that emerged from Chicago, NYC, and disco scenes from the 1970s-80s."
     },
-    "cards": [
-      {
-        "title": "THE ORIGINS"
-      },
-      {
-        "title": "THE MOVEMENT",
-        "description": "Breaking, popping, Campbellock (Locking) - these are the foundational styles that defined street dance."
-      }
-    ]
+    "ballroomCulture": {
+      "name": "Ballroom Culture",
+      "description": "The art of voguing, Wh/aacking, and punking from ballroom competitions, born from Harlem’s LGBTQ+ ballroom community in the 1970s-80s."
+    },
+    "modernStreet": {
+      "name": "Modern Street",
+      "description": "Contemporary street styles influenced by social media, global connectivity, and the new generation of urban dancers."
+    },
+    "africanDiaspora": {
+      "name": "African Diaspora Roots",
+      "description": "Traditional and contemporary styles rooted in African diaspora cultures across the Caribbean, Latin America, and beyond."
+    }
   },
-  
   "styles": {
     "title": "EXPLORE",
-    "titleAccent": "STYLES", 
+    "titleAccent": "STYLES",
+    "titleFull": "EXPLORE <accent>STYLES</accent>",
     "subtitle": "Discover the foundational dance styles that built the culture",
     "cardAction": "Explore Style →",
-    "eras": {
-      "1960s1970s": "1960s-1970s",
-      "1960s1980s": "1960s-1980s",
-      "1970s": "1970s",
-      "1970s1980s": "1970s-1980s",
-      "1980s1990s": "1980s-1990s",
-      "2000s": "2000s"
-    },
-    "locations": {
-      "southBronxNYC": "South Bronx, NYC",
-      "newYorkCity": "New York City",
-      "fresnoCA": "Fresno, CA",
-      "losAngelesCA": "Los Angeles, CA",
-      "chicagoNYC": "Chicago & NYC",
-      "harlemNYC": "Harlem, NYC",
-      "southCentralLA": "South Central LA",
-      "oaklandCA": "Oakland, CA"
-    },
     "detailed": {
       "locking": {
         "overview": {
@@ -97,28 +350,12 @@
             "Locking began in Los Angeles in 1970 when Don Campbell created the Campbellock by accident—turning a failed attempt at another dance into a new style. His unique freezes and playful energy quickly caught on, and the dance became a sensation in clubs and on TV.",
             "Don Campbell’s innovation inspired The Lockers crew and helped bring funk styles to the mainstream, making Locking a cornerstone of street dance history."
           ],
-          "title": "The Birth of Campbellock (1970)",
           "content": [
             "Donald Odell Campbell was born January 8th, 1951. In 1970, at just 19 years old, Don Campbell created the dance 'The Campbellock' at LA Trade Technical College in Downtown LA.",
             "Don was first and foremost an artist — a portrait artist who understood how art could garner expression and move people. When he tried to do a dance called 'The Robot Shuffle' but couldn't execute it properly, his unique 'mistakes' became the foundation of something revolutionary.",
             "Like 'The Lock' itself, all of Don's moves were never premeditated. They were the result of improvisation and interaction with others, dictated by the feel of the music and individual expression."
           ]
         },
-        "pioneers": [
-          {
-            "name": "Don Campbell",
-            "title": "Creator of Campbellock/Locking",
-            "years": "1951–2020",
-            "initials": "DC",
-            "description": "Born January 8th, 1951, Don 'Campbellock' Campbell was a portrait artist who revolutionized dance in 1970. His improvisational spirit and artistic background shaped Locking's emphasis on individual expression and creativity."
-          },
-          {
-            "name": "The Lockers",
-            "title": "Original Crew",
-            "type": "crew",
-            "description": "The original crew that helped popularize Locking through TV appearances and performances, including members like Toni Basil, Rerun (Fred Berry), and other pioneers who brought the style to mainstream recognition."
-          }
-        ],
         "culture": {
           "content": [
             "Locking emerged from the funk era of the early 1970s, embodying the spirit of individual expression and creative freedom that defined the era.",
@@ -169,47 +406,202 @@
             "description": "Showcase video demonstrating key Locking moves and techniques"
           }
         ]
+      },
+      "breaking": {
+        "overview": {
+          "content": [
+            "Breaking (B-Boying/B-Girling) is an athletic street dance style featuring toprock, footwork, power moves, and freezes. Dancers combine acrobatics, musicality, and improvisation to create dynamic performances that push physical boundaries.",
+            "Originating in the South Bronx, breaking became a symbol of creativity, resilience, and community, inspiring generations of dancers worldwide."
+          ]
+        },
+        "history": {
+          "summary": [
+            "Breaking emerged in the early 1970s at Bronx block parties, where young dancers developed new moves to the breakbeats spun by pioneering DJs.",
+            "The style quickly spread, evolving through battles, cyphers, and the influence of crews like the Rock Steady Crew and New York City Breakers."
+          ],
+          "content": [
+            "Breaking’s roots trace back to DJ Kool Herc’s legendary parties in 1973, where dancers responded to extended drum breaks with innovative footwork and acrobatics.",
+            "The dance evolved through friendly competition, with b-boys and b-girls showcasing originality, athleticism, and respect for the culture."
+          ]
+        }
+      },
+      "hipHop": {
+        "overview": {
+          "content": [
+            "Hip-Hop dance is the foundational street style born from the cultural movement of the Bronx in the 1970s. It incorporates freestyle, social dances, and party moves, reflecting the energy and diversity of Hip-Hop culture.",
+            "The style emphasizes individuality, community, and creative expression, evolving alongside rap, DJing, and graffiti art."
+          ]
+        },
+        "history": {
+          "summary": [
+            "Hip-Hop dance developed as part of the Five Elements of Hip-Hop, blending influences from breaking, popping, locking, and social dances.",
+            "The dance’s origins lie in block parties and cyphers, where dancers innovated new moves and shared their styles with the community.",
+            "Hip-Hop continues to evolve, embracing new influences while honoring its roots in self-expression and unity."
+          ]
+        }
+      },
+      "popping": {
+        "overview": {
+          "content": [
+            "Popping is a funk-driven street dance style based on quickly contracting and relaxing muscles to create sharp, robotic movements called 'pops.' Dancers use isolations, waves, and animation to bring music to life.",
+            "Originating in Fresno, California, popping became a staple of West Coast funk styles and a favorite in battles and performances."
+          ]
+        },
+        "history": {
+          "summary": [
+            "Popping was pioneered by dancers like Boogaloo Sam and the Electric Boogaloos in the late 1970s.",
+            "The style evolved through experimentation, crew battles, and the influence of funk music legends."
+          ],
+          "content": [
+            "Boogaloo Sam created popping by combining boogaloo, robot, and other funk styles, inspiring a new generation of dancers.",
+            "Popping’s versatility and creativity have made it a cornerstone of street dance culture worldwide."
+          ]
+        }
+      },
+      "house": {
+        "overview": {
+          "content": [
+            "House dance is a social street style that emerged in Chicago and New York clubs during the 1980s. It features fast footwork, fluid torso movements, and improvisation to house music’s driving beats.",
+            "The style celebrates freedom, musicality, and connection, thriving in underground club scenes and global dance communities."
+          ]
+        },
+        "history": {
+          "summary": [
+            "House dance developed alongside house music, with dancers innovating new steps and grooves in legendary clubs like the Warehouse and Paradise Garage.",
+            "The style spread internationally, influencing club culture and contemporary street dance."
+          ],
+          "content": [
+            "Dancers like Brian 'Footwork' Green and Ejoe Wilson helped shape house dance, blending influences from jazz, tap, and African dance.",
+            "House remains a vibrant, evolving style that values community, creativity, and the joy of movement."
+          ]
+        }
+      },
+      "voguing": {
+        "overview": {
+          "content": [
+            "Voguing is a dramatic, pose-driven dance style born from Harlem’s ballroom scene in the 1970s-80s. Dancers use angular arm movements, runway walks, and expressive poses inspired by fashion and Egyptian art.",
+            "The style is a celebration of identity, resilience, and self-expression, rooted in LGBTQ+ ballroom culture."
+          ]
+        },
+        "history": {
+          "summary": [
+            "Voguing evolved in Harlem’s ballroom competitions, where dancers competed in categories like 'Old Way,' 'New Way,' and 'Vogue Fem.'",
+            "The style gained mainstream attention through artists like Willi Ninja and Madonna, but its heart remains in the ballroom community."
+          ],
+          "content": [
+            "Voguing’s origins are deeply tied to the struggle for acceptance and creative freedom in LGBTQ+ communities.",
+            "The dance continues to inspire new generations, blending tradition with innovation and activism."
+          ]
+        }
+      },
+      "waacking": {
+        "overview": {
+          "content": [
+            "Wh/aacking is an expressive dance style emphasizing rapid arm movements, poses, and musical interpretation. It originated in Los Angeles clubs in the 1970s, blending funk, disco, and theatricality.",
+            "The style empowers dancers to tell stories through movement, celebrating individuality and freedom."
+          ]
+        },
+        "history": {
+          "summary": [
+            "Wh/aacking was pioneered by dancers in LA’s gay club scene, including Tyrone Proctor and the Punking movement.",
+            "The style evolved through battles, performances, and the influence of disco music."
+          ],
+          "content": [
+            "Wh/aacking’s roots lie in the search for self-expression and visibility within marginalized communities.",
+            "The dance remains a powerful tool for storytelling, activism, and creative exploration."
+          ]
+        }
+      },
+      "krumping": {
+        "overview": {
+          "content": [
+            "Krumping is a raw, high-energy street dance style from South Central LA, characterized by free, expressive movements and emotional intensity.",
+            "Dancers use stomps, chest pops, and arm swings to channel personal stories and spiritual connection."
+          ]
+        },
+        "history": {
+          "summary": [
+            "Krumping was created in the early 2000s by dancers like Tight Eyez and Big M, evolving from clowning and street battles.",
+            "The style became a form of release and empowerment, spreading through dance films and global competitions."
+          ],
+          "content": [
+            "Krumping’s origins are rooted in resilience and community, offering dancers a way to express emotion and overcome adversity.",
+            "The dance continues to evolve, inspiring new generations to find their voice through movement."
+          ]
+        }
+      },
+      "hustle": {
+        "overview": {
+          "content": [
+            "The Hustle is a partner dance from the 1970s disco era, featuring synchronized spins, turns, and smooth footwork. It became a popular social dance in clubs and parties across New York City.",
+            "The style celebrates connection, rhythm, and the joy of dancing together."
+          ]
+        },
+        "history": {
+          "summary": [
+            "The Hustle developed alongside disco music, with dancers innovating new steps and patterns in legendary venues like Studio 54.",
+            "Dancers like Van McCoy and Billy Fajardo helped popularize the Hustle, bringing it to mainstream audiences through competitions and performances.",
+            "The dance continues to evolve, connecting generations through music and movement."
+          ]
+        }
+      },
+      "punking": {
+        "overview": {
+          "content": [
+            "Punking is a theatrical street dance style from New York City, emphasizing dramatic gestures, poses, and runway attitude. It is closely related to whacking and voguing, blending funk, disco, and expressive storytelling.",
+            "The style empowers dancers to embrace character, emotion, and individuality."
+          ]
+        },
+        "history": {
+          "summary": [
+            "Punking was developed in the 1970s-80s by dancers in NYC’s underground club scene, including Michael Angelo and the Outrageous Waackers.",
+            "The style influenced the evolution of whacking and voguing, leaving a lasting impact on street dance culture."
+          ],
+          "content": [
+            "Punking’s roots lie in the search for creative freedom and self-expression within marginalized communities.",
+            "The dance remains a vibrant, evolving style that values storytelling, attitude, and innovation."
+          ]
+        }
+      },
+      "turfing": {
+        "overview": {
+          "content": [
+            "Turfing is an Oakland-born street dance style combining acrobatics, storytelling, and precise footwork. Dancers use intricate movements to create visual illusions and tell personal stories.",
+            "The style celebrates creativity, resilience, and the power of movement to inspire change."
+          ]
+        },
+        "history": {
+          "summary": [
+            "Turfing emerged in the 2000s in Oakland, California, as dancers responded to local music and social challenges with innovative movement.",
+            "The style gained recognition through viral videos, battles, and the influence of crews like Turf Feinz."
+          ],
+          "content": [
+            "Turfing’s origins are deeply tied to community, activism, and the desire to uplift through dance.",
+            "The dance continues to evolve, inspiring new generations to push creative boundaries and tell their stories."
+          ]
+        }
       }
     }
   },
 
-  "danceCategories": {
-    "hipHopFoundation": {
-      "name": "Hip-Hop Foundation",
-      "description": "The original elements born from 1970s Bronx block parties - breaking, DJing, MCing, and the street dance styles that started it all."
-    },
-    "funkStyles": {
-      "name": "Funk Styles",
-      "description": "West Coast funk-driven styles like popping and Campbellock (Locking), born from the soul and groove of 1970s California dance culture."
-    },
-    "clubHouse": {
-      "name": "Club & House Culture", 
-      "description": "Underground club styles including house, footwork, hustle, and club dances that emerged from Chicago, NYC, and disco scenes from the 1970s-80s."
-    },
-    "ballroomCulture": {
-      "name": "Ballroom Culture",
-      "description": "The art of voguing, Wh/aacking, and punking from ballroom competitions, born from Harlem’s LGBTQ+ ballroom community in the 1970s-80s."
-    },
-    "modernStreet": {
-      "name": "Modern Street",
-      "description": "Contemporary street styles influenced by social media, global connectivity, and the new generation of urban dancers."
-    },
-    "africanDiaspora": {
-      "name": "African Diaspora Roots",
-      "description": "Traditional and contemporary styles rooted in African diaspora cultures across the Caribbean, Latin America, and beyond."
-    }
-  },
-
   "stylesPage": {
-    "masthead": "Issue #002 • Styles Edition",
     "hero": {
       "title": {
         "line1": "DANCE",
         "line2": "STYLES",
         "line3": "ARCHIVE"
       },
-      "subtitle": "From breaking to voguing, explore the rich tapestry of movement that defines street dance culture.",
-      "description": "Each style carries the DNA of its community, history, and innovation."
+      "subtitle": "From breaking to voguing, explore the rich tapestry of movement that defines street dance culture."
+    },
+
+    "sections": {
+      "overview": "Overview",
+      "history": "History & Origins",
+      "pioneers": "Pioneers & Artists",
+      "culture": "Cultural Impact",
+      "featuredVideo": "Featured Video",
+      "techniques": "Key Techniques",
+      "related": "Related Styles"
     },
     "overview": {
       "title": "THE COMPLETE COLLECTION",
@@ -234,23 +626,45 @@
       "description": "Explore authentic street dance styles from breaking to voguing, popping to krumping. Discover the history, moves, and culture behind each dance style with video tutorials and community stories.",
       "keywords": "street dance styles, hip hop dance, breaking b-boying, popping animation, campbellock locking funk styles, house dance, voguing ballroom, wh/aacking punking, krumping clowning, street dance history, urban dance culture, dance battles, freestyle dance, street dance tutorials, dance community"
     },
-    "sections": {
-      "overview": "Overview",
-      "history": "History & Origins",
-      "pioneers": "Pioneers & Artists",
-      "culture": "Cultural Impact",
-      "featuredVideo": "Featured Video",
-      "techniques": "Key Techniques",
-      "related": "Related Styles"
+
+    "ui": {
+      "breadcrumbs": {
+        "styles": "Styles"
+      },
+      "tableOfContents": "Table of Contents",
+      "tags": {
+        "streetDance": "Street Dance"
+      },
+      "sourceLabel": "Source:"
     }
   },
-
+  "moves": {
+    "locking": {
+      "theLock": {
+        "name": "The Lock",
+        "description": "The foundational Locking move — a sudden freeze or stop that punctuates motion and creates rhythmic contrast."
+      },
+      "points": {
+        "name": "Points",
+        "description": "Hand and arm gestures that accentuate musical breaks and direct attention during performance."
+      }
+    }
+  },
+  "musicGenres": {
+    "funk": {
+      "name": "Funk",
+      "description": "Groove-driven music with strong backbeats that provided the rhythmic foundation for Locking and many West Coast styles."
+    },
+    "soul": {
+      "name": "Soul"
+    }
+  },
   "danceTags": {
     "hipHopFoundation": {
       "name": "Hip-Hop Foundation"
     },
     "funkStyles": {
-      "name": "Funk Styles"  
+      "name": "Funk Styles"
     },
     "clubCulture": {
       "name": "Club Culture"
@@ -273,7 +687,8 @@
     "modernStreet": {
       "name": "Modern Street"
     }
-  },  "danceStyles": {
+  },
+  "danceStyles": {
     "names": {
       "breaking": "Breaking (B-Boying/B-Girling)",
       "hipHop": "Hip-Hop Dance",
@@ -299,6 +714,14 @@
       "hustle": "Partner dance from 1970s disco era, featuring synchronized spins and turns.",
       "punking": "NYC-originated style related to whacking, emphasizing dramatic poses and runway attitude.",
       "turfing": "Oakland-born dance style combining acrobatics, storytelling, and precise footwork."
+    },
+    "video": {
+      "locking": {
+        "lockingFeatured": {
+          "title": "Time Travel: A Tribute to Don \"Campbellock\" Campbell",
+          "description": "Directed, edited, and animated by Mathilde Chamussy. Using live footage of Don Campbellock Campbell."
+        }
+      }
     }
   },
 
@@ -328,269 +751,6 @@
     "capoeira": "Brazilian martial art that blends dance, acrobatics, and music.",
     "turfing": "Oakland-born dance style combining acrobatics, storytelling, and precise footwork."
   },
-  
-  "navigation": {
-    "logo": {
-      "main": "STREET DANCE",
-      "accent": "CULTURE"
-    },
-    "links": {
-      "origins": "Origins",
-      "styles": "Styles",
-      "timeline": "Timeline", 
-      "trivia": "Trivia"
-    }
-  },
-  "ui": {
-    "breadcrumbs": {
-      "styles": "Styles"
-    },
-    "tableOfContents": "Table of Contents",
-    "tags": {
-      "streetDance": "Street Dance"
-    },
-    "sourceLabel": "Source:"
-  },
-  
-  "footer": {
-    "title": "STREET DANCE",
-    "description": "An independent publication documenting the stories, movements, and cultural impact of street dance from the streets to the global stage.",
-    "sections": {
-      "explore": {
-        "title": "Explore",
-        "links": [
-          "All Dance Styles",
-          "Cultural Timeline", 
-          "Test Your Knowledge"
-        ]
-      },
-      "connect": {
-        "title": "Connect",
-        "links": [
-          "About This Publication",
-          "Submit Your Story",
-          "Get in Touch"
-        ]
-      }
-    },
-    "copyright": "Street Dance Culture Magazine © {year} • Independent Publication",
-    "keepCultureAlive": "Keep the culture alive",
-    "established": {
-      "prefix": "Est.",
-      "year": "1973", 
-      "suffix": "From the Bronx to the World"
-    }
-  },
-  
-  "origins": {
-    "seo": {
-      "title": "Origins of Street Dance Culture - From Bronx to Global Movement",
-      "description": "Discover the authentic origins of street dance culture. From DJ Kool Herc’s 1973 Bronx block parties to Olympic recognition, explore the Five Elements of Hip-Hop that revolutionized dance, music, and culture worldwide."
-    },
-    "hero": {
-      "title": "ORIGIN OF STREET DANCE",
-      "subtitle": "From the South Bronx to global phenomenon — discover the authentic origins, pioneers, and cultural movements that transformed street dance into a worldwide language of expression and community.",
-      "badges": {
-        "location": "South Bronx • 1970s",
-        "movement": "Cultural Revolution",
-        "impact": "Global Movement"
-      }
-    },
-    "legacy": {
-      "title": "From Streets to Legacy",
-      "description": "The Five Elements evolved from neighborhood expression into Olympic recognition. Today’s practitioners honor the past while innovating for future generations, ensuring this culture continues to inspire and unite.",
-      "foundation": {
-        "title": "Cultural Preservation",
-        "description": "Each generation of dancers, DJs, MCs, and writers becomes the keeper of traditions while adding their own voice to the story."
-      },
-      "globalImpact": {
-        "title": "Olympic Recognition", 
-        "description": "Breaking’s inclusion in the 2024 Olympics represents decades of cultural validation and mainstream acceptance."
-      },
-      "futureForward": {
-        "title": "Next Generation",
-        "description": "Young artists worldwide are reimagining these elements, blending tradition with technology and social consciousness."
-      },
-      "quote": {
-        "text": "Hip-hop is not just entertainment, it’s a way of life, it’s a culture.",
-        "author": "Afrika Bambaataa",
-        "title": "Founder of Universal Zulu Nation"
-      },
-      "cta": {
-        "exploreStyles": "Explore Dance Styles", 
-        "backHome": "Back to Home"
-      }
-    }
-  },
-  
-  "streetCulture": {
-    "hero": {
-      "title": "STREET DANCE CULTURE",
-      "subtitle": "From the South Bronx to global phenomenon — discover the history, pioneers, and cultural movements that transformed street dance into a worldwide language of expression and community."
-    },
-    "insights": {
-      "exclusion": {
-        "title": "Born from Exclusion",
-        "description": "When mainstream dance studios excluded Black and Latino youth, the streets became their stage. Block parties transformed abandoned lots into creative sanctuaries."
-      },
-      "community": {
-        "title": "Community Power", 
-        "description": "Street dance created safe spaces where young people could express themselves, compete peacefully, and build community despite urban challenges."
-      },
-      "global": {
-        "title": "Global Movement",
-        "description": "From Bronx block parties to Olympic stages, street dance proved that authentic culture transcends boundaries and transforms lives worldwide."
-      }
-    },
-    "stats": {
-      "birthYear": "Birth Year",
-      "coreElements": "Core Elements", 
-      "countries": "Countries",
-      "olympics": "Olympics"
-    },
-    "whyStreets": {
-      "title": "Why the Streets?",
-      "exclusion": {
-        "title": "Exclusion from Studios",
-        "description": "Traditional dance studios and venues were largely inaccessible to Black and Latino youth due to economic barriers and social exclusion. The streets became their natural stage."
-      },
-      "blockParty": {
-        "title": "Block Party Culture",
-        "description": "DJ Kool Herc’s legendary block parties turned neighborhood gatherings into cultural movements. These outdoor events were free, accessible, and celebrated community."
-      },
-      "rawExpression": {
-        "title": "Raw Expression",
-        "description": "Street dance captured unfiltered emotion and authentic experience. No formal training required—just passion, creativity, and the courage to express yourself."
-      }
-    },
-    "elements": {
-      "title": "The Five Elements Born on Streets",
-      "djing": {
-        "name": "DJing",
-        "subtitle": "Aural Element • Sound Systems",
-        "description": "The foundation of hip-hop culture. DJs manipulate records to create new sounds, extend break beats, and energize crowds using turntables and mixing techniques.",
-        "why": "DJ Kool Herc noticed dancers got excited during drum breaks, so he used two turntables to extend these ’break beats’ - creating the backbone for all hip-hop music. As Herc said: ’to DJ is to have the insight to motivate the crowd. To have the crowd at your fingertips.’",
-        "pioneers": "streetCulture.elements.djing.pioneers",
-        "historicalNote": "DJ is short for disc jockey, a term dating back to the 1940s. In hip-hop, it evolved into an art form of creating music and beats that would accompany MCs with rhymes and vocals."
-      },
-      "mcing": {
-        "name": "MCing", 
-        "subtitle": "Oral Element • Street Poetry",
-        "description": "Masters of Ceremony who speak rhythmically over beats, tell stories, and engage the crowd with clever wordplay. MCing is the act of singing or rhythmically rhyming while a DJ plays beats.",
-        "why": "Originally, MCs helped DJs by talking to the crowd and announcing songs. This evolved into complex rhythmic storytelling that reflected street life and community experiences, tracing its origins back through African oral traditions and Jamaican toasting practices.",
-        "historicalNote": "MC is short for master of ceremonies, often written as emcee. MCing emerged in the 1970s but traces its roots through African culture and oral traditions."
-      },
-      "breaking": {
-        "name": "Breaking",
-        "subtitle": "Physical Element • Floor Dancing",
-        "description": "The art of breakdancing, also known as breaking or b-boying/b-girling, is an energetic and acrobatic form of dance using elaborate choreography, footwork, and movements.",
-        "why": "The break in breakdancing refers to the breaks and breakbeats in music made by early hip-hop DJs like DJ Kool Herc. B-boys and b-girls used dance battles as alternatives to gang violence, channeling aggression into artistic expression and community building.",
-        "historicalNote": "Breaking originated in New York City during the late 1960s and early 1970s. It has reached mainstream acceptance to the point of being a 2024 Olympic event."
-      },
-      "graffiti": {
-        "name": "Graffiti",
-        "subtitle": "Visual Element • Wall Art",
-        "description": "The act of writing or painting symbols, markings, and artistic expressions on walls and buildings. Modern artistic graffiti, also known as tagging or writing, creates what pioneers describe as a ’social uprising.’",
-        "why": "In communities where youth felt invisible, graffiti became a way to declare ’I exist’ and transform abandoned urban spaces into galleries of resistance and beauty. As Darryl ’Cornbread’ McCray states: ’There is no hip-hop artist before me... the foundations were already established.’",
-        "pioneers": "Darryl ’Cornbread’ McCray (Philadelphia Pioneer, 1960s), TAKI 183 (First Famous Tag), Phase 2 (Bubble Letters), Lady Pink (Female Graffiti Pioneer)",
-        "historicalNote": "Modern artistic graffiti dates back to the 1960s in Philadelphia, then spread to New York City where it combined with other hip-hop elements. McCray emphasizes tagging as the oldest, most important element of hip-hop."
-      },
-      "knowledge": {
-        "name": "Knowledge",
-        "subtitle": "Mental Element • Cultural Wisdom",
-        "description": "Understanding hip-hop history, respecting pioneers, and passing down cultural values to preserve authenticity. Knowledge refers both to technical skills and to broader social and political awareness.",
-        "why": "Afrika Bambaataa added this fifth element to ensure hip-hop culture wouldn’t just be entertainment, but a conscious movement that educates and uplifts communities. As he states, knowledge is the most important element that ’brings it all together’ - you cannot MC, DJ, breakdance, or make graffiti without knowledge.",
-        "pioneers": "Afrika Bambaataa (Universal Nation, Fifth Element Originator), KRS-One (Teacher), Grandmaster Flash (Technical Innovation)",
-        "historicalNote": "Knowledge encompasses straightforward technical knowledge of the four physical elements, plus self-knowledge and awareness of social and political issues. Hip-hop is often used for social change and giving voice to oppressed peoples."
-      },
-      "sections": {
-        "description": "Description",
-        "whyItMatters": "Why It Matters",
-        "pioneers": "Pioneers",
-        "historicalNote": "Historical Context",
-        "watchVideo": "Watch Video"
-      },
-      "videos": {
-        "title": "Learn Through Video",
-        "subtitle": "Watch documentaries and educational content about the Five Elements of Hip-Hop.",
-        "watchVideo": "Watch Video",
-        "videoTitle": "Hip-Hop Culture Video {number}",
-        "thumbnailAlt": "Video {number} thumbnail",
-        "previousVideo": "Previous video",
-        "nextVideo": "Next video",
-        "videoLabel": "Video"
-      }
-    },
-    "timeline": {
-      "title": "Key Moments",
-      "events": {
-        "1973": {
-          "title": "DJ Kool Herc’s First Block Party",
-          "location": "South Bronx",
-          "description": "The birth of hip-hop culture at 1520 Sedgwick Avenue."
-        },
-        "1975": {
-          "title": "First B-Boys Emerge",
-          "location": "Bronx",
-          "description": "Dancers create breaking moves to extended breaks."
-        },
-        "1977": {
-          "title": "Rock Steady Crew Founded",
-          "location": "Bronx",
-          "description": "Legendary crew defines b-boy culture and battles."
-        },
-        "1982": {
-          "title": "Wild Style Documentary",
-          "location": "NYC",
-          "description": "Film introduces hip-hop to mainstream audiences."
-        },
-        "1990s": {
-          "title": "Global Expansion",
-          "location": "Worldwide",
-          "description": "Hip-hop culture spreads internationally."
-        },
-        "2024": {
-          "title": "Olympic Recognition",
-          "location": "Paris",
-          "description": "Breaking debuts at the Olympics."
-        }
-      }
-    },
-    "values": {
-      "title": "Street Values",
-      "authenticity": {
-        "title": "Authenticity",
-        "description": "Being true to yourself and honoring the culture’s roots while adding your unique voice."
-      },
-      "community": {
-        "title": "Community",
-        "description": "Building connections, supporting fellow dancers, and creating inclusive spaces for all."
-      },
-      "respect": {
-        "title": "Respect", 
-        "description": "Honoring pioneers, understanding history, and recognizing contributions of all participants."
-      },
-      "peace": {
-        "title": "Peace",
-        "description": "Using dance battles and creativity as alternatives to violence and conflict."
-      },
-      "innovation": {
-        "title": "Innovation",
-        "description": "Constantly pushing boundaries while respecting foundational elements and traditions."
-      },
-      "unity": {
-        "title": "Unity",
-        "description": "Bringing people together across cultural, racial, and economic boundaries through movement."
-      }
-    },
-    "cta": {
-      "title": "Keep the {culture} Alive",
-      "culture": "Culture",
-      "description": "Explore dance styles and become part of the continuing story.",
-      "exploreStyles": "Explore Dance Styles",
-      "backHome": "Back to Home"
-    }
-  },    
   "people": {
     "donCampbell": {
       "name": "Don 'Campbellock' Campbell",
@@ -685,12 +845,6 @@
     }
   },
   "videos": {
-    "locking": {
-      "lockingFeatured": {
-        "title": "Time Travel: A Tribute to Don \"Campbellock\" Campbell",
-        "description": "Directed, edited, and animated by Mathilde Chamussy. Using live footage of Don Campbellock Campbell."
-      }
-    },
     "5ElementsOfHipHop": {
       "title": "5 Elements of Hip-Hop",
       "description": "A quick conversation about the elements of Hip Hop and why it's important to know about the cultural aspect."
@@ -712,31 +866,22 @@
       "description": "The history of graffiti in New York City and how pioneering artists who began by painting subway cars are now selling their art for thousands."
     }
   },
-  "moves": {
-    "locking": {
-      "theLock": {
-        "name": "The Lock",
-        "description": "The foundational Locking move — a sudden freeze or stop that punctuates motion and creates rhythmic contrast."
-      },
-      "points": {
-        "name": "Points",
-        "description": "Hand and arm gestures that accentuate musical breaks and direct attention during performance."
-      }
-    }
+  "eras": {
+    "1960s1970s": "1960s-1970s",
+    "1960s1980s": "1960s-1980s",
+    "1970s": "1970s",
+    "1970s1980s": "1970s-1980s",
+    "1980s1990s": "1980s-1990s",
+    "2000s": "2000s"
   },
-  "musicGenres": {
-    "funk": {
-      "name": "Funk",
-      "description": "Groove-driven music with strong backbeats that provided the rhythmic foundation for Locking and many West Coast styles."
-    },
-    "soul": {
-      "name": "Soul"
-    }
-  },
-  "meta": {
-    "title": "Street Dance Culture Archive - History, Moves & Community",
-    "description": "Discover the rich history, culture, and evolution of street dance styles from Hip-Hop to House, Breaking to Voguing. Learn about the artists, music, and communities that shaped urban movement.",
-    "keywords": "street dance, hip-hop, breaking, popping, campbellock locking, house dance, voguing, dance history, urban culture, dance archive",
-    "author": "Street Dance Culture Archive"
+  "locations": {
+    "southBronxNYC": "South Bronx, NYC",
+    "newYorkCity": "New York City",
+    "fresnoCA": "Fresno, CA",
+    "losAngelesCA": "Los Angeles, CA",
+    "chicagoNYC": "Chicago & NYC",
+    "harlemNYC": "Harlem, NYC",
+    "southCentralLA": "South Central LA",
+    "oaklandCA": "Oakland, CA"
   }
 }

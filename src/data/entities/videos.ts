@@ -3,10 +3,10 @@ import { VideoEntity } from '../../data/types';
 export const VIDEOS: Record<string, VideoEntity> = {
   'locking-featured': {
     id: 'locking-featured',
-    titleKey: 'videos.locking.lockingFeatured.title',
+    titleKey: 'danceStyles.video.locking.lockingFeatured.title',
     url: 'https://www.youtube.com/watch?v=C592tQXkbDs',
     type: 'history',
-    descriptionKey: 'videos.locking.lockingFeatured.description',
+    descriptionKey: 'danceStyles.video.locking.lockingFeatured.description',
     artistId: 'the-lockers',
     thumbnailUrl: 'https://img.youtube.com/vi/C592tQXkbDs/hqdefault.jpg',
   },

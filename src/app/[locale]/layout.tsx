@@ -1,4 +1,4 @@
-import { getMessages, getTranslations } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Footer } from '../../components/Footer';
 import { locales } from '../../i18n/request';
@@ -44,9 +44,6 @@ export default async function LocaleLayout({
   if (!locales.includes(locale as (typeof locales)[number])) {
     notFound();
   }
-
-  // Providing all messages to the client side is the easiest way to get started
-  const messages = await getMessages();
 
   return (
     <>

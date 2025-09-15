@@ -15,7 +15,7 @@ import { useFeatureCardsData } from '../../data/featureCards';
 
 export default function HomePage() {
   const t = useTranslations();
-  const tDescriptions = useTranslations('danceStyleDescriptions');
+  const tOverview = useTranslations('overview');
   const danceStyles = getAllDanceStyles();
   const featureCardsData = useFeatureCardsData();
 
@@ -23,27 +23,27 @@ export default function HomePage() {
   const overviewStats = useMemo(
     () => [
       {
-        value: t('overview.stats.birthYear.value'),
-        label: t('overview.stats.birthYear.label'),
+        value: tOverview('stats.birthYear.value'),
+        label: tOverview('stats.birthYear.label'),
         color: 'accent-primary' as const,
       },
       {
-        value: t('overview.stats.styles.value'),
-        label: t('overview.stats.styles.label'),
+        value: tOverview('stats.styles.value'),
+        label: tOverview('stats.styles.label'),
         color: 'accent-secondary' as const,
       },
       {
-        value: t('overview.stats.countries.value'),
-        label: t('overview.stats.countries.label'),
+        value: tOverview('stats.countries.value'),
+        label: tOverview('stats.countries.label'),
         color: 'accent-tertiary' as const,
       },
       {
-        value: t('overview.stats.olympic.value'),
-        label: t('overview.stats.olympic.label'),
+        value: tOverview('stats.olympic.value'),
+        label: tOverview('stats.olympic.label'),
         color: 'accent-primary' as const,
       },
     ],
-    [t]
+    [tOverview]
   );
 
   return (
@@ -53,34 +53,59 @@ export default function HomePage() {
       <Hero
         backgroundVariant="magazine"
         layout="magazine"
-        masthead={t('hero.masthead')}
-        title=""
-        titleLines={{
-          line1: t('hero.title.line1'),
-          line2: t('hero.title.line2'),
-          line3: t('hero.title.line3'),
-        }}
-        subtitle={t('hero.subtitle')}
+        masthead={tOverview('hero.masthead')}
+        title={tOverview.rich('hero.titleFull', {
+          accent1: (chunks) => (
+            <motion.span
+              className="block text-white mb-2"
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            >
+              {chunks}
+            </motion.span>
+          ),
+          accent2: (chunks) => (
+            <motion.span
+              className="block text-transparent bg-gradient-to-r from-accent-primary to-accent-secondary bg-clip-text mb-2"
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+            >
+              {chunks}
+            </motion.span>
+          ),
+          accent3: (chunks) => (
+            <motion.span
+              className="block text-transparent bg-gradient-to-r from-accent-secondary to-accent-tertiary bg-clip-text"
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+            >
+              {chunks}
+            </motion.span>
+          ),
+        })}
+        subtitle={tOverview('hero.subtitle')}
       />
       <Section background="secondary" padding="lg">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-header-md sm:text-header-lg md:text-header-xl font-black text-content-primary mb-4 leading-tight magazine-headline">
-            {t('overview.title.main')}
-            <span className="text-accent-primary">.</span>
-            <span className="text-transparent bg-gradient-to-r from-accent-secondary to-accent-primary bg-clip-text">
-              {' '}
-              {t('overview.title.accent')}
-            </span>
+            {tOverview.rich('title.titleFull', {
+              dot: (chunks) => (
+                <span className="text-accent-primary">{chunks}</span>
+              ),
+              accent: (chunks) => (
+                <span className="text-transparent bg-gradient-to-r from-accent-secondary to-accent-primary bg-clip-text">{chunks}</span>
+              ),
+            })}
           </h2>
           <p className="text-content-tertiary text-body-md sm:text-body-lg max-w-2xl mx-auto magazine-body">
-            {t('overview.description')}
+            {tOverview('description')}
           </p>
         </div>
 
-        <Stats
-          stats={overviewStats}
-          columns={4}
-        />
+        <Stats stats={overviewStats} columns={4} />
       </Section>
 
       {/* Origin of Street Dance Main Section */}
@@ -96,21 +121,35 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              {t('streetSection.masthead.foundation')}
+              {tOverview('streetSection.masthead.foundation')}
             </motion.div>
             <motion.h2
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-[1.1] magazine-headline"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.4 }}
+              initial={false}
+              animate={false}
             >
-              <span className="text-transparent bg-gradient-to-r from-orange-400 via-pink-500 to-purple-500 bg-clip-text">
-                {t('streetSection.title.line1')}
-              </span>
-              <br />
-              <span className="text-yellow-400">
-                {t('streetSection.title.line2')}
-              </span>
+              {tOverview.rich('streetSection.titleFull', {
+                accent1: (chunks) => (
+                  <motion.span
+                    className="block text-transparent bg-gradient-to-r from-orange-400 via-pink-500 to-purple-500 bg-clip-text"
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                  >
+                    {chunks}
+                  </motion.span>
+                ),
+                accent2: (chunks) => (
+                  <motion.span
+                    className="block text-yellow-400"
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+                  >
+                    {chunks}
+                  </motion.span>
+                ),
+              })}
             </motion.h2>
             <motion.p
               className="text-gray-300 text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto magazine-body font-light leading-relaxed"
@@ -118,7 +157,7 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              {t('streetSection.subtitle')}
+              {tOverview('streetSection.subtitle')}
             </motion.p>
           </div>
 
@@ -128,8 +167,8 @@ export default function HomePage() {
               <FeatureCard
                 key={card.id}
                 icon={card.icon}
-                title={t(card.titleKey)}
-                description={t(card.descriptionKey)}
+                title={tOverview(card.titleKey)}
+                description={tOverview(card.descriptionKey)}
                 gradientFrom={card.gradientFrom}
                 gradientTo={card.gradientTo}
                 borderColor={card.borderColor}
@@ -153,7 +192,7 @@ export default function HomePage() {
                 size="default"
                 showArrow={true}
               >
-                {t('streetSection.button')}
+                {tOverview('streetSection.button')}
               </CTAButton>
             </motion.div>
           </div>
@@ -165,8 +204,11 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-10 scroll-fade-in">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-3 magazine-headline">
-              {t('styles.title')}{' '}
-              <span className="text-orange-400">{t('styles.titleAccent')}</span>
+              {t.rich('styles.titleFull', {
+                accent: (chunks) => (
+                  <span className="text-orange-400">{chunks}</span>
+                ),
+              })}
             </h2>
             <p className="text-gray-400 text-sm sm:text-base magazine-body">
               {t('styles.subtitle')}
@@ -180,9 +222,9 @@ export default function HomePage() {
               <StyleGridCard
                 key={style.id}
                 id={style.id}
-                name={style.nameKey ? t(style.nameKey) : style.name || style.id}
+                name={t(style.nameKey!)}
                 slug={style.slug}
-                shortDescription={tDescriptions(style.id)}
+                shortDescription={t(style.shortDescriptionKey!)}
                 origins={style.origins}
                 theme={style.theme}
                 index={index}

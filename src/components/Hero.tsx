@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
 
 interface HeroProps {
-  title: string;
+  title: React.ReactNode;
   titleLines?: {
     line1?: string;
     line2?: string;

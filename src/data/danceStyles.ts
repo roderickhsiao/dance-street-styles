@@ -76,14 +76,14 @@ export const danceStyles: DanceStyle[] = [
     slug: 'breaking',
     shortDescriptionKey: 'danceStyles.shortDescriptions.breaking',
     fullDescriptionKey: 'styles.detailed.breaking.description',
-    eraKey: 'styles.eras.1970s',
-    locationKey: 'styles.locations.southBronxNYC',
+    eraKey: 'eras.1970s',
+    locationKey: 'locations.southBronxNYC',
     eraIcon: '📅',
     locationIcon: '📍',
     tags: ['hipHopFoundation', 'streetBattle', 'underground'],
     origins: {
-      yearKey: 'styles.eras.1970s',
-      locationKey: 'styles.locations.southBronxNYC',
+      yearKey: 'eras.1970s',
+      locationKey: 'locations.southBronxNYC',
       cultureKey: 'styles.detailed.breaking.origins.culture',
     },
     characteristicsKey: 'styles.detailed.breaking.characteristics.items',
@@ -110,14 +110,14 @@ export const danceStyles: DanceStyle[] = [
     slug: 'hip-hop',
     shortDescriptionKey: 'danceStyles.shortDescriptions.hipHop',
     fullDescriptionKey: 'styles.detailed.hipHop.description',
-    eraKey: 'styles.eras.1970s',
-    locationKey: 'styles.locations.newYorkCity',
+    eraKey: 'eras.1970s',
+    locationKey: 'locations.newYorkCity',
     eraIcon: '📅',
     locationIcon: '📍',
     tags: ['hipHopFoundation', 'socialDance', 'streetBattle'],
     origins: {
-      yearKey: 'styles.eras.1970s',
-      locationKey: 'styles.locations.newYorkCity',
+      yearKey: 'eras.1970s',
+      locationKey: 'locations.newYorkCity',
       cultureKey: 'styles.detailed.hipHop.origins.culture',
     },
     featuredVideoId: '5-elements-of-hop-hop',
@@ -142,14 +142,14 @@ export const danceStyles: DanceStyle[] = [
     slug: 'popping',
     shortDescriptionKey: 'danceStyles.shortDescriptions.popping',
     fullDescriptionKey: 'styles.detailed.popping.description',
-    eraKey: 'styles.eras.1960s1970s',
-    locationKey: 'styles.locations.fresnoCA',
+    eraKey: 'eras.1960s1970s',
+    locationKey: 'locations.fresnoCA',
     eraIcon: '📅',
     locationIcon: '📍',
     tags: ['funkStyles', 'streetBattle', 'theatrical'],
     origins: {
-      yearKey: 'styles.eras.1960s1970s',
-      locationKey: 'styles.locations.fresnoCA',
+      yearKey: 'eras.1960s1970s',
+      locationKey: 'locations.fresnoCA',
       cultureKey: 'styles.detailed.popping.origins.culture',
     },
     theme: {
@@ -168,14 +168,14 @@ export const danceStyles: DanceStyle[] = [
     slug: 'locking',
     shortDescriptionKey: 'danceStyles.shortDescriptions.locking',
     fullDescriptionKey: 'styles.detailed.locking.description',
-    eraKey: 'styles.eras.1960s1970s',
-    locationKey: 'styles.locations.losAngelesCA',
+    eraKey: 'eras.1960s1970s',
+    locationKey: 'locations.losAngelesCA',
     eraIcon: '📅',
     locationIcon: '📍',
     tags: ['funkStyles', 'socialDance', 'theatrical'],
     origins: {
-      yearKey: 'styles.eras.1960s1970s',
-      locationKey: 'styles.locations.losAngelesCA',
+      yearKey: 'eras.1960s1970s',
+      locationKey: 'locations.losAngelesCA',
       cultureKey: 'styles.detailed.locking.origins.culture',
     },
   // Normalized entity references (LOCKING migrated)
@@ -207,14 +207,14 @@ export const danceStyles: DanceStyle[] = [
     slug: 'house',
     shortDescriptionKey: 'danceStyles.shortDescriptions.house',
     fullDescriptionKey: 'styles.detailed.house.description',
-    eraKey: 'styles.eras.1980s1990s',
-    locationKey: 'styles.locations.chicagoNYC',
+    eraKey: 'eras.1980s1990s',
+    locationKey: 'locations.chicagoNYC',
     eraIcon: '📅',
     locationIcon: '📍',
     tags: ['clubCulture', 'socialDance', 'underground'],
     origins: {
-      yearKey: 'styles.eras.1980s1990s',
-      locationKey: 'styles.locations.chicagoNYC',
+      yearKey: 'eras.1980s1990s',
+      locationKey: 'locations.chicagoNYC',
       cultureKey: 'styles.detailed.house.origins.culture',
     },
     theme: {
@@ -233,14 +233,14 @@ export const danceStyles: DanceStyle[] = [
     slug: 'voguing',
     shortDescriptionKey: 'danceStyles.shortDescriptions.voguing',
     fullDescriptionKey: 'styles.detailed.voguing.description',
-    eraKey: 'styles.eras.1960s1980s',
-    locationKey: 'styles.locations.harlemNYC',
+    eraKey: 'eras.1960s1980s',
+    locationKey: 'locations.harlemNYC',
     eraIcon: '📅',
     locationIcon: '📍',
     tags: ['ballroomCulture', 'theatrical', 'underground'],
     origins: {
-      yearKey: 'styles.eras.1960s1980s',
-      locationKey: 'styles.locations.harlemNYC',
+      yearKey: 'eras.1960s1980s',
+      locationKey: 'locations.harlemNYC',
       cultureKey: 'styles.detailed.voguing.origins.culture',
     },
     theme: {
@@ -259,14 +259,14 @@ export const danceStyles: DanceStyle[] = [
     slug: 'waacking',
     shortDescriptionKey: 'danceStyles.shortDescriptions.waacking',
     fullDescriptionKey: 'styles.detailed.waacking.description',
-    eraKey: 'styles.eras.1970s',
-    locationKey: 'styles.locations.losAngelesCA',
+    eraKey: 'eras.1970s',
+    locationKey: 'locations.losAngelesCA',
     eraIcon: '📅',
     locationIcon: '📍',
     tags: ['funkStyles', 'ballroomCulture', 'theatrical', 'clubCulture'],
     origins: {
-      yearKey: 'styles.eras.1970s',
-      locationKey: 'styles.locations.losAngelesCA',
+      yearKey: 'eras.1970s',
+      locationKey: 'locations.losAngelesCA',
       cultureKey: 'styles.detailed.waacking.origins.culture',
     },
     theme: {
@@ -285,14 +285,14 @@ export const danceStyles: DanceStyle[] = [
     slug: 'krumping',
     shortDescriptionKey: 'danceStyles.shortDescriptions.krumping',
     fullDescriptionKey: 'styles.detailed.krumping.description',
-    eraKey: 'styles.eras.2000s',
-    locationKey: 'styles.locations.southCentralLA',
+    eraKey: 'eras.2000s',
+    locationKey: 'locations.southCentralLA',
     eraIcon: '📅',
     locationIcon: '📍',
     tags: ['streetBattle', 'theatrical', 'underground'],
     origins: {
-      yearKey: 'styles.eras.2000s',
-      locationKey: 'styles.locations.southCentralLA',
+      yearKey: 'eras.2000s',
+      locationKey: 'locations.southCentralLA',
       cultureKey: 'styles.detailed.krumping.origins.culture',
     },
     theme: {
@@ -311,14 +311,14 @@ export const danceStyles: DanceStyle[] = [
     slug: 'hustle',
     shortDescriptionKey: 'danceStyles.shortDescriptions.hustle',
     fullDescriptionKey: 'styles.detailed.hustle.description',
-    eraKey: 'styles.eras.1970s',
-    locationKey: 'styles.locations.newYorkCity',
+    eraKey: 'eras.1970s',
+    locationKey: 'locations.newYorkCity',
     eraIcon: '📅',
     locationIcon: '📍',
     tags: ['clubCulture', 'socialDance'],
     origins: {
-      yearKey: 'styles.eras.1970s',
-      locationKey: 'styles.locations.newYorkCity',
+      yearKey: 'eras.1970s',
+      locationKey: 'locations.newYorkCity',
       cultureKey: 'styles.detailed.hustle.origins.culture',
     },
     theme: {
@@ -337,14 +337,14 @@ export const danceStyles: DanceStyle[] = [
     slug: 'punking',
     shortDescriptionKey: 'danceStyles.shortDescriptions.punking',
     fullDescriptionKey: 'styles.detailed.punking.description',
-    eraKey: 'styles.eras.1970s1980s',
-    locationKey: 'styles.locations.newYorkCity',
+    eraKey: 'eras.1970s1980s',
+    locationKey: 'locations.newYorkCity',
     eraIcon: '📅',
     locationIcon: '📍',
     tags: ['ballroomCulture', 'theatrical', 'funkStyles'],
     origins: {
-      yearKey: 'styles.eras.1970s1980s',
-      locationKey: 'styles.locations.newYorkCity',
+      yearKey: 'eras.1970s1980s',
+      locationKey: 'locations.newYorkCity',
       cultureKey: 'styles.detailed.punking.origins.culture',
     },
     theme: {
@@ -363,14 +363,14 @@ export const danceStyles: DanceStyle[] = [
     slug: 'turfing',
     shortDescriptionKey: 'danceStyles.shortDescriptions.turfing',
     fullDescriptionKey: 'styles.detailed.turfing.description',
-    eraKey: 'styles.eras.2000s',
-    locationKey: 'styles.locations.oaklandCA',
+    eraKey: 'eras.2000s',
+    locationKey: 'locations.oaklandCA',
     eraIcon: '📅',
     locationIcon: '📍',
     tags: ['hipHopFoundation', 'streetBattle', 'modernStreet'],
     origins: {
-      yearKey: 'styles.eras.2000s',
-      locationKey: 'styles.locations.oaklandCA',
+      yearKey: 'eras.2000s',
+      locationKey: 'locations.oaklandCA',
       cultureKey: 'styles.detailed.turfing.origins.culture',
     },
     theme: {
@@ -425,12 +425,12 @@ export const getTagById = (tagId: string): DanceStyleTag | undefined => {
 };
 
 export const getStylesByEra = (eraKey: string): DanceStyle[] => {
-  // eraKey must be a translation key like 'styles.eras.1970s'
+  // eraKey must be a translation key like 'eras.1970s'
   return danceStyles.filter((style) => style.eraKey === eraKey);
 };
 
 export const getStylesByLocation = (locationKey: string): DanceStyle[] => {
-  // locationKey must be a translation key like 'styles.locations.newYorkCity'
+  // locationKey must be a translation key like 'locations.newYorkCity'
   return danceStyles.filter((style) => style.locationKey === locationKey);
 };
 

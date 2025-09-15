@@ -23,7 +23,7 @@ export function DanceStyleGridCard({
   slug,
   index,
 }: DanceStyleGridCardProps) {
-  const t = useTranslations('stylesPage');
+  const t = useTranslations();
   // The page passes raw era/location for compatibility; prefer translation keys
   // If the caller instead passes translation keys, they should already be translated
   const tTags = useTranslations('danceTags');
@@ -77,7 +77,7 @@ export function DanceStyleGridCard({
             
             <div className="flex items-center justify-start pt-2">
               <span className="text-body-sm font-medium text-accent-primary group-hover:text-accent-secondary transition-colors">
-                {t('styleCard.exploreStyle')}
+                {t('stylesPage.styleCard.exploreStyle')}
               </span>
             </div>
           </div>

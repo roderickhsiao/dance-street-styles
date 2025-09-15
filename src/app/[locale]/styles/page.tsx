@@ -15,7 +15,7 @@ export default function StylesPage() {
   const tStyleDescriptions = useTranslations('danceStyles.shortDescriptions');
   const allStyles = getAllDanceStyles();
   const tGlobal = useTranslations();
-  
+
   // Create a map of style IDs to style objects for quick lookup
   // Get all styles sorted alphabetically by translated name
   const sortedStyles = allStyles.sort((a, b) => {
@@ -27,9 +27,11 @@ export default function StylesPage() {
   return (
     <div className="min-h-screen bg-surface-primary">
       <MainNavigation />
-      
+
       <Hero
-        title={`${tPage('hero.title.line1')} ${tPage('hero.title.line2')} ${tPage('hero.title.line3')}`}
+        title={`${tPage('hero.title.line1')} ${tPage(
+          'hero.title.line2'
+        )} ${tPage('hero.title.line3')}`}
         subtitle={tPage('hero.subtitle')}
         backgroundVariant="street"
       />
@@ -57,7 +59,7 @@ export default function StylesPage() {
       <Section className="py-16" background="primary">
         <div className="container mx-auto px-6">
           <div className="mb-12 text-center">
-              <h2 className="text-header-lg font-black text-content-primary mb-4">
+            <h2 className="text-header-lg font-black text-content-primary mb-4">
               {tPage('allStyles.title')}
             </h2>
             <p className="text-body-md text-content-secondary max-w-2xl mx-auto">

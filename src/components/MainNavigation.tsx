@@ -1,11 +1,11 @@
 "use client";
-
-import { Link } from '@/i18n/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
 export function MainNavigation() {
   const t = useTranslations('navigation');
+  const pathname = usePathname();
 
   const navLinks = [
     { 
@@ -34,16 +34,24 @@ export function MainNavigation() {
           </Link>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-content-secondary hover:text-accent-primary font-medium transition-colors magazine-sans uppercase tracking-wider text-body-sm"
-              >
-                {link.label}
-              </Link>
-            ))}
+          <div className="hidden md:flex items-center space-x-2">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href || pathname.startsWith(link.href + '/');
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={
+                    'font-medium transition-colors magazine-sans uppercase tracking-wider text-body-sm px-3 py-1 rounded-lg ' +
+                    (isActive
+                      ? 'text-accent-primary font-bold bg-accent-primary/10'
+                      : 'text-content-secondary hover:text-accent-primary')
+                  }
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
             <LanguageSwitcher />
           </div>
 

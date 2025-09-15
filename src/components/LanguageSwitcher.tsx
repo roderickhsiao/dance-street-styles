@@ -27,35 +27,37 @@ export function LanguageSwitcher() {
         <Button
           variant="ghost"
           size="sm"
-          className="gap-2 text-content-secondary hover:text-content-primary"
+          className="gap-1 text-content-secondary hover:text-content-primary px-2 py-1 rounded-md bg-surface-elevated/10 border border-stroke-secondary shadow-lg min-h-0"
         >
-          <span className="text-lg">{getCountryFlag(locale)}</span>
-          <span className="hidden sm:inline">
+          <span className="text-base">{getCountryFlag(locale)}</span>
+          <span className="hidden sm:inline text-xs">
             {getLocaleShortName(locale)}
           </span>
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-40 p-2" align="end">
+      <PopoverContent
+        className="min-w-fit max-w-[10rem] px-3 py-1 rounded-md border border-stroke-secondary/10 bg-[rgba(30,30,40,0.7)]"
+        align="end"
+        style={{
+          WebkitBackdropFilter: 'blur(8px)',
+          backdropFilter: 'url(#glass-filter)',
+        }}
+      >
         <div className="space-y-1">
           {availableLocales.map((loc) => (
             <button
               key={loc.code}
               onClick={() => switchLocale(loc.code)}
-              className={`w-full text-left px-2 py-1.5 text-sm rounded-sm transition-colors ${
+              className={`w-full text-start px-2 py-1 rounded-sm flex items-center gap-2 transition-colors duration-150 font-normal focus:outline-none focus-visible:ring-1 focus-visible:ring-accent-primary/60 focus-visible:ring-offset-1 focus-visible:ring-offset-surface-elevated ${
                 locale === loc.code
-                  ? 'bg-accent-primary text-surface-primary font-medium'
-                  : 'text-content-secondary hover:text-content-primary hover:bg-surface-elevated'
+                  ? 'text-accent-primary bg-accent-primary/10'
+                  : 'text-content-secondary hover:text-content-primary'
               }`}
+              aria-current={locale === loc.code ? 'true' : undefined}
+              style={{ minHeight: '2.25rem' }}
             >
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <span className="text-base">{getCountryFlag(loc.code)}</span>
-                  <span>{getLocaleDisplayName(loc.code)}</span>
-                </div>
-                {locale === loc.code && (
-                  <div className="w-1.5 h-1.5 rounded-full bg-current" />
-                )}
-              </div>
+              <span className="text-base align-middle flex items-center">{getCountryFlag(loc.code)}</span>
+              <span className="flex-1 magazine-sans tracking-normal text-body-sm align-middle flex items-center">{getLocaleDisplayName(loc.code)}</span>
             </button>
           ))}
         </div>

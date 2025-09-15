@@ -23,7 +23,7 @@ interface VideoCarouselProps {
 }
 
 export const VideoCarousel = ({ videos, className = '' }: VideoCarouselProps) => {
-  const t = useTranslations('streetCulture.elements.videos');
+  const t = useTranslations('origins.streetCulture.elements.videos');
   const [currentIndex, setCurrentIndex] = useState(0);
   const thumbnailRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const thumbnailContainerRef = useRef<HTMLDivElement>(null);
