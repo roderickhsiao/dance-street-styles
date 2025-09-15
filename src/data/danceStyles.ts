@@ -89,11 +89,10 @@ export const danceStyles: DanceStyle[] = [
     characteristicsKey: 'styles.detailed.breaking.characteristics.items',
     keyMovesKey: 'styles.detailed.breaking.keyMoves.items',
     influentialArtistsKey: 'styles.detailed.breaking.influentialArtists.items',
-  // musicGenres items moved to structured `musicGenres` where applicable
     videosKey: 'styles.detailed.breaking.videos.items',
     timelineKey: 'styles.detailed.breaking.timeline.events',
     featuredVideoId: 'breaking-documentary',
-    videoIds: ['locking-featured'], // Additional videos
+    videoIds: [], // Additional videos
     theme: {
       primary: '#E74C3C',
       secondary: '#C0392B',
@@ -120,8 +119,8 @@ export const danceStyles: DanceStyle[] = [
       locationKey: 'locations.newYorkCity',
       cultureKey: 'styles.detailed.hipHop.origins.culture',
     },
-    featuredVideoId: '5-elements-of-hop-hop',
-    videoIds: ['dj-evolution', 'mcing-history', 'graffiti-art'],
+    featuredVideoId: 'hiphop-birth',
+    videoIds: ['5-elements-of-hop-hop', 'dj-evolution', 'mcing-history', 'graffiti-art'],
     theme: {
       primary: '#FF6B35',
       secondary: '#F7931E',
@@ -152,6 +151,7 @@ export const danceStyles: DanceStyle[] = [
       locationKey: 'locations.fresnoCA',
       cultureKey: 'styles.detailed.popping.origins.culture',
     },
+    featuredVideoId: 'popping-interview',
     theme: {
       primary: '#9B59B6',
       secondary: '#8E44AD',
@@ -178,9 +178,8 @@ export const danceStyles: DanceStyle[] = [
       locationKey: 'locations.losAngelesCA',
       cultureKey: 'styles.detailed.locking.origins.culture',
     },
-  // Normalized entity references (LOCKING migrated)
   featuredVideoId: 'locking-featured',
-  videoIds: ['dj-evolution'], // Additional videos
+  videoIds: ['toni-basil-lockers-memories'], // Additional videos
   influentialArtistIds: ['don-campbell', 'toni-basil'],
   crewIds: ['the-lockers'],
   dancerIds: ['don-campbell', 'toni-basil'],
@@ -217,6 +216,7 @@ export const danceStyles: DanceStyle[] = [
       locationKey: 'locations.chicagoNYC',
       cultureKey: 'styles.detailed.house.origins.culture',
     },
+    featuredVideoId: 'house-marjory-smarth',
     theme: {
       primary: '#3498DB',
       secondary: '#2980B9',
@@ -243,6 +243,7 @@ export const danceStyles: DanceStyle[] = [
       locationKey: 'locations.harlemNYC',
       cultureKey: 'styles.detailed.voguing.origins.culture',
     },
+    featuredVideoId: 'voguing-lgbtq-history',
     theme: {
       primary: '#E91E63',
       secondary: '#AD1457',
@@ -269,6 +270,7 @@ export const danceStyles: DanceStyle[] = [
       locationKey: 'locations.losAngelesCA',
       cultureKey: 'styles.detailed.waacking.origins.culture',
     },
+    featuredVideoId: 'waacking-tyrone-proctor',
     theme: {
       primary: '#FF1744',
       secondary: '#D50000',
@@ -340,6 +342,7 @@ export const danceStyles: DanceStyle[] = [
     eraKey: 'eras.1970s',
     locationKey: 'locations.losAngelesCA',
     eraIcon: '📅',
+    featuredVideoId: 'punking-featured',
     locationIcon: '📍',
     tags: ['ballroomCulture', 'theatrical', 'funkStyles'],
     origins: {
@@ -373,6 +376,8 @@ export const danceStyles: DanceStyle[] = [
       locationKey: 'locations.oaklandCA',
       cultureKey: 'styles.detailed.turfing.origins.culture',
     },
+    featuredVideoId: 'turfing-liquid-flow',
+    videoIds: ['turfing-scorpion-lopez'],
     theme: {
       primary: '#1E88E5',
       secondary: '#42A5F5',

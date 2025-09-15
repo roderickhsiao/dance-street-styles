@@ -94,7 +94,7 @@ export function FeaturedVideo({ video, className = '' }: FeaturedVideoProps) {
                         ? t(video.titleKey)
                         : t('featuredVideo.title')}
                     </h3>
-                    <p className="text-body-xs md:text-body-sm text-white/80 mt-1">
+                    <p className="text-body-xs md:text-body-sm text-white/80 mt-1 line-clamp-2">
                       {video.descriptionKey
                         ? t(video.descriptionKey)
                         : t('featuredVideo.description')}

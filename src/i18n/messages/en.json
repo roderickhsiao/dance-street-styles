@@ -740,6 +740,56 @@
         "lockingFeatured": {
           "title": "Time Travel: A Tribute to Don \"Campbellock\" Campbell",
           "description": "Directed, edited, and animated by Mathilde Chamussy. Using live footage of Don Campbellock Campbell."
+        },
+        "toniBasilMemories": {
+          "title": "Toni Basil Sharing Memories for The Lockers",
+          "description": "Toni Basil shares her personal memories and experiences with The Lockers, providing intimate insights into the early days of locking and the legendary dance crew."
+        }
+      },
+      "punking": {
+        "punkingFeatured": {
+          "title": "PUNKING/Whacking/Waacking originators by IHOAP",
+          "description": "This video presents originators/innovators of PUNKING/WHacking/Waacking dance style."
+        }
+      },
+      "waacking": {
+        "tyroneProctor": {
+          "title": "Interview with Tyrone Proctor - Rest In Power Tyrone",
+          "description": "An interview with Tyrone Proctor, one of the Pioneers of Waacking and an original Soul Train Dancer. Interview courtesy of Rennie Harris and the American Street Dance Archives. Filmed at Destiny Arts Center in Oakland, CA during Rennie Harris' Illadelph Legends Hip Hop Festival Bay Area, presented by Embodiment Project."
+        }
+      },
+      "house": {
+        "marjorySmarth": {
+          "title": "In Remembrance and Honor of Marjory Smarth",
+          "description": "A tribute video honoring Marjory Smarth, a beloved figure in the house dance community. #LiveTrueDanceFree #MarjorySmarthForever"
+        }
+      },
+      "turfing": {
+        "scorpionLopez": {
+          "title": "Scorpion - On Lopez Tonight",
+          "description": "Scorpion showcases his incredible turfing skills on Lopez Tonight, demonstrating the athleticism and storytelling power of Oakland's signature dance style."
+        },
+        "liquidFlow": {
+          "title": "Liquid Flow - A Viral Moment, Born From Grief: The Story of the TURF FEINZ",
+          "description": "In \"Liquid Flow,\" a 2019 mini-documentary produced for the Oakland Museum of California (OMCA) featuring the Turf Feinz and directed by YAK Films, Darrell \"D-Real\" Armstead says, \"Oakland is a city of artists. Layer on layer. That pressure, the need to express yourself? It's everywhere. Homicide. Housing. Money flowing out but never in. Somebody you know dead. Some people say all this, that we do now, came from all that.\""
+        }
+      },
+      "hipHop": {
+        "birth": {
+          "title": "The Birth of Hip Hop",
+          "description": "In 1973, DJ Kool Herc set up his turntables and introduced a technique at a South Bronx house party that would change music as many people knew it. His ability to switch from record to record — as well as isolate and repeat music breaks — led to the discovery of the hip hop genre."
+        }
+      },
+      "popping": {
+        "interview": {
+          "title": "Interview with Popin Pete & Suga Pop",
+          "description": "The EB's were born in 1977 when Boogaloo Sam founded the Electronic Boogaloo Lockers - Dance Channel TV interviews Popin Pete & Suga Pop."
+        }
+      },
+      "voguing": {
+        "lgbtqHistory": {
+          "title": "How the LGBTQ community created voguing",
+          "description": "Vogue, the dance, not the magazine. Explore the origins of voguing in the LGBTQ ballroom community and how this powerful form of expression emerged from Harlem's underground scene."
         }
       }
     }
