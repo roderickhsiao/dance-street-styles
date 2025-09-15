@@ -1,4 +1,4 @@
-import { Link } from '../../i18n/navigation';
+import { Link } from '@/i18n/navigation';
 import { motion } from 'framer-motion';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '../../lib/utils';

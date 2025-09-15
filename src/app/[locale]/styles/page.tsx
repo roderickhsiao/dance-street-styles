@@ -6,7 +6,7 @@ import { MainNavigation } from '@/components/MainNavigation';
 import { Hero } from '@/components/Hero';
 import { Section } from '@/components/Section';
 import { CTAButton } from '@/components/ui/cta-button';
-import { DanceStyleGridCard } from '@/components/DanceStyleGridCard';
+import { DanceStyleGridCard } from '@/app/[locale]/styles/parts/DanceStyleGridCard';
 import { getAllDanceStyles } from '@/data/danceStyles';
 
 export default function StylesPage() {

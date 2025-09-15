@@ -1,8 +1,8 @@
 'use client';
 
 import { useLocale } from 'next-intl';
-import { usePathname, useRouter } from '../i18n/navigation';
-import { useIntlDisplayNames } from '../i18n/hooks';
+import { usePathname, useRouter } from '@/i18n/navigation';
+import { useIntlDisplayNames } from '@/i18n/hooks';
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
 import { Button } from './ui/button';
 import { getCountryFlag, getLocaleDisplayName, getLocaleShortName } from '../i18n/locale-flags';
