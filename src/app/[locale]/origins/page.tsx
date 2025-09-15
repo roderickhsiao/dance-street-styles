@@ -4,7 +4,6 @@ import { motion } from '@/lib/motion';
 import { useTranslations } from 'next-intl';
 import { useMemo } from 'react';
 import { useIntl } from '@/i18n/hooks';
-import { MainNavigation } from '@/components/MainNavigation';
 import { ExpandableCard } from '@/components/ExpandableCard';
 import { Timeline } from '@/components/Timeline';
 import { Hero } from '@/components/Hero';
@@ -339,8 +338,6 @@ export default function OriginOfStreetDancePage() {
 
   return (
     <div className="min-h-screen bg-surface-primary">
-      <MainNavigation />
-
       <Hero
         backgroundVariant="magazine"
         title={t('hero.title')}
@@ -360,7 +357,7 @@ export default function OriginOfStreetDancePage() {
         </h2>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8">
+          <div className="space-y-8 md:sticky top-24 bottom-24">
             {whyStreetsData.map((section, index) => (
               <div
                 key={index}

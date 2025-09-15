@@ -2,7 +2,6 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from '@/lib/motion';
-import { MainNavigation } from '@/components/MainNavigation';
 import { Hero } from '@/components/Hero';
 import { Section } from '@/components/Section';
 import { CTAButton } from '@/components/ui/cta-button';
@@ -26,8 +25,6 @@ export default function StylesPage() {
 
   return (
     <div className="min-h-screen bg-surface-primary">
-      <MainNavigation />
-
       <Hero
         title={`${tPage('hero.title.line1')} ${tPage(
           'hero.title.line2'

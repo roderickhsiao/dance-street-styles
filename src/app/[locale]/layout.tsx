@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Footer } from '../../components/Footer';
+import { MainNavigation } from '../../components/MainNavigation';
 import { locales } from '../../i18n/request';
 import { getOGLocale } from '../../i18n/locale-mappings';
 
@@ -47,6 +48,7 @@ export default async function LocaleLayout({
 
   return (
     <>
+      <MainNavigation />
       {children}
       <Footer />
     </>

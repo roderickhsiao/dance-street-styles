@@ -8,14 +8,14 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const exploreLinks = [
-    { text: t('sections.explore.links.0'), href: '/styles' },
-    { text: t('sections.explore.links.1'), href: '/origins' },
+    { text: t('sections.explore.links.styles'), href: '/styles' },
+    { text: t('sections.explore.links.origins'), href: '/origins' },
+    { text: t('sections.explore.links.trivia'), href: '/trivia' },
   ];
 
   const connectLinks = [
-    { text: t('sections.connect.links.0'), href: '/about' },
-    { text: t('sections.connect.links.1'), href: '/submit' },
-    { text: t('sections.connect.links.2'), href: '/contact' },
+    { text: t('sections.connect.links.about'), href: '/about' },
+    { text: t('sections.connect.links.contact'), href: '/contact' },
   ];
 
   return (

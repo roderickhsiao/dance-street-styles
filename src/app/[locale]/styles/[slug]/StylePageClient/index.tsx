@@ -4,7 +4,6 @@ import { useEffect, useState, useRef } from 'react';
 import { motion } from '@/lib/motion';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
-import { MainNavigation } from '@/components/MainNavigation';
 import { Badge } from '@/components/ui/badge';
 import { useTheme } from '@/hooks/useTheme';
 import { ArrowLeft, MapPin, Clock, Zap, ChevronRight } from 'lucide-react';
@@ -418,9 +417,6 @@ export function StylePageClient({
 
   return (
     <div className="min-h-screen bg-surface-primary text-content-primary">
-      <MainNavigation />
-
-      {/* Header */}
       <header className="relative overflow-hidden bg-gradient-to-br from-surface-secondary via-surface-primary to-surface-secondary border-b border-stroke-primary">
         {/* Dynamic Theme Background with Spotlight Effect */}
         <div

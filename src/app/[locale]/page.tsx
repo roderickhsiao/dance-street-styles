@@ -3,7 +3,6 @@
 import { motion } from '@/lib/motion';
 import { useTranslations } from 'next-intl';
 import { useMemo } from 'react';
-import { MainNavigation } from '../../components/MainNavigation';
 import { Hero } from '../../components/Hero';
 import { Section } from '../../components/Section';
 import { Stats } from '../../components/Stats';
@@ -48,8 +47,6 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-surface-primary">
-      <MainNavigation />
-
       <Hero
         backgroundVariant="magazine"
         layout="magazine"

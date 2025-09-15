@@ -178,6 +178,14 @@ export const VIDEOS: Record<string, VideoEntity> = {
     descriptionKey: 'danceStyles.video.soul.yoshieFeatured.description',
     artistId: 'yoshie',
     thumbnailUrl: 'https://img.youtube.com/vi/7qG-u6S75OI/hqdefault.jpg',
+  },
+  'litefeet-sound-of-subway': {
+    id: 'litefeet-sound-of-subway',
+    titleKey: 'danceStyles.video.litefeet.soundOfSubway.title',
+    url: 'https://www.youtube.com/watch?v=Oj2wok72jQ8',
+    type: 'history',
+    descriptionKey: 'danceStyles.video.litefeet.soundOfSubway.description',
+    thumbnailUrl: 'https://img.youtube.com/vi/Oj2wok72jQ8/hqdefault.jpg',
   }
 };
 

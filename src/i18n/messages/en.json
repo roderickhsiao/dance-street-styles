@@ -23,15 +23,18 @@
     "sections": {
       "explore": {
         "title": "Explore",
-        "links": [
-          "All Dance Styles",
-          "Cultural Timeline",
-          "Test Your Knowledge"
-        ]
+        "links": {
+          "styles": "All Dance Styles",
+          "origins": "Cultural Timeline",
+          "trivia": "Test Your Knowledge"
+        }
       },
       "connect": {
         "title": "Connect",
-        "links": ["About This Publication", "Submit Your Story", "Get in Touch"]
+        "links": {
+          "about": "About This Publication",
+          "contact": "Get in Touch"
+        }
       }
     },
     "copyright": "Street Dance Culture Magazine © {year} • Independent Publication",
@@ -40,6 +43,146 @@
       "prefix": "Est.",
       "year": "1973",
       "suffix": "From the Bronx to the World"
+    }
+  },
+
+  "about": {
+    "seo": {
+      "title": "About Street Dance Culture - Independent Documentation Project",
+      "description": "Learn about Street Dance Culture, an independent open-source project documenting authentic street dance history, movements, and culture. Community-driven content celebrating dance heritage from the Bronx to the world."
+    },
+    "hero": {
+      "title": "ABOUT THIS PROJECT",
+      "subtitle": "An independent documentation of street dance culture, built with respect for the Black and Latino communities and pioneers who created these movements. Learn the culture, not just the moves.",
+      "badges": {
+        "status": "Open Source",
+        "mission": "Cultural Preservation", 
+        "community": "Community Driven"
+      }
+    },
+    "mission": {
+      "title": "Our Mission",
+      "content": [
+        "Street Dance Culture is an independent project dedicated to documenting and preserving the authentic history of street dance movements. We believe these stories deserve to be told with accuracy, respect, and cultural context.",
+        "This is not a commercial venture — it's a labor of love created to honor the pioneers, communities, and cultures that gave birth to these incredible art forms.",
+        "We encourage learning the culture, not just the moves. Understanding the history, struggle, joy, and innovation behind each dance deepens your connection to the art and shows respect to its creators."
+      ]
+    },
+    "approach": {
+      "title": "Our Approach",
+      "principles": [
+        {
+          "title": "Community First",
+          "description": "All information is gathered from within the communities themselves — from dancers, pioneers, historians, and cultural keepers who lived these stories."
+        },
+        {
+          "title": "Cultural Education Over Entertainment",
+          "description": "We prioritize teaching the history, context, and cultural significance behind each dance. Learn the struggles, celebrations, and innovations that shaped these movements."
+        },
+        {
+          "title": "Honor Black & Latino Origins",
+          "description": "Street dance culture was created by Black and Latino communities. We ensure these origins are acknowledged, respected, and never erased from the narrative."
+        },
+        {
+          "title": "Authenticity Over Aesthetics",
+          "description": "We prioritize cultural accuracy and authentic voices over trendy interpretations or mainstream narratives."
+        },
+        {
+          "title": "Open Source Values",
+          "description": "This project is open source, transparent, and built with the belief that culture belongs to the community, not corporations."
+        },
+        {
+          "title": "Continuous Learning",
+          "description": "We acknowledge that our understanding evolves. We're committed to updating content based on community feedback and new insights."
+        }
+      ]
+    },
+    "content": {
+      "title": "Content & Sources",
+      "description": "Information presented here comes from:",
+      "sources": [
+        "Direct interviews and conversations with dance pioneers",
+        "Historical documentation from the communities themselves", 
+        "Academic research and cultural studies",
+        "Video archives and performance documentation",
+        "Community forums, discussions, and shared knowledge"
+      ],
+      "note": "We strive for accuracy but recognize that cultural history is complex and sometimes contested. Different communities may have different perspectives on the same events."
+    },
+    "feedback": {
+      "title": "Help Us Improve",
+      "content": [
+        "This project is only as strong as the community that supports it. If you notice information that needs correction, have additional context to share, or want to contribute to this documentation, we want to hear from you.",
+        "Every correction, every story, every piece of cultural context makes this resource more valuable for future generations of dancers and culture enthusiasts."
+      ],
+      "cta": "Have feedback, corrections, or want to contribute?",
+      "contact": "Reach out and help us keep the culture authentic."
+    },
+    "recognition": {
+      "title": "Learn Culture, Not Just Moves",
+      "content": [
+        "We acknowledge that street dance culture emerged from marginalized communities — primarily Black and Latino communities in urban America. These communities created something beautiful from struggle, something joyful from hardship.",
+        "When you learn a street dance, you're not just learning choreography — you're connecting with decades of cultural history, social resistance, and artistic innovation. Each move carries the spirit of the neighborhoods where it was born.",
+        "We encourage dancers to study the history, understand the context, and learn from the communities themselves. Respect the culture by knowing its story, not just copying its steps.",
+        "This project exists to honor those origins and ensure the stories are told correctly, with full recognition of the cultural context and social conditions that birthed these movements. We stand against cultural appropriation and work to center the voices and experiences of the communities who created these art forms."
+      ]
+    },
+    "culturalLearning": {
+      "title": "Beyond the Dance Floor",
+      "content": [
+        "Street dance is more than movement — it's storytelling, community building, and cultural preservation. Each style carries the history of the people who created it, their struggles, triumphs, and artistic vision.",
+        "Before you learn to pop, lock, or break, learn about the communities that birthed these movements. Understand the social conditions, the musical influences, and the cultural significance that make each dance unique.",
+        "True mastery comes not from perfect technique alone, but from understanding and respecting the culture that gave life to the movement. This knowledge transforms you from a dancer who copies moves into an artist who honors tradition."
+      ],
+      "callToAction": "Dance with knowledge. Move with respect. Learn the culture, not just the steps."
+    },
+    "technical": {
+      "title": "Built With Care",
+      "description": "This site is built using modern web technologies with accessibility and performance in mind:",
+      "tech": [
+        "Next.js with App Router for optimal performance",
+        "Internationalization support for multiple languages", 
+        "Responsive design that works on all devices",
+        "Accessible markup following WCAG guidelines",
+        "Semantic HTML and structured data"
+      ],
+      "code": "The source code is available on GitHub for transparency and community contributions."
+    }
+  },
+
+  "contact": {
+    "seo": {
+      "title": "Contact Street Dance Culture - Share Your Story",
+      "description": "Get in touch with Street Dance Culture. Share corrections, contribute stories, or provide feedback to help us preserve authentic street dance history."
+    },
+    "hero": {
+      "title": "GET IN TOUCH",
+      "subtitle": "Help us keep the culture authentic. Share your knowledge, provide corrections, or contribute to the documentation of street dance history.",
+      "badges": {
+        "open": "Open Source",
+        "community": "Community Driven",
+        "feedback": "Always Learning"
+      }
+    },
+    "main": {
+      "title": "We Value Your Voice",
+      "content": [
+        "Street dance culture belongs to the communities that created it — primarily Black and Latino communities who transformed struggle into art, hardship into joy, and neighborhoods into stages.",
+        "If you see something that needs correction, have a story to share, or want to contribute to this project, we want to hear from you. Every piece of feedback helps us create a more accurate and complete picture of street dance history.",
+        "We especially encourage input from community elders, original practitioners, and cultural keepers who can share authentic stories and context that textbooks often miss."
+      ]
+    },
+    "feedback": {
+      "title": "Corrections & Feedback",
+      "description": "Found something that needs fixing? Have additional context or historical details to share? We're always ready to learn and improve."
+    },
+    "contribute": {
+      "title": "Contribute Content",
+      "description": "Want to help document street dance culture? Share stories, suggest new content, or contribute to this open source project."
+    },
+    "response": {
+      "title": "Response Time",
+      "description": "We aim to respond to all messages within 48 hours. This is an independent project, so please be patient as we review your contribution."
     }
   },
 
@@ -891,6 +1034,12 @@
         "yoshieFeatured": {
           "title": "YOSHIE - SOUL DANCE \"Inner City Blues / Make Me Wanna Holler\" 【DANCEWORKS】",
           "description": "A masterful performance by YOSHIE, one of the key figures in Japanese Soul Dance, showcasing the style's energetic expression to classic soul music."
+        }
+      },
+      "litefeet": {
+        "soundOfSubway": {
+          "title": "Litefeet: Sound of the Subway",
+          "description": "FACT presents Litefeet: Sound of the Subway, a documentary on the music of the New York underground."
         }
       }
     }

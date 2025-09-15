@@ -413,6 +413,7 @@ export const danceStyles: DanceStyle[] = [
     locationKey: 'locations.harlemNYC',
     eraIcon: '📅',
     locationIcon: '📍',
+    featuredVideoId: 'litefeet-sound-of-subway',
     tags: ['hipHopFoundation', 'socialDance', 'modernStreet'],
     origins: {
       yearKey: 'eras.2000s',
