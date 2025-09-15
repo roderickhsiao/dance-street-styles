@@ -337,14 +337,14 @@ export const danceStyles: DanceStyle[] = [
     slug: 'punking',
     shortDescriptionKey: 'danceStyles.shortDescriptions.punking',
     fullDescriptionKey: 'styles.detailed.punking.description',
-    eraKey: 'eras.1970s1980s',
-    locationKey: 'locations.newYorkCity',
+    eraKey: 'eras.1970s',
+    locationKey: 'locations.losAngelesCA',
     eraIcon: '📅',
     locationIcon: '📍',
     tags: ['ballroomCulture', 'theatrical', 'funkStyles'],
     origins: {
-      yearKey: 'eras.1970s1980s',
-      locationKey: 'locations.newYorkCity',
+      yearKey: 'eras.1970s',
+      locationKey: 'locations.losAngelesCA',
       cultureKey: 'styles.detailed.punking.origins.culture',
     },
     theme: {

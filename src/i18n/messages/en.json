@@ -341,7 +341,7 @@
       "locking": {
         "overview": {
           "content": [
-            "Locking is a high-energy funk dance style known for its playful attitude, theatrical moves, and signature freezes called 'locks.' Dancers use exaggerated gestures, sharp stops, and expressive character to connect with the audience and the music.",
+            "Locking is a high-energy funk dance style known for its playful attitude, theatrical moves, and signature freezes called ’locks.’ Dancers use exaggerated gestures, sharp stops, and expressive character to connect with the audience and the music.",
             "The style celebrates individuality, musicality, and crowd interaction. Locking’s vibrant personality and improvisational spirit make it a favorite in battles, performances, and street dance culture worldwide."
           ]
         },
@@ -351,9 +351,9 @@
             "Don Campbell’s innovation inspired The Lockers crew and helped bring funk styles to the mainstream, making Locking a cornerstone of street dance history."
           ],
           "content": [
-            "Donald Odell Campbell was born January 8th, 1951. In 1970, at just 19 years old, Don Campbell created the dance 'The Campbellock' at LA Trade Technical College in Downtown LA.",
-            "Don was first and foremost an artist — a portrait artist who understood how art could garner expression and move people. When he tried to do a dance called 'The Robot Shuffle' but couldn't execute it properly, his unique 'mistakes' became the foundation of something revolutionary.",
-            "Like 'The Lock' itself, all of Don's moves were never premeditated. They were the result of improvisation and interaction with others, dictated by the feel of the music and individual expression."
+            "Donald Odell Campbell was born January 8th, 1951. In 1970, at just 19 years old, Don Campbell created the dance ’The Campbellock’ at LA Trade Technical College in Downtown LA.",
+            "Don was first and foremost an artist — a portrait artist who understood how art could garner expression and move people. When he tried to do a dance called ’The Robot Shuffle’ but couldn’t execute it properly, his unique ’mistakes’ became the foundation of something revolutionary.",
+            "Like ’The Lock’ itself, all of Don’s moves were never premeditated. They were the result of improvisation and interaction with others, dictated by the feel of the music and individual expression."
           ]
         },
         "culture": {
@@ -366,25 +366,25 @@
           "bpm": "100–120",
           "timeSignature": "4/4",
           "keyElements": "Funk & Soul",
-          "description": "Locking is performed to funk music with strong, steady beats that provide the rhythmic foundation for the characteristic 'lock' movements. The music's emphasis on groove and rhythm allows dancers to play with timing and express their individual style.",
+          "description": "Locking is performed to funk music with strong, steady beats that provide the rhythmic foundation for the characteristic ’lock’ movements. The music’s emphasis on groove and rhythm allows dancers to play with timing and express their individual style.",
           "artists": [
             {
               "name": "James Brown",
               "type": "Funk Pioneer",
-              "contribution": "The Godfather of Soul's rhythmic innovations provided the musical foundation that inspired early Locking dancers."
+              "contribution": "The Godfather of Soul’s rhythmic innovations provided the musical foundation that inspired early Locking dancers."
             },
             {
               "name": "Parliament-Funkadelic",
               "type": "Funk Collective",
-              "contribution": "George Clinton's funk empire created the groove-heavy soundscapes that became synonymous with West Coast funk styles."
+              "contribution": "George Clinton’s funk empire created the groove-heavy soundscapes that became synonymous with West Coast funk styles."
             }
           ],
-          "playlist": "Curated playlist of tracks that define Locking's musical heritage and contemporary evolution."
+          "playlist": "Curated playlist of tracks that define Locking’s musical heritage and contemporary evolution."
         },
         "techniques": {
           "title": "Techniques & Key Moves",
           "content": [
-            "The fundamental 'Lock' — the signature freeze that gives the dance its name",
+            "The fundamental ’Lock’ — the signature freeze that gives the dance its name",
             "Points and hand gestures that emphasize the rhythmic breaks",
             "Fast leg movements contrasted with sudden stops",
             "Theatrical expressions and showmanship"
@@ -443,7 +443,7 @@
       "popping": {
         "overview": {
           "content": [
-            "Popping is a funk-driven street dance style based on quickly contracting and relaxing muscles to create sharp, robotic movements called 'pops.' Dancers use isolations, waves, and animation to bring music to life.",
+            "Popping is a funk-driven street dance style based on quickly contracting and relaxing muscles to create sharp, robotic movements called ’pops.’ Dancers use isolations, waves, and animation to bring music to life.",
             "Originating in Fresno, California, popping became a staple of West Coast funk styles and a favorite in battles and performances."
           ]
         },
@@ -471,7 +471,7 @@
             "The style spread internationally, influencing club culture and contemporary street dance."
           ],
           "content": [
-            "Dancers like Brian 'Footwork' Green and Ejoe Wilson helped shape house dance, blending influences from jazz, tap, and African dance.",
+            "Dancers like Brian ’Footwork’ Green and Ejoe Wilson helped shape house dance, blending influences from jazz, tap, and African dance.",
             "House remains a vibrant, evolving style that values community, creativity, and the joy of movement."
           ]
         }
@@ -485,7 +485,7 @@
         },
         "history": {
           "summary": [
-            "Voguing evolved in Harlem’s ballroom competitions, where dancers competed in categories like 'Old Way,' 'New Way,' and 'Vogue Fem.'",
+            "Voguing evolved in Harlem’s ballroom competitions, where dancers competed in categories like ’Old Way,’ ’New Way,’ and ’Vogue Fem.’",
             "The style gained mainstream attention through artists like Willi Ninja and Madonna, but its heart remains in the ballroom community."
           ],
           "content": [
@@ -548,18 +548,18 @@
       "punking": {
         "overview": {
           "content": [
-            "Punking is a theatrical street dance style from New York City, emphasizing dramatic gestures, poses, and runway attitude. It is closely related to whacking and voguing, blending funk, disco, and expressive storytelling.",
+            "Punking is a theatrical street dance style from Los Angeles, emphasizing dramatic gestures, poses, and runway attitude. It originated in LA’s underground gay community and later evolved into whacking/waacking.",
             "The style empowers dancers to embrace character, emotion, and individuality."
           ]
         },
         "history": {
           "summary": [
-            "Punking was developed in the 1970s-80s by dancers in NYC’s underground club scene, including Michael Angelo and the Outrageous Waackers.",
-            "The style influenced the evolution of whacking and voguing, leaving a lasting impact on street dance culture."
+            "Punking was early 1970s by dancers in LA’s underground gay club scene, including Michael Angelo Harris, Andrew Frank, and Viktor Manoel at clubs like Paradise Ballroom, Ginos, and Ginos II",
+            "The style later evolved into whacking/waacking as it spread beyond the gay community, influencing modern street dance culture."
           ],
           "content": [
-            "Punking’s roots lie in the search for creative freedom and self-expression within marginalized communities.",
-            "The dance remains a vibrant, evolving style that values storytelling, attitude, and innovation."
+            "Punking’s roots lie in the search for creative freedom and self-expression within marginalized LGBTQ+ communities in 1970s Los Angeles",
+            "The dance remains historically significant as the foundation that led to whacking/waacking, valuing storytelling, attitude, and innovation."
           ]
         }
       },
@@ -712,7 +712,7 @@
       "waacking": "Expressive dance style emphasizing arm movements and poses, born from LA club culture.",
       "krumping": "High-energy, expressive dance from LA characterized by free, expressive movements.",
       "hustle": "Partner dance from 1970s disco era, featuring synchronized spins and turns.",
-      "punking": "NYC-originated style related to whacking, emphasizing dramatic poses and runway attitude.",
+      "punking": "LA-originated style from the underground gay community, the foundation that evolved into whacking/waacking.",
       "turfing": "Oakland-born dance style combining acrobatics, storytelling, and precise footwork."
     },
     "video": {
@@ -733,7 +733,7 @@
     "house": "Fluid footwork and torso movements that emerged with Chicago house music.",
     "voguing": "Fashion-inspired poses and runway walks from Harlem ballroom culture.",
     "waacking": "Expressive dance style emphasizing arm movements and poses, born from LA club culture.",
-    "punking": "Theatrical dance style with dramatic gestures and poses.",
+    "punking": "Theatrical dance style from LA’s underground gay community that later evolved into whacking/waacking.",
     "krumping": "High-energy movement expressing raw emotions and spiritual connection.",
     "clowning": "Playful dance style that evolved into krumping, emphasizing character and comedy.",
     "juke-footwork": "Lightning-fast leg work synchronized to Chicago juke music.",
@@ -753,7 +753,7 @@
   },
   "people": {
     "donCampbell": {
-      "name": "Don 'Campbellock' Campbell",
+      "name": "Don ’Campbellock’ Campbell",
       "role": "Creator of Campbellock / Locking",
       "bio": "Born January 8th, 1951, Don Campbell pioneered the Campbellock (Locking) in Los Angeles in 1970. An improvisational artist, his style emphasized theatrical freezes, funk-timed locks, and individual expression."
     },
@@ -763,9 +763,9 @@
       "bio": "Choreographer and performer who helped popularize Locking through appearances with The Lockers and mainstream media in the 1970s and beyond."
     },
     "fredBerry": {
-      "name": "Fred 'Rerun' Berry",
+      "name": "Fred ’Rerun’ Berry",
       "role": "Performer & Early Promoter",
-      "bio": "Fred Berry ('Rerun') was a prominent performer and cultural figure who helped bring West Coast funk styles, including Locking, to wider attention through TV and stage performances."
+      "bio": "Fred Berry (’Rerun’) was a prominent performer and cultural figure who helped bring West Coast funk styles, including Locking, to wider attention through TV and stage performances."
     },
     "djKoolHerc": {
       "name": "DJ Kool Herc",
@@ -780,7 +780,7 @@
     "afrikaBambaataa": {
       "name": "Afrika Bambaataa",
       "role": "Culture Builder",
-      "bio": "Hip-hop pioneer who founded the Universal Zulu Nation and added the fifth element 'Knowledge' to hip-hop, emphasizing education and community building."
+      "bio": "Hip-hop pioneer who founded the Universal Zulu Nation and added the fifth element ’Knowledge’ to hip-hop, emphasizing education and community building."
     },
     "grandmasterCaz": {
       "name": "Grandmaster Caz",
@@ -790,12 +790,12 @@
     "melleMel": {
       "name": "Melle Mel",
       "role": "Social Commentary",
-      "bio": "Pioneering rapper known for socially conscious lyrics and powerful delivery, bringing depth and message to hip-hop music through tracks like 'The Message'."
+      "bio": "Pioneering rapper known for socially conscious lyrics and powerful delivery, bringing depth and message to hip-hop music through tracks like ’The Message’."
     },
     "kurtisBlow": {
       "name": "Kurtis Blow",
       "role": "First Rap Record Deal",
-      "bio": "First commercially successful rapper to sign with a major label, helping to bring hip-hop from the streets to mainstream audiences with hits like 'The Breaks'."
+      "bio": "First commercially successful rapper to sign with a major label, helping to bring hip-hop from the streets to mainstream audiences with hits like ’The Breaks’."
     },
     "crazyLegs": {
       "name": "Crazy Legs",
@@ -813,7 +813,7 @@
       "bio": "Trailblazing female b-girl who broke barriers in the male-dominated breaking scene, known for her technical skill and competitive spirit."
     },
     "darrylCornbreadMcCray": {
-      "name": "Darryl 'Cornbread' McCray",
+      "name": "Darryl ’Cornbread’ McCray",
       "role": "Philadelphia Pioneer",
       "bio": "Early graffiti pioneer from Philadelphia who helped establish tagging as a form of urban expression, influencing the development of modern graffiti art."
     },
@@ -841,13 +841,13 @@
   "crews": {
     "theLockers": {
       "name": "The Lockers",
-      "description": "An original Locking crew formed in the early 1970s that popularized Campbellock on television and stage; notable members included Don Campbell, Toni Basil, Fred 'Rerun' Berry, and others."
+      "description": "An original Locking crew formed in the early 1970s that popularized Campbellock on television and stage; notable members included Don Campbell, Toni Basil, Fred ’Rerun’ Berry, and others."
     }
   },
   "videos": {
     "5ElementsOfHipHop": {
       "title": "5 Elements of Hip-Hop",
-      "description": "A quick conversation about the elements of Hip Hop and why it's important to know about the cultural aspect."
+      "description": "A quick conversation about the elements of Hip Hop and why it’s important to know about the cultural aspect."
     },
     "djEvolution": {
       "title": "The Evolution of the DJ",
