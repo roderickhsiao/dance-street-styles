@@ -12,6 +12,7 @@ import { DanceStyleTag } from '@/data/danceStyles';
 import { DanceStyleSectionLayout } from '@/app/[locale]/styles/[slug]/StylePageClient/parts/DanceStyleSectionLayout';
 import { FeaturedVideo } from '@/components/FeaturedVideo';
 import { getVideoById } from '@/data/entities';
+import { KeyFigures } from '@/components/KeyFigures';
 import clsx from 'clsx';
 import { useInViewport } from 'react-in-viewport';
 
@@ -120,7 +121,8 @@ export function StylePageClient({
     const current = visibleSectionsRef.current;
     if (!current.includes(sectionId)) {
       visibleSectionsRef.current = [...current, sectionId];
-      const nextActive = visibleSectionsRef.current[visibleSectionsRef.current.length - 1];
+      const nextActive =
+        visibleSectionsRef.current[visibleSectionsRef.current.length - 1];
       if (activeSection !== nextActive) {
         setActiveSection(nextActive);
       }
@@ -129,9 +131,10 @@ export function StylePageClient({
   const handleSectionLeave = (sectionId: string) => {
     const current = visibleSectionsRef.current;
     visibleSectionsRef.current = current.filter((id) => id !== sectionId);
-    const nextActive = visibleSectionsRef.current.length > 0
-      ? visibleSectionsRef.current[visibleSectionsRef.current.length - 1]
-      : 'overview';
+    const nextActive =
+      visibleSectionsRef.current.length > 0
+        ? visibleSectionsRef.current[visibleSectionsRef.current.length - 1]
+        : 'overview';
     if (activeSection !== nextActive) {
       setActiveSection(nextActive);
     }
@@ -159,7 +162,7 @@ export function StylePageClient({
                 return [];
               }
             })()}
-            className="text-body-sm md:text-body-md text-content-secondary leading-relaxed"
+            className="text-body-md text-content-secondary leading-relaxed"
           />
         </DanceStyleSectionLayout>
       ),
@@ -188,6 +191,22 @@ export function StylePageClient({
               className="text-body-md text-content-secondary leading-relaxed"
             />
           </div>
+        </DanceStyleSectionLayout>
+      ),
+    },
+    {
+      id: 'pioneers',
+      labelKey: tUi('pioneers'),
+      icon: '⭐',
+      accentColor: 'tertiary',
+      component: (
+        <DanceStyleSectionLayout
+          id="pioneers"
+          title={tUi('pioneers')}
+          emoji="⭐"
+          accentColor="tertiary"
+        >
+          <KeyFigures keyFigureIds={danceStyle.keyFigureIds || []} />
         </DanceStyleSectionLayout>
       ),
     },
@@ -376,11 +395,11 @@ export function StylePageClient({
                   </h3>
                   <ChevronRight className="h-4 w-4 text-content-tertiary group-hover:text-accent-primary transition-colors flex-shrink-0 ml-2" />
                 </div>
-                
+
                 <p className="text-body-sm text-content-secondary mb-3 leading-relaxed">
                   {tDescriptions(relatedStyle.id)}
                 </p>
-                
+
                 <div className="flex items-center gap-3 text-body-xs text-content-tertiary">
                   <div className="flex items-center gap-1">
                     <MapPin className="h-3 w-3" />

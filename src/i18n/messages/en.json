@@ -851,7 +851,9 @@
         "streetDance": "Street Dance"
       },
       "sourceLabel": "Source:",
-      "relatedStyles": "Related Styles"
+      "relatedStyles": "Related Styles",
+      "pioneers": "Key Figures",
+      "memberOf": "Member of"
     }
   },
   "moves": {
@@ -1075,12 +1077,12 @@
     "donCampbell": {
       "name": "Don ’Campbellock’ Campbell",
       "role": "Creator of Campbellock / Locking",
-      "bio": "Born January 8th, 1951, Don Campbell pioneered the Campbellock (Locking) in Los Angeles in 1970. An improvisational artist, his style emphasized theatrical freezes, funk-timed locks, and individual expression."
+      "bio": "Born 1951. Pioneered Campbellock (Locking) in LA in 1970. Known for theatrical freezes, funk-timed locks, and individual expression."
     },
     "toniBasil": {
       "name": "Toni Basil",
       "role": "Pioneer & Performer",
-      "bio": "Choreographer and performer who helped popularize Locking through appearances with The Lockers and mainstream media in the 1970s and beyond."
+      "bio": "Choreographer and performer who helped popularize Locking through The Lockers and mainstream media appearances in the 1970s."
     },
     "fredBerry": {
       "name": "Fred ’Rerun’ Berry",
@@ -1156,6 +1158,76 @@
       "name": "KRS-One",
       "role": "Teacher",
       "bio": "Conscious rapper and activist known for educational approach to hip-hop, founding the Temple of Hip-Hop and emphasizing knowledge as the fifth element."
+    },
+    "gregPope": {
+      "name": "Greg 'Campbellock Jr.' Pope",
+      "role": "Original Locker",
+      "bio": "Greg Pope, known as 'Campbellock Jr.', was one of the original seven members of The Lockers from 1973-1976, contributing to the crew's groundbreaking television appearances."
+    },
+    "adolfoQuinones": {
+      "name": "Adolfo 'Shabba Doo' Quiñones",
+      "role": "Original Locker & Breakin' Star",
+      "bio": "Adolfo Quiñones, professionally known as 'Shabba Doo', was an original member of The Lockers and later gained international fame starring in the 'Breakin'' film series."
+    },
+    "billWilliams": {
+      "name": "William 'Slim the Robot' Williams",
+      "role": "Original Locker",
+      "bio": "William 'Bill' Williams, performing as 'Slim the Robot', was one of the original seven Lockers members known for his robotic movement style and innovative choreography."
+    },
+    "leoWilliamson": {
+      "name": "Leo 'Fluky Luke' Williamson",
+      "role": "Original Locker",
+      "bio": "Leo Williamson, known as 'Fluky Luke', was an original member of The Lockers from 1973-1976, known for his smooth style and contributions to the crew's early success."
+    },
+    "andrewFrank": {
+      "name": "Andrew Frank",
+      "role": "Punking Pioneer",
+      "bio": ""
+    },
+    "arthurGoff": {
+      "name": "Arthur Goff",
+      "role": "Punking Pioneer", 
+      "bio": ""
+    },
+    "tinkerToy": {
+      "name": "Tinker Toy",
+      "role": "Punking Pioneer",
+      "bio": ""
+    },
+    "billyStarrEstrada": {
+      "name": "Billy Starr Estrada",
+      "role": "Punking Pioneer",
+      "bio": ""
+    },
+    "lonnyCarbajal": {
+      "name": "Lonny Carbajal",
+      "role": "Punking Pioneer",
+      "bio": ""
+    },
+    "viktorManoel": {
+      "name": "Viktor Manoel",
+      "role": "Punking Pioneer",
+      "bio": "Born 1957 in Mexico. Mexican-American dancer, choreographer, writer, and actor who was one of the original Punking pioneers. Later worked with renowned choreographers including Toni Basil and Édouard Lock, and performed in David Bowie's Glass Spider Tour (1987). Appeared in films including 'Staying Alive' (1983) and 'Breakin' 2: Electric Boogaloo' (1984)."
+    },
+    "tommyMitchell": {
+      "name": "Tommy Mitchell",
+      "role": "Punking Pioneer",
+      "bio": ""
+    },
+    "fayeRaye": {
+      "name": "Faye Raye",
+      "role": "Punking Pioneer",
+      "bio": ""
+    },
+    "kennyChinaDoll": {
+      "name": "Kenny 'China Doll'",
+      "role": "Punking Pioneer",
+      "bio": ""
+    },
+    "michaelAngeloHarris": {
+      "name": "Michael Angelo Harris",
+      "role": "Innovative DJ for Punking",
+      "bio": "The innovative DJ who provided the musical foundation for the Punking art form and movement in the 1970s Los Angeles gay club scene."
     }
   },
   "crews": {

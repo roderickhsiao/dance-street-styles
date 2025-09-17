@@ -47,6 +47,7 @@ export interface DanceStyle {
   // References to normalized entity records (use ids)
   influentialArtistIds?: string[];
   influentialArtistsKey?: string;
+  keyFigureIds?: string[]; // Key figures (pioneers, innovators, influential artists) of the style
   featuredVideoId?: string; // Main featured video for the style
   videoIds?: string[]; // Additional videos for the style
   videosKey?: string;
@@ -142,6 +143,9 @@ export interface PersonEntity {
   roleKey?: string;
   bioKey?: string;
   imageUrl?: string;
+  birthDate?: Date;
+  deathDate?: Date;
+  crewIds?: string[]; // crews this person belongs/belonged to
   socialLinks?: {
     instagram?: string;
     youtube?: string;

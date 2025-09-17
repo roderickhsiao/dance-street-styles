@@ -6,7 +6,7 @@ export const CREWS: Record<string, CrewEntity> = {
     nameKey: 'crews.theLockers.name',
     foundedYear: '1970',
     originLocationKey: 'styles.locations.losAngelesCA',
-    memberIds: ['don-campbell', 'toni-basil', 'fred-berry'],
+    memberIds: ['don-campbell', 'toni-basil', 'fred-berry', 'greg-pope', 'adolfo-quinones', 'bill-williams', 'leo-williamson'],
     descriptionKey: 'crews.theLockers.description',
   },
 };
@@ -18,3 +18,8 @@ export const getCrewById = (id: string): CrewEntity | undefined => {
 };
 
 export const getAllCrews = () => CREWS_LIST;
+
+// Helper functions for member relationships  
+export const getCrewsByMemberId = (personId: string): CrewEntity[] => {
+  return CREWS_LIST.filter(crew => crew.memberIds?.includes(personId));
+};

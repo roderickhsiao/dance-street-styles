@@ -113,7 +113,11 @@ export const danceStyles: DanceStyle[] = [
       foreground: '#ECF0F1',
       muted: '#7F8C8D',
     },
-    relatedStyles: [DanceStyleId.HIP_HOP, DanceStyleId.POPPING, DanceStyleId.LOCKING],
+    relatedStyles: [
+      DanceStyleId.HIP_HOP,
+      DanceStyleId.POPPING,
+      DanceStyleId.LOCKING,
+    ],
   },
   {
     id: DanceStyleId.HIP_HOP,
@@ -132,7 +136,12 @@ export const danceStyles: DanceStyle[] = [
       cultureKey: 'styles.detailed.hipHop.origins.culture',
     },
     featuredVideoId: 'hiphop-birth',
-    videoIds: ['5-elements-of-hop-hop', 'dj-evolution', 'mcing-history', 'graffiti-art'],
+    videoIds: [
+      '5-elements-of-hop-hop',
+      'dj-evolution',
+      'mcing-history',
+      'graffiti-art',
+    ],
     theme: {
       primary: '#FF6B35',
       secondary: '#F7931E',
@@ -141,7 +150,12 @@ export const danceStyles: DanceStyle[] = [
       foreground: '#FFFFFF',
       muted: '#4A4A4A',
     },
-    relatedStyles: [DanceStyleId.BREAKING, DanceStyleId.POPPING, DanceStyleId.LOCKING, DanceStyleId.KRUMPING],
+    relatedStyles: [
+      DanceStyleId.BREAKING,
+      DanceStyleId.POPPING,
+      DanceStyleId.LOCKING,
+      DanceStyleId.KRUMPING,
+    ],
   },
   {
     id: DanceStyleId.POPPING,
@@ -168,7 +182,11 @@ export const danceStyles: DanceStyle[] = [
       foreground: '#FFFFFF',
       muted: '#95A5A6',
     },
-    relatedStyles: [DanceStyleId.LOCKING, DanceStyleId.BREAKING, DanceStyleId.HIP_HOP],
+    relatedStyles: [
+      DanceStyleId.LOCKING,
+      DanceStyleId.BREAKING,
+      DanceStyleId.HIP_HOP,
+    ],
   },
   {
     id: DanceStyleId.LOCKING,
@@ -186,14 +204,23 @@ export const danceStyles: DanceStyle[] = [
       locationKey: 'locations.losAngelesCA',
       cultureKey: 'styles.detailed.locking.origins.culture',
     },
-  featuredVideoId: 'locking-featured',
-  videoIds: ['toni-basil-lockers-memories'], // Additional videos
-  influentialArtistIds: ['don-campbell', 'toni-basil'],
-  crewIds: ['the-lockers'],
-  dancerIds: ['don-campbell', 'toni-basil'],
-  moveIds: ['the-lock', 'points'],
-  musicGenreIds: ['funk', 'soul'],
-  // Musical characteristics (structured above in `musicGenres`)
+    keyFigureIds: [
+      'don-campbell',
+      'toni-basil',
+      'fred-berry',
+      'greg-pope',
+      'adolfo-quinones',
+      'bill-williams',
+      'leo-williamson',
+    ],
+    featuredVideoId: 'locking-featured',
+    videoIds: ['toni-basil-lockers-memories'], // Additional videos
+    influentialArtistIds: ['don-campbell', 'toni-basil'],
+    crewIds: ['the-lockers'],
+    dancerIds: ['don-campbell', 'toni-basil'],
+    moveIds: ['the-lock', 'points'],
+    musicGenreIds: ['funk', 'soul'],
+    // Musical characteristics (structured above in `musicGenres`)
     theme: {
       primary: '#F1C40F',
       secondary: '#F39C12',
@@ -234,7 +261,12 @@ export const danceStyles: DanceStyle[] = [
       foreground: '#2C3E50',
       muted: '#BDC3C7',
     },
-    relatedStyles: [DanceStyleId.HIP_HOP, DanceStyleId.LITEFEET, DanceStyleId.HUSTLE, DanceStyleId.FOOTWORK],
+    relatedStyles: [
+      DanceStyleId.HIP_HOP,
+      DanceStyleId.LITEFEET,
+      DanceStyleId.HUSTLE,
+      DanceStyleId.FOOTWORK,
+    ],
   },
   {
     id: DanceStyleId.VOGUING,
@@ -261,7 +293,11 @@ export const danceStyles: DanceStyle[] = [
       foreground: '#FFFFFF',
       muted: '#424242',
     },
-    relatedStyles: [DanceStyleId.WAACKING, DanceStyleId.PUNKING, DanceStyleId.HOUSE],
+    relatedStyles: [
+      DanceStyleId.WAACKING,
+      DanceStyleId.PUNKING,
+      DanceStyleId.HOUSE,
+    ],
   },
   {
     id: DanceStyleId.WAACKING,
@@ -288,7 +324,11 @@ export const danceStyles: DanceStyle[] = [
       foreground: '#FFFFFF',
       muted: '#424242',
     },
-    relatedStyles: [DanceStyleId.VOGUING, DanceStyleId.LOCKING, DanceStyleId.PUNKING],
+    relatedStyles: [
+      DanceStyleId.VOGUING,
+      DanceStyleId.LOCKING,
+      DanceStyleId.PUNKING,
+    ],
   },
   {
     id: DanceStyleId.KRUMPING,
@@ -315,7 +355,11 @@ export const danceStyles: DanceStyle[] = [
       muted: '#424242',
     },
     featuredVideoId: 'krumping-tommy-clown',
-    relatedStyles: [DanceStyleId.HIP_HOP, DanceStyleId.BREAKING, DanceStyleId.TURFING],
+    relatedStyles: [
+      DanceStyleId.HIP_HOP,
+      DanceStyleId.BREAKING,
+      DanceStyleId.TURFING,
+    ],
   },
   {
     id: DanceStyleId.HUSTLE,
@@ -353,14 +397,33 @@ export const danceStyles: DanceStyle[] = [
     eraKey: 'eras.1970s',
     locationKey: 'locations.losAngelesCA',
     eraIcon: '📅',
-    featuredVideoId: 'punking-featured',
     locationIcon: '📍',
-    tags: ['ballroomCulture', 'theatrical', 'funkStyles'],
+    tags: ['ballroomCulture', 'theatrical', 'underground'],
     origins: {
       yearKey: 'eras.1970s',
       locationKey: 'locations.losAngelesCA',
       cultureKey: 'styles.detailed.punking.origins.culture',
     },
+    keyFigureIds: [
+      'andrew-frank',
+      'arthur-goff',
+      'tinker-toy',
+      'billy-starr-estrada',
+      'lonny-carbajal',
+      'viktor-manoel',
+      'tommy-mitchell',
+      'faye-raye',
+      'kenny-china-doll',
+      'michael-angelo-harris',
+    ],
+    featuredVideoId: 'punking-featured',
+    videoIds: [], // Additional videos when available
+    influentialArtistIds: [
+      'viktor-manoel',
+      'andrew-frank',
+      'arthur-goff',
+      'michael-angelo-harris',
+    ],
     theme: {
       primary: '#E91E63',
       secondary: '#AD1457',
@@ -369,7 +432,11 @@ export const danceStyles: DanceStyle[] = [
       foreground: '#FFFFFF',
       muted: '#424242',
     },
-    relatedStyles: [DanceStyleId.WAACKING, DanceStyleId.VOGUING, DanceStyleId.LOCKING],
+    relatedStyles: [
+      DanceStyleId.WAACKING,
+      DanceStyleId.VOGUING,
+      DanceStyleId.LOCKING,
+    ],
   },
   {
     id: DanceStyleId.TURFING,
@@ -492,7 +559,11 @@ export const danceStyles: DanceStyle[] = [
       muted: '#424242',
     },
     featuredVideoId: 'jit-pioneers',
-    relatedStyles: [DanceStyleId.FOOTWORK, DanceStyleId.HOUSE, DanceStyleId.HIP_HOP],
+    relatedStyles: [
+      DanceStyleId.FOOTWORK,
+      DanceStyleId.HOUSE,
+      DanceStyleId.HIP_HOP,
+    ],
   },
   {
     id: DanceStyleId.SOUL,
@@ -584,7 +655,9 @@ export const getAllErasTranslated = (t: (key: string) => string): string[] => {
   return getAllEras().map((k) => t(k));
 };
 
-export const getAllLocationsTranslated = (t: (key: string) => string): string[] => {
+export const getAllLocationsTranslated = (
+  t: (key: string) => string
+): string[] => {
   return getAllLocations().map((k) => t(k));
 };
 

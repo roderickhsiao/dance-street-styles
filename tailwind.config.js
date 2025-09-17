@@ -50,5 +50,39 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // Add custom utilities
+    function({ addUtilities }) {
+      addUtilities({
+        '.scrollbar-hide': {
+          /* IE and Edge */
+          '-ms-overflow-style': 'none',
+          /* Firefox */
+          'scrollbar-width': 'none',
+          /* Safari and Chrome */
+          '&::-webkit-scrollbar': {
+            display: 'none'
+          }
+        },
+        '.line-clamp-2': {
+          overflow: 'hidden',
+          display: '-webkit-box',
+          '-webkit-box-orient': 'vertical',
+          '-webkit-line-clamp': '2',
+        },
+        '.line-clamp-3': {
+          overflow: 'hidden',
+          display: '-webkit-box',
+          '-webkit-box-orient': 'vertical',
+          '-webkit-line-clamp': '3',
+        },
+        '.line-clamp-none': {
+          overflow: 'visible',
+          display: 'block',
+          '-webkit-box-orient': 'horizontal',
+          '-webkit-line-clamp': 'none',
+        }
+      })
+    }
+  ],
 };
