@@ -129,6 +129,22 @@ export const VIDEOS: Record<string, VideoEntity> = {
     descriptionKey: 'danceStyles.video.voguing.lgbtqHistory.description',
     thumbnailUrl: 'https://img.youtube.com/vi/XJ6fqQX_e9U/hqdefault.jpg',
   },
+  'paris-is-burning': {
+    id: 'paris-is-burning',
+    titleKey: 'danceStyles.video.voguing.parisIsBurning.title',
+    url: 'https://www.youtube.com/watch?v=k70tlLetqqw',
+    type: 'history',
+    descriptionKey: 'danceStyles.video.voguing.parisIsBurning.description',
+    thumbnailUrl: 'https://img.youtube.com/vi/k70tlLetqqw/hqdefault.jpg',
+  },
+  'strike-a-pose': {
+    id: 'strike-a-pose',
+    titleKey: 'danceStyles.video.voguing.strikeAPose.title',
+    url: 'https://www.youtube.com/watch?v=x53ICmkFFlU',
+    type: 'history',
+    descriptionKey: 'danceStyles.video.voguing.strikeAPose.description',
+    thumbnailUrl: 'https://img.youtube.com/vi/x53ICmkFFlU/hqdefault.jpg',
+  },
   'footwork-featured': {
     id: 'footwork-featured',
     titleKey: 'danceStyles.video.footwork.featured.title',

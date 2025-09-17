@@ -37,14 +37,14 @@ export const KeyFigures = ({ keyFigureIds, className = "" }: KeyFiguresProps) =>
               key={figure.id}
               className="flex items-start gap-3 py-2 hover:bg-surface-elevated/20 rounded-lg transition-colors duration-200 group"
             >
-              {/* Subtle Avatar - with image support */}
-              <div className="w-10 h-10 mt-1 rounded-full bg-gray-700 flex items-center justify-center text-gray-300 font-medium text-sm flex-shrink-0 group-hover:bg-gray-600 transition-colors duration-200 overflow-hidden">
+              {/* Avatar - with image support */}
+              <div className="w-16 h-16 mt-1 rounded-full bg-gray-700 flex items-center justify-center text-gray-300 font-medium text-lg flex-shrink-0 group-hover:bg-gray-600 transition-colors duration-200 overflow-hidden">
                 {figure.imageUrl ? (
                   <Image 
                     src={figure.imageUrl} 
                     alt={tPeople(`${personKey}.name`)}
-                    width={40}
-                    height={40}
+                    width={64}
+                    height={64}
                     className="w-full h-full object-cover"
                     onError={(e) => {
                       // Fallback to initials if image fails to load
@@ -52,7 +52,7 @@ export const KeyFigures = ({ keyFigureIds, className = "" }: KeyFiguresProps) =>
                       target.style.display = 'none';
                       const parent = target.parentElement;
                       if (parent) {
-                        parent.innerHTML = `<span class="text-gray-300 font-medium text-sm">${tPeople(`${personKey}.name`).split(' ')[0].charAt(0)}${tPeople(`${personKey}.name`).split(' ').length > 1 ? tPeople(`${personKey}.name`).split(' ')[1].charAt(0) : ''}</span>`;
+                        parent.innerHTML = `<span class="text-gray-300 font-medium text-lg">${tPeople(`${personKey}.name`).split(' ')[0].charAt(0)}${tPeople(`${personKey}.name`).split(' ').length > 1 ? tPeople(`${personKey}.name`).split(' ')[1].charAt(0) : ''}</span>`;
                       }
                     }}
                   />
@@ -76,13 +76,16 @@ export const KeyFigures = ({ keyFigureIds, className = "" }: KeyFiguresProps) =>
                 </p>
                 
                 {figure.crewIds && figure.crewIds.length > 0 && (
-                  <div className="flex items-center gap-1 mt-1">
+                  <div className="flex flex-wrap items-center gap-2 mt-2">
                     {figure.crewIds.map((crewId) => {
                       const crew = getCrewById(crewId);
                       if (!crew) return null;
                       const crewKey = crewId.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
                       return (
-                        <span key={crewId} className="text-body-xs text-content-tertiary">
+                        <span 
+                          key={crewId} 
+                          className="inline-flex items-center px-2 py-1 rounded-md bg-surface-elevated/40 border border-stroke-secondary text-body-xs text-content-tertiary font-medium"
+                        >
                           {tCrews(`${crewKey}.name`)}
                         </span>
                       );

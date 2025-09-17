@@ -284,7 +284,24 @@ export const danceStyles: DanceStyle[] = [
       locationKey: 'locations.harlemNYC',
       cultureKey: 'styles.detailed.voguing.origins.culture',
     },
+    keyFigureIds: [
+      'william-dorsey-swann',
+      'willi-ninja',
+      'paris-dupree',
+      'jose-xtravaganza',
+      'luis-xtravaganza',
+      'archie-burnett',
+    ],
     featuredVideoId: 'voguing-lgbtq-history',
+    videoIds: ['paris-is-burning', 'strike-a-pose'], // Additional videos when available
+    influentialArtistIds: [
+      'william-dorsey-swann',
+      'willi-ninja',
+      'paris-dupree',
+      'jose-xtravaganza',
+      'luis-xtravaganza',
+      'archie-burnett',
+    ],
     theme: {
       primary: '#E91E63',
       secondary: '#AD1457',
@@ -309,13 +326,29 @@ export const danceStyles: DanceStyle[] = [
     locationKey: 'locations.losAngelesCA',
     eraIcon: '📅',
     locationIcon: '📍',
-    tags: ['funkStyles', 'ballroomCulture', 'theatrical', 'clubCulture'],
+    tags: ['ballroomCulture', 'theatrical', 'clubCulture', 'underground'],
     origins: {
       yearKey: 'eras.1970s',
       locationKey: 'locations.losAngelesCA',
       cultureKey: 'styles.detailed.waacking.origins.culture',
     },
+    keyFigureIds: [
+      'tyrone-proctor',
+      'jeffrey-daniel',
+      'archie-burnett',
+      'billy-goodson',
+      'willi-ninja',
+      'viktor-manoel',
+    ],
     featuredVideoId: 'waacking-tyrone-proctor',
+    videoIds: ['breed-of-motion'], // Additional videos when available
+    influentialArtistIds: [
+      'tyrone-proctor',
+      'jeffrey-daniel',
+      'archie-burnett',
+      'viktor-manoel',
+    ],
+    crewIds: ['breed-of-motion', 'outrageous-waack-dancers'],
     theme: {
       primary: '#FF1744',
       secondary: '#D50000',

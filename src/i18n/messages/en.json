@@ -64,7 +64,7 @@
       "title": "Our Mission",
       "content": [
         "Street Dance Culture is an independent project dedicated to documenting and preserving the authentic history of street dance movements. We believe these stories deserve to be told with accuracy, respect, and cultural context.",
-        "This is not a commercial venture — it's a labor of love created to honor the pioneers, communities, and cultures that gave birth to these incredible art forms.",
+        "This is not a commercial venture — it’s a labor of love created to honor the pioneers, communities, and cultures that gave birth to these incredible art forms.",
         "We encourage learning the culture, not just the moves. Understanding the history, struggle, joy, and innovation behind each dance deepens your connection to the art and shows respect to its creators."
       ]
     },
@@ -93,7 +93,7 @@
         },
         {
           "title": "Continuous Learning",
-          "description": "We acknowledge that our understanding evolves. We're committed to updating content based on community feedback and new insights."
+          "description": "We acknowledge that our understanding evolves. We’re committed to updating content based on community feedback and new insights."
         }
       ]
     },
@@ -122,7 +122,7 @@
       "title": "Learn Culture, Not Just Moves",
       "content": [
         "We acknowledge that street dance culture emerged from marginalized communities — primarily Black and Latino communities in urban America. These communities created something beautiful from struggle, something joyful from hardship.",
-        "When you learn a street dance, you're not just learning choreography — you're connecting with decades of cultural history, social resistance, and artistic innovation. Each move carries the spirit of the neighborhoods where it was born.",
+        "When you learn a street dance, you’re not just learning choreography — you’re connecting with decades of cultural history, social resistance, and artistic innovation. Each move carries the spirit of the neighborhoods where it was born.",
         "We encourage dancers to study the history, understand the context, and learn from the communities themselves. Respect the culture by knowing its story, not just copying its steps.",
         "This project exists to honor those origins and ensure the stories are told correctly, with full recognition of the cultural context and social conditions that birthed these movements. We stand against cultural appropriation and work to center the voices and experiences of the communities who created these art forms."
       ]
@@ -130,7 +130,7 @@
     "culturalLearning": {
       "title": "Beyond the Dance Floor",
       "content": [
-        "Street dance is more than movement — it's storytelling, community building, and cultural preservation. Each style carries the history of the people who created it, their struggles, triumphs, and artistic vision.",
+        "Street dance is more than movement — it’s storytelling, community building, and cultural preservation. Each style carries the history of the people who created it, their struggles, triumphs, and artistic vision.",
         "Before you learn to pop, lock, or break, learn about the communities that birthed these movements. Understand the social conditions, the musical influences, and the cultural significance that make each dance unique.",
         "True mastery comes not from perfect technique alone, but from understanding and respecting the culture that gave life to the movement. This knowledge transforms you from a dancer who copies moves into an artist who honors tradition."
       ],
@@ -174,7 +174,7 @@
     },
     "feedback": {
       "title": "Corrections & Feedback",
-      "description": "Found something that needs fixing? Have additional context or historical details to share? We're always ready to learn and improve."
+      "description": "Found something that needs fixing? Have additional context or historical details to share? We’re always ready to learn and improve."
     },
     "contribute": {
       "title": "Contribute Content",
@@ -554,12 +554,12 @@
         "overview": {
           "content": [
             "Breaking (B-Boying/B-Girling) combines athletic floor work with rhythmic footwork, explosive power moves, and dynamic freezes. Born in 1973 Bronx block parties, breakers battle in cyphers using toprock, downrock, power, and freeze combinations.",
-            "Each breaking battle tells a story through movement, with dancers showcasing technical mastery, originality, and respect for hip-hop's foundational culture."
+            "Each breaking battle tells a story through movement, with dancers showcasing technical mastery, originality, and respect for hip-hop’s foundational culture."
           ]
         },
         "history": {
           "summary": [
-            "Breaking emerged at DJ Kool Herc's 1973 block parties when dancers began responding to drum breaks with innovative floor work and acrobatic moves.",
+            "Breaking emerged at DJ Kool Herc’s 1973 block parties when dancers began responding to drum breaks with innovative floor work and acrobatic moves.",
             "Pioneering crews like Rock Steady Crew and New York City Breakers developed the vocabulary of toprock, footwork, power moves, and freezes that define breaking today."
           ],
           "content": [
@@ -1002,6 +1002,14 @@
         "lgbtqHistory": {
           "title": "How the LGBTQ community created voguing",
           "description": "Vogue, the dance, not the magazine. Explore the origins of voguing in the LGBTQ ballroom community and how this powerful form of expression emerged from Harlem’s underground scene."
+        },
+        "parisIsBurning": {
+          "title": "Paris is Burning",
+          "description": "The iconic 1990 documentary that brought ballroom culture and voguing to mainstream consciousness, chronicling the drag ball scene in New York City during the 1980s."
+        },
+        "strikeAPose": {
+          "title": "Strike a Pose",
+          "description": "Documentary following Madonna’s backup dancers from the Blond Ambition tour, exploring how voguing entered mainstream culture and the lives of the dancers who helped popularize it worldwide."
         }
       },
       "footwork": {
@@ -1035,7 +1043,7 @@
       "soul": {
         "yoshieFeatured": {
           "title": "YOSHIE - SOUL DANCE \"Inner City Blues / Make Me Wanna Holler\" 【DANCEWORKS】",
-          "description": "A masterful performance by YOSHIE, one of the key figures in Japanese Soul Dance, showcasing the style's energetic expression to classic soul music."
+          "description": "A masterful performance by YOSHIE, one of the key figures in Japanese Soul Dance, showcasing the style’s energetic expression to classic soul music."
         }
       },
       "litefeet": {
@@ -1160,80 +1168,157 @@
       "bio": "Conscious rapper and activist known for educational approach to hip-hop, founding the Temple of Hip-Hop and emphasizing knowledge as the fifth element."
     },
     "gregPope": {
-      "name": "Greg 'Campbellock Jr.' Pope",
+      "name": "Greg ’Campbellock Jr.’ Pope",
       "role": "Original Locker",
-      "bio": "Greg Pope, known as 'Campbellock Jr.', was one of the original seven members of The Lockers from 1973-1976, contributing to the crew's groundbreaking television appearances."
+      "bio": "Greg Pope, known as ’Campbellock Jr.’, was one of the original seven members of The Lockers from 1973-1976, contributing to the crew’s groundbreaking television appearances."
     },
     "adolfoQuinones": {
-      "name": "Adolfo 'Shabba Doo' Quiñones",
-      "role": "Original Locker & Breakin' Star",
-      "bio": "Adolfo Quiñones, professionally known as 'Shabba Doo', was an original member of The Lockers and later gained international fame starring in the 'Breakin'' film series."
+      "name": "Adolfo ’Shabba Doo’ Quiñones",
+      "role": "Original Locker & Breakin’ Star",
+      "bio": "Adolfo Quiñones, professionally known as ’Shabba Doo’, was an original member of The Lockers and later gained international fame starring in the ’Breakin’’ film series."
     },
     "billWilliams": {
-      "name": "William 'Slim the Robot' Williams",
+      "name": "William ’Slim the Robot’ Williams",
       "role": "Original Locker",
-      "bio": "William 'Bill' Williams, performing as 'Slim the Robot', was one of the original seven Lockers members known for his robotic movement style and innovative choreography."
+      "bio": "William ’Bill’ Williams, performing as ’Slim the Robot’, was one of the original seven Lockers members known for his robotic movement style and innovative choreography."
     },
     "leoWilliamson": {
-      "name": "Leo 'Fluky Luke' Williamson",
+      "name": "Leo ’Fluky Luke’ Williamson",
       "role": "Original Locker",
-      "bio": "Leo Williamson, known as 'Fluky Luke', was an original member of The Lockers from 1973-1976, known for his smooth style and contributions to the crew's early success."
+      "bio": "Leo Williamson, known as ’Fluky Luke’, was an original member of The Lockers from 1973-1976, known for his smooth style and contributions to the crew’s early success."
     },
     "andrewFrank": {
       "name": "Andrew Frank",
       "role": "Punking Pioneer",
-      "bio": ""
+      "bio": "Recognized by Tyrone Proctor as one of the wonderful geniuses of waacking/punking in the underground clubs of 1970s Los Angeles."
     },
     "arthurGoff": {
       "name": "Arthur Goff",
       "role": "Punking Pioneer", 
-      "bio": ""
+      "bio": "Recognized by Tyrone Proctor as one of the wonderful geniuses of waacking/punking in the underground clubs of 1970s Los Angeles."
     },
     "tinkerToy": {
       "name": "Tinker Toy",
       "role": "Punking Pioneer",
-      "bio": ""
+      "bio": "Recognized by Tyrone Proctor as one of the wonderful geniuses of waacking/punking in the underground clubs of 1970s Los Angeles."
     },
     "billyStarrEstrada": {
       "name": "Billy Starr Estrada",
       "role": "Punking Pioneer",
-      "bio": ""
+      "bio": "Known as ’Billy Starr’, recognized by Tyrone Proctor as one of the wonderful geniuses of waacking/punking in the underground clubs of 1970s Los Angeles."
     },
     "lonnyCarbajal": {
       "name": "Lonny Carbajal",
       "role": "Punking Pioneer",
-      "bio": ""
+      "bio": "Known as ’Lonnie Carbajial’, recognized by Tyrone Proctor as one of the wonderful geniuses of waacking/punking in the underground clubs of 1970s Los Angeles."
     },
     "viktorManoel": {
       "name": "Viktor Manoel",
       "role": "Punking Pioneer",
-      "bio": "Born 1957 in Mexico. Mexican-American dancer, choreographer, writer, and actor who was one of the original Punking pioneers. Later worked with renowned choreographers including Toni Basil and Édouard Lock, and performed in David Bowie's Glass Spider Tour (1987). Appeared in films including 'Staying Alive' (1983) and 'Breakin' 2: Electric Boogaloo' (1984)."
+      "bio": "Born 1957 in Mexico. Mexican-American dancer, choreographer, writer, and actor who was one of the original Punking pioneers. Later worked with renowned choreographers including Toni Basil and Édouard Lock, and performed in David Bowie’s Glass Spider Tour (1987). Appeared in films including ’Staying Alive’ (1983) and ’Breakin’ 2: Electric Boogaloo’ (1984)."
     },
     "tommyMitchell": {
       "name": "Tommy Mitchell",
       "role": "Punking Pioneer",
-      "bio": ""
+      "bio": "Known as ’Little Tommy’, recognized by Tyrone Proctor as one of the wonderful geniuses of waacking/punking in the underground clubs of 1970s Los Angeles."
     },
     "fayeRaye": {
       "name": "Faye Raye",
       "role": "Punking Pioneer",
-      "bio": ""
+      "bio": "Recognized by Tyrone Proctor as one of the wonderful geniuses of waacking/punking in the underground clubs of 1970s Los Angeles."
     },
     "kennyChinaDoll": {
-      "name": "Kenny 'China Doll'",
+      "name": "Kenny ’China Doll’",
       "role": "Punking Pioneer",
-      "bio": ""
+      "bio": "Recognized by Tyrone Proctor as one of the wonderful geniuses of waacking/punking in the underground clubs of 1970s Los Angeles."
     },
     "michaelAngeloHarris": {
       "name": "Michael Angelo Harris",
       "role": "Innovative DJ for Punking",
       "bio": "The innovative DJ who provided the musical foundation for the Punking art form and movement in the 1970s Los Angeles gay club scene."
+    },
+    "tyroneProctor": {
+      "name": "Tyrone ’The Bone’ Proctor",
+      "role": "Waacking Pioneer & Soul Train Legend",
+      "bio": "Legendary dancer nicknamed ’The Bone’ by Don Cornelius, Tyrone Proctor is one of the last living pioneers of Waacking, which he helped evolve in 1970s Los Angeles gay club scene. Original Soul Train Gang dancer who won the 1975 American Bandstand competition with partner Sharon Hill. Co-founded The Outrageous Waack Dancers with Jeffrey Daniel, Jodi Watley, and others. Featured in Jodi Watley’s ’Still A Thrill’ (1987) - the first major music video to feature waacking. Helped form Breed Of Motion in NYC with Willi Ninja, and choreographed for Taylor Dane’s ’Tell It To My Heart’ - the first video to incorporate Vogue style. Nominated ’Best Choreographer’ at 1989 MTV Awards for New Kids on the Block."
+    },
+    "jeffreyDaniel": {
+      "name": "Jeffrey Daniel",
+      "role": "Waacking Pioneer & Shalamar Member",
+      "bio": "Born August 24, 1955. American dancer, singer-songwriter, and choreographer who learned Waacking from Tyrone Proctor and added the ’g’ to make it ’waacking’. Founding member of Shalamar and taught Michael Jackson the moonwalk. Worked as choreographer on Michael Jackson’s ’Bad’ and ’Smooth Criminal’ videos."
+    },
+    "archieBurnett": {
+      "name": "Archie Burnett",
+      "role": "Waacking & Voguing Pioneer",
+      "bio": "Influential dancer and instructor known for his contributions to both Waacking and Voguing styles, helping to preserve and teach these dance forms to new generations."
+    },
+    "billyGoodson": {
+      "name": "Billy Goodson",
+      "role": "Outrageous Waack Dancer",
+      "bio": "Member of the legendary ’Outrageous Waack Dancers’ who helped define and showcase the Waacking style in its formative years."
+    },
+    "jodyWatley": {
+      "name": "Jody Watley",
+      "role": "Singer, Dancer & Cultural Icon",
+      "bio": "Born January 30, 1959. Grammy Award-winning singer, dancer, and style icon who started as a Soul Train dancer alongside Jeffrey Daniel before co-founding Shalamar. Her dance background and fashion sense helped bring street dance aesthetics to mainstream pop culture."
+    },
+    "sharonHill": {
+      "name": "Sharon Hill",
+      "role": "Waacking Pioneer",
+      "bio": "Pioneer dancer who contributed to the development and preservation of Waacking culture in Los Angeles."
+    },
+    "clevelandMosesJr": {
+      "name": "Cleveland Moses Jr",
+      "role": "Waacking Pioneer",
+      "bio": "Influential figure in the early Waacking scene who helped shape the style and pass it on to future generations."
+    },
+    "kirtWashington": {
+      "name": "Kirt Washington",
+      "role": "Waacking Pioneer",
+      "bio": "Pioneer dancer who was instrumental in the development and evolution of Waacking in Los Angeles dance culture."
+    },
+    "williNinja": {
+      "name": "Willi Ninja",
+      "role": "Godfather of Voguing",
+      "bio": "Born April 12, 1961, died September 2, 2006. William Roscoe Leake, known as Willi Ninja, was the ’Godfather of Voguing’ who founded the House of Ninja in 1982, one of the early and most influential Houses in the ballroom scene. Featured prominently in the documentary ’Paris Is Burning’, he refined voguing with clean, sharp movements and brought ballroom culture to mainstream attention through music videos with Janet Jackson and runway work coaching supermodels and celebrities on their walks."
+    },
+    "parisDupree": {
+      "name": "Paris Dupree",
+      "role": "Voguing Pioneer",
+      "bio": "A widely acknowledged pioneer of voguing who is credited with coining the term ’voguing’ by mimicking poses from Vogue magazine during a competitive exchange with other queens at an after-hours club. Dupree’s pioneering role in bringing the style of posing to the forefront eventually became known as voguing, though the precise origin is debated, their influence as a foundational figure is widely recognized."
+    },
+    "joseXtravaganza": {
+      "name": "Jose Xtravaganza",
+      "role": "Ballroom Pioneer",
+      "bio": "Member of the influential Xtravaganza family in the ballroom scene, Jose Xtravaganza was one of the pioneers who helped bring ballroom culture to mainstream attention, notably dancing with Madonna and contributing to the global spread of voguing and ballroom culture."
+    },
+    "luisXtravaganza": {
+      "name": "Luis Xtravaganza",
+      "role": "Ballroom Pioneer",
+      "bio": "Member of the influential Xtravaganza family in the ballroom scene, Luis Xtravaganza was one of the pioneers who helped bring ballroom culture to mainstream attention, notably dancing with Madonna and contributing to the global spread of voguing and ballroom culture."
+    },
+    "williamDorseySwann": {
+      "name": "William Dorsey Swann",
+      "role": "19th Century Ballroom Pioneer",
+      "bio": "A pioneer of early ballroom culture in the 19th century, William Dorsey Swann’s ’Cake Walk’ traditions influenced the early development of the drag scene and ballroom culture. According to the National Museums Liverpool, Swann’s contributions laid important groundwork for what would evolve into modern ballroom and voguing culture."
     }
   },
   "crews": {
     "theLockers": {
       "name": "The Lockers",
       "description": "An original Locking crew formed in the early 1970s that popularized Campbellock on television and stage; notable members included Don Campbell, Toni Basil, Fred ’Rerun’ Berry, and others."
+    },
+    "breedOfMotion": {
+      "name": "Breed of Motion",
+      "description": "Innovative dance collective formed by Tyrone Proctor and other pioneers in the early 1980s in New York. Featured prominent dancers including Archie Burnett and Willi Ninja, the group was instrumental in the evolution of waacking, punking, and contemporary black street dance culture. They performed and choreographed for TV shows and music acts like the Isley Brothers and New Kids on the Block, helping bridge ballroom, waacking, and mainstream entertainment."
+    },
+    "outrageousWaackDancers": {
+      "name": "Outrageous Waack Dancers",
+      "description": "Legendary waacking crew formed in 1970s Los Angeles, featuring pioneers like Tyrone Proctor, Jeffrey Daniel, Jody Watley, Billy Goodson, Sharon Hill, Cleveland Moses Jr, and Kirt Washington. This influential collective helped define and showcase the Waacking style during its formative years, with members performing on Soul Train and contributing to the evolution of the dance form."
+    },
+    "houseOfXtravaganza": {
+      "name": "House of Xtravaganza",
+      "description": "One of the legendary ballroom houses established in 1980s New York, founded by Hector Xtravaganza. The House of Xtravaganza became renowned for producing exceptional voguing talent including Jose and Luis Xtravaganza, who helped define and elevate the artform through their performances and teaching."
     }
   },
   "videos": {
@@ -1256,6 +1341,10 @@
     "graffitiArt": {
       "title": "A history of graffiti in NYC",
       "description": "The history of graffiti in New York City and how pioneering artists who began by painting subway cars are now selling their art for thousands."
+    },
+    "breedOfMotion": {
+      "title": "Breed of Motion Documentary",
+      "description": "Documentary about the pioneering dance collective Breed of Motion, formed by Tyrone Proctor and other pioneers in the 1980s. Featured prominent dancers including Archie Burnett and Willi Ninja, the group was instrumental in the evolution of waacking, punking, and contemporary black street dance culture. They performed and choreographed for TV shows and music acts like the Isley Brothers and New Kids on the Block."
     }
   },
   "eras": {
