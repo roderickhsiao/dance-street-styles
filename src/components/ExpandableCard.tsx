@@ -43,9 +43,10 @@ export const ExpandableCard = ({
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
+      transition={{ duration: 0.4, ease: 'easeOut' }}
       className={`${bgColor} ${hoverColor} ${borderColor} backdrop-blur-sm p-4 sm:p-6 rounded-2xl border transition-all duration-300 cursor-pointer`}
       onClick={() => setIsExpanded(!isExpanded)}
     >
@@ -61,23 +62,23 @@ export const ExpandableCard = ({
             </p>
           </div>
         </div>
-        <motion.div
-          animate={{ rotate: isExpanded ? 180 : 0 }}
-          transition={{ duration: 0.3 }}
-          className="text-content-tertiary"
+        <div
+          className={`text-content-tertiary transition-transform duration-300 ${
+            isExpanded ? 'rotate-180' : 'rotate-0'
+          }`}
         >
           ▼
-        </motion.div>
+        </div>
       </div>
 
       <AnimatePresence>
         {isExpanded && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="overflow-hidden"
+            initial={{ opacity: 0, scaleY: 0 }}
+            animate={{ opacity: 1, scaleY: 1 }}
+            exit={{ opacity: 0, scaleY: 0 }}
+            transition={{ duration: 0.25, ease: 'easeOut' }}
+            className="origin-top"
           >
             <div className="mt-6 pt-6 border-t border-stroke-secondary">
               <div className="space-y-4">

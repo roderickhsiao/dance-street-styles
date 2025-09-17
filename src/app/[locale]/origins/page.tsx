@@ -417,9 +417,9 @@ export default function OriginOfStreetDancePage() {
       <Section background="primary" padding="lg">
         <div className="max-w-6xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -433,9 +433,9 @@ export default function OriginOfStreetDancePage() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
               viewport={{ once: true }}
               className="bg-surface-secondary/30 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-2xl border border-stroke-secondary text-center"
             >
@@ -449,9 +449,9 @@ export default function OriginOfStreetDancePage() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
               viewport={{ once: true }}
               className="bg-surface-secondary/30 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-2xl border border-stroke-secondary text-center"
             >
@@ -465,9 +465,9 @@ export default function OriginOfStreetDancePage() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3, ease: 'easeOut' }}
               viewport={{ once: true }}
               className="bg-surface-secondary/30 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-2xl border border-stroke-secondary text-center"
             >
@@ -491,9 +491,9 @@ export default function OriginOfStreetDancePage() {
             />
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.4, ease: 'easeOut' }}
               viewport={{ once: true }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
