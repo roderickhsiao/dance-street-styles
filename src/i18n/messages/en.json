@@ -853,6 +853,7 @@
       "sourceLabel": "Source:",
       "relatedStyles": "Related Styles",
       "pioneers": "Key Figures",
+      "resources": "Resources & References",
       "memberOf": "Member of"
     }
   },
@@ -1368,5 +1369,76 @@
     "southCentralLA": "South Central LA",
     "oaklandCA": "Oakland, CA",
     "japan": "Japan"
+  },
+  "resources": {
+    "visit": "Visit",
+    "campbellockWebsite": {
+      "title": "Don Campbell's Website",
+      "description": "Personal website of Don Campbell, the creator of locking (originally called Campbellock). Features his personal story, the history of the dance, and authentic insights into the birth of one of the most iconic funk styles.",
+      "author": "Don Campbell",
+      "source": "Personal Website",
+      "platform": "Personal Website",
+      "siteName": "Don Campbell"
+    },
+    "theLockersWebsite": {
+      "title": "The Lockers Website",
+      "description": "Website of The Lockers, the legendary dance crew that changed the face of dance. Features the seven original members, their history, celebrity testimonials, and rare photos from the group that pioneered locking in popular culture.",
+      "author": "The Lockers Dance Crew",
+      "source": "Crew Website", 
+      "platform": "Crew Website",
+      "siteName": "The Lockers"
+    },
+    "example": {
+      "title": "Example Resource",
+      "description": "This is a placeholder for real resources that need to be verified and added.",
+      "author": "TBD",
+      "source": "TBD"
+    },
+    "checkYourBodyAtTheDoor": {
+      "title": "Check Your Body at the Door",
+      "description": "A documentary about remarkable underground House dancers in NYC during the golden decade of the 1990s. Featuring rare dance club footage, the film follows master free-stylists into the clubs, their jobs, and their everyday lives.",
+      "author": "Sally Sommer & Charles Atlas",
+      "source": "Independent Documentary",
+      "platform": "Vimeo On Demand",
+      "siteName": "Check Your Body at the Door",
+      "context": "Groundbreaking documentary about underground House dancers in NYC during the golden decade of the 1990s",
+      "trailer": {
+        "title": "Check Your Body at the Door - Official Trailer",
+        "description": "Official trailer for the groundbreaking documentary about underground House dancers in NYC during the 1990s."
+      }
+    },
+    "platforms": {
+      "netflix": "Netflix",
+      "youtube": "YouTube", 
+      "spotify": "Spotify",
+      "pbs": "PBS",
+      "criterion": "Criterion Collection",
+      "independent": "Independent Release",
+      "various": "Various Platforms"
+    },
+    "ui": {
+      "noResourcesTitle": "Additional Resources",
+      "noResourcesMessage": "Resources for this style are being curated. Check back soon!",
+      "moreResources": "More Resources",
+      "featuredSection": "Featured Resources",
+      "documentariesSection": "Documentaries & Films",
+      "booksSection": "Books & Publications", 
+      "websitesSection": "Websites",
+      "videosSection": "Videos & Documentaries",
+      "podcastsSection": "Podcasts & Audio",
+      "otherSection": "Other Resources",
+      "visit": "Visit",
+      "visitButton": "Visit",
+      "watchButton": "Watch",
+      "listenButton": "Listen",
+      "readButton": "Read",
+      "featured": "Featured",
+      "playVideo": "Play Video",
+      "closeVideo": "Close Video", 
+      "watchTrailer": "Watch Trailer",
+      "viewWebsite": "View Website",
+      "documentary": "Documentary",
+      "visitSite": "Visit Site"
+    }
   }
 }

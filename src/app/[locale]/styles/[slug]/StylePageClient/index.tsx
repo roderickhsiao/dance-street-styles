@@ -8,10 +8,9 @@ import { Badge } from '@/components/ui/badge';
 import { useTheme } from '@/hooks/useTheme';
 import { ArrowLeft, MapPin, Clock, Zap, ChevronRight } from 'lucide-react';
 import { DanceStyle } from '@/data/types';
-import { DanceStyleTag } from '@/data/danceStyles';
-import { DanceStyleSectionLayout } from '@/app/[locale]/styles/[slug]/StylePageClient/parts/DanceStyleSectionLayout';
+import { DanceStyleTag, getFeaturedVideoForStyle } from '@/data/danceStyles';
+import { DanceStyleSectionLayout, ResourcesSection } from '@/app/[locale]/styles/[slug]/StylePageClient/parts';
 import { FeaturedVideo } from '@/components/FeaturedVideo';
-import { getVideoById } from '@/data/entities';
 import { KeyFigures } from '@/components/KeyFigures';
 import clsx from 'clsx';
 import { useInViewport } from 'react-in-viewport';
@@ -22,6 +21,10 @@ export interface Pioneer {
   name: string;
   description?: string;
 }
+
+
+
+
 
 interface StylePageClientProps {
   danceStyle: DanceStyle;
@@ -109,6 +112,7 @@ export function StylePageClient({
   const tTags = useTranslations('danceTags');
   const tStyles = useTranslations();
   const tUi = useTranslations('stylesPage.ui');
+  const tResourcesUi = useTranslations('resources.ui');
   const tOverview = useTranslations(
     `styles.detailed.${danceStyle.slug}.overview`
   );
@@ -207,6 +211,22 @@ export function StylePageClient({
           accentColor="tertiary"
         >
           <KeyFigures keyFigureIds={danceStyle.keyFigureIds || []} />
+        </DanceStyleSectionLayout>
+      ),
+    },
+    {
+      id: 'resources',
+      labelKey: tResourcesUi('moreResources'),
+      icon: '📚',
+      accentColor: 'primary',
+      component: (
+        <DanceStyleSectionLayout
+          id="resources"
+          title={tResourcesUi('moreResources')}
+          emoji="📚"
+          accentColor="primary"
+        >
+          <ResourcesSection danceStyleId={danceStyle.id} />
         </DanceStyleSectionLayout>
       ),
     },
@@ -393,7 +413,7 @@ export function StylePageClient({
                   <h3 className="text-body-md font-semibold text-content-primary group-hover:text-accent-primary transition-colors">
                     {tNames(relatedStyle.id)}
                   </h3>
-                  <ChevronRight className="h-4 w-4 text-content-tertiary group-hover:text-accent-primary transition-colors flex-shrink-0 ml-2" />
+                  <ChevronRight className="h-4 w-4 text-content-tertiary group-hover:text-accent-primary transition-colors shrink-0 ml-2" />
                 </div>
 
                 <p className="text-body-sm text-content-secondary mb-3 leading-relaxed">
@@ -561,11 +581,7 @@ export function StylePageClient({
               {/* Featured Media in Hero */}
               <div className="lg:block">
                 <FeaturedVideo
-                  video={
-                    danceStyle.featuredVideoId
-                      ? getVideoById(danceStyle.featuredVideoId)
-                      : undefined
-                  }
+                  video={getFeaturedVideoForStyle(danceStyle.id) || undefined}
                 />
               </div>
             </div>

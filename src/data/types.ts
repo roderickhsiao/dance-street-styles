@@ -17,51 +17,101 @@ export enum DanceStyleId {
   WAACKING = 'waacking',
 }
 
+// Video categories enum
+export enum VideoCategory {
+  HISTORY = 'history',
+  TUTORIAL = 'tutorial',
+  PERFORMANCE = 'performance',
+  BATTLE = 'battle',
+  INTERVIEW = 'interview',
+  DOCUMENTARY = 'documentary'
+}
+
+// Resource types enum  
+export enum ResourceType {
+  VIDEO = 'video',
+  PODCAST = 'podcast',
+  BOOK = 'book',
+  ARTICLE = 'article',
+  WEBSITE = 'website',
+  PLAYLIST = 'playlist',
+  COURSE = 'course',
+  ARCHIVE = 'archive',
+  IMAGE = 'image',
+  SOCIAL_MEDIA = 'social_media',
+  DOCUMENTARY = 'documentary'
+}
+
+// Consolidated video reference structure
+export interface VideoReference {
+  id: string;
+  featured?: boolean; // Whether this is the main featured video
+  category?: VideoCategory;
+  order?: number; // Display order (featured videos get priority)
+}
+
+// Resource reference structure - can reference any type of resource
+export interface ResourceReference {
+  id: string; // References entity in videos, podcasts, books, etc.
+  type: ResourceType;
+  featured?: boolean; // Whether to highlight this resource
+  category?: string; // Subcategory within the type (e.g., 'beginner', 'advanced')
+  order?: number; // Display order
+  context?: string; // Additional context about why this resource is relevant
+}
+
+// More robust dance style structure
 export interface DanceStyle {
   id: DanceStyleId;
-  // Support both translation keys and static content for backwards compatibility
-  name?: string;
-  nameKey?: string;
   slug: string;
-  shortDescription?: string;
-  shortDescriptionKey?: string;
-  fullDescription?: string;
-  fullDescriptionKey?: string;
-  // Additional metadata from categories
-  // All user-visible era/location values must be provided as translation keys.
-  eraKey: string; // Translation key for era (e.g. 'styles.eras.1970s')
-  locationKey: string; // Translation key for location (e.g. 'styles.locations.southBronxNYC')
+  
+  // Content (prefer translation keys for i18n)
+  nameKey: string;
+  shortDescriptionKey: string;
+  fullDescriptionKey: string;
+  
+  // Metadata
+  eraKey: string; // Translation key for era (e.g. 'eras.1970s')
+  locationKey: string; // Translation key for location (e.g. 'locations.southBronxNYC')
   eraIcon: string;
   locationIcon: string;
   tags: string[]; // Array of tag IDs for flexible categorization
+  
+  // Origins info
   origins: {
-    yearKey?: string;
-    locationKey?: string;
-    cultureKey?: string;
+    yearKey: string;
+    locationKey: string;
+    cultureKey: string;
   };
-  // Support both arrays and translation keys
-  characteristics?: string[];
-  characteristicsKey?: string;
-  keyMoves?: string[];
-  keyMovesKey?: string;
-  // References to normalized entity records (use ids)
-  influentialArtistIds?: string[];
-  influentialArtistsKey?: string;
-  keyFigureIds?: string[]; // Key figures (pioneers, innovators, influential artists) of the style
-  featuredVideoId?: string; // Main featured video for the style
-  videoIds?: string[]; // Additional videos for the style
-  videosKey?: string;
-  timelineEventIds?: string[];
-  timelineKey?: string;
+  
+  // Content references (consolidated approach - use entity IDs)
+  keyFigureIds?: string[]; // People who are key to this style
+  influentialArtistIds?: string[]; // Subset of key figures who are particularly influential
+  crewIds?: string[]; // Important crews/groups
+  moveIds?: string[]; // Signature moves
+  musicGenreIds?: string[]; // Associated music genres
+  
+  // Media (consolidated video structure)
+  videos?: VideoReference[]; // All videos with metadata about their role
+  
+  // Additional resources (documentaries, books, websites, podcasts, etc.)
+  resources?: ResourceReference[]; // Collection of different resource types
+  
+  // Timeline and characteristics (use translation keys for consistency)
+  characteristicsKey?: string; // Points to translation key with array
+  keyMovesKey?: string; // Points to translation key with array  
+  timelineKey?: string; // Points to translation key with timeline events
+  
+  // Visual theming
   theme: ThemeColors;
-  relatedStyles: DanceStyleId[]; // Use enum for related styles to prevent typos
-  // Structured performer and crew data
-  dancerIds?: string[];
-  crewIds?: string[];
-  // Named moves with translation keys
-  moveIds?: string[];
-  // Music genres as structured items (ids reference translation keys)
-  musicGenreIds?: string[];
+  
+  // Relationships
+  relatedStyles: DanceStyleId[];
+  
+  // Status and validation
+  status?: 'complete' | 'draft' | 'needs_review';
+  lastUpdated?: string; // ISO date string
+  sources?: string[]; // Source attribution for data accuracy
 }
 
 export interface Artist {
@@ -187,12 +237,36 @@ export interface MusicGenreEntity {
   descriptionKey?: string;
 }
 
-export interface Resource {
+export interface OGMetadata {
+  title?: string;
+  titleKey?: string;
+  description?: string;
+  descriptionKey?: string;
+  image: string;
+  siteName?: string;
+  siteNameKey?: string;
+}
+
+export interface ResourceEntity {
   id: string;
-  title: string;
-  type: 'article' | 'book' | 'documentary' | 'website' | 'podcast';
+  titleKey: string; // Translation key for title
+  type: 'documentary' | 'book' | 'article' | 'website' | 'podcast' | 'playlist' | 'course' | 'interview' | 'archive' | 'video';
   url?: string;
-  description: string;
-  author?: string;
+  descriptionKey: string; // Translation key for description
+  authorKey?: string; // Translation key for author/creator
   year?: string;
+  duration?: string; // For videos/podcasts (e.g., "90 min", "45 min")
+  language?: string; // ISO code like 'en', 'fr', 'es'
+  platformKey?: string; // Translation key for platform (e.g., "Netflix", "YouTube", "Spotify")
+  thumbnailUrl?: string;
+  tags?: string[]; // Resource tags like 'beginner-friendly', 'historical', 'technical'
+  accessibility?: {
+    hasSubtitles?: boolean;
+    hasTranscript?: boolean;
+    languages?: string[]; // Available subtitle languages
+  };
+  sourceKey?: string; // Translation key for source attribution
+  featured?: boolean; // Whether to highlight this resource
+  trailerId?: string; // Video ID reference for trailer
+  ogMetadata?: OGMetadata; // Server-side fetched Open Graph metadata for websites
 }

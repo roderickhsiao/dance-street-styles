@@ -152,7 +152,7 @@ export const VideoCarousel = ({ videos, className = '' }: VideoCarouselProps) =>
                     key={index}
                     ref={(el) => { thumbnailRefs.current[index] = el; }}
                     onClick={() => goToVideo(index)}
-                    className={`flex-shrink-0 relative overflow-hidden rounded-lg border-2 transition-all duration-300 snap-center ${
+                    className={`shrink-0 relative overflow-hidden rounded-lg border-2 transition-all duration-300 snap-center ${
                       index === currentIndex
                         ? 'border-accent-primary scale-105 shadow-lg shadow-accent-primary/25'
                         : 'border-stroke-secondary hover:border-accent-primary/50 hover:scale-102'

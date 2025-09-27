@@ -43,6 +43,14 @@ export const VIDEOS: Record<string, VideoEntity> = {
     descriptionKey: 'videos.mcingHistory.description',
     thumbnailUrl: 'https://img.youtube.com/vi/s9nEeyhld2E/hqdefault.jpg',
   },
+  'check-your-body-at-the-door-trailer': {
+    id: 'check-your-body-at-the-door-trailer',
+    titleKey: 'checkYourBodyAtTheDoor.trailer.title',
+    url: 'https://www.youtube.com/watch?v=xWBoXrHRhmA&t=1s',
+    type: 'history',
+    descriptionKey: 'resources.checkYourBodyAtTheDoor.trailer.description',
+    thumbnailUrl: 'https://img.youtube.com/vi/xWBoXrHRhmA/hqdefault.jpg',
+  },
   'breaking-documentary': {
     id: 'breaking-documentary',
     titleKey: 'videos.breakingDocumentary.title',
@@ -212,3 +220,6 @@ export const getVideoById = (id: string): VideoEntity | undefined => {
 };
 
 export const getAllVideos = () => VIDEOS_LIST;
+
+// Export as videoEntities for consistency
+export const videoEntities = VIDEOS;

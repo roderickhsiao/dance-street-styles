@@ -1,5 +1,5 @@
 export * from './people';
-export * from './videos';
-export * from './moves';
 export * from './crews';
+export * from './moves';
 export * from './musicGenres';
+export * from './videos';
