@@ -6,7 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "project": "./scripts/project-manage.sh",
+    "project:info": "./scripts/project-manage.sh info",
+    "project:list": "./scripts/project-manage.sh list"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
