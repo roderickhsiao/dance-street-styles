@@ -1,8 +1,0 @@
-    "checkYourBodyAtTheDoor": {
-      "title": "Check Your Body at the Door",
-      "description": "A documentary about remarkable underground House dancers in NYC during the golden decade of the 1990s. Featuring rare dance club footage, the film follows master free-stylists into the clubs, their jobs, and their everyday lives.",
-      "author": "Sally Sommer & Charles Atlas",
-      "source": "Independent Documentary", 
-      "platform": "Vimeo On Demand",
-      "siteName": "Check Your Body at the Door"
-    },
