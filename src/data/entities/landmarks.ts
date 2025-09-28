@@ -77,7 +77,7 @@ export const landmarks: Record<string, LandmarkEntity> = {
     relatedStyleIds: ['house'],
     keyFigureIds: ['frankie-knuckles'],
     aliases: ['Warehouse', 'The Warehouse'],
-    imageUrl: '/images/landmarks/the-warehouse-chicago.png',
+    imageUrl: '/images/landmarks/the-warehouse-chicago-optimized.jpg',
     mapUrl: 'https://maps.google.com/?q=206+S.+Jefferson+Street,+Chicago,+IL',
     tags: ['birthplace-of-house-music', 'legendary-venue'],
   },

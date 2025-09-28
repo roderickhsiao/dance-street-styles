@@ -32,7 +32,7 @@ export async function generateMetadata({
       locale: locale,
       siteName: 'Street Dance Culture Magazine',
       publishedTime: '1973-08-11T00:00:00.000Z', // Historical significance
-      modifiedTime: new Date().toISOString(),
+      modifiedTime: '2024-01-01T00:00:00.000Z', // Use static date to avoid ISR churn
       images: [{
         url: `/api/og/dynamic?title=${encodeURIComponent(tHero('title'))}&subtitle=${encodeURIComponent(tHero('badges.movement'))}`,
         width: 1200,
@@ -81,7 +81,6 @@ export default function OriginsLayout({
       name: 'Street Dance Culture Magazine'
     },
     datePublished: '1973-08-11',
-    dateModified: new Date().toISOString(),
     publisher: {
       '@type': 'Organization',
       name: 'Street Dance Culture Magazine'

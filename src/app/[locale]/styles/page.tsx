@@ -3,6 +3,9 @@ import { getAllDanceStyles } from '@/data/danceStyles';
 import type { Metadata } from 'next';
 import { StylesPageClient } from './StylesPageClient';
 
+// Add ISR with 24 hour revalidation for styles listing
+export const revalidate = 86400;
+
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('stylesPage.seo');
   const tHero = await getTranslations('stylesPage.hero');

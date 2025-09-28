@@ -1,6 +1,8 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
+// Cache OG images for 7 days to reduce generation costs
+export const revalidate = 604800;
 
 export async function GET(request: Request) {
   try {

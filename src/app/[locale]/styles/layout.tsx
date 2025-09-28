@@ -61,7 +61,7 @@ export default function StylesLayout({
       name: 'Street Dance Culture Magazine'
     },
     datePublished: '1970-01-01',
-    dateModified: new Date().toISOString(),
+    dateModified: '2024-01-01T00:00:00.000Z', // Use static date to avoid ISR churn
     publisher: {
       '@type': 'Organization',
       name: 'Street Dance Culture Magazine'

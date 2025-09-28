@@ -4,6 +4,9 @@ import { Section } from '@/components/ui/section';
 import { ContactModal } from '@/components/features/contact-modal';
 import type { Metadata } from 'next';
 
+// Add ISR with 7 days revalidation for about page (rarely changes)
+export const revalidate = 604800;
+
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('about.seo');
   const tHero = await getTranslations('about.hero');

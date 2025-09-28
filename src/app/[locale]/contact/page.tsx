@@ -4,6 +4,9 @@ import { Section } from '@/components/ui/section';
 import { ContactForm } from '@/components/features/contact-form';
 import type { Metadata } from 'next';
 
+// Add ISR with 1 day revalidation for contact page
+export const revalidate = 86400;
+
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('contact.seo');
   const tHero = await getTranslations('contact.hero');

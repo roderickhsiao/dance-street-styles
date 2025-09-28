@@ -5,6 +5,9 @@ import { locales } from '../../../../i18n/constants';
 import { Metadata } from 'next';
 import { StylePageClient } from './StylePageClient';
 
+// Add ISR with longer revalidation for dance style content (rarely changes)
+// export const revalidate = 604800; // 7 days
+
 // Generate static params for all dance style pages across all locales
 export function generateStaticParams() {
   const allStyles = getAllDanceStyles();
