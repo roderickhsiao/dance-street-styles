@@ -1,0 +1,90 @@
+name: Feature Request
+description: Suggest a new feature or improvement for the Street Dance Culture website
+title: "[FEATURE] "
+labels: ["enhancement", "needs triage"]
+assignees:
+  - roderickhsiao
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! Please fill out the information below to help us understand your request.
+
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: Feature Type
+      description: What type of feature are you requesting?
+      options:
+        - New dance style coverage
+        - UI/UX improvement
+        - Performance enhancement
+        - Accessibility improvement
+        - Internationalization (i18n)
+        - Content management
+        - Animation/interaction
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or need
+      description: Is your feature request related to a problem? Please describe the problem or need.
+      placeholder: I'm always frustrated when... / It would be great if...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: Describe the solution you'd like to see
+      placeholder: A clear and concise description of what you want to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative solutions
+      description: Have you considered any alternative solutions or features?
+      placeholder: A clear and concise description of any alternative solutions or features you've considered.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature to you?
+      options:
+        - Low - Nice to have
+        - Medium - Would be helpful
+        - High - Important for user experience
+        - Critical - Blocking current functionality
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: dance-culture-relevance
+    attributes:
+      label: Street Dance Culture Relevance
+      description: Please check all that apply
+      options:
+        - label: This feature relates to breaking/b-boying/b-girling
+        - label: This feature relates to hip-hop culture
+        - label: This feature relates to dance history/education
+        - label: This feature relates to community/social aspects
+        - label: This feature relates to accessibility for diverse users
+        - label: This feature relates to internationalization
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add any other context, mockups, or examples about the feature request here
+    validations:
+      required: false
