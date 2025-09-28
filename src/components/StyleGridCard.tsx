@@ -139,7 +139,7 @@ export const StyleGridCard = ({
 
               {/* Bottom action with subtle accent line */}
               <div className="flex items-center text-orange-400 text-sm font-bold uppercase tracking-wider group-hover:text-orange-300 transition-colors duration-300 magazine-sans mt-auto">
-                <div className="w-8 h-px bg-gradient-to-r from-orange-500 to-transparent mr-3 group-hover:w-12 transition-all duration-300"></div>
+                <div className="w-8 h-px bg-gradient-to-r from-orange-500 to-transparent me-3 group-hover:w-12 transition-all duration-300"></div>
                 {tGlobal('styles.cardAction') ||
                   tGlobal('stylesPage.styleCard.exploreStyle')}
               </div>

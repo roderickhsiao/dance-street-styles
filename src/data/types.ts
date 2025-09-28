@@ -244,7 +244,7 @@ export interface OGMetadata {
   titleKey?: string;
   description?: string;
   descriptionKey?: string;
-  image: string;
+  image?: string;
   siteName?: string;
   siteNameKey?: string;
 }
@@ -252,7 +252,7 @@ export interface OGMetadata {
 export interface ResourceEntity {
   id: string;
   titleKey: string; // Translation key for title
-  type: 'documentary' | 'book' | 'article' | 'website' | 'podcast' | 'playlist' | 'course' | 'interview' | 'archive' | 'video';
+  type: ResourceType;
   url?: string;
   descriptionKey: string; // Translation key for description
   authorKey?: string; // Translation key for author/creator

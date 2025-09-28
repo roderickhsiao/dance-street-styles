@@ -1333,7 +1333,7 @@
       }
     },
     "caleafSellers": {
-      "name": "Caleaf Sellers",
+      "name": "Caleaf “Big Leaf” Sellers",
       "role": "House Dance Pioneer",
       "bio": "Part of the famed MOP TOP crew in NYC, Caleaf is known for his musicality and helped innovate many house steps. He, along with others like Brooklyn Terry Wright and Buddha Stretch, bridged hip-hop and house communities.",
       "socialMedia": {
@@ -1481,6 +1481,26 @@
       "name": "Kimson",
       "role": "French Dance Pioneer", 
       "bio": "First generation member of Wanted Posse (1993-1995), part of the original collective that established the crew's groundbreaking approach to French street dance culture."
+    },
+    "buddhaStretch": {
+      "name": "Buddha Stretch",
+      "role": "Elite Force Founder & Choreographer",
+      "bio": "Emilio Austin Jr., founding member and choreographer of Elite Force crew (1992). Helped establish house dance in mainstream hip-hop culture through music video choreography, notably Michael Jackson's \"Remember the Time\" (1992)."
+    },
+    "henryLink": {
+      "name": "Link", 
+      "role": "Elite Force Founding Member",
+      "bio": "Henry McMillan, founding member of Elite Force crew alongside Buddha Stretch and Loose Joint. Helped establish the crew's signature style in the early 1990s Brooklyn house scene."
+    },
+    "looseJoint": {
+      "name": "Loose Joint",
+      "role": "Elite Force Founding Member", 
+      "bio": "Jamel Brown, founding member of Elite Force crew. Known for his smooth and fluid house dance style that helped define the crew's early aesthetic and Brooklyn house movement."
+    },
+    "bobbyBarnette": {
+      "name": "Mileage",
+      "role": "Elite Force Member",
+      "bio": "Bobby Barnette, Elite Force crew member who joined in 1998. Brought his unique style and energy to the legendary house dance collective during their continued evolution."
     }
   },
   "crews": {
@@ -1521,8 +1541,8 @@
       "description": "Legendary NYC house dance crew from the 1990s featuring influential dancers like Caleaf Sellers, Buddha Stretch, and others. MOP TOP was instrumental in bridging hip-hop and house dance communities, helping to define the New York house scene with their innovative style and musicality."
     },
     "danceFusion": {
-      "name": "Dance Fusion",
-      "description": "Influential house dance crew that emerged from the New York house scene. Dance Fusion was known for their technical precision and creative interpretations of house music, contributing to the evolution and preservation of authentic house dance culture."
+      "name": "Dance Fusion NYC",
+      "description": "Premier New York dance collective founded in 1997, featuring legendary dancers including Caleaf Sellers, Marjory Smarth, Tony Sekou Williams, Shannon Mabra, Shannon Selby, Tony McGregor, and Hiroyuki Suzuki. Key innovators in the evolution of Hip-Hop and House Dance culture who fused hip-hop foundation with underground house dance. Performed with artists like Michael Jackson, Diana Ross, Mariah Carey, Will Smith, and LL Cool J. Known for spreading dance styles globally through teaching, judging international competitions (Juste Debout, Dance Delight), and workshops worldwide. Originally taught at historic Fazil's Dance Studio before moving to Broadway Dance Center and Peridance Capezio Center."
     },
     "houseNation": {
       "name": "House Nation",
@@ -1635,6 +1655,78 @@
         "description": "Official trailer for the groundbreaking documentary about underground House dancers in NYC during the 1990s."
       }
     },
+    "comeAsYouAreLoft": {
+      "title": "Come As You Are",
+      "description": "A short documentary exploring the cultural and social impact of the legendary Loft era in NYC. This film discusses how the ritual of club dancing and radical self expression ignited unity and healing within the Latino and African American communities of New York. Understand how 'The Loft' laid the roots for the birth of the international phenomenon of House culture and music.",
+      "author": "Various Artists",
+      "source": "Independent Documentary",
+      "platform": "YouTube",
+      "siteName": "YouTube"
+    },
+    "iWasThereWhenHouseTookOver": {
+      "title": "I Was There When House Took Over The World: House Was Born",
+      "description": "How social unrest and Chicago's underground gay clubs led to a global dance movement. This documentary about the history of house music explores the origins of the genre, and features interviews with Nile Rodgers, Traxman, Jesse Saunders, Honey Dijon and Marshall Jefferson.",
+      "author": "Various Artists",
+      "source": "Independent Documentary",
+      "platform": "YouTube",
+      "siteName": "YouTube"
+    },
+    "parisIsBurning": {
+      "title": "Paris is Burning",
+      "description": "Groundbreaking 1990 documentary that chronicles the ball culture of New York City and the African-American, Latino, gay, and transgender communities involved in it. The film explores themes of race, class, gender, and sexuality while documenting the art of voguing and the elaborate social and competitive ball scene.",
+      "author": "Jennie Livingston",
+      "source": "Prestige Films",
+      "platform": "YouTube",
+      "siteName": "YouTube"
+    },
+    "kikiDocumentary": {
+      "title": "Kiki",
+      "description": "Contemporary documentary exploring the current Kiki ballroom scene in New York City. The film follows seven characters from the Kiki community, a movement created by and for LGBTQ+ youth of color, showcasing how the ballroom culture continues to evolve and provide safe spaces for self-expression and community building.",
+      "author": "Sara Jordenö",
+      "source": "Independent Documentary",
+      "platform": "YouTube",
+      "siteName": "YouTube"
+    },
+    "voguingHouseBallroomScene": {
+      "title": "Voguing and the House Ballroom Scene of New York City 1989-92",
+      "description": "Harlem's gay ball subculture of the late 1980s is superbly documented in this trove of previously unseen photographs. In 1989, Malcolm McLaren had his only number one hit with a single called 'Deep in Vogue.' Early the next year, Madonna had one of the biggest hits of her career, with the single 'Vogue,' and when Jennie Livingston's film Paris Is Burning arrived in cinemas the same year, winning the Grand Jury Prize at the Sundance Film Festival, the mainstream got hip to New York City's extraordinary ball culture, from which the film and McLaren and Madonna's songs had arisen.",
+      "author": "Stuart Baker (Editor)",
+      "source": "Soul Jazz Records",
+      "platform": "Google Books",
+      "siteName": "Soul Jazz Records"
+    },
+    "theQueenDoc": {
+      "title": "The Queen",
+      "description": "The groundbreaking 1968 documentary about the Miss All-America Camp Beauty Pageant that introduced audiences to competitive drag culture. The film captures Crystal LaBeija's iconic moment calling out racial bias in the pageant, which sparked her to form the influential House of LaBeija and launch the Black & Brown ballroom scene.",
+      "director": "Frank Simon",
+      "source": "Independent Documentary",
+      "platform": "YouTube",
+      "siteName": "YouTube"
+    },
+    "howDoILookDoc": {
+      "title": "How Do I Look",
+      "description": "Wolfgang Busch's decade-long documentation of ball culture from the mid-1990s to 2000s, featuring legends like Willi Ninja, Jose Xtravaganza, Kevin Ultra-Omni, Octavia St. Laurent, and Pepper LaBeija. The film explores the scene's roots in the 1920s Harlem Renaissance and its influence on mainstream artists and musicians.",
+      "director": "Wolfgang Busch",
+      "source": "Independent Documentary",
+      "platform": "YouTube",
+      "siteName": "YouTube"
+    },
+    "strikeAPoseDoc": {
+      "title": "Strike A Pose",
+      "description": "The story of seven young dancers, including Jose and Luis Xtravaganza, who joined Madonna on her controversial 1990 Blond Ambition World Tour. Twenty-five years after Truth or Dare, the film revisits these dancers' lives and their impact on sexual freedom and gay culture worldwide.",
+      "director": "Ester Gould, Reijer Zwaan",
+      "source": "Independent Documentary",
+      "platform": "YouTube",
+      "siteName": "YouTube"
+    },
+    "myHouseDoc": {
+      "title": "My House",
+      "description": "Elegance Bratton's contemporary look at ballroom culture through this Viceland documentary series. Following modern ballroom personalities like Tati 007, Alex Mugler, Jelani Mizrahi, Lolita Balenciaga, and Relish Milan in today's New York scene across ten episodes.",
+      "director": "Elegance Bratton",
+      "source": "Viceland",
+      "platform": "YouTube",
+      "siteName": "YouTube"
+    },
     "punkingDanceInstagram": {
       "title": "@punking.dance",
       "description": "Official Archive of the artform of Punking from beginning to evolution researched & curated by @alyssachloe_22 @viktormanoel",
@@ -1675,6 +1767,70 @@
       "platform": "YouTube",
       "siteName": "YouTube"
     },
+    "lifeAndDeathNYDanceFloor": {
+      "title": "Life and Death on the New York Dance Floor, 1980–1983",
+      "description": "Chronicles the tumultuous period of New York's dance culture from 1980-1983, charting sonic and social eruptions in the city's subterranean party venues. Explores how post-disco, post-punk, and hip hop scenes became marked by plurality, interaction, and convergence before gentrification and other forces brought this creative era to an end.",
+      "author": "Tim Lawrence",
+      "source": "Duke University Press",
+      "platform": "Google Books",
+      "siteName": "Google Books"
+    },
+    "sallySommerHouseDancing": {
+      "title": "C'mon to my house: Underground-House Dancing",
+      "description": "Academic research article examining the underground house dancing scene and its cultural significance. Published in Dance Research Journal by Cambridge University Press, this scholarly work provides in-depth analysis of house dance culture and community.",
+      "author": "Sally R. Sommer",
+      "source": "Dance Research Journal",
+      "platform": "Cambridge University Press",
+      "siteName": "Dance Research Journal"
+    },
+    "czarinaMiraniHouseHistory": {
+      "title": "Spin Slide and Jack: A History of House Dancing",
+      "description": "Comprehensive exploration of house dancing history covering the fundamental moves and cultural evolution of the dance style. Features interviews with key figures and analysis of the dance's development from Chicago and New York scenes.",
+      "author": "Czarina Mirani",
+      "source": "5 Magazine",
+      "platform": "5 Magazine",
+      "siteName": "5 Magazine"
+    },
+    "barryWaltersBurningDownHouse": {
+      "title": "Burning Down the House",
+      "description": "Early journalistic coverage of house music and dance culture from 1986, providing contemporary perspective on the emerging scene. This SPIN magazine article captures the energy and innovation of house culture during its formative years.",
+      "author": "Barry Walters",
+      "source": "SPIN Magazine",
+      "platform": "SPIN Magazine",
+      "siteName": "SPIN Magazine"
+    },
+    "philCheesemanHistoryOfHouse": {
+      "title": "The History Of House",
+      "description": "Comprehensive historical overview of house music from its Chicago origins to global expansion. Originally published in DJ Magazine, this detailed chronicle traces the genre's evolution, key figures, and cultural impact from the 1970s through the early 2000s.",
+      "author": "Phil Cheeseman",
+      "source": "DJ Magazine",
+      "platform": "DJ Magazine",
+      "siteName": "DJ Magazine"
+    },
+    "simonReynoldsGenerationEcstasy": {
+      "title": "Generation Ecstasy: Into the World of Techno and Rave Culture",
+      "description": "Comprehensive examination of electronic dance music culture including house music origins. Reynolds provides detailed analysis of how house music developed from disco and influenced the broader electronic music landscape.",
+      "author": "Simon Reynolds",
+      "source": "Routledge",
+      "platform": "Routledge Publishers",
+      "siteName": "Routledge"
+    },
+    "doYouRememberHouse": {
+      "title": "Do You Remember House?: Chicago's Queer of Color Undergrounds",
+      "description": "Do You Remember House? tells the full story of the emergence, queer remediation, and memorialization of house in Chicago from its beginnings in the late '70s to the present. Based on expansive research in archives and his extensive conversations with the makers of house in Chicago's parks, clubs, museums, and dance studios, author Micah Salkind argues that queer remediation and adaptation of house music by crossover communities in its first decade shaped the ways that Chicago producers, DJs, dancers, and promoters today invoke and mobilize the genre as an archive of collectivity and congregation.",
+      "author": "Micah E. Salkind",
+      "source": "Oxford University Press",
+      "platform": "Google Books",
+      "siteName": "Oxford University Press"
+    },
+    "discographiesBook": {
+      "title": "Discographies: Dance, Music, Culture and the Politics of Sound",
+      "description": "Experiencing disco, hip hop, house, techno, drum 'n' bass and garage, Discographies plots a course through the transatlantic dance scene of the last twenty-five years. It discusses the problems posed by contemporary dance culture of both academic and cultural study and finds these origins in the history of opposition to music as a source of sensory pleasure. Discussing such issues as technology, club space, drugs, the musical body, gender, sexuality and pleasure, Discographies explores the ecstatic experiences at the heart of contemporary dance culture. It suggests why politicians and agencies as diverse as the independent music press and public broadcasting should be so hostile to this cultural phenomenon.",
+      "author": "Jeremy Gilbert & Ewan Pearson",
+      "source": "Taylor & Francis",
+      "platform": "Google Books",
+      "siteName": "Taylor & Francis"
+    },
     "platforms": {
       "netflix": "Netflix",
       "youtube": "YouTube", 
@@ -1693,6 +1849,7 @@
       "booksSection": "Books & Publications", 
       "websitesSection": "Websites",
       "videosSection": "Videos & Documentaries",
+      "articlesSection": "Articles & Interviews",
       "podcastsSection": "Podcasts & Audio",
       "otherSection": "Other Resources",
       "visit": "Visit",
@@ -1706,7 +1863,11 @@
       "watchTrailer": "Watch Trailer",
       "viewWebsite": "View Website",
       "documentary": "Documentary",
-      "visitSite": "Visit Site"
+      "visitSite": "Visit Site",
+      "byAuthor": "by {author}",
+      "publisherYear": "{publisher} • {year}",
+      "separator": "•",
+      "untitled": "Untitled"
     },
     "resourceTypes": {
       "documentary": "Documentary",

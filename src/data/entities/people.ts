@@ -18,7 +18,7 @@ export const PEOPLE: Record<string, PersonEntity> = {
     bioKey: 'people.toniBasil.bio',
     crewIds: ['the-lockers'],
     imageUrl: '/images/people/toni-basil.jpg',
-    birthDate: new Date('1943-09-22'),
+    category: 'dancer',
   },
   'fred-berry': {
     id: 'fred-berry',
@@ -376,10 +376,11 @@ export const PEOPLE: Record<string, PersonEntity> = {
     roleKey: 'people.marjorySmarth.role',
     bioKey: 'people.marjorySmarth.bio',
     imageUrl: '/images/people/marjory-smarth.jpg',
+    category: 'dancer',
+    crewIds: ['dance-fusion'],
     socialLinks: {
       instagram: 'livetruedancefree'
-    },
-    category: 'dancer',
+    }
   },
   'ejoe-wilson': {
     id: 'ejoe-wilson',
@@ -387,6 +388,8 @@ export const PEOPLE: Record<string, PersonEntity> = {
     roleKey: 'people.ejoeWilson.role',
     bioKey: 'people.ejoeWilson.bio',
     imageUrl: '/images/people/ejoe-wilson.jpg',
+    category: 'dancer',
+    crewIds: ['elite-force'],
     socialLinks: {
       instagram: 'ejoewilson'
     }
@@ -399,6 +402,7 @@ export const PEOPLE: Record<string, PersonEntity> = {
     bioKey: 'people.caleafSellers.bio',
     imageUrl: '/images/people/caleaf-sellers.jpg',
     category: 'dancer',
+    crewIds: ['mop-top', 'dance-fusion'],
     socialLinks: {
       instagram: 'caleaf_sellers'
     }
@@ -410,6 +414,7 @@ export const PEOPLE: Record<string, PersonEntity> = {
     bioKey: 'people.brianFootworkGreen.bio',
     imageUrl: '/images/people/brian-footwork-green.jpg',
     category: 'dancer',
+    crewIds: ['dance-fusion'],
     socialLinks: {
       instagram: 'brianfootworkgreen'
     }
@@ -420,10 +425,10 @@ export const PEOPLE: Record<string, PersonEntity> = {
     roleKey: 'people.kimHolmes.role',
     bioKey: 'people.kimHolmes.bio',
     imageUrl: '/images/people/kim-holmes.jpg',
+    category: 'dancer',
     socialLinks: {
       instagram: 'kimd.holmes'
-    },
-    category: 'dancer',
+    }
   },
   'brahms-la-fortune': {
     id: 'brahms-la-fortune',
@@ -441,6 +446,7 @@ export const PEOPLE: Record<string, PersonEntity> = {
     roleKey: 'people.shanSelby.role',
     bioKey: 'people.shanSelby.bio',
     imageUrl: '/images/people/shan-selby.jpg',
+    crewIds: ['dance-fusion'],
     socialLinks: {
       instagram: 'selby._s'
     },
@@ -557,10 +563,11 @@ export const PEOPLE: Record<string, PersonEntity> = {
     roleKey: 'people.tonyMcgregor.role',
     bioKey: 'people.tonyMcgregor.bio',
     imageUrl: '/images/people/tony-mcgregor.jpg',
+    category: 'dancer',
+    crewIds: ['dance-fusion'],
     socialLinks: {
       instagram: 'tonyvmcgregor'
-    },
-    category: 'dancer',
+    }
   },
   'brooklyn-terry-wright': {
     id: 'brooklyn-terry-wright',
@@ -569,6 +576,7 @@ export const PEOPLE: Record<string, PersonEntity> = {
     bioKey: 'people.brooklynTerryWright.bio',
     imageUrl: '/images/people/brooklyn-terry-wright.jpg',
     category: 'dancer',
+    crewIds: ['elite-force'],
     socialLinks: {
       instagram: 'brooklynterryef'
     }
@@ -580,6 +588,7 @@ export const PEOPLE: Record<string, PersonEntity> = {
     bioKey: 'people.shannonMabra.bio',
     imageUrl: '/images/people/shannon-mabra.jpg',
     category: 'dancer',
+    crewIds: ['mop-top', 'dance-fusion'],
     socialLinks: {
       instagram: 'shannonwhichwaysha'
     }
@@ -591,6 +600,7 @@ export const PEOPLE: Record<string, PersonEntity> = {
     bioKey: 'people.tonySekouWilliams.bio',
     imageUrl: '/images/people/tony-sekou-williams.jpg',
     category: 'dancer',
+    crewIds: ['dance-fusion'],
     socialLinks: {
       instagram: 'sekouheru'
     }
@@ -612,6 +622,7 @@ export const PEOPLE: Record<string, PersonEntity> = {
     roleKey: 'people.hiro.role',
     bioKey: 'people.hiro.bio',
     imageUrl: '/images/people/hiro.jpg',
+    crewIds: ['dance-fusion'],
     category: 'dancer',
     socialLinks: {
       instagram: 'hiroalma'
@@ -694,6 +705,42 @@ export const PEOPLE: Record<string, PersonEntity> = {
     bioKey: 'people.kimson.bio',
     crewIds: ['wanted-posse'],
     imageUrl: '/images/people/kimson.jpg',
+    category: 'dancer',
+  },
+  'buddha-stretch': {
+    id: 'buddha-stretch',
+    nameKey: 'people.buddhaStretch.name',
+    roleKey: 'people.buddhaStretch.role',
+    bioKey: 'people.buddhaStretch.bio',
+    crewIds: ['elite-force'],
+    imageUrl: '/images/people/buddha-stretch.jpg',
+    category: 'dancer',
+  },
+  'henry-link': {
+    id: 'henry-link',
+    nameKey: 'people.henryLink.name',
+    roleKey: 'people.henryLink.role',
+    bioKey: 'people.henryLink.bio',
+    crewIds: ['elite-force'],
+    imageUrl: '/images/people/henry-link.jpg',
+    category: 'dancer',
+  },
+  'loose-joint': {
+    id: 'loose-joint',
+    nameKey: 'people.looseJoint.name',
+    roleKey: 'people.looseJoint.role',
+    bioKey: 'people.looseJoint.bio',
+    crewIds: ['elite-force'],
+    imageUrl: '/images/people/loose-joint.jpg',
+    category: 'dancer',
+  },
+  'bobby-barnette': {
+    id: 'bobby-barnette',
+    nameKey: 'people.bobbyBarnette.name',
+    roleKey: 'people.bobbyBarnette.role',
+    bioKey: 'people.bobbyBarnette.bio',
+    crewIds: ['elite-force'],
+    imageUrl: '/images/people/bobby-barnette.jpg',
     category: 'dancer',
   }
 };

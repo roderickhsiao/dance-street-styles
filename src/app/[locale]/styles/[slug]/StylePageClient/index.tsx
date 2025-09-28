@@ -327,7 +327,7 @@ export function StylePageClient({
   //                   {pioneer.name}
   //                 </span>
   //                 {pioneer.description && (
-  //                   <span className="text-content-secondary ml-2">
+  //                   <span className="text-content-secondary ms-2">
   //                     {pioneer.description}
   //                   </span>
   //                 )}
@@ -424,7 +424,7 @@ export function StylePageClient({
                   <h3 className="text-body-md font-semibold text-content-primary group-hover:text-accent-primary transition-colors">
                     {tNames(relatedStyle.id)}
                   </h3>
-                  <ChevronRight className="h-4 w-4 text-content-tertiary group-hover:text-accent-primary transition-colors shrink-0 ml-2" />
+                  <ChevronRight className="h-4 w-4 text-content-tertiary group-hover:text-accent-primary transition-colors shrink-0 ms-2" />
                 </div>
 
                 <p className="text-body-sm text-content-secondary mb-3 leading-relaxed">

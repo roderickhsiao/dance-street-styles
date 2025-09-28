@@ -25,7 +25,7 @@ export const Quote = ({
           {quote}
         </q>
         {author && (
-          <cite className="text-content-secondary text-body-sm magazine-sans font-bold ml-2 not-italic">
+          <cite className="text-content-secondary text-body-sm magazine-sans font-bold ms-2 not-italic">
             — {author}
             {authorTitle && <span className="text-content-tertiary font-medium">, {authorTitle}</span>}
           </cite>

@@ -352,13 +352,13 @@ export const danceStyles: DanceStyle[] = [
       'shannon-mabra',
       'tony-sekou-williams',
       'voodoo-ray',
+      'hiro',
+
       'badson',
       'hagson',
       'yugson',
       'babson',
       'mamson',
-
-      'hiro',
     ],
     videos: [
       {
@@ -377,6 +377,86 @@ export const danceStyles: DanceStyle[] = [
         category: 'documentary',
         order: 1,
         contextKey: 'resources.checkYourBodyAtTheDoor.context',
+      },
+      // Come As You Are - Loft Documentary
+      {
+        id: 'come-as-you-are-loft',
+        type: ResourceType.DOCUMENTARY,
+        featured: true,
+        category: 'documentary',
+        order: 2,
+      },
+      // I Was There When House Took Over The World
+      {
+        id: 'i-was-there-when-house-took-over',
+        type: ResourceType.DOCUMENTARY,
+        featured: true,
+        category: 'documentary',
+        order: 3,
+      },
+      // Life and Death on the New York Dance Floor Book
+      {
+        id: 'life-and-death-ny-dance-floor',
+        type: ResourceType.BOOK,
+        featured: true,
+        category: 'book',
+        order: 4,
+      },
+      // Sally Sommer Academic Article
+      {
+        id: 'sally-sommer-house-dancing',
+        type: ResourceType.ARTICLE,
+        featured: true,
+        category: 'academic',
+        order: 5,
+      },
+      // Czarina Mirani 5 Magazine Article
+      {
+        id: 'czarina-mirani-house-history',
+        type: ResourceType.ARTICLE,
+        featured: true,
+        category: 'magazine',
+        order: 6,
+      },
+      // Barry Walters SPIN Magazine Article
+      {
+        id: 'barry-walters-burning-down-house',
+        type: ResourceType.ARTICLE,
+        featured: true,
+        category: 'magazine',
+        order: 7,
+      },
+      // Phil Cheeseman DJ Magazine Article
+      {
+        id: 'phil-cheeseman-history-of-house',
+        type: ResourceType.ARTICLE,
+        featured: true,
+        category: 'magazine',
+        order: 8,
+      },
+      // Simon Reynolds Generation Ecstasy Book
+      {
+        id: 'simon-reynolds-generation-ecstasy',
+        type: ResourceType.BOOK,
+        featured: true,
+        category: 'book',
+        order: 9,
+      },
+      // Do You Remember House Book
+      {
+        id: 'do-you-remember-house',
+        type: ResourceType.BOOK,
+        featured: true,
+        category: 'book',
+        order: 10,
+      },
+      // Discographies Book
+      {
+        id: 'discographies-book',
+        type: ResourceType.BOOK,
+        featured: true,
+        category: 'book',
+        order: 11,
       },
     ],
     landmarkIds: ['the-warehouse-chicago', 'paradise-garage-nyc'],
@@ -451,7 +531,64 @@ export const danceStyles: DanceStyle[] = [
         order: 3,
       },
     ],
-    resources: [], // Add verified resources here
+    resources: [
+      // Paris is Burning Documentary
+      {
+        id: 'paris-is-burning',
+        type: ResourceType.DOCUMENTARY,
+        featured: true,
+        category: 'documentary',
+        order: 1,
+      },
+      // Kiki Documentary
+      {
+        id: 'kiki-documentary',
+        type: ResourceType.DOCUMENTARY,
+        featured: true,
+        category: 'documentary',
+        order: 2,
+      },
+      // The Queen Documentary (1968) - Origins
+      {
+        id: 'the-queen-documentary',
+        type: ResourceType.DOCUMENTARY,
+        featured: true,
+        category: 'documentary',
+        order: 3,
+      },
+      // How Do I Look Documentary
+      {
+        id: 'how-do-i-look-documentary',
+        type: ResourceType.DOCUMENTARY,
+        featured: true,
+        category: 'documentary',
+        order: 4,
+      },
+      // Strike A Pose Documentary (Madonna dancers)
+      {
+        id: 'strike-a-pose-documentary',
+        type: ResourceType.DOCUMENTARY,
+        featured: true,
+        category: 'documentary',
+        order: 5,
+      },
+      // My House Documentary Series (Contemporary)
+      {
+        id: 'my-house-documentary',
+        type: ResourceType.DOCUMENTARY,
+        featured: false,
+        category: 'documentary',
+        order: 6,
+      },
+      // Voguing and the House Ballroom Scene Book
+      {
+        id: 'voguing-house-ballroom-scene',
+        type: ResourceType.BOOK,
+        featured: true,
+        category: 'book',
+        order: 7,
+      },
+    ],
     landmarkIds: ['webster-hall-nyc', 'tracks-nightclub'],
     influentialArtistIds: [
       'william-dorsey-swann',

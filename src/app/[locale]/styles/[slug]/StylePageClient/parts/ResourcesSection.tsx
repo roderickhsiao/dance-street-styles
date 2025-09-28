@@ -1,11 +1,14 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Globe, BookOpen } from 'lucide-react';
+import { Globe, BookOpen, FileText } from 'lucide-react';
 import { getResourcesGroupedByType } from '@/data/danceStyles';
+import { ResourceType } from '@/data/types';
 import { WebsitePreviewCard } from './WebsitePreviewCard';
 import { ResourceItem } from './ResourceItem';
 import { VideoResource } from './VideoResource';
+import { ArticleCard } from './ArticleCard';
+import { BookCard } from './BookCard';
 
 interface ResourcesSectionProps {
   danceStyleId: string;
@@ -39,7 +42,8 @@ export function ResourcesSection({ danceStyleId }: ResourcesSectionProps) {
     ...resourcesByType.documentaries,
     ...resourcesByType.books, 
     ...resourcesByType.videos,
-    ...resourcesByType.podcasts
+    ...resourcesByType.podcasts,
+    ...resourcesByType.articles
   ].filter((resource): resource is NonNullable<typeof resource> => resource !== null);
 
   if (allResources.length === 0) {
@@ -57,9 +61,17 @@ export function ResourcesSection({ danceStyleId }: ResourcesSectionProps) {
   }
 
   // Separate resources by type
-  const websites = allResources.filter(r => r.type === 'website');
-  const videos = allResources.filter(r => r.type === 'video' || r.type === 'documentary');
-  const otherResources = allResources.filter(r => r.type !== 'website' && r.type !== 'video' && r.type !== 'documentary');
+  const websites = allResources.filter(r => r.type === ResourceType.WEBSITE);
+  const videos = allResources.filter(r => r.type === ResourceType.VIDEO || r.type === ResourceType.DOCUMENTARY);
+  const articles = allResources.filter(r => r.type === ResourceType.ARTICLE);
+  const books = allResources.filter(r => r.type === ResourceType.BOOK);
+  const otherResources = allResources.filter(r => 
+    r.type !== ResourceType.WEBSITE && 
+    r.type !== ResourceType.VIDEO && 
+    r.type !== ResourceType.DOCUMENTARY && 
+    r.type !== ResourceType.ARTICLE &&
+    r.type !== ResourceType.BOOK
+  );
   
   return (
     <div className="space-y-8 w-full max-w-full overflow-hidden">
@@ -78,7 +90,7 @@ export function ResourcesSection({ danceStyleId }: ResourcesSectionProps) {
         </div>
       )}
       
-      {/* Videos - Special cards with inline playback */}
+      {/* Videos & Documentaries - Special cards with inline playback */}
       {videos.length > 0 && (
         <div>
           <h4 className="text-body-md font-semibold text-content-primary mb-4 flex items-center gap-2">
@@ -88,6 +100,37 @@ export function ResourcesSection({ danceStyleId }: ResourcesSectionProps) {
           <div className="grid sm:grid-cols-2 gap-4 w-full max-w-full overflow-hidden">
             {videos.map((resource) => (
               <VideoResource key={resource.id} resource={resource} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      
+      {/* Articles - Special cards with rich metadata */}
+      {articles.length > 0 && (
+        <div>
+          <h4 className="text-body-md font-semibold text-content-primary mb-4 flex items-center gap-2">
+            <FileText className="w-4 h-4 text-amber-400" />
+            {tUi('articlesSection')}
+          </h4>
+          <div className="grid sm:grid-cols-2 gap-4 w-full max-w-full overflow-hidden">
+            {articles.map((resource) => (
+              <ArticleCard key={resource.id} resource={resource} />
+            ))}
+          </div>
+        </div>
+      )}
+      
+      {/* Books - Special cards with book metadata */}
+      {books.length > 0 && (
+        <div>
+          <h4 className="text-body-md font-semibold text-content-primary mb-4 flex items-center gap-2">
+            <BookOpen className="w-4 h-4 text-green-400" />
+            {tUi('booksSection')}
+          </h4>
+          <div className="grid sm:grid-cols-2 gap-4 w-full max-w-full overflow-hidden">
+            {books.map((resource) => (
+              <BookCard key={resource.id} resource={resource} />
             ))}
           </div>
         </div>
