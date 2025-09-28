@@ -22,9 +22,7 @@ export default function RootLayout({ children }: Props) {
     <html lang="en">
       <head>
         {/* Load YouTube JavaScript API */}
-        <script src="https://www.youtube.com/iframe_api" async></script>
-        {/* Load inert polyfill from local file */}
-        <script src="/inert.min.js" async></script>
+        <script src="https://www.youtube.com/iframe_api" async defer></script>
       </head>
       <body className={`${inter.variable} antialiased font-sans`}>
         {/* Shared SVG filter for liquid glass effect */}

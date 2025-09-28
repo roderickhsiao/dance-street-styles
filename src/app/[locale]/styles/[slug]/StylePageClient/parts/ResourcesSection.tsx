@@ -6,7 +6,7 @@ import { getResourcesGroupedByType } from '@/data/danceStyles';
 import { ResourceType } from '@/data/types';
 import { WebsitePreviewCard } from './WebsitePreviewCard';
 import { ResourceItem } from './ResourceItem';
-import { VideoResource } from './VideoResource';
+import { VideoResourceCard } from '@/components/VideoResourceCard';
 import { ArticleCard } from './ArticleCard';
 import { BookCard } from './BookCard';
 
@@ -99,7 +99,7 @@ export function ResourcesSection({ danceStyleId }: ResourcesSectionProps) {
           </h4>
           <div className="grid sm:grid-cols-2 gap-4 w-full max-w-full overflow-hidden">
             {videos.map((resource) => (
-              <VideoResource key={resource.id} resource={resource} />
+              <VideoResourceCard key={resource.id} resource={resource} />
             ))}
           </div>
         </div>

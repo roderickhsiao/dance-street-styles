@@ -10,14 +10,22 @@ import { Hero } from '@/components/Hero';
 import { CardGrid } from '@/components/CardGrid';
 import { Stats } from '@/components/Stats';
 import { Section } from '@/components/Section';
-import { VideoCarousel } from '@/components/VideoCarousel';
+
 import { ValueCards } from '@/components/ValueCards';
 import { Quote } from '@/components/Quote';
 import { CTAButton } from '@/components/ui/cta-button';
 import { PEOPLE } from '@/data/entities';
 import { VIDEOS } from '@/data/entities';
+import { VideoResourceCard } from '@/components/VideoResourceCard';
 
 const compactTimeline = [
+  {
+    year: 'Early 1970s',
+    titleKey: 'streetCulture.timeline.events.early1970s.title',
+    locationKey: 'streetCulture.timeline.events.early1970s.location',
+    descriptionKey: 'streetCulture.timeline.events.early1970s.description',
+    icon: '🕺',
+  },
   {
     year: '1973',
     titleKey: 'streetCulture.timeline.events.1973.title',
@@ -26,10 +34,10 @@ const compactTimeline = [
     icon: '🎧',
   },
   {
-    year: '1975',
-    titleKey: 'streetCulture.timeline.events.1975.title',
-    locationKey: 'streetCulture.timeline.events.1975.location',
-    descriptionKey: 'streetCulture.timeline.events.1975.description',
+    year: 'Mid 1970s',
+    titleKey: 'streetCulture.timeline.events.mid1970s.title',
+    locationKey: 'streetCulture.timeline.events.mid1970s.location',
+    descriptionKey: 'streetCulture.timeline.events.mid1970s.description',
     icon: '💫',
   },
   {
@@ -40,18 +48,25 @@ const compactTimeline = [
     icon: '👥',
   },
   {
-    year: '1982',
-    titleKey: 'streetCulture.timeline.events.1982.title',
-    locationKey: 'streetCulture.timeline.events.1982.location',
-    descriptionKey: 'streetCulture.timeline.events.1982.description',
-    icon: '🎬',
+    year: '1980s',
+    titleKey: 'streetCulture.timeline.events.1980s.title',
+    locationKey: 'streetCulture.timeline.events.1980s.location',
+    descriptionKey: 'streetCulture.timeline.events.1980s.description',
+    icon: '🏛️',
   },
   {
-    year: '1990s',
-    titleKey: 'streetCulture.timeline.events.1990s.title',
-    locationKey: 'streetCulture.timeline.events.1990s.location',
-    descriptionKey: 'streetCulture.timeline.events.1990s.description',
+    year: '1990',
+    titleKey: 'streetCulture.timeline.events.1990.title',
+    locationKey: 'streetCulture.timeline.events.1990.location',
+    descriptionKey: 'streetCulture.timeline.events.1990.description',
     icon: '🌍',
+  },
+  {
+    year: '2000s',
+    titleKey: 'streetCulture.timeline.events.2000s.title',
+    locationKey: 'streetCulture.timeline.events.2000s.location',
+    descriptionKey: 'streetCulture.timeline.events.2000s.description',
+    icon: '💻',
   },
   {
     year: '2024',
@@ -264,7 +279,7 @@ export default function OriginOfStreetDancePage() {
         pioneers,
       };
     });
-  }, [t, intl]);
+  }, [intl, tGloblal]);
 
   // Memoize translated badges
   const heroBadges = useMemo(
@@ -323,18 +338,44 @@ export default function OriginOfStreetDancePage() {
     [t]
   );
 
-  // Simplified video data with just URLs
-  // Video data with working YouTube URLs for Hip-Hop culture education
-  const videoData = useMemo(
-    () => [
-      { url: VIDEOS['5-elements-of-hop-hop'].url },
-      { url: VIDEOS['dj-evolution'].url },
-      { url: VIDEOS['mcing-history'].url },
-      { url: VIDEOS['breaking-documentary'].url },
-      { url: VIDEOS['graffiti-art'].url },
-    ],
-    []
-  );
+  // Video resources for compact display
+  const videoResources = [
+    {
+      id: '5-elements-of-hop-hop',
+      titleKey: VIDEOS['5-elements-of-hop-hop'].titleKey || 'videos.5ElementsOfHipHop.title',
+      descriptionKey: VIDEOS['5-elements-of-hop-hop'].descriptionKey || 'videos.5ElementsOfHipHop.description',
+      type: 'documentary',
+      url: VIDEOS['5-elements-of-hop-hop'].url,
+    },
+    {
+      id: 'dj-evolution',
+      titleKey: VIDEOS['dj-evolution'].titleKey || 'videos.djEvolution.title',
+      descriptionKey: VIDEOS['dj-evolution'].descriptionKey || 'videos.djEvolution.description',
+      type: 'documentary',
+      url: VIDEOS['dj-evolution'].url,
+    },
+    {
+      id: 'mcing-history',
+      titleKey: VIDEOS['mcing-history'].titleKey || 'videos.mcingHistory.title',
+      descriptionKey: VIDEOS['mcing-history'].descriptionKey || 'videos.mcingHistory.description',
+      type: 'documentary',
+      url: VIDEOS['mcing-history'].url,
+    },
+    {
+      id: 'breaking-documentary',
+      titleKey: VIDEOS['breaking-documentary'].titleKey || 'videos.breakingDocumentary.title',
+      descriptionKey: VIDEOS['breaking-documentary'].descriptionKey || 'videos.breakingDocumentary.description',
+      type: 'documentary',
+      url: VIDEOS['breaking-documentary'].url,
+    },
+    {
+      id: 'graffiti-art',
+      titleKey: VIDEOS['graffiti-art'].titleKey || 'videos.graffitiArt.title',
+      descriptionKey: VIDEOS['graffiti-art'].descriptionKey || 'videos.graffitiArt.description',
+      type: 'documentary',
+      url: VIDEOS['graffiti-art'].url,
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-surface-primary">
@@ -405,7 +446,39 @@ export default function OriginOfStreetDancePage() {
         title={t('streetCulture.timeline.title')}
       />
 
-      <VideoCarousel videos={videoData} className="bg-surface-secondary" />
+      <Section background="secondary" padding="lg">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-header-xl font-black mb-6 text-content-primary magazine-headline">
+              {tGloblal('resources.ui.videosSection')}
+            </h2>
+          </motion.div>
+          
+          <div className="grid sm:grid-cols-2 gap-4">
+            {videoResources.map((resource) => (
+              <motion.div
+                key={resource.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <VideoResourceCard 
+                  resource={resource} 
+                  showBadge={false}
+                  translationNamespace=""
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </Section>
 
       <Section background="primary" padding="none">
         <ValueCards

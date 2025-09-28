@@ -24,7 +24,7 @@
       "explore": {
         "title": "Explore",
         "links": {
-          "styles": "All Dance Styles",
+          "styles": "Dance Styles",
           "origins": "Cultural Timeline",
           "trivia": "Test Your Knowledge"
         }
@@ -266,7 +266,7 @@
         }
       },
       "elements": {
-        "title": "The Five Elements Born on Streets",
+        "title": "Core Elements of Street Culture",
         "djing": {
           "name": "DJing",
           "subtitle": "Aural Element • Sound Systems",
@@ -314,7 +314,7 @@
         },
         "videos": {
           "title": "Learn Through Video",
-          "subtitle": "Watch documentaries and educational content about the Five Elements of Hip-Hop.",
+          "subtitle": "Watch documentaries and educational content about street dance culture and its diverse elements.",
           "watchVideo": "Watch Video",
           "videoTitle": "Hip-Hop Culture Video {number}",
           "thumbnailAlt": "Video {number} thumbnail",
@@ -324,8 +324,13 @@
         }
       },
       "timeline": {
-        "title": "Key Moments",
+        "title": "Key Moments in Street Dance Culture",
         "events": {
+          "early1970s": {
+            "title": "Funk & Disco Era Begins",
+            "location": "CA & NYC",
+            "description": "Early street dance styles emerge: Locking in LA (1969-1972), disco hustle in NYC clubs."
+          },
           "1973": {
             "title": "DJ Kool Herc’s First Block Party",
             "location": "South Bronx",
@@ -336,25 +341,35 @@
             "location": "Bronx",
             "description": "Dancers create breaking moves to extended breaks."
           },
+          "mid1970s": {
+            "title": "Parallel Street Styles Rise",
+            "location": "CA & NYC",
+            "description": "Popping develops in Fresno, waacking/punking in LA gay clubs, while b-boying grows in Bronx."
+          },
           "1977": {
-            "title": "Rock Steady Crew Founded",
-            "location": "Bronx",
-            "description": "Legendary crew defines b-boy culture and battles."
+            "title": "Crews Define Culture",
+            "location": "Multi-City",
+            "description": "Rock Steady Crew (NYC), Electric Boogaloos (CA) establish battle culture across coasts."
           },
-          "1982": {
-            "title": "Wild Style Documentary",
+          "1980s": {
+            "title": "Voguing & House Emerge",
             "location": "NYC",
-            "description": "Film introduces hip-hop to mainstream audiences."
+            "description": "Harlem ballroom scene creates voguing; Chicago house music spawns house dance."
           },
-          "1990s": {
-            "title": "Global Expansion",
+          "1990": {
+            "title": "Mainstream Breakthrough",
+            "location": "Global",
+            "description": "Madonna's 'Vogue' and 'Paris is Burning' bring ballroom culture worldwide."
+          },
+          "2000s": {
+            "title": "Digital Age Evolution",
             "location": "Worldwide",
-            "description": "Hip-hop culture spreads internationally."
+            "description": "Internet spreads all street styles globally; new styles emerge from social media."
           },
           "2024": {
             "title": "Olympic Recognition",
             "location": "Paris",
-            "description": "Breaking debuts at the Olympics."
+            "description": "Breaking debuts at Olympics, representing decades of street dance evolution."
           }
         }
       },
@@ -399,16 +414,16 @@
     "hero": {
       "masthead": "Issue #001 • Culture Edition",
       "titleFull": "<accent1>STREET</accent1> <accent2>DANCE</accent2> <accent3>CULTURE</accent3>",
-      "subtitle": "From the Bronx blocks to global stages — the untold stories of movement, rhythm, and revolution that changed the world."
+      "subtitle": "From California funk scenes to Bronx blocks, club floors to global stages — the diverse stories of movement, rhythm, and revolution that changed the world."
     },
     "title": {
       "titleFull": "THE MOVEMENT<dot>.</dot><accent>DOCUMENTED</accent>"
     },
-    "description": "From breakbeats to global stages, explore the dance styles that shaped culture and connected communities worldwide.",
+    "description": "From early funk styles to breakbeats, ballroom battles to global stages — explore the diverse dance styles that shaped culture and connected communities worldwide.",
     "stats": {
       "birthYear": {
-        "value": "1973",
-        "label": "Born in the Bronx"
+        "value": "Early 1970s",
+        "label": "Multi-City Origins"
       },
       "styles": {
         "value": "20+",
