@@ -25,10 +25,6 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
-      <head>
-        {/* Load YouTube JavaScript API */}
-        <script src="https://www.youtube.com/iframe_api" async defer></script>
-      </head>
       <body className={`${inter.variable} antialiased font-sans`}>
         {/* Shared SVG filter for liquid glass effect */}
         <svg style={{ display: 'none' }} aria-hidden="true" focusable="false">

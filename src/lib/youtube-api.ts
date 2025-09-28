@@ -57,6 +57,7 @@ export class YouTubeApiManager {
   private timeUpdateCallbacks: Map<string, (time: number) => void> = new Map();
   private apiReady = false;
   private readyCallbacks: (() => void)[] = [];
+  private scriptLoaded = false;
 
   static getInstance(): YouTubeApiManager {
     if (!YouTubeApiManager.instance) {
@@ -66,7 +67,7 @@ export class YouTubeApiManager {
   }
 
   private constructor() {
-    // Wait for YouTube API to be ready
+    // Initialize YouTube API loading when needed
     if (typeof window !== 'undefined') {
       if (window.YT && window.YT.Player) {
         this.apiReady = true;
@@ -80,7 +81,61 @@ export class YouTubeApiManager {
     }
   }
 
-  private waitForApi(): Promise<void> {
+  private loadYouTubeAPI(): Promise<void> {
+    return new Promise((resolve, reject) => {
+      if (typeof window === 'undefined') {
+        reject(new Error('Window is not available'));
+        return;
+      }
+
+      // Check if API is already loaded
+      if (window.YT && window.YT.Player) {
+        this.apiReady = true;
+        resolve();
+        return;
+      }
+
+      // Check if script is already loaded/loading
+      if (this.scriptLoaded) {
+        this.readyCallbacks.push(() => resolve());
+        return;
+      }
+
+      // Load the script
+      this.scriptLoaded = true;
+      const script = document.createElement('script');
+      script.src = 'https://www.youtube.com/iframe_api';
+      script.async = true;
+      script.defer = true;
+
+      script.onload = () => {
+        // Script loaded, but we still need to wait for onYouTubeIframeAPIReady
+        this.readyCallbacks.push(() => resolve());
+      };
+
+      script.onerror = () => {
+        this.scriptLoaded = false;
+        reject(new Error('Failed to load YouTube API script'));
+      };
+
+      document.head.appendChild(script);
+    });
+  }
+
+  private async waitForApi(): Promise<void> {
+    if (this.apiReady) {
+      return Promise.resolve();
+    }
+
+    // Load the API if not already loaded
+    try {
+      await this.loadYouTubeAPI();
+    } catch (error) {
+      console.error('Failed to load YouTube API:', error);
+      throw error;
+    }
+
+    // Wait for API ready callback
     return new Promise((resolve) => {
       if (this.apiReady) {
         resolve();
