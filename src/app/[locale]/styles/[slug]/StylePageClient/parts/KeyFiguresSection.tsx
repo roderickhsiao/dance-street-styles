@@ -49,10 +49,7 @@ export const KeyFiguresSection = ({ keyFigureIds, className = "" }: KeyFiguresSe
     const initials = getInitials(fullName);
 
     return (
-      <div
-        key={figure.id}
-        className="relative flex gap-4 py-3 hover:bg-surface-elevated/20 rounded-lg transition-colors duration-200 group"
-      >
+      <div className="group flex gap-2 sm:gap-3 md:gap-4 py-2 sm:py-3 hover:bg-surface-elevated/20 rounded-lg transition-colors duration-200 relative">
         {/* Social Media Icons - Upper Right Corner */}
         <div className="absolute top-3 end-3 flex items-center gap-1.5">
           {figure.socialLinks?.instagram && (
@@ -98,7 +95,7 @@ export const KeyFiguresSection = ({ keyFigureIds, className = "" }: KeyFiguresSe
 
         {/* Avatar */}
         <div className="shrink-0">
-          <div className="w-14 h-14 rounded-full bg-gray-700 flex items-center justify-center text-gray-300 font-medium text-sm group-hover:bg-gray-600 transition-colors duration-200 overflow-hidden">
+          <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-gray-700 flex items-center justify-center text-gray-300 font-medium text-xs sm:text-sm group-hover:bg-gray-600 transition-colors duration-200 overflow-hidden">
             {figure.imageUrl ? (
               <Image 
                 src={figure.imageUrl} 
@@ -123,20 +120,20 @@ export const KeyFiguresSection = ({ keyFigureIds, className = "" }: KeyFiguresSe
         </div>
         
         {/* Info - structured with consistent spacing */}
-        <div className="flex-1 min-w-0 space-y-1 pe-12">
+        <div className="flex-1 min-w-0 space-y-0.5 sm:space-y-1 pe-8 sm:pe-12">
           {/* Primary info block - always aligned with avatar */}
           <div>
-            <h4 className="text-body-md font-semibold text-content-primary leading-tight">
+            <h4 className="text-body-sm sm:text-body-md font-semibold text-content-primary leading-tight line-clamp-1">
               {fullName}
             </h4>
-            <p className="text-body-sm text-content-secondary leading-tight">
+            <p className="text-body-xs sm:text-body-sm text-content-secondary leading-tight line-clamp-2">
               {tPeople(`${personKey}.role`)}
             </p>
           </div>
           
           {/* Secondary info - crew badges if available */}
           {figure.crewIds && figure.crewIds.length > 0 && (
-            <div className="flex flex-wrap items-center gap-1.5">
+            <div className="flex flex-wrap items-center gap-1 sm:gap-1.5">
               {figure.crewIds.map((crewId) => {
                 const crew = getCrewById(crewId);
                 if (!crew) return null;
@@ -144,7 +141,7 @@ export const KeyFiguresSection = ({ keyFigureIds, className = "" }: KeyFiguresSe
                 return (
                   <span 
                     key={crewId} 
-                    className="inline-flex items-center px-2 py-0.5 rounded-md bg-surface-elevated/40 border border-stroke-secondary text-body-xs text-content-tertiary font-medium"
+                    className="inline-flex items-center px-1.5 sm:px-2 py-0.5 rounded-md bg-surface-elevated/40 border border-stroke-secondary text-xs sm:text-body-xs text-content-tertiary font-medium truncate sm:max-w-none"
                   >
                     {tCrews(`${crewKey}.name`)}
                   </span>
@@ -158,28 +155,28 @@ export const KeyFiguresSection = ({ keyFigureIds, className = "" }: KeyFiguresSe
   };
 
   return (
-    <div className={`bg-surface-secondary rounded-2xl p-6 md:p-8 ${className}`}>
+    <div className={`bg-surface-secondary rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 ${className}`}>
       {/* Section Header */}
-      <div className="mb-8">
-        <h2 className="text-header-lg font-black text-content-primary mb-3">{t('title')}</h2>
-        <p className="text-body-md text-content-secondary leading-relaxed">
+      <div className="mb-6 sm:mb-8">
+        <h2 className="text-header-md sm:text-header-lg font-black text-content-primary mb-2 sm:mb-3">{t('title')}</h2>
+        <p className="text-body-sm sm:text-body-md text-content-secondary leading-relaxed">
           {t('description')}
         </p>
       </div>
 
-      <div className="space-y-6">
+      <div className="space-y-4 sm:space-y-6">
         {/* Music Artists Section */}
         {musicPioneers.length > 0 && (
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-pink-500 flex items-center justify-center shrink-0">
-                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+              <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-gradient-to-r from-orange-500 to-pink-500 flex items-center justify-center shrink-0">
+                <svg className="w-3 h-3 sm:w-4 sm:h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
                 </svg>
               </div>
-              <h3 className="text-header-sm font-bold text-content-primary">{t('musicArtists')}</h3>
+              <h3 className="text-body-md sm:text-header-sm font-bold text-content-primary">{t('musicArtists')}</h3>
             </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:ps-9">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-2 sm:gap-3 sm:ps-7 md:ps-9">
             {musicPioneers.map(renderFigureCard)}
           </div>
         </div>
@@ -188,15 +185,15 @@ export const KeyFiguresSection = ({ keyFigureIds, className = "" }: KeyFiguresSe
       {/* Dancers Section */}
       {dancers.length > 0 && (
         <div>
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-6 h-6 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center shrink-0">
-              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+            <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center shrink-0">
+              <svg className="w-3 h-3 sm:w-4 sm:h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"/>
               </svg>
             </div>
-            <h3 className="text-header-sm font-bold text-content-primary">{t('dancers')}</h3>
+            <h3 className="text-body-md sm:text-header-sm font-bold text-content-primary">{t('dancers')}</h3>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:ps-9">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-2 sm:gap-3 sm:ps-7 md:ps-9">
             {dancers.map(renderFigureCard)}
           </div>
           </div>

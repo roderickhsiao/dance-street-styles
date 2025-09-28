@@ -27,9 +27,17 @@ export function Modal({
     if (!isOpen) return;
 
     const body = document.body;
+    const documentElement = document.documentElement;
     
-    // Lock body scroll
+    // Lock body scroll with additional mobile fixes
+    const scrollY = window.scrollY;
     body.style.overflow = 'hidden';
+    body.style.position = 'fixed';
+    body.style.top = `-${scrollY}px`;
+    body.style.width = '100%';
+    
+    // Also lock document scroll for mobile
+    documentElement.style.overflow = 'hidden';
     
     // Handle ESC key
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -38,7 +46,15 @@ export function Modal({
       }
     };
     
+    // Prevent touch scroll on mobile
+    const handleTouchMove = (e: TouchEvent) => {
+      if (!modalRef.current?.contains(e.target as Node)) {
+        e.preventDefault();
+      }
+    };
+    
     document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('touchmove', handleTouchMove, { passive: false });
     
     // Focus trap - focus the modal when it opens
     if (modalRef.current) {
@@ -46,8 +62,16 @@ export function Modal({
     }
     
     return () => {
+      // Restore scroll position and unlock
       body.style.overflow = '';
+      body.style.position = '';
+      body.style.top = '';
+      body.style.width = '';
+      documentElement.style.overflow = '';
+      window.scrollTo(0, scrollY);
+      
       document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('touchmove', handleTouchMove);
     };
   }, [isOpen, onClose]);
 
@@ -81,7 +105,7 @@ export function Modal({
   return (
     <div 
       data-modal-root
-      className="fixed inset-0 z-50 flex items-center justify-center"
+      className="fixed inset-0 z-50 flex items-center justify-center md:p-4"
       ref={modalRef}
       tabIndex={-1}
     >
@@ -91,9 +115,9 @@ export function Modal({
         onClick={handleOverlayClick}
       />
       
-      {/* Modal Content */}
+      {/* Modal Content - full screen on mobile, centered on desktop */}
       <div 
-        className={`relative bg-surface-primary rounded-xl shadow-2xl max-h-[90vh] overflow-auto ${className}`}
+        className={`relative bg-surface-primary shadow-2xl w-full h-full md:w-auto md:h-auto md:max-h-[90vh] md:max-w-[90vw] md:rounded-xl overflow-auto ${className}`}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header with close button */}

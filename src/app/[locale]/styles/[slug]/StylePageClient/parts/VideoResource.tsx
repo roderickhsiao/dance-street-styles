@@ -1,9 +1,11 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Play, ExternalLink } from 'lucide-react';
-
+import { Play, ExternalLink, X } from 'lucide-react';
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
+import { m, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import { YouTubeApiManager } from '@/lib/youtube-api';
 import { getVideoById } from '@/data/entities/videos';
 import { 
   getYouTubeVideoId, 
@@ -66,48 +68,165 @@ function getResourceTypeConfig(type: string) {
 }
 
 
-export function VideoResource({ resource }: VideoResourceProps) {
+export const VideoResource = ({ resource }: VideoResourceProps) => {
   const tResources = useTranslations('resources');
   const videoPlayer = useVideoPlayer();
-  const resourceConfig = getResourceTypeConfig(resource.type);
-
-
-
-  // For documentaries, we need to get the trailer URL
-  const getVideoUrl = () => {
-    if (resource.type === 'documentary' && resource.trailerId) {
-      const trailerVideo = getVideoById(resource.trailerId);
-      return trailerVideo?.url;
-    }
-    return resource.url;
-  };
-
-  const videoUrl = getVideoUrl();
+  const [isInlineExpanded, setIsInlineExpanded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const playerRef = useRef<HTMLDivElement>(null);
+  // Use a truly unique player ID per resource instance that never changes
+  const playerInstanceId = useMemo(() => {
+    const timestamp = Date.now();
+    const random = Math.random().toString(36).substr(2, 9);
+    return `inline-player-${resource.id}-${timestamp}-${random}`;
+  }, [resource.id]); // Only depend on resource.id for stability
+  const [playerCreated, setPlayerCreated] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   
-  // Check if this is a video resource (YouTube, Vimeo, etc.) or documentary with trailer
-  const isVideoResource = (videoUrl && isVideoUrl(videoUrl)) || 
-                         (resource.type === 'documentary' && resource.trailerId);
+  const resourceConfig = useMemo(() => getResourceTypeConfig(resource.type), [resource.type]);
 
-  const youTubeVideoId = isVideoResource && videoUrl ? getYouTubeVideoId(videoUrl) : null;
 
-  // Handle video click
-  const handleVideoClick = () => {
-    if (youTubeVideoId) {
+
+  // Mobile detection
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Memoized video data
+  const videoData = useMemo(() => {
+    const getVideoUrl = () => {
+      if (resource.type === 'documentary' && resource.trailerId) {
+        const trailerVideo = getVideoById(resource.trailerId);
+        return trailerVideo?.url;
+      }
+      return resource.url;
+    };
+
+    const videoUrl = getVideoUrl();
+    const isVideoResource = (videoUrl && isVideoUrl(videoUrl)) || 
+                           (resource.type === 'documentary' && resource.trailerId);
+    const youTubeVideoId = isVideoResource && videoUrl ? getYouTubeVideoId(videoUrl) : null;
+    
+    return { videoUrl, isVideoResource, youTubeVideoId };
+  }, [resource.type, resource.trailerId, resource.url]);
+
+  // Memoized translated content
+  const translatedContent = useMemo(() => ({
+    title: tResources(resource.titleKey),
+    description: tResources(resource.descriptionKey)
+  }), [tResources, resource.titleKey, resource.descriptionKey]);
+
+  // Handle video click - mobile inline or desktop modal
+  const handleVideoClick = useCallback(() => {
+    if (!videoData.youTubeVideoId) {
+      return;
+    }
+    
+    if (isMobile) {
+      // Mobile: expand inline (completely independent)
+      setIsInlineExpanded(true);
+    } else {
+      // Desktop: open in modal/PiP (global system)
       videoPlayer.openVideo(
-        youTubeVideoId,
-        tResources(resource.titleKey),
-        tResources(resource.descriptionKey)
+        videoData.youTubeVideoId,
+        translatedContent.title,
+        translatedContent.description
       );
     }
-  };
+  }, [videoData.youTubeVideoId, isMobile, videoPlayer, translatedContent]);  // Handle inline close with cleanup
+  const handleInlineClose = useCallback(() => {
+    // Destroy player to prevent conflicts
+    if (playerCreated) {
+      const apiManager = YouTubeApiManager.getInstance();
+      apiManager.destroyPlayer(playerInstanceId);
+    }
+    
+    // Reset all states
+    setIsInlineExpanded(false);
+    setPlayerCreated(false);
+    setIsLoading(false);
+  }, [playerCreated, playerInstanceId]);
+
+  // Initialize inline YouTube player when expanded
+  useEffect(() => {
+    if (!isInlineExpanded || !videoData.youTubeVideoId || playerCreated) {
+      return;
+    }
+
+    const apiManager = YouTubeApiManager.getInstance();
+    const playerId = playerInstanceId;
+    
+    const createPlayerWithDelay = async (retryCount = 0) => {
+      try {
+        setIsLoading(true);
+        
+        // Ensure container is ready
+        await new Promise(resolve => setTimeout(resolve, 300));
+        
+        if (!playerRef.current || !isInlineExpanded) {
+          setIsLoading(false);
+          return;
+        }
+
+        // Ensure no existing player with this ID (extra safety)
+        apiManager.destroyPlayer(playerId);
+        
+        await apiManager.createPlayer(playerId, videoData.youTubeVideoId!, {
+          autoplay: true,
+          startTime: 0,
+        });
+        
+        // Only set states if we're still expanded
+        if (isInlineExpanded) {
+          setPlayerCreated(true);
+          setIsLoading(false);
+        }
+      } catch {
+        // Retry up to 3 times with increasing delay
+        if (retryCount < 2 && isInlineExpanded) {
+          setTimeout(() => createPlayerWithDelay(retryCount + 1), (retryCount + 1) * 1000);
+        } else {
+          // Final failure - reset states
+          setPlayerCreated(false);
+          setIsLoading(false);
+        }
+      }
+    };
+
+    // Wait for next tick to ensure DOM is ready
+    setTimeout(createPlayerWithDelay, 0);
+  }, [isInlineExpanded, videoData.youTubeVideoId, playerCreated, playerInstanceId]);
+
+  // Cleanup player on unmount
+  useEffect(() => {
+    const playerId = playerInstanceId;
+    
+    return () => {
+      const apiManager = YouTubeApiManager.getInstance();
+      apiManager.destroyPlayer(playerId);
+    };
+  }, [playerInstanceId]);
+  
+  // Additional cleanup when video changes or component state changes
+  useEffect(() => {
+    if (!isInlineExpanded && playerCreated) {
+      const apiManager = YouTubeApiManager.getInstance();
+      apiManager.destroyPlayer(playerInstanceId);
+      setPlayerCreated(false);
+      setIsLoading(false);
+    }
+  }, [isInlineExpanded, playerCreated, playerInstanceId, videoData.youTubeVideoId]);
 
   // All video resources use consistent card layout
   if (resource.url) {
-    const thumbnailUrl = getYouTubeThumbnailUrl(videoUrl || resource.url, 'medium');
+    const thumbnailUrl = getYouTubeThumbnailUrl(videoData.videoUrl || resource.url, 'medium');
 
     // Create the clickable wrapper based on resource type
     const ClickableWrapper = ({ children }: { children: React.ReactNode }) => {
-      if (isVideoResource && youTubeVideoId) {
+      if (videoData.isVideoResource && videoData.youTubeVideoId) {
         // For YouTube videos, make entire card clickable to open video player
         return (
           <button
@@ -134,7 +253,55 @@ export function VideoResource({ resource }: VideoResourceProps) {
 
     return (
       <>
-        <ClickableWrapper>
+        {/* Mobile inline expanded video */}
+        <AnimatePresence>
+          {isInlineExpanded && isMobile && videoData.youTubeVideoId && (
+            <m.div
+              key="mobile-video-player"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="bg-black/40 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 mb-6"
+            >
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-lg font-bold text-white">{translatedContent.title}</h3>
+              <button
+                onClick={handleInlineClose}
+                className="p-2 text-gray-400 hover:text-white transition-colors"
+                aria-label="Close video"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="aspect-video relative rounded-xl overflow-hidden">
+              <div
+                ref={playerRef}
+                id={playerInstanceId}
+                className="w-full h-full bg-black"
+              />
+              {/* Loading indicator */}
+              {isLoading && (
+                <div className="absolute inset-0 flex items-center justify-center bg-black/50">
+                  <div className="w-8 h-8 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                </div>
+              )}
+
+            </div>
+            <p className="text-gray-300 text-sm mt-4">{translatedContent.description}</p>
+          </m.div>
+          )}
+          
+          {/* Hide the clickable card when video is playing inline on mobile */}
+          {!(isInlineExpanded && isMobile) && (
+            <m.div
+              key="video-card"
+              initial={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
+            >
+              <ClickableWrapper>
           <div className="flex items-start gap-2 sm:gap-3">
             {/* Video Thumbnail */}
             <div className="relative w-16 sm:w-20 rounded-lg overflow-hidden shrink-0 bg-surface-elevated flex items-center justify-center"
@@ -177,7 +344,7 @@ export function VideoResource({ resource }: VideoResourceProps) {
                 </span>
               </div>
               
-              {!isVideoResource && (
+              {!videoData.isVideoResource && (
                 <div className="inline-flex items-center gap-1 text-accent-secondary group-hover:text-accent-primary text-body-xs font-medium transition-colors max-w-full">
                   <ExternalLink className="w-3 h-3 shrink-0" />
                   <span className="truncate">{tResources('ui.visitSite')}</span>
@@ -185,7 +352,10 @@ export function VideoResource({ resource }: VideoResourceProps) {
               )}
             </div>
           </div>
-        </ClickableWrapper>
+              </ClickableWrapper>
+            </m.div>
+          )}
+        </AnimatePresence>
       </>
     );
   }
