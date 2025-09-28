@@ -2,13 +2,7 @@
 
 import { motion } from '@/lib/motion';
 import { useTranslations } from 'next-intl';
-
-// Helper function to extract YouTube video ID from URL
-const getYouTubeVideoId = (url: string): string | null => {
-  const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
-  const match = url.match(regExp);
-  return match && match[7].length === 11 ? match[7] : null;
-};
+import { getYouTubeVideoId } from '@/lib/youtube';
 
 interface VideoItem {
   title: string;

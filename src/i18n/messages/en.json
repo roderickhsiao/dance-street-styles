@@ -854,7 +854,8 @@
       "relatedStyles": "Related Styles",
       "pioneers": "Key Figures",
       "resources": "Resources & References",
-      "memberOf": "Member of"
+      "memberOf": "Member of",
+      "historicLandmarks": "Historic Landmarks"
     }
   },
   "moves": {
@@ -1407,6 +1408,46 @@
         "description": "Official trailer for the groundbreaking documentary about underground House dancers in NYC during the 1990s."
       }
     },
+    "punkingDanceInstagram": {
+      "title": "@punking.dance",
+      "description": "Official Archive of the artform of Punking from beginning to evolution researched & curated by @alyssachloe_22 @viktormanoel",
+      "author": "Alyssa Chloe & Viktor Manoel",
+      "source": "Social Media Platform",
+      "platform": "Instagram",
+      "siteName": "Instagram"
+    },
+    "viktorManoelPunkingInterview": {
+      "title": "Interview: Viktor Manoel Is Keeping Punking Alive",
+      "description": "In-depth interview with Viktor Manoel, the last remaining originator of Punking, covering the dance's creation in 1970s LA gay clubs, his work with David Bowie, the AIDS crisis impact, and his mission to preserve the authentic history and spirit of the dance.",
+      "author": "Hanne Os Wold",
+      "source": "Danseinformasjonen (Dance Info Norway)",
+      "platform": "Dance Info Norway",
+      "siteName": "Danseinformasjonen"
+    },
+    "viktorManoelDanceMogulPt1": {
+      "title": "Viktor Manoel Dance Mogul Magazine Exclusive 2012 (Punking) Part 1",
+      "description": "First part of Viktor Manoel's exclusive interview with Dance Mogul Magazine in 2012, discussing the history and origins of Punking dance from the perspective of one of its original creators.",
+      "author": "Dance Mogul Magazine",
+      "source": "YouTube",
+      "platform": "YouTube",
+      "siteName": "YouTube"
+    },
+    "viktorManoelDanceMogulPt2": {
+      "title": "Viktor Manoel Dance Mogul Magazine Exclusive 2012 (Punking) Part 2",
+      "description": "Second part of Viktor Manoel's exclusive interview with Dance Mogul Magazine, continuing the exploration of Punking history and its cultural significance in the dance community.",
+      "author": "Dance Mogul Magazine",
+      "source": "YouTube",
+      "platform": "YouTube",
+      "siteName": "YouTube"
+    },
+    "viktorManoelDanceMogulPt3": {
+      "title": "Viktor Manoel Dance Mogul Magazine Exclusive 2012 (Punking) Part 3",
+      "description": "Final part of Viktor Manoel's exclusive interview series, addressing the history of Punking and discussing important issues like bullying within the dance community.",
+      "author": "Dance Mogul Magazine",
+      "source": "YouTube",
+      "platform": "YouTube",
+      "siteName": "YouTube"
+    },
     "platforms": {
       "netflix": "Netflix",
       "youtube": "YouTube", 
@@ -1439,6 +1480,88 @@
       "viewWebsite": "View Website",
       "documentary": "Documentary",
       "visitSite": "Visit Site"
+    },
+    "resourceTypes": {
+      "documentary": "Documentary",
+      "video": "Video", 
+      "interview": "Interview"
+    }
+  },
+
+  "landmarks": {
+    "sectionDescription": "Significant venues and locations that shaped this dance style",
+    "preservingHistory": "Preserving Cultural Heritage",
+    "heritageNote": "These venues and locations represent the authentic spaces where dance culture flourished. Many have closed, but their legacy lives on through the communities and movements they fostered.",
+    
+    "the-warehouse-chicago": {
+      "name": "The Warehouse",
+      "significance": "The legendary Chicago club where DJ Frankie Knuckles pioneered house music from 1977-1982. This venue gave house music its name and became the spiritual home of the genre and its associated dance culture."
+    },
+    
+    "paradise-garage-nyc": {
+      "name": "Paradise Garage", 
+      "significance": "Iconic NYC club (1977-1987) where DJ Larry Levan created the template for modern club culture. The venue's sound system and community fostered both house music and voguing culture."
+    },
+    
+    "1520-sedgwick-avenue": {
+      "name": "1520 Sedgwick Avenue",
+      "significance": "The Bronx apartment building where DJ Kool Herc threw the party on August 11, 1973, that is widely credited as the birth of hip-hop culture, including breaking and hip-hop dance."
+    },
+    
+    "webster-hall-nyc": {
+      "name": "Webster Hall",
+      "significance": "Historic Manhattan ballroom (since 1886) that has hosted voguing balls and LGBTQ+ community events, serving as an important venue for ballroom culture development."
+    },
+    
+    "bronx-river-houses": {
+      "name": "Bronx River Houses",
+      "significance": "Public housing complex in the Bronx where Afrika Bambaataa founded the Zulu Nation in the 1970s, becoming a crucial hub for early hip-hop culture and breaking battles."
+    },
+    
+    "cedar-park": {
+      "name": "Cedar Park",
+      "significance": "Bronx park that served as an important outdoor venue for early breaking battles and hip-hop jams throughout the 1970s and 1980s, fostering the development of breaking culture."
+    },
+    
+    "ginos-ii": {
+      "name": "Gino's II",
+      "significance": "All-ages nightclub in Hollywood (1976-1985) where punking dance originated. The term 'punking' was coined here by DJ and dance originator Michael Angelo Harris, who used 'punk' as empowerment in the underground gay dance community."
+    },
+    
+    "tracks-nightclub": {
+      "name": "Tracks",
+      "significance": "Legendary NYC nightclub that was a central venue for ballroom culture and voguing in the 1980s and 1990s, hosting major balls and fostering the competitive ballroom scene."
+    },
+    
+    "paradise-ballroom": {
+      "name": "Paradise Ballroom",
+      "significance": "One of the first gay discos in Los Angeles (1974-1977) where 'Posing' dance was performed - dramatic freezes emulating Hollywood stars like Greta Garbo. This blending with other styles became the foundation of punking."
+    },
+    
+    "peanuts-club": {
+      "name": "Peanuts",
+      "significance": "West Hollywood nightclub (1979-1995) that started as a lesbian club but became mixed, catering to different LGBTQ+ crowds. Featured two bars, pool table, and mid-sized dance floor with floor-to-ceiling mirrors."
+    }
+  },
+
+  "common": {
+    "active": "Active",
+    "historical": "Historical",
+    "present": "Present", 
+    "keyFigures": "Key Figures",
+    "more": "more",
+    "capacity": "Capacity",
+    "visitWebsite": "Visit Website",
+    "historicLandmarks": "Historic Landmarks",
+    "viewOnMap": "View on Map",
+    "status": {
+      "active": "Active",
+      "historical": "Historical"
+    },
+    "actions": {
+      "viewOnMap": "View on Map",
+      "learnMore": "Learn More",
+      "visitWebsite": "Visit Website"
     }
   }
 }

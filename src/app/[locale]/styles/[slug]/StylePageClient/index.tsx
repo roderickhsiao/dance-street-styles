@@ -9,9 +9,10 @@ import { useTheme } from '@/hooks/useTheme';
 import { ArrowLeft, MapPin, Clock, Zap, ChevronRight } from 'lucide-react';
 import { DanceStyle } from '@/data/types';
 import { DanceStyleTag, getFeaturedVideoForStyle } from '@/data/danceStyles';
-import { DanceStyleSectionLayout, ResourcesSection } from '@/app/[locale]/styles/[slug]/StylePageClient/parts';
+import { DanceStyleSectionLayout, ResourcesSection, LandmarksSection } from '@/app/[locale]/styles/[slug]/StylePageClient/parts';
 import { FeaturedVideo } from '@/components/FeaturedVideo';
 import { KeyFigures } from '@/components/KeyFigures';
+import { getLandmarkById } from '@/data/entities/landmarks';
 import clsx from 'clsx';
 import { useInViewport } from 'react-in-viewport';
 
@@ -214,6 +215,24 @@ export function StylePageClient({
         </DanceStyleSectionLayout>
       ),
     },
+    // Add landmarks section if the style has landmark IDs and valid landmarks exist
+    ...(danceStyle.landmarkIds && danceStyle.landmarkIds.length > 0 && 
+        danceStyle.landmarkIds.some(id => getLandmarkById(id)) ? [{
+      id: 'landmarks',
+      labelKey: tUi('historicLandmarks'),
+      icon: '🏛️',
+      accentColor: 'secondary' as const,
+      component: (
+        <DanceStyleSectionLayout
+          id="landmarks"
+          title={tUi('historicLandmarks')}
+          emoji="🏛️"
+          accentColor="secondary"
+        >
+          <LandmarksSection landmarkIds={danceStyle.landmarkIds} />
+        </DanceStyleSectionLayout>
+      ),
+    }] : []),
     {
       id: 'resources',
       labelKey: tResourcesUi('moreResources'),
@@ -683,8 +702,8 @@ export function StylePageClient({
       />
 
       {/* Main Content Layout */}
-      <div className="max-w-7xl mx-auto md:px-6 py-8">
-        <div className="grid lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-8">
+        <div className="grid lg:grid-cols-4 gap-4 lg:gap-8 min-w-0">
           {/* Desktop Sidebar TOC */}
           <aside
             className="hidden lg:block"
@@ -727,8 +746,8 @@ export function StylePageClient({
           </aside>
 
           {/* Main Content */}
-          <main className="lg:col-span-3" role="main">
-            <article className="space-y-4 md:space-y-6">
+          <main className="lg:col-span-3 min-w-0 overflow-hidden" role="main">
+            <article className="space-y-4 md:space-y-6 min-w-0 overflow-hidden">
               {availableSections.map((section) => (
                 <ViewportSection
                   key={section.id}

@@ -62,7 +62,7 @@ export function ResourcesSection({ danceStyleId }: ResourcesSectionProps) {
   const otherResources = allResources.filter(r => r.type !== 'website' && r.type !== 'video' && r.type !== 'documentary');
   
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 w-full max-w-full overflow-hidden">
       {/* Website Previews - Special cards with OG-like previews */}
       {websites.length > 0 && (
         <div>
@@ -70,7 +70,7 @@ export function ResourcesSection({ danceStyleId }: ResourcesSectionProps) {
             <Globe className="w-4 h-4 text-blue-400" />
             {tUi('websitesSection')}
           </h4>
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid sm:grid-cols-2 gap-4 w-full max-w-full overflow-hidden">
             {websites.map((resource) => (
               <WebsitePreviewCard key={resource.id} resource={resource} />
             ))}
@@ -85,7 +85,7 @@ export function ResourcesSection({ danceStyleId }: ResourcesSectionProps) {
             <span className="text-red-400">🎬</span>
             {tUi('videosSection')}
           </h4>
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid sm:grid-cols-2 gap-4 w-full max-w-full overflow-hidden">
             {videos.map((resource) => (
               <VideoResource key={resource.id} resource={resource} />
             ))}
@@ -100,7 +100,7 @@ export function ResourcesSection({ danceStyleId }: ResourcesSectionProps) {
             <BookOpen className="w-4 h-4 text-amber-400" />
             {tUi('otherSection')}
           </h4>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 w-full max-w-full overflow-hidden">
             {otherResources.map((resource) => (
               <ResourceItem key={resource.id} resource={resource} />
             ))}

@@ -5,6 +5,7 @@ import { getPersonById } from './entities/people';
 import { getCrewById } from './entities/crews';
 import { getMoveById } from './entities/moves';
 import { getMusicGenreById } from './entities/musicGenres';
+// Landmarks are accessed in components via getLandmarkById
 
 // Re-export the enum for convenience
 export { DanceStyleId };
@@ -118,6 +119,11 @@ export const danceStyles: DanceStyle[] = [
       }
     ],
     resources: [], // Add verified resources here
+    landmarkIds: [
+      '1520-sedgwick-avenue',
+      'bronx-river-houses',
+      'cedar-park',
+    ],
     theme: {
       primary: '#E74C3C',
       secondary: '#C0392B',
@@ -291,6 +297,7 @@ export const danceStyles: DanceStyle[] = [
         context: 'Official website of The Lockers crew featuring the seven original members and their pioneering role in dance culture'
       }
     ],
+
     influentialArtistIds: ['don-campbell', 'toni-basil'],
     crewIds: ['the-lockers'],
     dancerIds: ['don-campbell', 'toni-basil'],
@@ -346,6 +353,10 @@ export const danceStyles: DanceStyle[] = [
         order: 1,
         contextKey: 'resources.checkYourBodyAtTheDoor.context'
       }
+    ],
+    landmarkIds: [
+      'the-warehouse-chicago',
+      'paradise-garage-nyc',
     ],
     theme: {
       primary: '#3498DB',
@@ -405,6 +416,10 @@ export const danceStyles: DanceStyle[] = [
       }
     ],
     resources: [], // Add verified resources here
+    landmarkIds: [
+      'webster-hall-nyc',
+      'tracks-nightclub',
+    ],
     influentialArtistIds: [
       'william-dorsey-swann',
       'willi-ninja',
@@ -465,6 +480,11 @@ export const danceStyles: DanceStyle[] = [
       }
     ],
     resources: [], // Add verified resources here
+    landmarkIds: [
+      'ginos-ii',
+      'paradise-ballroom',
+      'peanuts-club',
+    ],
     influentialArtistIds: [
       'tyrone-proctor',
       'jeffrey-daniel',
@@ -596,12 +616,48 @@ export const danceStyles: DanceStyle[] = [
         order: 1
       }
     ],
-    resources: [], // Add verified resources here
+    resources: [
+      {
+        id: 'punking-dance-instagram',
+        type: ResourceType.WEBSITE,
+        featured: true,
+        order: 1
+      },
+      {
+        id: 'viktor-manoel-punking-interview',
+        type: ResourceType.ARTICLE,
+        featured: true,
+        order: 2
+      },
+      {
+        id: 'viktor-manoel-dance-mogul-pt1',
+        type: ResourceType.VIDEO,
+        featured: true,
+        order: 3
+      },
+      {
+        id: 'viktor-manoel-dance-mogul-pt2',
+        type: ResourceType.VIDEO,
+        featured: true,
+        order: 4
+      },
+      {
+        id: 'viktor-manoel-dance-mogul-pt3',
+        type: ResourceType.VIDEO,
+        featured: true,
+        order: 5
+      }
+    ],
     influentialArtistIds: [
       'viktor-manoel',
       'andrew-frank',
       'arthur-goff',
       'michael-angelo-harris',
+    ],
+    landmarkIds: [
+      'ginos-ii',
+      'paradise-ballroom',
+      'peanuts-club',
     ],
     theme: {
       primary: '#E91E63',
@@ -743,6 +799,7 @@ export const danceStyles: DanceStyle[] = [
       }
     ],
     resources: [], // Add verified resources here
+
     relatedStyles: [DanceStyleId.HOUSE, DanceStyleId.JIT, DanceStyleId.HIP_HOP],
   },
   {
@@ -761,6 +818,7 @@ export const danceStyles: DanceStyle[] = [
       locationKey: 'locations.detroitMI',
       cultureKey: 'styles.detailed.jit.origins.culture',
     },
+
     theme: {
       primary: '#4CAF50',
       secondary: '#388E3C',

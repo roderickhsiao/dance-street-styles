@@ -90,6 +90,7 @@ export interface DanceStyle {
   crewIds?: string[]; // Important crews/groups
   moveIds?: string[]; // Signature moves
   musicGenreIds?: string[]; // Associated music genres
+  landmarkIds?: string[]; // Important locations and venues
   
   // Media (consolidated video structure)
   videos?: VideoReference[]; // All videos with metadata about their role

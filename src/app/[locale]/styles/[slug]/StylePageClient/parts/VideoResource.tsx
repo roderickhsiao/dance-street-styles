@@ -2,13 +2,16 @@
 
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { Play, ExternalLink } from 'lucide-react';
+import { Play, ExternalLink, X } from 'lucide-react';
 import { useState } from 'react';
 import Image from 'next/image';
-import { AnimatePresence } from 'framer-motion';
-import { motion } from '@/lib/motion';
-import { videoEntities } from '@/data/entities/videos';
-import type { VideoEntity } from '@/data/types';
+import { getVideoById } from '@/data/entities/videos';
+import { 
+  getYouTubeVideoId, 
+  getYouTubeThumbnailUrl, 
+  isVideoUrl, 
+  getYouTubeEmbedUrl 
+} from '@/lib/youtube';
 
 interface VideoResourceProps {
   resource: {
@@ -22,248 +25,191 @@ interface VideoResourceProps {
   };
 }
 
-// Helper function to extract YouTube video ID
-function getYouTubeVideoId(url: string): string | null {
-  const regex =
-    /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/;
-  const match = url.match(regex);
-  return match ? match[1] : null;
-}
-
-// Helper function to get YouTube thumbnail URL
-function getYouTubeThumbnailUrl(url: string, quality: 'default' | 'medium' | 'high' | 'maxres' = 'medium'): string | null {
-  const videoId = getYouTubeVideoId(url);
-  if (!videoId) return null;
-  
-  const qualityMap = {
-    default: 'default',
-    medium: 'mqdefault', 
-    high: 'hqdefault',
-    maxres: 'maxresdefault'
-  };
-  
-  return `https://img.youtube.com/vi/${videoId}/${qualityMap[quality]}.jpg`;
-}
-
-// Separate component for trailer embed to avoid hydration issues
-function TrailerEmbed({ video, tResources }: { 
-  video: VideoEntity; 
-  tResources: ReturnType<typeof useTranslations>; 
-}) {
-  const videoId = getYouTubeVideoId(video.url);
-  
-  if (!videoId) {
-    return (
-      <div className="w-full h-full bg-surface-secondary flex items-center justify-center">
-        <p className="text-content-secondary text-body-sm">
-          Trailer unavailable
-        </p>
-      </div>
-    );
+/**
+ * Get resource type configuration for display
+ */
+function getResourceTypeConfig(type: string) {
+  switch (type.toLowerCase()) {
+    case 'documentary':
+      return { 
+        labelKey: 'resourceTypes.documentary', 
+        icon: '🎬', 
+        bgColor: 'bg-red-500/10', 
+        textColor: 'text-red-400',
+        borderColor: 'border-red-500/20'
+      };
+    case 'video':
+      return { 
+        labelKey: 'resourceTypes.video', 
+        icon: '📹', 
+        bgColor: 'bg-blue-500/10', 
+        textColor: 'text-blue-400',
+        borderColor: 'border-blue-500/20'
+      };
+    case 'interview':
+    case 'article':
+      return { 
+        labelKey: 'resourceTypes.interview', 
+        icon: '🎙️', 
+        bgColor: 'bg-purple-500/10', 
+        textColor: 'text-purple-400',
+        borderColor: 'border-purple-500/20'
+      };
+    default:
+      return { 
+        labelKey: 'resourceTypes.video', 
+        icon: '🎬', 
+        bgColor: 'bg-gray-500/10', 
+        textColor: 'text-gray-400',
+        borderColor: 'border-gray-500/20'
+      };
   }
-
-  return (
-    <div className="w-full h-full">
-      <iframe
-        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`}
-        title={tResources(video.titleKey || '')}
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        className="w-full h-full border-0"
-      />
-    </div>
-  );
 }
+
 
 export function VideoResource({ resource }: VideoResourceProps) {
   const tResources = useTranslations('resources');
-  const [showTrailer, setShowTrailer] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  // Get trailer video data if exists
-  const trailerVideo = resource.trailerId
-    ? videoEntities[resource.trailerId]
-    : null;
+  const resourceConfig = getResourceTypeConfig(resource.type);
 
-  // Documentary with trailer - Hero style with integrated trailer
-  if (resource.type === 'documentary' && trailerVideo && resource.url) {
-    const thumbnailUrl = getYouTubeThumbnailUrl(trailerVideo.url, 'high');
-    
-    return (
-      <div className="bg-surface-elevated border border-stroke-secondary rounded-lg overflow-hidden hover:border-accent-secondary/50 transition-all duration-300">
-        {/* Hero Section - AnimatePresence with fixed container */}
-        <div className="aspect-[16/9] relative overflow-hidden">
-          <AnimatePresence mode="wait" initial={false}>
-            {!showTrailer ? (
-              <motion.button
-                key="thumbnail"
-                type="button"
-                aria-label={tResources(resource.titleKey)}
-                className="absolute inset-0 w-full h-full group flex items-end justify-start p-0 m-0"
-                onClick={() => setShowTrailer(true)}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                {thumbnailUrl ? (
-                  <div className="w-full h-full relative overflow-hidden">
-                    <motion.div
-                      className="w-full h-full"
-                      whileHover={{
-                        scale: 1.02,
-                        filter: 'brightness(1.04)',
-                      }}
-                      transition={{ duration: 0.25, ease: 'easeOut' }}
-                    >
-                      <Image
-                        src={thumbnailUrl}
-                        alt={tResources(resource.titleKey)}
-                        className="w-full h-full object-cover"
-                        fill
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                      />
-                    </motion.div>
-                    {/* Hover overlay */}
-                    <div className="absolute inset-0 transition-colors pointer-events-none group-hover:bg-black/10" />
-                  </div>
-                ) : (
-                  <div className="w-full h-full bg-surface-secondary flex items-center justify-center">
-                    <Play className="h-12 w-12 text-accent-primary" />
-                  </div>
-                )}
+  // For documentaries, we need to get the trailer URL
+  const getVideoUrl = () => {
+    if (resource.type === 'documentary' && resource.trailerId) {
+      const trailerVideo = getVideoById(resource.trailerId);
+      return trailerVideo?.url;
+    }
+    return resource.url;
+  };
 
-                {/* Documentary badge */}
-                <div className="absolute top-4 end-4">
-                  <span className="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                    🎬 {tResources('ui.documentary')}
-                  </span>
-                </div>
+  const videoUrl = getVideoUrl();
+  
+  // Check if this is a video resource (YouTube, Vimeo, etc.) or documentary with trailer
+  const isVideoResource = (videoUrl && isVideoUrl(videoUrl)) || 
+                         (resource.type === 'documentary' && resource.trailerId);
 
-                {/* Bottom gradient overlay and content */}
-                <div className="absolute start-0 end-0 bottom-0 p-3 bg-gradient-to-t from-black/70 via-black/30 to-transparent">
-                  <div className="flex items-center justify-between gap-4">
-                    <div className="text-left">
-                      <h4 className="text-body-sm md:text-body-md font-bold text-white leading-tight">
-                        {tResources(resource.titleKey)}
-                      </h4>
-                    </div>
+  const youTubeVideoId = isVideoResource && videoUrl ? getYouTubeVideoId(videoUrl) : null;
 
-                    <div className="ms-auto">
-                      <motion.div
-                        className="bg-accent-primary/80 rounded-full p-2 shadow-lg"
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.18 }}
-                      >
-                        <Play className="h-4 w-4 text-white" />
-                      </motion.div>
-                    </div>
-                  </div>
-                </div>
-              </motion.button>
-            ) : (
-              <motion.div
-                key="iframe"
-                className="absolute inset-0 w-full h-full"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <TrailerEmbed video={trailerVideo} tResources={tResources} />
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          {/* Close button when trailer is playing */}
-          {showTrailer && (
-            <button
-              onClick={() => setShowTrailer(false)}
-              className="absolute top-4 start-4 bg-black/70 hover:bg-black/90 text-white rounded-full p-2 transition-colors z-10"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          )}
-        </div>
-        
-        {/* Description and Actions */}
-        <div className="p-3">
-          <p className="text-body-xs text-content-secondary mb-3 line-clamp-2">
-            {tResources(resource.descriptionKey)}
-          </p>
-          
-          {/* Visit Site Link */}
-          <a
-            href={resource.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-content-secondary hover:text-content-primary text-body-xs transition-colors"
-          >
-            <ExternalLink className="w-3.5 h-3.5" />
-            {tResources('ui.visitSite')}
-          </a>
-        </div>
-      </div>
-    );
-  }
-
-  // Standard video resource (for regular videos)
+  // All video resources use consistent card layout
   if (resource.url) {
-    const thumbnailUrl = getYouTubeThumbnailUrl(resource.url, 'medium');
+    const thumbnailUrl = getYouTubeThumbnailUrl(videoUrl || resource.url, 'medium');
     
+    // Show inline video player when playing
+    if (isPlaying && youTubeVideoId) {
+      return (
+        <div className="bg-surface-secondary/30 border border-stroke-secondary rounded-lg overflow-hidden">
+          <div className="relative">
+            {/* Close Button */}
+            <button
+              onClick={() => setIsPlaying(false)}
+              className="absolute top-4 end-4 z-20 p-2 bg-black/50 rounded-full text-white hover:bg-black/70 transition-colors"
+            >
+              <X className="h-4 w-4" />
+            </button>
+            
+            {/* YouTube Embed */}
+            <iframe
+              src={getYouTubeEmbedUrl(youTubeVideoId, true)}
+              title={tResources(resource.titleKey)}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full aspect-video"
+            />
+          </div>
+        </div>
+      );
+    }
+
     return (
-      <div className="group bg-surface-elevated border border-stroke-secondary rounded-lg overflow-hidden hover:border-accent-secondary/50 transition-all duration-300">
-        <div className="flex gap-3 p-3">
-          {/* Video Thumbnail - Clickable */}
-          <a 
-            href={resource.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative w-24 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-surface-secondary block"
-          >
-            {thumbnailUrl ? (
-              <Image
-                src={thumbnailUrl}
-                alt={tResources(resource.titleKey)}
-                fill
-                className="object-cover"
-                sizes="96px"
-              />
-            ) : (
-              <div className="absolute inset-0 bg-red-500 flex items-center justify-center">
-                <Play className="w-4 h-4 text-white" />
+      <div className="group bg-surface-secondary/30 border border-stroke-secondary rounded-lg p-2 sm:p-3 hover:bg-surface-secondary hover:border-accent-secondary/50 transition-all duration-300 w-full max-w-full overflow-hidden">
+        <div className="flex items-start gap-2 sm:gap-3">
+          {/* Video Thumbnail - Clickable for inline play or external link */}
+          {isVideoResource && youTubeVideoId ? (
+            <button
+              onClick={() => setIsPlaying(true)}
+              className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden shrink-0 bg-surface-elevated flex items-center justify-center"
+            >
+              {thumbnailUrl ? (
+                <Image
+                  src={thumbnailUrl}
+                  alt={tResources(resource.titleKey)}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 64px, 80px"
+                />
+              ) : (
+                <div className="w-full h-full bg-accent-primary/10 flex items-center justify-center">
+                  <Play className="w-4 h-4 sm:w-6 sm:h-6 text-accent-primary" />
+                </div>
+              )}
+              
+              {/* Play overlay */}
+              <div className="absolute inset-0 bg-black/0 hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-1 sm:p-1.5">
+                  <Play className="w-2 h-2 sm:w-3 sm:h-3 text-black fill-current" />
+                </div>
               </div>
-            )}
-            
-            {/* Play overlay */}
-            <div className="absolute inset-0 bg-black/0 hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-1.5">
-                <Play className="w-3 h-3 text-black fill-current" />
-              </div>
-            </div>
-          </a>
-          
-          {/* Content */}
-          <div className="flex-1 min-w-0">
-            <h4 className="text-body-sm font-semibold text-content-primary line-clamp-2 mb-1">
-              {tResources(resource.titleKey)}
-            </h4>
-            <p className="text-body-xs text-content-secondary line-clamp-2 mb-2">
-              {tResources(resource.descriptionKey)}
-            </p>
-            
-            <Link
+              
+            </button>
+          ) : (
+            <a 
               href={resource.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-accent-secondary hover:text-accent-primary text-body-xs font-medium transition-colors"
+              className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden shrink-0 bg-surface-elevated flex items-center justify-center"
             >
-              <Play className="w-3 h-3" />
-              <span>{tResources('ui.playVideo')}</span>
-              <ExternalLink className="w-3 h-3" />
-            </Link>
+              {thumbnailUrl ? (
+                <Image
+                  src={thumbnailUrl}
+                  alt={tResources(resource.titleKey)}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 64px, 80px"
+                />
+              ) : (
+                <div className="w-full h-full bg-accent-primary/10 flex items-center justify-center">
+                  <Play className="w-4 h-4 sm:w-6 sm:h-6 text-accent-primary" />
+                </div>
+              )}
+              
+              {/* Play overlay */}
+              <div className="absolute inset-0 bg-black/0 hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-1 sm:p-1.5">
+                  <Play className="w-2 h-2 sm:w-3 sm:h-3 text-black fill-current" />
+                </div>
+              </div>
+              
+            </a>
+          )}
+          
+          {/* Content */}
+          <div className="flex-1 min-w-0 max-w-full overflow-hidden">
+            <h4 className="text-body-xs sm:text-body-sm font-semibold text-content-primary line-clamp-1 sm:line-clamp-2 mb-1 break-words">
+              {tResources(resource.titleKey)}
+            </h4>
+            <p className="text-xs sm:text-body-xs text-content-secondary line-clamp-1 sm:line-clamp-2 mb-2 break-words">
+              {tResources(resource.descriptionKey)}
+            </p>
+            
+            {/* Resource Type Badge - Pill Style */}
+            <div className="mb-2">
+              <span className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full border text-xs font-medium max-w-full ${resourceConfig.bgColor} ${resourceConfig.textColor} ${resourceConfig.borderColor}`}>
+                <span className="text-xs shrink-0">{resourceConfig.icon}</span>
+                <span className="truncate">{tResources(resourceConfig.labelKey)}</span>
+              </span>
+            </div>
+            
+            {!isVideoResource && (
+              <Link
+                href={resource.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-accent-secondary hover:text-accent-primary text-body-xs font-medium transition-colors max-w-full"
+              >
+                <ExternalLink className="w-3 h-3 shrink-0" />
+                <span className="truncate">{tResources('ui.visitSite')}</span>
+              </Link>
+            )}
           </div>
         </div>
       </div>
@@ -272,20 +218,28 @@ export function VideoResource({ resource }: VideoResourceProps) {
 
   // Fallback for resources without URL
   return (
-    <div className="group bg-surface-secondary/30 border border-stroke-secondary rounded-lg p-3">
-      <div className="flex items-start gap-3">
+    <div className="group bg-surface-secondary/30 border border-stroke-secondary rounded-lg p-2 sm:p-3 w-full max-w-full overflow-hidden">
+      <div className="flex items-start gap-2 sm:gap-3">
         {/* Placeholder thumbnail */}
-        <div className="w-16 h-12 rounded-lg bg-surface-elevated flex items-center justify-center flex-shrink-0">
-          <Play className="w-4 h-4 text-red-400" />
+        <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg bg-surface-elevated flex items-center justify-center shrink-0">
+          <Play className="w-4 h-4 sm:w-6 sm:h-6 text-accent-primary" />
         </div>
         
-        <div className="flex-1 min-w-0">
-          <h4 className="text-body-sm font-semibold text-content-primary line-clamp-2 mb-1">
+        <div className="flex-1 min-w-0 max-w-full overflow-hidden">
+          <h4 className="text-body-xs sm:text-body-sm font-semibold text-content-primary line-clamp-1 sm:line-clamp-2 mb-1 break-words">
             {tResources(resource.titleKey)}
           </h4>
-          <p className="text-body-xs text-content-secondary line-clamp-2">
+          <p className="text-xs sm:text-body-xs text-content-secondary line-clamp-1 sm:line-clamp-2 mb-2 break-words">
             {tResources(resource.descriptionKey)}
           </p>
+          
+          {/* Resource Type Badge - Pill Style */}
+          <div>
+            <span className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full border text-xs font-medium max-w-full ${resourceConfig.bgColor} ${resourceConfig.textColor} ${resourceConfig.borderColor}`}>
+              <span className="text-xs shrink-0">{resourceConfig.icon}</span>
+              <span className="truncate">{tResources(resourceConfig.labelKey)}</span>
+            </span>
+          </div>
         </div>
       </div>
     </div>

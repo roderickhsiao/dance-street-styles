@@ -5,13 +5,7 @@ import { useTranslations } from 'next-intl';
 import { useState, useRef } from 'react';
 import Image from 'next/image';
 import { Play } from 'lucide-react';
-
-// Helper function to extract YouTube video ID from URL
-const getYouTubeVideoId = (url: string): string | null => {
-  const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
-  const match = url.match(regExp);
-  return match && match[7].length === 11 ? match[7] : null;
-};
+import { getYouTubeVideoId } from '@/lib/youtube';
 
 interface VideoItem {
   url: string;
