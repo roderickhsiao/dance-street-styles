@@ -5,10 +5,23 @@ import type { Metadata } from 'next';
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('about.seo');
+  const tHero = await getTranslations('about.hero');
   
   return {
     title: t('title'),
     description: t('description'),
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      images: [{
+        url: `/opengraph-image?title=${encodeURIComponent(tHero('title'))}&subtitle=${encodeURIComponent(tHero('badges.mission'))}`
+      }]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
+    }
   };
 }
 

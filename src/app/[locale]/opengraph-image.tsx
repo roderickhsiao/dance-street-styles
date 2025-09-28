@@ -10,18 +10,20 @@ export const size = {
 export const contentType = 'image/png';
 
 interface Props {
-  params: {
+  params: Promise<{
     locale: string;
-  };
-  searchParams: {
+  }>;
+  searchParams: Promise<{
     title?: string;
     subtitle?: string;
-  };
+  }>;
 }
 
-export default async function Image({ searchParams }: Props) {
-  const title = searchParams.title || 'STREET DANCE';
-  const subtitle = searchParams.subtitle || 'CULTURE MAGAZINE';
+export default async function Image({ params, searchParams }: Props) {
+  const { locale } = await params;
+  const { title: titleParam, subtitle: subtitleParam } = await searchParams;
+  const title = titleParam || 'STREET DANCE';
+  const subtitle = subtitleParam || 'CULTURE MAGAZINE';
 
   return new ImageResponse(
     (

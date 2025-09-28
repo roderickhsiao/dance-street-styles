@@ -1,19 +1,41 @@
-'use client';
-
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { motion } from '@/lib/motion';
 import { Hero } from '@/components/Hero';
 import { Section } from '@/components/Section';
 import { CTAButton } from '@/components/ui/cta-button';
 import { StyleGridCard } from '@/components/StyleGridCard';
 import { getAllDanceStyles } from '@/data/danceStyles';
+import type { Metadata } from 'next';
 
-export default function StylesPage() {
-  const tPage = useTranslations('stylesPage');
-  const tStyleNames = useTranslations('danceStyles.names');
-  const tStyleDescriptions = useTranslations('danceStyles.shortDescriptions');
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('stylesPage.seo');
+  const tHero = await getTranslations('stylesPage.hero');
+  
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords'),
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      images: [{
+        url: `/opengraph-image?title=${encodeURIComponent(tHero('title.line1') + ' ' + tHero('title.line2'))}&subtitle=${encodeURIComponent(tHero('title.line3'))}`
+      }]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
+    }
+  };
+}
+
+export default async function StylesPage() {
+  const tPage = await getTranslations('stylesPage');
+  const tStyleNames = await getTranslations('danceStyles.names');
+  const tStyleDescriptions = await getTranslations('danceStyles.shortDescriptions');
   const allStyles = getAllDanceStyles();
-  const tGlobal = useTranslations();
+  const tGlobal = await getTranslations();
 
   // Create a map of style IDs to style objects for quick lookup
   // Get all styles sorted alphabetically by translated name
