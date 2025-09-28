@@ -111,10 +111,10 @@ export default async function AboutPage() {
                 {t('feedback.github.description')}
               </p>
               <a
-                href="https://github.com/roderickhsiao/dance-street-styles"
+                href="https://github.com/roderickhsiao/street-dance-culture"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 border border-stroke-primary text-content-primary font-medium hover:border-accent-primary hover:text-accent-primary transition-colors rounded-lg text-body-sm"
+                className="text-accent-primary hover:text-accent-secondary transition-colors"
               >
                 {t('feedback.github.button')}
               </a>
