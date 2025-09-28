@@ -10,7 +10,7 @@ import { ArrowLeft, MapPin, Clock, Zap, ChevronRight } from 'lucide-react';
 import { DanceStyle } from '@/data/types';
 import { DanceStyleTag, getFeaturedVideoForStyle } from '@/data/danceStyles';
 import { DanceStyleSectionLayout, ResourcesSection, LandmarksSection, KeyFiguresSection } from '@/app/[locale]/styles/[slug]/StylePageClient/parts';
-import { FeaturedVideo } from '@/components/FeaturedVideo';
+import { FeaturedVideo } from '@/components/features/video/FeaturedVideo';
 import { getLandmarkById } from '@/data/entities/landmarks';
 import clsx from 'clsx';
 import { useInViewport } from 'react-in-viewport';

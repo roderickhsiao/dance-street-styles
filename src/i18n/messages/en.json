@@ -109,14 +109,31 @@
       ],
       "note": "We strive for accuracy but recognize that cultural history is complex and sometimes contested. Different communities may have different perspectives on the same events."
     },
+    "acknowledgment": {
+      "title": "What We Know We Don't Know",
+      "content": [
+        "Street dance history is complex, and we acknowledge that this documentation may have gaps, missing context, or incomplete attributions. Cultural history often has multiple perspectives, and we're committed to learning and improving.",
+        "If you notice something that needs correction, have additional context to share, or want to contribute your knowledge, we genuinely want to hear from you."
+      ]
+    },
+    "quote": "Learn the culture, not just the moves. Understanding the history, struggle, and innovation behind each dance shows respect to its creators and deepens your connection to the art.",
     "feedback": {
-      "title": "Help Us Improve",
+      "title": "Help Us Learn & Improve",
       "content": [
         "This project is only as strong as the community that supports it. If you notice information that needs correction, have additional context to share, or want to contribute to this documentation, we want to hear from you.",
         "Every correction, every story, every piece of cultural context makes this resource more valuable for future generations of dancers and culture enthusiasts."
       ],
       "cta": "Have feedback, corrections, or want to contribute?",
-      "contact": "Reach out and help us keep the culture authentic."
+      "contact": {
+        "title": "Share Your Knowledge",
+        "description": "Found something that needs fixing? Have stories or context to share? We're always ready to learn.",
+        "button": "Get In Touch"
+      },
+      "github": {
+        "title": "Open Source",
+        "description": "This project is open source and transparent. View the code, suggest changes, or contribute directly.",
+        "button": "View on GitHub"
+      }
     },
     "recognition": {
       "title": "Learn Culture, Not Just Moves",
@@ -147,6 +164,10 @@
         "Semantic HTML and structured data"
       ],
       "code": "The source code is available on GitHub for transparency and community contributions."
+    },
+    "contact": {
+      "title": "Get In Touch",
+      "description": "Help us keep the culture authentic. Share your knowledge, provide corrections, or contribute to the documentation of street dance history."
     }
   },
 
@@ -183,6 +204,102 @@
     "response": {
       "title": "Response Time",
       "description": "We aim to respond to all messages within 48 hours. This is an independent project, so please be patient as we review your contribution."
+    },
+    "modal": {
+      "title": "Get In Touch",
+      "description": "Help us keep the culture authentic. Share your knowledge, provide corrections, or contribute to the documentation of street dance history.",
+      "button": "Get In Touch"
+    },
+    "form": {
+      "categories": {
+        "correction": {
+          "title": "Correction or Feedback",
+          "description": "Found something that needs fixing? Missing context or attribution?"
+        },
+        "contribution": {
+          "title": "Share Your Story",
+          "description": "Have stories, photos, or knowledge to contribute?"
+        },
+        "question": {
+          "title": "Ask a Question", 
+          "description": "Want to learn more about street dance culture or this project?"
+        },
+        "collaboration": {
+          "title": "Collaborate",
+          "description": "Interested in working together on documentation or events?"
+        }
+      },
+      "steps": {
+        "category": {
+          "title": "How would you like to contribute?",
+          "guidance": "Select a category to continue →"
+        },
+        "personal": {
+          "title": "Tell us about yourself"
+        },
+        "message": {
+          "title": "Share your message"
+        }
+      },
+      "navigation": {
+        "back": "Back",
+        "cancel": "Cancel", 
+        "continue": "Continue",
+        "startOver": "Start Over"
+      },
+      "fields": {
+        "name": {
+          "label": "Full Name",
+          "placeholder": "Your full name"
+        },
+        "email": {
+          "label": "Email Address", 
+          "placeholder": "your.email@example.com"
+        },
+        "subject": {
+          "label": "Subject",
+          "placeholder": "What would you like to discuss?"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Share your thoughts, corrections, contributions, or questions about street dance culture..."
+        },
+        "social": {
+          "title": "Social Handles",
+          "optional": "(optional)",
+          "instagram": {
+            "label": "Instagram",
+            "placeholder": "username"
+          },
+          "twitter": {
+            "label": "Twitter/X", 
+            "placeholder": "username"
+          },
+          "website": {
+            "label": "Website",
+            "placeholder": "your-site.com"
+          }
+        }
+      },
+      "attachments": {
+        "title": "Attachments",
+        "optional": "(optional)",
+        "dropzone": {
+          "title": "Drop files here or click to browse",
+          "subtitle": "Images, PDFs, documents up to 10MB each (max 5 files)"
+        }
+      },
+      "messages": {
+        "success": {
+          "title": "✓ Message sent successfully!",
+          "subtitle": "We'll get back to you soon. Feel free to send another message or start over."
+        }
+      },
+      "buttons": {
+        "send": "Send Message",
+        "sending": "Sending...",
+        "sent": "Message Sent!"
+      }
     }
   },
 

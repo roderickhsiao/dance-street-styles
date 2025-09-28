@@ -101,7 +101,7 @@ export const StaggeredGridItem = ({ children, className = '', index = 0 }: Anima
       animate: { 
         opacity: 1, 
         y: 0,
-        transition: { duration: 0.6 }
+        transition: { duration: 0.6, delay: index * 0.1 }
       }
     }}
     className={className}

@@ -1,6 +1,5 @@
 'use client';
 
-import { ReactNode } from 'react';
 import { FadeInUpSection } from '@/components/animations/AnimatedSections';
 
 interface SectionHeaderProps {

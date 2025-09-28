@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useCallback, useState } from 'react';
 import { PictureInPicture, X } from 'lucide-react';
-import { Modal } from './Modal';
+import { Modal } from '../../ui/modal';
 import { YouTubeApiManager } from '@/lib/youtube-api';
 
 interface VideoModalProps {

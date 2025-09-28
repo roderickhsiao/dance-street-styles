@@ -3,6 +3,7 @@
 import { ReactNode } from 'react';
 import { motion } from '@/lib/motion';
 import clsx from 'clsx';
+import Image from 'next/image';
 
 interface BaseCardProps {
   children: ReactNode;
@@ -76,7 +77,6 @@ export const ResourceCard = ({
   author,
   platform,
   year,
-  type,
   url,
   ...baseProps
 }: ResourceCardProps) => {
@@ -89,9 +89,11 @@ export const ResourceCard = ({
       <div className="space-y-3">
         {image && (
           <div className="aspect-video bg-surface-primary rounded overflow-hidden">
-            <img 
+            <Image 
               src={image} 
               alt={title}
+              width={400}
+              height={225}
               className="w-full h-full object-cover"
             />
           </div>

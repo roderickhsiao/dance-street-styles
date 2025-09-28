@@ -3,11 +3,11 @@
 import { motion } from '@/lib/motion';
 import { useTranslations } from 'next-intl';
 import { useMemo } from 'react';
-import { Hero } from '../../components/Hero';
-import { Section } from '../../components/Section';
-import { Stats } from '../../components/Stats';
-import { FeatureCard } from '../../components/FeatureCard';
-import { StyleGridCard } from '../../components/StyleGridCard';
+import { Hero } from '../../components/ui/hero';
+import { Section } from '../../components/ui/section';
+import { Stats } from '../../components/ui/stats';
+import { FeatureCard } from '../../components/ui/feature-card';
+import { StyleGridCard } from '../../components/features/dance-styles/StyleGridCard';
 import { CTAButton } from '../../components/ui/cta-button';
 import { getAllDanceStyles } from '../../data/danceStyles';
 import { useFeatureCardsData } from '../../data/featureCards';

@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { Footer } from '../../components/Footer';
-import { MainNavigation } from '../../components/MainNavigation';
+import { Footer } from '../../components/layouts/Footer';
+import { MainNavigation } from '../../components/layouts/MainNavigation';
 import { locales } from '../../i18n/request';
 import { getOGLocale } from '../../i18n/locale-mappings';
 

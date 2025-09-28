@@ -14,7 +14,7 @@ This is a Next.js street dance culture magazine website with internationalizatio
 - **Accessibility & SEO**: Always consider WCAG guidelines and semantic HTML
 - **Inclusive Language**: Use diverse examples including b-boys, b-girls, and all dance community members
 - **Source Attribution**: Only include content/quotes with proper source attribution
-- **Class name**: Use clsx over template literals for conditional class names
+- **Class name**: Use `clsx` library over template literals for conditional class names
 
 ### Component Structure
 ```tsx

@@ -4,19 +4,19 @@ import { motion } from '@/lib/motion';
 import { useTranslations } from 'next-intl';
 import { useMemo } from 'react';
 import { useIntl } from '@/i18n/hooks';
-import { ExpandableCard } from '@/components/ExpandableCard';
-import { Timeline } from '@/components/Timeline';
-import { Hero } from '@/components/Hero';
-import { CardGrid } from '@/components/CardGrid';
-import { Stats } from '@/components/Stats';
-import { Section } from '@/components/Section';
+import { ExpandableCard } from '@/components/parts/ExpandableCard';
+import { Timeline } from '@/components/ui/timeline';
+import { Hero } from '@/components/ui/hero';
+import { CardGrid } from '@/components/ui/card-grid';
+import { Stats } from '@/components/ui/stats';
+import { Section } from '@/components/ui/section';
 
-import { ValueCards } from '@/components/ValueCards';
-import { Quote } from '@/components/Quote';
+import { ValueCards } from '@/components/parts/ValueCards';
+import { Quote } from '@/components/ui/quote';
 import { CTAButton } from '@/components/ui/cta-button';
 import { PEOPLE } from '@/data/entities';
 import { VIDEOS } from '@/data/entities';
-import { VideoResourceCard } from '@/components/VideoResourceCard';
+import { VideoResourceCard } from '@/components/features/video/VideoResourceCard';
 
 const compactTimeline = [
   {

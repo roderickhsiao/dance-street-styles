@@ -119,23 +119,24 @@ export function Modal({
       {/* Modal Content - full screen on mobile, centered on desktop */}
       <div 
         className={clsx(
-          'relative bg-surface-primary shadow-2xl w-full h-full md:w-auto md:h-auto md:max-h-[90vh] md:max-w-[90vw] md:rounded-xl overflow-auto',
+          'relative bg-gradient-to-br from-gray-900/98 to-black/95 shadow-2xl w-full h-full md:w-auto md:h-auto md:max-h-[90vh] md:max-w-[90vw] md:rounded-2xl overflow-auto',
+          'border-2 border-gray-600/30 backdrop-blur-xl',
           className
         )}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header with close button */}
         {(title || showCloseButton) && (
-          <div className="flex items-center justify-between p-4 border-b border-stroke-secondary">
+          <div className="flex items-center justify-between p-6 bg-gradient-to-r from-gray-900/95 to-gray-800/95 border-b border-gray-600/40">
             {title && (
-              <h2 className="text-header-sm font-bold text-content-primary">
+              <h2 className="text-header-sm font-bold text-white">
                 {title}
               </h2>
             )}
             {showCloseButton && (
               <button
                 onClick={onClose}
-                className="p-2 hover:bg-surface-secondary rounded-lg transition-colors text-content-secondary hover:text-content-primary"
+                className="p-2 hover:bg-gray-700/50 rounded-xl transition-all duration-200 text-gray-300 hover:text-white hover:scale-105"
                 aria-label="Close modal"
               >
                 <X className="h-4 w-4" />

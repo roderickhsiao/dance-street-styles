@@ -2,8 +2,8 @@ import { NextIntlClientProvider } from 'next-intl';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { polyfillCountryFlagEmojis } from 'country-flag-emoji-polyfill';
-import { MotionProvider } from '@/components/MotionProvider';
-import { VideoPlayerProvider } from '@/components/VideoPlayerProvider';
+import { MotionProvider } from '@/components/ui/motion-provider';
+import { VideoPlayerProvider } from '@/components/features/video/VideoPlayerProvider';
 import type { Metadata } from 'next';
 
 const inter = Inter({

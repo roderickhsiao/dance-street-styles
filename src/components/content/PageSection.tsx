@@ -1,7 +1,7 @@
 'use client';
 
 import { ReactNode } from 'react';
-import { Section } from '@/components/Section';
+import { Section } from '@/components/ui/section';
 import { SectionHeader } from './SectionHeader';
 import { ContentArray } from './ContentArray';
 
@@ -16,6 +16,7 @@ interface PageSectionProps {
   animate?: boolean;
   children?: ReactNode;
   className?: string;
+  index?: number;
 }
 
 export const PageSection = ({

@@ -138,7 +138,7 @@ export const ExpandableCard = ({
                           >
                             <div className="text-center">
                               <div className="text-2xl mb-1">▶</div>
-                              <div>Watch Video</div>
+                              <div>{t('watchVideo')}</div>
                             </div>
                           </a>
                         );

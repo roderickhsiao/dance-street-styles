@@ -12,7 +12,7 @@ import {
   getYouTubeThumbnailUrl, 
   isVideoUrl 
 } from '@/lib/youtube';
-import { useVideoPlayer } from '@/components/VideoPlayerProvider';
+import { useVideoPlayer } from '@/components/features/video/VideoPlayerProvider';
 
 interface VideoResourceCardProps {
   resource: {

@@ -1,10 +1,10 @@
 'use client';
 
 import { motion } from '@/lib/motion';
-import { Hero } from '@/components/Hero';
-import { Section } from '@/components/Section';
+import { Hero } from '@/components/ui/hero';
+import { Section } from '@/components/ui/section';
 import { CTAButton } from '@/components/ui/cta-button';
-import { StyleGridCard } from '@/components/StyleGridCard';
+import { StyleGridCard } from '@/components/features/dance-styles/StyleGridCard';
 import type { DanceStyle } from '@/data/types';
 
 interface StylesPageClientProps {

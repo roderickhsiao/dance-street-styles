@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
-import { Hero } from '@/components/Hero';
-import { Section } from '@/components/Section';
+import { Hero } from '@/components/ui/hero';
+import { Section } from '@/components/ui/section';
+import { ContactForm } from '@/components/features/contact-form';
 import type { Metadata } from 'next';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -42,63 +43,76 @@ export default async function ContactPage() {
           t('hero.badges.community'),
           t('hero.badges.feedback')
         ]}
-        backgroundVariant="culture"
+        backgroundVariant="street"
       />
 
-      {/* Contact Section */}
+      {/* Main Content */}
       <Section background="primary" padding="xl">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-header-lg font-black text-content-primary mb-8 magazine-headline">
-            {t('main.title')}
-          </h2>
-          <div className="space-y-6 mb-12">
-            {t.raw('main.content').map((paragraph: string, index: number) => (
-              <p key={index} className="text-body-lg text-content-secondary leading-relaxed">
-                {paragraph}
-              </p>
-            ))}
+        <div className="max-w-3xl mx-auto space-y-12">
+          
+          {/* Introduction */}
+          <div>
+            <h2 className="text-header-md font-semibold text-content-primary mb-6">
+              {t('main.title')}
+            </h2>
+            <div className="space-y-4 text-content-secondary">
+              {t.raw('main.content').map((paragraph: string, index: number) => (
+                <p key={index} className="text-body-md leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
+
+        </div>
+      </Section>
+
+      {/* Contact Information */}
+      <Section background="secondary" padding="xl">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-header-md font-semibold text-content-primary mb-8 text-start">
+            How We Can Help Each Other
+          </h2>
           
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="p-8 bg-surface-elevated border border-stroke-primary rounded-2xl">
-              <h3 className="text-header-sm font-black text-content-primary mb-4">
+            <div className="p-6 bg-surface-primary border border-stroke-secondary rounded-lg">
+              <h3 className="font-semibold text-content-primary mb-3">
                 {t('feedback.title')}
               </h3>
-              <p className="text-content-secondary mb-6">
+              <p className="text-content-secondary text-body-sm leading-relaxed">
                 {t('feedback.description')}
               </p>
-              <a
-                // href="mailto:feedback@streetdanceculture.com"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-accent-primary to-accent-secondary text-black font-bold hover:from-accent-primary/90 hover:to-accent-secondary/90 transition-all duration-300 rounded-xl uppercase tracking-wider magazine-sans text-body-sm"
-              >
-                Send Feedback
-              </a>
             </div>
 
-            <div className="p-8 bg-surface-elevated border border-stroke-primary rounded-2xl">
-              <h3 className="text-header-sm font-black text-content-primary mb-4">
+            <div className="p-6 bg-surface-primary border border-stroke-secondary rounded-lg">
+              <h3 className="font-semibold text-content-primary mb-3">
                 {t('contribute.title')}
               </h3>
-              <p className="text-content-secondary mb-6">
+              <p className="text-content-secondary text-body-sm leading-relaxed">
                 {t('contribute.description')}
               </p>
-              <a
-                // href="mailto:contribute@streetdanceculture.com"
-                className="inline-flex items-center px-6 py-3 border-2 border-stroke-primary text-content-primary font-bold hover:border-accent-primary hover:text-accent-primary transition-colors rounded-xl uppercase tracking-wider magazine-sans text-body-sm"
-              >
-                Get Involved
-              </a>
             </div>
           </div>
 
-          <div className="p-8 bg-surface-secondary border border-stroke-primary rounded-2xl">
-            <h3 className="text-header-sm font-black text-content-primary mb-4">
+          {/* Response Time */}
+          <div className="p-6 bg-surface-elevated/30 border-s-4 border-accent-primary rounded-r-lg">
+            <h3 className="font-semibold text-content-primary mb-3">
               {t('response.title')}
             </h3>
-            <p className="text-content-tertiary">
+            <p className="text-content-secondary text-body-sm italic">
               {t('response.description')}
             </p>
           </div>
+        </div>
+      </Section>
+
+      {/* Contact Form */}
+      <Section background="primary" padding="xl">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-header-md font-semibold text-content-primary mb-8">
+            Ready to Reach Out?
+          </h2>
+          <ContactForm />
         </div>
       </Section>
     </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from '@/lib/motion';
+import clsx from 'clsx';
 
 interface SectionProps {
   children: React.ReactNode;
@@ -13,7 +14,7 @@ interface SectionProps {
 
 export const Section = ({ 
   children, 
-  className = "", 
+  className, 
   background = 'none',
   containerWidth = 'max-7xl',
   padding = 'lg',
@@ -42,7 +43,11 @@ export const Section = ({
   };
 
   const content = (
-    <section className={`${backgroundClasses[background]} ${paddingClasses[padding]} ${className}`}>
+    <section className={clsx(
+      backgroundClasses[background], 
+      paddingClasses[padding], 
+      className
+    )}>
       <div className={containerClasses[containerWidth]}>
         {children}
       </div>

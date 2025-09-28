@@ -6,7 +6,7 @@ import { getResourcesGroupedByType } from '@/data/danceStyles';
 import { ResourceType } from '@/data/types';
 import { WebsitePreviewCard } from './WebsitePreviewCard';
 import { ResourceItem } from './ResourceItem';
-import { VideoResourceCard } from '@/components/VideoResourceCard';
+import { VideoResourceCard } from '@/components/features/video/VideoResourceCard';
 import { ArticleCard } from './ArticleCard';
 import { BookCard } from './BookCard';
 

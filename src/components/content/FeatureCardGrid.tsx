@@ -9,10 +9,17 @@ interface FeatureCardData {
 }
 
 interface FeatureCardGridProps {
-  items: FeatureCardData[];
+  items?: FeatureCardData[];
+  cards?: Array<{
+    emoji: string;
+    titleKey: string;
+    descriptionKey: string;
+  }>;
+  translationNamespace?: string;
   columns?: 2 | 3 | 4;
   className?: string;
   animate?: boolean;
+  background?: 'primary' | 'secondary' | 'elevated' | 'none';
 }
 
 export const FeatureCardGrid = ({
@@ -29,7 +36,7 @@ export const FeatureCardGrid = ({
 
   return (
     <div className={`${gridClasses[columns]} ${className}`}>
-      {items.map((item, index) => {
+      {items?.map((item, index) => {
         const content = (
           <div className="bg-surface-secondary/30 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-2xl border border-stroke-secondary text-center hover:border-accent-primary/50 transition-all duration-300">
             <div className="text-4xl mb-4">{item.emoji}</div>
