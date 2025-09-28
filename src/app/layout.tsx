@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { polyfillCountryFlagEmojis } from 'country-flag-emoji-polyfill';
 import { MotionProvider } from '@/components/MotionProvider';
+import { VideoPlayerProvider } from '@/components/VideoPlayerProvider';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -19,6 +20,12 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
+      <head>
+        {/* Load YouTube JavaScript API */}
+        <script src="https://www.youtube.com/iframe_api" async></script>
+        {/* Load inert polyfill from local file */}
+        <script src="/inert.min.js" async></script>
+      </head>
       <body className={`${inter.variable} antialiased font-sans`}>
         {/* Shared SVG filter for liquid glass effect */}
         <svg style={{ display: 'none' }} aria-hidden="true" focusable="false">
@@ -54,7 +61,9 @@ export default function RootLayout({ children }: Props) {
         </svg>
         <NextIntlClientProvider>
           <MotionProvider>
-            {children}
+            <VideoPlayerProvider>
+              {children}
+            </VideoPlayerProvider>
           </MotionProvider>
         </NextIntlClientProvider>
       </body>
