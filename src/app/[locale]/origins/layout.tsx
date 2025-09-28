@@ -8,6 +8,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale });
+  const tHero = await getTranslations({ locale, namespace: 'origins.hero' });
 
   return {
     title: `${t('origins.seo.title')} | Street Dance Culture`,
@@ -32,6 +33,12 @@ export async function generateMetadata({
       siteName: 'Street Dance Culture Magazine',
       publishedTime: '1973-08-11T00:00:00.000Z', // Historical significance
       modifiedTime: new Date().toISOString(),
+      images: [{
+        url: `/opengraph-image?title=${encodeURIComponent(tHero('title'))}&subtitle=${encodeURIComponent(tHero('badges.movement'))}`,
+        width: 1200,
+        height: 630,
+        alt: t('origins.seo.title')
+      }]
     },
     twitter: {
       card: 'summary_large_image',
@@ -42,7 +49,6 @@ export async function generateMetadata({
       canonical: `/origins`,
       languages: {
         'en': '/en/origins',
-        'zh-Hant-TW': '/zh-Hant-TW/origins',
       },
     },
     robots: {

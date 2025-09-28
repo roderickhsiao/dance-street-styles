@@ -29,7 +29,6 @@ export async function generateMetadata({
       canonical: `/styles`,
       languages: {
         'en': '/en/styles',
-        'zh-Hant-TW': '/zh-Hant-TW/styles',
       },
     },
     robots: {
