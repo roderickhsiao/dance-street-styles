@@ -9,9 +9,8 @@ import { useTheme } from '@/hooks/useTheme';
 import { ArrowLeft, MapPin, Clock, Zap, ChevronRight } from 'lucide-react';
 import { DanceStyle } from '@/data/types';
 import { DanceStyleTag, getFeaturedVideoForStyle } from '@/data/danceStyles';
-import { DanceStyleSectionLayout, ResourcesSection, LandmarksSection } from '@/app/[locale]/styles/[slug]/StylePageClient/parts';
+import { DanceStyleSectionLayout, ResourcesSection, LandmarksSection, KeyFiguresSection } from '@/app/[locale]/styles/[slug]/StylePageClient/parts';
 import { FeaturedVideo } from '@/components/FeaturedVideo';
-import { KeyFigures } from '@/components/KeyFigures';
 import { getLandmarkById } from '@/data/entities/landmarks';
 import clsx from 'clsx';
 import { useInViewport } from 'react-in-viewport';
@@ -205,14 +204,7 @@ export function StylePageClient({
       icon: '⭐',
       accentColor: 'tertiary',
       component: (
-        <DanceStyleSectionLayout
-          id="pioneers"
-          title={tUi('pioneers')}
-          emoji="⭐"
-          accentColor="tertiary"
-        >
-          <KeyFigures keyFigureIds={danceStyle.keyFigureIds || []} />
-        </DanceStyleSectionLayout>
+        <KeyFiguresSection keyFigureIds={danceStyle.keyFigureIds || []} />
       ),
     },
     // Add landmarks section if the style has landmark IDs and valid landmarks exist

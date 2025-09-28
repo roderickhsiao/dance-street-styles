@@ -206,6 +206,9 @@ export const PEOPLE: Record<string, PersonEntity> = {
     roleKey: 'people.viktorManoel.role',
     bioKey: 'people.viktorManoel.bio',
     imageUrl: '/images/people/viktor-manoel.jpg',
+    socialLinks: {
+      instagram: 'viktormanoel',
+    }
   },
   'tommy-mitchell': {
     id: 'tommy-mitchell',
@@ -260,6 +263,10 @@ export const PEOPLE: Record<string, PersonEntity> = {
     bioKey: 'people.archieBurnett.bio',
     crewIds: ['breed-of-motion'],
     imageUrl: '/images/people/archie-burnett.jpg',
+    socialLinks: {
+      instagram: 'demoncar0007'
+    },
+    category: 'dancer',
   },
   'billy-goodson': {
     id: 'billy-goodson',
@@ -344,6 +351,351 @@ export const PEOPLE: Record<string, PersonEntity> = {
     birthDate: new Date('1858-01-01'), // Approximate birth year
     deathDate: new Date('1925-01-01'), // Approximate death year
   },
+  // House Dance Pioneers
+  'frankie-knuckles': {
+    id: 'frankie-knuckles',
+    nameKey: 'people.frankieKnuckles.name',
+    roleKey: 'people.frankieKnuckles.role',
+    bioKey: 'people.frankieKnuckles.bio',
+    imageUrl: '/images/people/frankie-knuckles.jpg',
+    birthDate: new Date('1955-01-18'),
+    deathDate: new Date('2014-03-31'),
+    category: 'musician',
+  },
+    'larry-levan': {
+    id: 'larry-levan',
+    nameKey: 'people.larryLevan.name',
+    roleKey: 'people.larryLevan.role',
+    bioKey: 'people.larryLevan.bio',
+    imageUrl: '/images/people/larry-levan.jpg',
+    category: 'musician',
+  },
+  'marjory-smarth': {
+    id: 'marjory-smarth',
+    nameKey: 'people.marjorySmarth.name',
+    roleKey: 'people.marjorySmarth.role',
+    bioKey: 'people.marjorySmarth.bio',
+    imageUrl: '/images/people/marjory-smarth.jpg',
+    socialLinks: {
+      instagram: 'livetruedancefree'
+    },
+    category: 'dancer',
+  },
+  'ejoe-wilson': {
+    id: 'ejoe-wilson',
+    nameKey: 'people.ejoeWilson.name',
+    roleKey: 'people.ejoeWilson.role',
+    bioKey: 'people.ejoeWilson.bio',
+    imageUrl: '/images/people/ejoe-wilson.jpg',
+    socialLinks: {
+      instagram: 'ejoewilson'
+    }
+  },
+
+  'caleaf-sellers': {
+    id: 'caleaf-sellers',
+    nameKey: 'people.caleafSellers.name',
+    roleKey: 'people.caleafSellers.role',
+    bioKey: 'people.caleafSellers.bio',
+    imageUrl: '/images/people/caleaf-sellers.jpg',
+    category: 'dancer',
+    socialLinks: {
+      instagram: 'caleaf_sellers'
+    }
+  },
+  'brian-footwork-green': {
+    id: 'brian-footwork-green',
+    nameKey: 'people.brianFootworkGreen.name',
+    roleKey: 'people.brianFootworkGreen.role',
+    bioKey: 'people.brianFootworkGreen.bio',
+    imageUrl: '/images/people/brian-footwork-green.jpg',
+    category: 'dancer',
+    socialLinks: {
+      instagram: 'brianfootworkgreen'
+    }
+  },
+  'kim-holmes': {
+    id: 'kim-holmes',
+    nameKey: 'people.kimHolmes.name',
+    roleKey: 'people.kimHolmes.role',
+    bioKey: 'people.kimHolmes.bio',
+    imageUrl: '/images/people/kim-holmes.jpg',
+    socialLinks: {
+      instagram: 'kimd.holmes'
+    },
+    category: 'dancer',
+  },
+  'brahms-la-fortune': {
+    id: 'brahms-la-fortune',
+    nameKey: 'people.brahmsLaFortune.name',
+    roleKey: 'people.brahmsLaFortune.role',
+    bioKey: 'people.brahmsLaFortune.bio',
+    imageUrl: '/images/people/brahms-la-fortune.jpg',
+    socialLinks: {
+      instagram: 'bravobrahms'
+    }
+  },
+  'shan-selby': {
+    id: 'shan-selby',
+    nameKey: 'people.shanSelby.name',
+    roleKey: 'people.shanSelby.role',
+    bioKey: 'people.shanSelby.bio',
+    imageUrl: '/images/people/shan-selby.jpg',
+    socialLinks: {
+      instagram: 'selby._s'
+    },
+    category: 'dancer',
+  },
+  'rennie-harris': {
+    id: 'rennie-harris',
+    nameKey: 'people.rennieHarris.name',
+    roleKey: 'people.rennieHarris.role',
+    bioKey: 'people.rennieHarris.bio',
+    imageUrl: '/images/people/rennie-harris.jpg',
+    socialLinks: {
+      instagram: 'rennieharris'
+    }
+  },
+  'ron-hardy': {
+    id: 'ron-hardy',
+    nameKey: 'people.ronHardy.name',
+    roleKey: 'people.ronHardy.role',
+    bioKey: 'people.ronHardy.bio',
+    imageUrl: '/images/people/ron-hardy.jpg',
+    category: 'musician',
+  },
+  'jamie-principle': {
+    id: 'jamie-principle',
+    nameKey: 'people.jamiePrinciple.name',
+    roleKey: 'people.jamiePrinciple.role',
+    bioKey: 'people.jamiePrinciple.bio',
+    imageUrl: '/images/people/jamie-principle.jpg',
+    socialLinks: {
+      instagram: 'jamieprinciple'
+    },
+    category: 'musician',
+  },
+  'jesse-saunders': {
+    id: 'jesse-saunders',
+    nameKey: 'people.jesseSaunders.name',
+    roleKey: 'people.jesseSaunders.role',
+    bioKey: 'people.jesseSaunders.bio',
+    imageUrl: '/images/people/jesse-saunders.jpg',
+    socialLinks: {
+      instagram: 'jessesaundrs'
+    },
+    category: 'musician',
+  },
+  'larry-heard': {
+    id: 'larry-heard',
+    nameKey: 'people.larryHeard.name',
+    roleKey: 'people.larryHeard.role',
+    bioKey: 'people.larryHeard.bio',
+    imageUrl: '/images/people/larry-heard.jpg',
+    category: 'musician',
+  },
+  'marshall-jefferson': {
+    id: 'marshall-jefferson',
+    nameKey: 'people.marshallJefferson.name',
+    roleKey: 'people.marshallJefferson.role',
+    bioKey: 'people.marshallJefferson.bio',
+    imageUrl: '/images/people/marshall-jefferson.jpg',
+    socialLinks: {
+      instagram: 'marshall_jefferson'
+    },
+    category: 'musician',
+  },
+  'adonis': {
+    id: 'adonis',
+    nameKey: 'people.adonis.name',
+    roleKey: 'people.adonis.role',
+    bioKey: 'people.adonis.bio',
+    imageUrl: '/images/people/adonis.jpg',
+    category: 'musician',
+  },
+  'steve-silk-hurley': {
+    id: 'steve-silk-hurley',
+    nameKey: 'people.steveSilkHurley.name',
+    roleKey: 'people.steveSilkHurley.role',
+    bioKey: 'people.steveSilkHurley.bio',
+    imageUrl: '/images/people/steve-silk-hurley.jpg',
+    socialLinks: {
+      instagram: 'stevesilkhurley'
+    },
+    category: 'musician',
+  },
+  'lil-louis': {
+    id: 'lil-louis',
+    nameKey: 'people.lilLouis.name',
+    roleKey: 'people.lilLouis.role',
+    bioKey: 'people.lilLouis.bio',
+    imageUrl: '/images/people/lil-louis.jpg',
+    category: 'musician',
+  },
+  'farley-jackmaster-funk': {
+    id: 'farley-jackmaster-funk',
+    nameKey: 'people.farleyJackmasterFunk.name',
+    roleKey: 'people.farleyJackmasterFunk.role',
+    bioKey: 'people.farleyJackmasterFunk.bio',
+    imageUrl: '/images/people/farley-jackmaster-funk.jpg',
+    category: 'musician',
+  },
+  'tony-humphries': {
+    id: 'tony-humphries',
+    nameKey: 'people.tonyHumphries.name',
+    roleKey: 'people.tonyHumphries.role',
+    bioKey: 'people.tonyHumphries.bio',
+    imageUrl: '/images/people/tony-humphries.jpg',
+    socialLinks: {
+      instagram: 'tony_humphries'
+    },
+    category: 'musician',
+  },
+  'tony-mcgregor': {
+    id: 'tony-mcgregor',
+    nameKey: 'people.tonyMcgregor.name',
+    roleKey: 'people.tonyMcgregor.role',
+    bioKey: 'people.tonyMcgregor.bio',
+    imageUrl: '/images/people/tony-mcgregor.jpg',
+    socialLinks: {
+      instagram: 'tonyvmcgregor'
+    },
+    category: 'dancer',
+  },
+  'brooklyn-terry-wright': {
+    id: 'brooklyn-terry-wright',
+    nameKey: 'people.brooklynTerryWright.name',
+    roleKey: 'people.brooklynTerryWright.role',
+    bioKey: 'people.brooklynTerryWright.bio',
+    imageUrl: '/images/people/brooklyn-terry-wright.jpg',
+    category: 'dancer',
+    socialLinks: {
+      instagram: 'brooklynterryef'
+    }
+  },
+  'shannon-mabra': {
+    id: 'shannon-mabra',
+    nameKey: 'people.shannonMabra.name',
+    roleKey: 'people.shannonMabra.role',
+    bioKey: 'people.shannonMabra.bio',
+    imageUrl: '/images/people/shannon-mabra.jpg',
+    category: 'dancer',
+    socialLinks: {
+      instagram: 'shannonwhichwaysha'
+    }
+  },
+  'tony-sekou-williams': {
+    id: 'tony-sekou-williams',
+    nameKey: 'people.tonySekouWilliams.name',
+    roleKey: 'people.tonySekouWilliams.role',
+    bioKey: 'people.tonySekouWilliams.bio',
+    imageUrl: '/images/people/tony-sekou-williams.jpg',
+    category: 'dancer',
+    socialLinks: {
+      instagram: 'sekouheru'
+    }
+  },
+  'voodoo-ray': {
+    id: 'voodoo-ray',
+    nameKey: 'people.voodooRay.name',
+    roleKey: 'people.voodooRay.role',
+    bioKey: 'people.voodooRay.bio',
+    imageUrl: '/images/people/voodoo-ray.jpg',
+    category: 'dancer',
+    socialLinks: {
+      instagram: 'mrvoodooray'
+    }
+  },
+  'hiro': {
+    id: 'hiro',
+    nameKey: 'people.hiro.name',
+    roleKey: 'people.hiro.role',
+    bioKey: 'people.hiro.bio',
+    imageUrl: '/images/people/hiro.jpg',
+    category: 'dancer',
+    socialLinks: {
+      instagram: 'hiroalma'
+    }
+  },
+  'babson': {
+    id: 'babson',
+    nameKey: 'people.babson.name',
+    roleKey: 'people.babson.role',
+    bioKey: 'people.babson.bio',
+    crewIds: ['wanted-posse'],
+    imageUrl: '/images/people/babson.jpg',
+    category: 'dancer',
+    socialLinks: {
+      instagram: 'babsonswanted_officiel'
+    }
+  },
+  'mamson': {
+    id: 'mamson',
+    nameKey: 'people.mamson.name',
+    roleKey: 'people.mamson.role',
+    bioKey: 'people.mamson.bio',
+    crewIds: ['wanted-posse'],
+    imageUrl: '/images/people/mamson.jpg',
+    category: 'dancer',
+    socialLinks: {
+      instagram: 'mamsonic'
+    }
+  },
+  'yugson': {
+    id: 'yugson',
+    nameKey: 'people.yugson.name',
+    roleKey: 'people.yugson.role',
+    bioKey: 'people.yugson.bio',
+    crewIds: ['wanted-posse'],
+    imageUrl: '/images/people/yugson.jpg',
+    category: 'dancer',
+    socialLinks: {
+      instagram: 'yugson_hawks1'
+    }
+  },
+  'babyson': {
+    id: 'babyson',
+    nameKey: 'people.babyson.name',
+    roleKey: 'people.babyson.role',
+    bioKey: 'people.babyson.bio',
+    crewIds: ['wanted-posse'],
+    imageUrl: '/images/people/babyson.jpg',
+    category: 'dancer',
+    socialLinks: {
+      instagram: 'babyson'
+    }
+  },
+  'badson': {
+    id: 'badson',
+    nameKey: 'people.badson.name',
+    roleKey: 'people.badson.role',
+    bioKey: 'people.badson.bio',
+    crewIds: ['wanted-posse'],
+    imageUrl: '/images/people/badson.jpg',
+    category: 'dancer',
+    birthDate: new Date('1970-01-01'),
+    socialLinks: {
+      instagram: 'badson_wantedposse'
+    }
+  },
+  'hagson': {
+    id: 'hagson',
+    nameKey: 'people.hagson.name',
+    roleKey: 'people.hagson.role',
+    bioKey: 'people.hagson.bio',
+    crewIds: ['wanted-posse'],
+    imageUrl: '/images/people/hagson.jpg',
+    category: 'dancer',
+  },
+  'kimson': {
+    id: 'kimson',
+    nameKey: 'people.kimson.name',
+    roleKey: 'people.kimson.role',
+    bioKey: 'people.kimson.bio',
+    crewIds: ['wanted-posse'],
+    imageUrl: '/images/people/kimson.jpg',
+    category: 'dancer',
+  }
 };
 
 export const PEOPLE_LIST: PersonEntity[] = Object.values(PEOPLE);

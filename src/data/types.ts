@@ -197,6 +197,7 @@ export interface PersonEntity {
   birthDate?: Date;
   deathDate?: Date;
   crewIds?: string[]; // crews this person belongs/belonged to
+  category?: 'musician' | 'dancer'; // Category to separate music producers/DJs from dancers
   socialLinks?: {
     instagram?: string;
     youtube?: string;

@@ -115,15 +115,11 @@ export const danceStyles: DanceStyle[] = [
         id: 'breaking-documentary',
         featured: true,
         category: VideoCategory.DOCUMENTARY,
-        order: 1
-      }
+        order: 1,
+      },
     ],
     resources: [], // Add verified resources here
-    landmarkIds: [
-      '1520-sedgwick-avenue',
-      'bronx-river-houses',
-      'cedar-park',
-    ],
+    landmarkIds: ['1520-sedgwick-avenue', 'bronx-river-houses', 'cedar-park'],
     theme: {
       primary: '#E74C3C',
       secondary: '#C0392B',
@@ -159,28 +155,28 @@ export const danceStyles: DanceStyle[] = [
         id: 'hiphop-birth',
         featured: true,
         category: VideoCategory.HISTORY,
-        order: 1
+        order: 1,
       },
       {
         id: '5-elements-of-hop-hop',
         category: VideoCategory.HISTORY,
-        order: 2
+        order: 2,
       },
       {
         id: 'dj-evolution',
         category: VideoCategory.TUTORIAL,
-        order: 3
+        order: 3,
       },
       {
         id: 'mcing-history',
         category: VideoCategory.HISTORY,
-        order: 4
+        order: 4,
       },
       {
         id: 'graffiti-art',
         category: VideoCategory.HISTORY,
-        order: 5
-      }
+        order: 5,
+      },
     ],
     resources: [], // Add verified resources here
     theme: {
@@ -219,8 +215,8 @@ export const danceStyles: DanceStyle[] = [
         id: 'popping-interview',
         featured: true,
         category: VideoCategory.INTERVIEW,
-        order: 1
-      }
+        order: 1,
+      },
     ],
     resources: [], // Add verified resources here
     theme: {
@@ -268,13 +264,13 @@ export const danceStyles: DanceStyle[] = [
         id: 'locking-featured',
         featured: true,
         category: VideoCategory.HISTORY,
-        order: 1
+        order: 1,
       },
       {
         id: 'toni-basil-lockers-memories',
         category: VideoCategory.DOCUMENTARY,
-        order: 2
-      }
+        order: 2,
+      },
     ],
     // Collection of different types of resources
     resources: [
@@ -285,7 +281,8 @@ export const danceStyles: DanceStyle[] = [
         featured: true,
         category: 'official',
         order: 1,
-        context: 'Official website of Don Campbell, the creator of locking, with authentic history and personal insights'
+        context:
+          'Official website of Don Campbell, the creator of locking, with authentic history and personal insights',
       },
       // The Lockers official website
       {
@@ -294,8 +291,9 @@ export const danceStyles: DanceStyle[] = [
         featured: true,
         category: 'official',
         order: 2,
-        context: 'Official website of The Lockers crew featuring the seven original members and their pioneering role in dance culture'
-      }
+        context:
+          'Official website of The Lockers crew featuring the seven original members and their pioneering role in dance culture',
+      },
     ],
 
     influentialArtistIds: ['don-campbell', 'toni-basil'],
@@ -335,13 +333,40 @@ export const danceStyles: DanceStyle[] = [
       locationKey: 'locations.chicagoNYC',
       cultureKey: 'styles.detailed.house.origins.culture',
     },
+    keyFigureIds: [
+      'frankie-knuckles',
+      'larry-levan',
+      'ron-hardy',
+      'jamie-principle',
+      'jesse-saunders',
+      'marshall-jefferson',
+      'steve-silk-hurley',
+      'tony-humphries',
+      'brian-footwork-green',
+      'ejoe-wilson',
+      'kim-holmes',
+      'caleaf-sellers',
+      'marjory-smarth',
+      'tony-mcgregor',
+      'brooklyn-terry-wright',
+      'shannon-mabra',
+      'tony-sekou-williams',
+      'voodoo-ray',
+      'badson',
+      'hagson',
+      'yugson',
+      'babson',
+      'mamson',
+
+      'hiro',
+    ],
     videos: [
       {
         id: 'house-marjory-smarth',
         featured: true,
         category: VideoCategory.HISTORY,
-        order: 1
-      }
+        order: 1,
+      },
     ],
     resources: [
       // Check Your Body at the Door Documentary
@@ -351,12 +376,23 @@ export const danceStyles: DanceStyle[] = [
         featured: true,
         category: 'documentary',
         order: 1,
-        contextKey: 'resources.checkYourBodyAtTheDoor.context'
-      }
+        contextKey: 'resources.checkYourBodyAtTheDoor.context',
+      },
     ],
-    landmarkIds: [
-      'the-warehouse-chicago',
-      'paradise-garage-nyc',
+    landmarkIds: ['the-warehouse-chicago', 'paradise-garage-nyc'],
+    crewIds: [
+      'mop-top',
+      'dance-fusion',
+      'dance-floor',
+      'elite-force',
+      'house-nation',
+      'ghost-shadow',
+      'exclusive-elements',
+      'supernaturalz',
+      'scheme-team',
+      'club-house',
+      'wanted-posse',
+      'serial-stepperz',
     ],
     theme: {
       primary: '#3498DB',
@@ -402,24 +438,21 @@ export const danceStyles: DanceStyle[] = [
         id: 'voguing-lgbtq-history',
         featured: true,
         category: VideoCategory.HISTORY,
-        order: 1
+        order: 1,
       },
       {
         id: 'paris-is-burning',
         category: VideoCategory.DOCUMENTARY,
-        order: 2
+        order: 2,
       },
       {
         id: 'strike-a-pose',
         category: VideoCategory.DOCUMENTARY,
-        order: 3
-      }
+        order: 3,
+      },
     ],
     resources: [], // Add verified resources here
-    landmarkIds: [
-      'webster-hall-nyc',
-      'tracks-nightclub',
-    ],
+    landmarkIds: ['webster-hall-nyc', 'tracks-nightclub'],
     influentialArtistIds: [
       'william-dorsey-swann',
       'willi-ninja',
@@ -471,20 +504,16 @@ export const danceStyles: DanceStyle[] = [
         id: 'waacking-tyrone-proctor',
         featured: true,
         category: VideoCategory.HISTORY,
-        order: 1
+        order: 1,
       },
       {
         id: 'breed-of-motion',
         category: VideoCategory.DOCUMENTARY,
-        order: 2
-      }
+        order: 2,
+      },
     ],
     resources: [], // Add verified resources here
-    landmarkIds: [
-      'ginos-ii',
-      'paradise-ballroom',
-      'peanuts-club',
-    ],
+    landmarkIds: ['ginos-ii', 'paradise-ballroom', 'peanuts-club'],
     influentialArtistIds: [
       'tyrone-proctor',
       'jeffrey-daniel',
@@ -535,8 +564,8 @@ export const danceStyles: DanceStyle[] = [
         id: 'krumping-tommy-clown',
         featured: true,
         category: VideoCategory.HISTORY,
-        order: 1
-      }
+        order: 1,
+      },
     ],
     resources: [], // Add verified resources here
     relatedStyles: [
@@ -574,8 +603,8 @@ export const danceStyles: DanceStyle[] = [
         id: 'hustle-latin-origins',
         featured: true,
         category: VideoCategory.HISTORY,
-        order: 1
-      }
+        order: 1,
+      },
     ],
     resources: [], // Add verified resources here
     relatedStyles: [DanceStyleId.HOUSE, DanceStyleId.HIP_HOP],
@@ -613,40 +642,40 @@ export const danceStyles: DanceStyle[] = [
         id: 'punking-featured',
         featured: true,
         category: VideoCategory.HISTORY,
-        order: 1
-      }
+        order: 1,
+      },
     ],
     resources: [
       {
         id: 'punking-dance-instagram',
         type: ResourceType.WEBSITE,
         featured: true,
-        order: 1
+        order: 1,
       },
       {
         id: 'viktor-manoel-punking-interview',
         type: ResourceType.ARTICLE,
         featured: true,
-        order: 2
+        order: 2,
       },
       {
         id: 'viktor-manoel-dance-mogul-pt1',
         type: ResourceType.VIDEO,
         featured: true,
-        order: 3
+        order: 3,
       },
       {
         id: 'viktor-manoel-dance-mogul-pt2',
         type: ResourceType.VIDEO,
         featured: true,
-        order: 4
+        order: 4,
       },
       {
         id: 'viktor-manoel-dance-mogul-pt3',
         type: ResourceType.VIDEO,
         featured: true,
-        order: 5
-      }
+        order: 5,
+      },
     ],
     influentialArtistIds: [
       'viktor-manoel',
@@ -654,11 +683,7 @@ export const danceStyles: DanceStyle[] = [
       'arthur-goff',
       'michael-angelo-harris',
     ],
-    landmarkIds: [
-      'ginos-ii',
-      'paradise-ballroom',
-      'peanuts-club',
-    ],
+    landmarkIds: ['ginos-ii', 'paradise-ballroom', 'peanuts-club'],
     theme: {
       primary: '#E91E63',
       secondary: '#AD1457',
@@ -694,13 +719,13 @@ export const danceStyles: DanceStyle[] = [
         id: 'turfing-liquid-flow',
         featured: true,
         category: VideoCategory.PERFORMANCE,
-        order: 1
+        order: 1,
       },
       {
         id: 'turfing-scorpion-lopez',
         category: VideoCategory.PERFORMANCE,
-        order: 2
-      }
+        order: 2,
+      },
     ],
     resources: [], // Add verified resources here
     theme: {
@@ -733,8 +758,8 @@ export const danceStyles: DanceStyle[] = [
         id: 'litefeet-sound-of-subway',
         featured: true,
         category: VideoCategory.HISTORY,
-        order: 1
-      }
+        order: 1,
+      },
     ],
     origins: {
       yearKey: 'eras.2000s',
@@ -790,13 +815,13 @@ export const danceStyles: DanceStyle[] = [
         id: 'footwork-featured',
         featured: true,
         category: VideoCategory.PERFORMANCE,
-        order: 1
+        order: 1,
       },
       {
         id: 'footwork-let-me-see',
         category: VideoCategory.PERFORMANCE,
-        order: 2
-      }
+        order: 2,
+      },
     ],
     resources: [], // Add verified resources here
 
@@ -832,8 +857,8 @@ export const danceStyles: DanceStyle[] = [
         id: 'jit-pioneers',
         featured: true,
         category: VideoCategory.HISTORY,
-        order: 1
-      }
+        order: 1,
+      },
     ],
     resources: [], // Add verified resources here
     relatedStyles: [
@@ -871,8 +896,8 @@ export const danceStyles: DanceStyle[] = [
         id: 'soul-yoshie-featured',
         featured: true,
         category: VideoCategory.PERFORMANCE,
-        order: 1
-      }
+        order: 1,
+      },
     ],
     resources: [], // Add verified resources here
     relatedStyles: [DanceStyleId.HOUSE, DanceStyleId.HIP_HOP],
@@ -956,7 +981,7 @@ export const getAllUsedTags = (): DanceStyleTag[] => {
 export const getVideosForStyle = (styleId: DanceStyleId | string) => {
   const style = getDanceStyleById(styleId as DanceStyleId);
   if (!style?.videos) return [];
-  
+
   return style.videos
     .map((videoRef) => {
       const video = getVideoById(videoRef.id);
@@ -974,19 +999,22 @@ export const getVideosForStyle = (styleId: DanceStyleId | string) => {
 
 export const getFeaturedVideoForStyle = (styleId: DanceStyleId | string) => {
   const videos = getVideosForStyle(styleId);
-  return videos.find(video => video?.featured) || videos[0] || null;
+  return videos.find((video) => video?.featured) || videos[0] || null;
 };
 
-export const getVideosByCategory = (styleId: DanceStyleId | string, category: string) => {
+export const getVideosByCategory = (
+  styleId: DanceStyleId | string,
+  category: string
+) => {
   const videos = getVideosForStyle(styleId);
-  return videos.filter(video => video?.category === category);
+  return videos.filter((video) => video?.category === category);
 };
 
 // Resource-related helper functions
 export const getResourcesForStyle = (styleId: DanceStyleId | string) => {
   const style = getDanceStyleById(styleId as DanceStyleId);
   if (!style?.resources) return [];
-  
+
   return style.resources
     .map((resourceRef) => {
       const resource = getResourceById(resourceRef.id);
@@ -1002,12 +1030,17 @@ export const getResourcesForStyle = (styleId: DanceStyleId | string) => {
     });
 };
 
-export const getResourcesByType = (styleId: DanceStyleId | string, type: ResourceType) => {
+export const getResourcesByType = (
+  styleId: DanceStyleId | string,
+  type: ResourceType
+) => {
   const resources = getResourcesForStyle(styleId);
   return resources.filter((resource) => resource && resource.type === type);
 };
 
-export const getFeaturedResourcesForStyle = (styleId: DanceStyleId | string) => {
+export const getFeaturedResourcesForStyle = (
+  styleId: DanceStyleId | string
+) => {
   const resources = getResourcesForStyle(styleId);
   return resources.filter((resource) => resource && resource.featured);
 };
@@ -1032,37 +1065,47 @@ export const getArticleResourcesForStyle = (styleId: DanceStyleId | string) => {
 // Get resources grouped by type for UI display
 export const getResourcesGroupedByType = (styleId: DanceStyleId | string) => {
   const allResources = getResourcesForStyle(styleId);
-  
+
   const groupedResources = {
-    videos: allResources.filter(r => r && r.type === ResourceType.VIDEO),
-    documentaries: allResources.filter(r => r && r.type === ResourceType.DOCUMENTARY),
-    podcasts: allResources.filter(r => r && r.type === ResourceType.PODCAST), 
-    books: allResources.filter(r => r && r.type === ResourceType.BOOK),
-    articles: allResources.filter(r => r && r.type === ResourceType.ARTICLE),
-    websites: allResources.filter(r => r && r.type === ResourceType.WEBSITE),
-    playlists: allResources.filter(r => r && r.type === ResourceType.PLAYLIST),
-    courses: allResources.filter(r => r && r.type === ResourceType.COURSE),
-    archives: allResources.filter(r => r && r.type === ResourceType.ARCHIVE),
-    images: allResources.filter(r => r && r.type === ResourceType.IMAGE),
-    socialMedia: allResources.filter(r => r && r.type === ResourceType.SOCIAL_MEDIA)
+    videos: allResources.filter((r) => r && r.type === ResourceType.VIDEO),
+    documentaries: allResources.filter(
+      (r) => r && r.type === ResourceType.DOCUMENTARY
+    ),
+    podcasts: allResources.filter((r) => r && r.type === ResourceType.PODCAST),
+    books: allResources.filter((r) => r && r.type === ResourceType.BOOK),
+    articles: allResources.filter((r) => r && r.type === ResourceType.ARTICLE),
+    websites: allResources.filter((r) => r && r.type === ResourceType.WEBSITE),
+    playlists: allResources.filter(
+      (r) => r && r.type === ResourceType.PLAYLIST
+    ),
+    courses: allResources.filter((r) => r && r.type === ResourceType.COURSE),
+    archives: allResources.filter((r) => r && r.type === ResourceType.ARCHIVE),
+    images: allResources.filter((r) => r && r.type === ResourceType.IMAGE),
+    socialMedia: allResources.filter(
+      (r) => r && r.type === ResourceType.SOCIAL_MEDIA
+    ),
   };
-  
+
   return groupedResources;
 };
 
 // Data validation and robustness functions
-export const validateDanceStyle = (style: Partial<DanceStyle>): { valid: boolean; errors: string[] } => {
+export const validateDanceStyle = (
+  style: Partial<DanceStyle>
+): { valid: boolean; errors: string[] } => {
   const errors: string[] = [];
-  
+
   // Required fields
   if (!style.id) errors.push('Missing required field: id');
   if (!style.slug) errors.push('Missing required field: slug');
   if (!style.nameKey) errors.push('Missing required field: nameKey');
-  if (!style.shortDescriptionKey) errors.push('Missing required field: shortDescriptionKey');
-  if (!style.fullDescriptionKey) errors.push('Missing required field: fullDescriptionKey');
+  if (!style.shortDescriptionKey)
+    errors.push('Missing required field: shortDescriptionKey');
+  if (!style.fullDescriptionKey)
+    errors.push('Missing required field: fullDescriptionKey');
   if (!style.eraKey) errors.push('Missing required field: eraKey');
   if (!style.locationKey) errors.push('Missing required field: locationKey');
-  
+
   // Validate origins structure
   if (!style.origins) {
     errors.push('Missing required field: origins');
@@ -1071,17 +1114,25 @@ export const validateDanceStyle = (style: Partial<DanceStyle>): { valid: boolean
     if (!style.origins.locationKey) errors.push('Missing origins.locationKey');
     if (!style.origins.cultureKey) errors.push('Missing origins.cultureKey');
   }
-  
+
   // Validate theme structure
   if (!style.theme) {
     errors.push('Missing required field: theme');
   } else {
-    const requiredThemeColors = ['primary', 'secondary', 'accent', 'background', 'foreground', 'muted'];
-    requiredThemeColors.forEach(color => {
-      if (!style.theme![color as keyof typeof style.theme]) errors.push(`Missing theme.${color}`);
+    const requiredThemeColors = [
+      'primary',
+      'secondary',
+      'accent',
+      'background',
+      'foreground',
+      'muted',
+    ];
+    requiredThemeColors.forEach((color) => {
+      if (!style.theme![color as keyof typeof style.theme])
+        errors.push(`Missing theme.${color}`);
     });
   }
-  
+
   // Validate arrays
   if (style.tags && !Array.isArray(style.tags)) {
     errors.push('tags must be an array');
@@ -1089,37 +1140,47 @@ export const validateDanceStyle = (style: Partial<DanceStyle>): { valid: boolean
   if (style.relatedStyles && !Array.isArray(style.relatedStyles)) {
     errors.push('relatedStyles must be an array');
   }
-  
+
   // Validate video references
   if (style.videos && Array.isArray(style.videos)) {
     style.videos.forEach((video, index: number) => {
       if (!video.id) errors.push(`Video at index ${index} missing id`);
-      if (video.category && !Object.values(VideoCategory).includes(video.category)) {
-        errors.push(`Invalid video category at index ${index}: ${video.category}`);
+      if (
+        video.category &&
+        !Object.values(VideoCategory).includes(video.category)
+      ) {
+        errors.push(
+          `Invalid video category at index ${index}: ${video.category}`
+        );
       }
     });
   }
-  
+
   // Validate resource references
   if (style.resources && Array.isArray(style.resources)) {
     style.resources.forEach((resource, index: number) => {
       if (!resource.id) errors.push(`Resource at index ${index} missing id`);
-      if (!resource.type || !Object.values(ResourceType).includes(resource.type)) {
-        errors.push(`Invalid or missing resource type at index ${index}: ${resource.type}`);
+      if (
+        !resource.type ||
+        !Object.values(ResourceType).includes(resource.type)
+      ) {
+        errors.push(
+          `Invalid or missing resource type at index ${index}: ${resource.type}`
+        );
       }
     });
   }
-  
+
   return {
     valid: errors.length === 0,
-    errors
+    errors,
   };
 };
 
 export const getDanceStyleWithFallbacks = (id: DanceStyleId | string) => {
   const style = getDanceStyleById(id as DanceStyleId);
   if (!style) return null;
-  
+
   // Provide safe defaults for optional fields
   return {
     ...style,
@@ -1132,7 +1193,7 @@ export const getDanceStyleWithFallbacks = (id: DanceStyleId | string) => {
     resources: style.resources || [],
     tags: style.tags || [],
     relatedStyles: style.relatedStyles || [],
-    status: style.status || 'complete'
+    status: style.status || 'complete',
   };
 };
 
@@ -1140,16 +1201,24 @@ export const getDanceStyleWithFallbacks = (id: DanceStyleId | string) => {
 export const getStyleWithEntities = (styleId: DanceStyleId | string) => {
   const style = getDanceStyleWithFallbacks(styleId);
   if (!style) return null;
-  
+
   return {
     ...style,
-    keyFigures: style.keyFigureIds.map(id => getPersonById(id)).filter(Boolean),
-    influentialArtists: style.influentialArtistIds.map(id => getPersonById(id)).filter(Boolean),
-    crews: style.crewIds.map(id => getCrewById(id)).filter(Boolean),
-    moves: style.moveIds.map(id => getMoveById(id)).filter(Boolean),
-    musicGenres: style.musicGenreIds.map(id => getMusicGenreById(id)).filter(Boolean),
+    keyFigures: style.keyFigureIds
+      .map((id) => getPersonById(id))
+      .filter(Boolean),
+    influentialArtists: style.influentialArtistIds
+      .map((id) => getPersonById(id))
+      .filter(Boolean),
+    crews: style.crewIds.map((id) => getCrewById(id)).filter(Boolean),
+    moves: style.moveIds.map((id) => getMoveById(id)).filter(Boolean),
+    musicGenres: style.musicGenreIds
+      .map((id) => getMusicGenreById(id))
+      .filter(Boolean),
     videos: getVideosForStyle(styleId),
     resources: getResourcesForStyle(styleId),
-    relatedStylesData: style.relatedStyles.map(id => getDanceStyleById(id)).filter(Boolean)
+    relatedStylesData: style.relatedStyles
+      .map((id) => getDanceStyleById(id))
+      .filter(Boolean),
   };
 };
