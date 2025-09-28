@@ -2,14 +2,7 @@ import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
 
-export const alt = 'Street Dance Culture - Magazine';
-export const size = {
-  width: 1200,
-  height: 630,
-};
-export const contentType = 'image/png';
-
-export default async function Image() {
+export async function GET() {
   return new ImageResponse(
     (
       <div
@@ -18,11 +11,12 @@ export default async function Image() {
           width: '100%',
           display: 'flex',
           flexDirection: 'column',
-          alignItems: 'center',
+          alignItems: 'flex-start',
           justifyContent: 'center',
           backgroundColor: '#000000',
           backgroundImage: 'linear-gradient(45deg, #000000 0%, #111111 100%)',
           position: 'relative',
+          padding: '0 80px',
         }}
       >
         {/* Background gradient overlay */}
@@ -43,18 +37,19 @@ export default async function Image() {
           style={{
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center',
+            alignItems: 'flex-start',
             justifyContent: 'center',
-            textAlign: 'center',
+            textAlign: 'left',
             zIndex: 1,
+            width: '100%',
           }}
         >
           {/* Logo/Brand mark */}
           <div
             style={{
-              width: 120,
-              height: 120,
-              borderRadius: 20,
+              width: 80,
+              height: 80,
+              borderRadius: 16,
               background: 'linear-gradient(135deg, #f97316 0%, #ec4899 50%, #a855f7 100%)',
               display: 'flex',
               alignItems: 'center',
@@ -65,10 +60,10 @@ export default async function Image() {
           >
             <span
               style={{
-                fontSize: 72,
+                fontSize: 48,
                 fontWeight: 900,
                 color: '#000000',
-                fontFamily: 'system-ui, sans-serif',
+                fontFamily: 'Inter, system-ui, sans-serif',
               }}
             >
               S
@@ -80,13 +75,10 @@ export default async function Image() {
             style={{
               fontSize: 80,
               fontWeight: 900,
-              background: 'linear-gradient(135deg, #f97316 0%, #ec4899 50%, #a855f7 100%)',
-              backgroundClip: 'text',
-              WebkitBackgroundClip: 'text',
-              color: 'transparent',
+              color: '#f97316',
               margin: '0 0 20px 0',
               letterSpacing: '-0.02em',
-              fontFamily: 'system-ui, sans-serif',
+              fontFamily: 'Inter, system-ui, sans-serif',
               textTransform: 'uppercase',
             }}
           >
@@ -97,11 +89,11 @@ export default async function Image() {
           <p
             style={{
               fontSize: 32,
-              color: '#ffffff',
+              color: '#ec4899',
               margin: '0 0 30px 0',
               fontWeight: 600,
               opacity: 0.9,
-              fontFamily: 'system-ui, sans-serif',
+              fontFamily: 'Inter, system-ui, sans-serif',
               textTransform: 'uppercase',
               letterSpacing: '0.1em',
             }}
@@ -148,7 +140,8 @@ export default async function Image() {
       </div>
     ),
     {
-      ...size,
+      width: 1200,
+      height: 630,
     }
   );
 }

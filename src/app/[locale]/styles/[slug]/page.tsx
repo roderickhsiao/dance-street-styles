@@ -54,7 +54,7 @@ export async function generateMetadata({
       locale: locale,
       siteName: 'Street Dance Culture Magazine',
       images: [{
-        url: `/opengraph-image?title=${encodeURIComponent(styleName(danceStyle.id).toUpperCase())}&subtitle=${encodeURIComponent('DANCE STYLE')}`,
+        url: `/api/og/dynamic?title=${encodeURIComponent(styleName(danceStyle.id).toUpperCase())}&subtitle=${encodeURIComponent('DANCE STYLE')}`,
         width: 1200,
         height: 630,
         alt: title

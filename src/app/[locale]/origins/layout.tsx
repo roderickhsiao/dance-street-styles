@@ -34,7 +34,7 @@ export async function generateMetadata({
       publishedTime: '1973-08-11T00:00:00.000Z', // Historical significance
       modifiedTime: new Date().toISOString(),
       images: [{
-        url: `/opengraph-image?title=${encodeURIComponent(tHero('title'))}&subtitle=${encodeURIComponent(tHero('badges.movement'))}`,
+        url: `/api/og/dynamic?title=${encodeURIComponent(tHero('title'))}&subtitle=${encodeURIComponent(tHero('badges.movement'))}`,
         width: 1200,
         height: 630,
         alt: t('origins.seo.title')

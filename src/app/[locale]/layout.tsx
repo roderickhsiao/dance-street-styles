@@ -24,7 +24,7 @@ export async function generateMetadata({
       type: 'website',
       locale: getOGLocale(locale),
       images: [{
-        url: '/opengraph-image',
+        url: '/api/og',
         width: 1200,
         height: 630,
         alt: t('title'),

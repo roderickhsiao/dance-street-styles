@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: t('title'),
       description: t('description'),
       images: [{
-        url: `/opengraph-image?title=${encodeURIComponent(tHero('title.line1') + ' ' + tHero('title.line2'))}&subtitle=${encodeURIComponent(tHero('title.line3'))}`,
+        url: `/api/og/dynamic?title=${encodeURIComponent(tHero('title.line1') + ' ' + tHero('title.line2'))}&subtitle=${encodeURIComponent(tHero('title.line3'))}`,
         width: 1200,
         height: 630,
         alt: t('title')

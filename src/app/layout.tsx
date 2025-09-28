@@ -4,6 +4,7 @@ import './globals.css';
 import { polyfillCountryFlagEmojis } from 'country-flag-emoji-polyfill';
 import { MotionProvider } from '@/components/MotionProvider';
 import { VideoPlayerProvider } from '@/components/VideoPlayerProvider';
+import type { Metadata } from 'next';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -12,6 +13,10 @@ const inter = Inter({
 });
 
 polyfillCountryFlagEmojis();
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://street-dance-culture.vercel.app'),
+};
 
 type Props = {
   children: React.ReactNode;
