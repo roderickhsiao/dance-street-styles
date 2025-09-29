@@ -93,6 +93,35 @@ Test your knowledge with our trivia system covering:
 - Dance techniques and terminology
 - Cultural significance and values
 
+## 🚀 **Development & Project Management**
+
+This project uses GitHub Projects for task management and development coordination:
+
+- **📋 [View Project Board](https://github.com/users/roderickhsiao/projects/1)** - Track progress and priorities
+- **📖 [Project Documentation](.github/PROJECT.md)** - Detailed project management info
+- **📝 [Development Backlog](docs/BACKLOG.md)** - Comprehensive feature and task list
+
+### Quick Commands
+```bash
+# View project status
+pnpm project:info
+
+# List all project items  
+pnpm project:list
+
+# Add issue to project
+./scripts/project-manage.sh add-issue <number>
+
+# Create new issue
+./scripts/project-manage.sh create-issue "Title" "Description"
+```
+
+### Contributing
+1. Check the [project board](https://github.com/users/roderickhsiao/projects/1) for open tasks
+2. Review [contributing guidelines](.github/CONTRIBUTING.md) (coming soon)
+3. Create issues using our [templates](.github/ISSUE_TEMPLATE/)
+4. Submit PRs following our [template](.github/pull_request_template.md)
+
 ---
 
 *Keep the culture alive. From the Bronx to the world.*

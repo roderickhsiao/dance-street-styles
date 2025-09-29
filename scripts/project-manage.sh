@@ -2,10 +2,12 @@
 
 # GitHub Project Management Script for Street Dance Culture
 # This script provides common project management tasks using GitHub CLI
+# Note: GitHub Projects are user/org-level but linked to specific repositories
 
 PROJECT_NUMBER=1
 OWNER="roderickhsiao"
 REPO="street-dance-culture"
+REPO_FULL="$OWNER/$REPO"
 
 # Colors for output
 RED='\033[0;31m'
@@ -28,7 +30,7 @@ add_issue_to_project() {
     issue_number=$1
     echo -e "${YELLOW}📋 Adding issue #$issue_number to project...${NC}"
     
-    gh project item-add $PROJECT_NUMBER --owner $OWNER --url https://github.com/$OWNER/$REPO/issues/$issue_number
+    gh project item-add $PROJECT_NUMBER --owner $OWNER --url https://github.com/$REPO_FULL/issues/$issue_number
     
     if [ $? -eq 0 ]; then
         echo -e "${GREEN}✅ Successfully added issue #$issue_number to project${NC}"
@@ -51,7 +53,7 @@ create_and_add_issue() {
     echo -e "${YELLOW}🆕 Creating new issue: $title${NC}"
     
     # Create the issue and capture the URL
-    issue_url=$(gh issue create --title "$title" --body "$body" --repo $OWNER/$REPO)
+    issue_url=$(gh issue create --title "$title" --body "$body" --repo $REPO_FULL)
     
     if [ $? -eq 0 ]; then
         echo -e "${GREEN}✅ Issue created: $issue_url${NC}"
@@ -80,7 +82,7 @@ list_project_items() {
 show_project_info() {
     echo -e "${BLUE}📊 Project Information:${NC}"
     echo "Project URL: https://github.com/users/$OWNER/projects/$PROJECT_NUMBER"
-    echo "Repository: https://github.com/$OWNER/$REPO"
+    echo "Repository: https://github.com/$REPO_FULL"
     echo ""
     
     # Show project items
