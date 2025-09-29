@@ -1,4 +1,14 @@
-# Project Backlog - Street Dance Culture
+# Project Ba### 🎵 Content Expansion (NEW)
+- [ ] Music & Moves Database for Dance Styles (Issue #7)
+- [ ] People & Personalities Hub - Pioneer profiles and biographies (Issue #12)
+- [ ] Crew & Community Database - Legendary crews and modern collectives (Issue #13)
+- [ ] Global Culture Map - Interactive world map of dance scenes (Issue #14)
+- [ ] Local Community Resource Hub - Events, DJs, venues, meetups (Issue #15)
+- [ ] Educational Tools & Interactive Learning Features (Issue #11)
+- [ ] Regional Dance Styles & Global Variations (Issue #10)
+- [ ] Video integration and tutorial embedding
+- [ ] Interactive move builder and choreography tools
+- [ ] Cultural context and historical timeline expansion Street Dance Culture
 
 This ### 💰 Community Sustainability (NEW)
 - [ ] Community Support Platform (Buy Me Coffee, Ko-fi) (Issue #8)
@@ -168,8 +178,12 @@ This ### 💰 Community Sustainability (NEW)
 ### Epic 1: Foundation (8-10 weeks)
 All high-priority design system, responsive design, and accessibility items
 
-### Epic 2: Content Expansion (10-12 weeks) **UPDATED**
+### Epic 2: Content Expansion (16-20 weeks) **UPDATED**
 - Music & Moves Database (Issue #7)
+- People & Personalities Hub (Issue #12) 
+- Crew & Community Database (Issue #13)
+- Global Culture Map & Geographic Hub (Issue #14)
+- Local Community Resource Hub (Issue #15)
 - Regional Styles & Global Variations (Issue #10) 
 - Educational Tools & Interactive Learning (Issue #11)
 - Video integration and tutorial systems
