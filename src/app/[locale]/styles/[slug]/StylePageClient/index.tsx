@@ -5,7 +5,6 @@ import { motion } from '@/lib/motion';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { Badge } from '@/components/ui/badge';
-import { useTheme } from '@/hooks/useTheme';
 import { ArrowLeft, MapPin, Clock, Zap, ChevronRight } from 'lucide-react';
 import { DanceStyle } from '@/data/types';
 import { DanceStyleTag, getFeaturedVideoForStyle } from '@/data/danceStyles';
@@ -103,7 +102,6 @@ export function StylePageClient({
   relatedStyles,
   styleTags,
 }: StylePageClientProps) {
-  const { applyTheme, clearTheme } = useTheme();
   const [activeSection, setActiveSection] = useState('overview');
   const [isTocOpen, setIsTocOpen] = useState(false);
   const visibleSectionsRef = useRef<string[]>([]);
@@ -449,12 +447,7 @@ export function StylePageClient({
     });
   }
 
-  useEffect(() => {
-    if (danceStyle) {
-      applyTheme(danceStyle.theme);
-      return () => clearTheme();
-    }
-  }, [danceStyle, applyTheme, clearTheme]);
+  // Note: Dance style-specific theming removed in favor of global theme system
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
