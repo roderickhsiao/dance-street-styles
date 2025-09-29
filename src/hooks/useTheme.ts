@@ -1,25 +1,31 @@
-"use client";
+'use client';
 
-import { useState } from 'react';
-import { ThemeColors } from '@/data/types';
-import { applyThemeColors, resetTheme } from '@/lib/utils';
+import { useAtom } from 'jotai';
+import { useEffect } from 'react';
+import { themeAtom, isDarkAtom, isLightAtom } from '@/lib/theme-atoms';
+import { Theme } from '@/lib/theme';
 
-export const useTheme = () => {
-  const [currentTheme, setCurrentTheme] = useState<ThemeColors | null>(null);
+export function useTheme() {
+  const [theme, setTheme] = useAtom(themeAtom);
+  const [isDark] = useAtom(isDarkAtom);
+  const [isLight] = useAtom(isLightAtom);
 
-  const applyTheme = (theme: ThemeColors) => {
-    setCurrentTheme(theme);
-    applyThemeColors(theme);
-  };
+  // Apply theme class to document root
+  useEffect(() => {
+    const root = document.documentElement;
+    root.classList.remove(Theme.LIGHT, Theme.DARK);
+    root.classList.add(theme);
+  }, [theme]);
 
-  const clearTheme = () => {
-    setCurrentTheme(null);
-    resetTheme();
+  const toggleTheme = () => {
+    setTheme(theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT);
   };
 
   return {
-    currentTheme,
-    applyTheme,
-    clearTheme
+    theme,
+    setTheme,
+    toggleTheme,
+    isDark,
+    isLight,
   };
-};
+}

@@ -34,7 +34,7 @@ export function HomePageClient({ danceStyles, featureCardsData, overviewStats }:
         title={tOverview.rich('hero.titleFull', {
           accent1: (chunks) => (
             <motion.span
-              className="block text-white mb-2"
+              className="block text-content-primary mb-2"
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -102,7 +102,7 @@ export function HomePageClient({ danceStyles, featureCardsData, overviewStats }:
               {tOverview('streetSection.masthead.foundation')}
             </motion.div>
             <motion.h2
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-[1.1] magazine-headline"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-content-primary mb-6 leading-[1.1] magazine-headline"
               initial={false}
               animate={false}
             >
@@ -130,7 +130,7 @@ export function HomePageClient({ danceStyles, featureCardsData, overviewStats }:
               })}
             </motion.h2>
             <motion.p
-              className="text-gray-300 text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto magazine-body font-light leading-relaxed"
+              className="text-content-secondary text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto magazine-body font-light leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -186,14 +186,14 @@ export function HomePageClient({ danceStyles, featureCardsData, overviewStats }:
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="text-center mb-8 sm:mb-10 scroll-fade-in">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-3 magazine-headline">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-content-primary mb-3 magazine-headline">
               {t.rich('styles.titleFull', {
                 accent: (chunks) => (
                   <span className="text-orange-400">{chunks}</span>
                 ),
               })}
             </h2>
-            <p className="text-gray-400 text-sm sm:text-base magazine-body">
+            <p className="text-content-tertiary text-sm sm:text-base magazine-body">
               {t('styles.subtitle')}
             </p>
           </div>

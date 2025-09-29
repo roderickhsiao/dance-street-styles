@@ -4,6 +4,7 @@ import './globals.css';
 import { polyfillCountryFlagEmojis } from 'country-flag-emoji-polyfill';
 import { MotionProvider } from '@/components/ui/motion-provider';
 import { VideoPlayerProvider } from '@/components/features/video/VideoPlayerProvider';
+import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import type { Metadata } from 'next';
 
 const inter = Inter({
@@ -22,10 +23,49 @@ type Props = {
   children: React.ReactNode;
 };
 
-export default function RootLayout({ children }: Props) {
+export default async function RootLayout({ children }: Props) {
+
   return (
-    <html lang="en">
-      <body className={`${inter.variable} antialiased font-sans`}>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var theme = 'dark';
+                  var stored = '';
+                  
+                  // Try to get from cookie first
+                  var cookies = document.cookie.split('; ');
+                  for (var i = 0; i < cookies.length; i++) {
+                    if (cookies[i].startsWith('sdc_theme=')) {
+                      stored = cookies[i].split('=')[1];
+                      break;
+                    }
+                  }
+                  
+                  // Fallback to localStorage
+                  if (!stored && typeof localStorage !== 'undefined') {
+                    stored = localStorage.getItem('sdc_theme');
+                  }
+                  
+                  if (stored === 'light' || stored === 'dark') {
+                    theme = stored;
+                  }
+                  
+                  document.documentElement.classList.add(theme);
+                  document.documentElement.style.colorScheme = theme;
+                } catch (e) {
+                  document.documentElement.classList.add('dark');
+                  document.documentElement.style.colorScheme = 'dark';
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body className={`${inter.variable} antialiased font-sans bg-surface-primary text-content-primary`}>
         {/* Shared SVG filter for liquid glass effect */}
         <svg style={{ display: 'none' }} aria-hidden="true" focusable="false">
           <filter
@@ -58,13 +98,15 @@ export default function RootLayout({ children }: Props) {
             />
           </filter>
         </svg>
-        <NextIntlClientProvider>
-          <MotionProvider>
-            <VideoPlayerProvider>
-              {children}
-            </VideoPlayerProvider>
-          </MotionProvider>
-        </NextIntlClientProvider>
+        <ThemeProvider>
+          <NextIntlClientProvider>
+            <MotionProvider>
+              <VideoPlayerProvider>
+                {children}
+              </VideoPlayerProvider>
+            </MotionProvider>
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

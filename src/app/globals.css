@@ -2,12 +2,134 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+  ┌─────────────────────────────────────────────────────────────────────────────┐
+  │                      STREET DANCE CULTURE - COLOR SYSTEM                   │
+  │                                                                             │
+  │  Pure CSS color palette with semantic naming and theme support             │
+  │  - Light theme: Default (professional, accessible)                         │
+  │  - Dark theme: Primary (street culture aesthetic)                          │
+  │                                                                             │
+  │  Usage: bg-surface-primary, text-content-secondary, border-stroke-accent   │
+  └─────────────────────────────────────────────────────────────────────────────┘
+*/
+
 @layer base {
+  :root {
+    /* ═══════════════════════════════════════════════════════════════════════ */
+    /*                              LIGHT THEME                               */
+    /* ═══════════════════════════════════════════════════════════════════════ */
+    
+    /* Surface Colors - Backgrounds and containers */
+    --color-surface-primary: 255 255 255;      /* #ffffff - Main background */
+    --color-surface-secondary: 249 250 251;    /* #f9fafb - Section backgrounds */
+    --color-surface-elevated: 243 244 246;     /* #f3f4f6 - Cards, modals */
+    --color-surface-overlay: 0 0 0;            /* #000000 - Modal overlays (use with alpha) */
+    --color-surface-inverse: 0 0 0;            /* #000000 - High contrast backgrounds */
+    
+    /* Content Colors - Text and foreground elements */
+    --color-content-primary: 17 24 39;         /* #111827 - Primary text */
+    --color-content-secondary: 75 85 99;       /* #4b5563 - Secondary text */
+    --color-content-tertiary: 107 114 128;     /* #6b7280 - Tertiary text, captions */
+    --color-content-inverse: 255 255 255;      /* #ffffff - Text on dark backgrounds */
+    --color-content-disabled: 156 163 175;     /* #9ca3af - Disabled text */
+    
+    /* Brand Accent Colors - Street dance culture identity */
+    --color-accent-primary: 249 115 22;        /* #f97316 - Orange (energy, movement) */
+    --color-accent-secondary: 236 72 153;      /* #ec4899 - Pink (creativity, passion) */
+    --color-accent-tertiary: 168 85 247;       /* #a855f7 - Purple (rhythm, flow) */
+    --color-accent-primary-hover: 234 88 12;   /* #ea580c - Orange hover */
+    --color-accent-secondary-hover: 219 39 119;/* #db2777 - Pink hover */
+    --color-accent-tertiary-hover: 147 51 234; /* #9333ea - Purple hover */
+    
+    /* Stroke Colors - Borders and dividers */
+    --color-stroke-primary: 209 213 219;       /* #d1d5db - Default borders */
+    --color-stroke-secondary: 156 163 175;     /* #9ca3af - Subtle borders */
+    --color-stroke-tertiary: 107 114 128;      /* #6b7280 - Strong borders */
+    --color-stroke-accent: 249 115 22;         /* #f97316 - Accent borders */
+    --color-stroke-focus: 249 115 22;          /* #f97316 - Focus rings */
+    
+    /* Status Colors - Feedback and states */
+    --color-status-success: 34 197 94;         /* #22c55e - Success states */
+    --color-status-warning: 234 179 8;         /* #eab308 - Warning states */
+    --color-status-error: 239 68 68;           /* #ef4444 - Error states */
+    --color-status-info: 59 130 246;           /* #3b82f6 - Info states */
+    --color-status-success-bg: 34 197 94;      /* Success background (use with alpha) */
+    --color-status-warning-bg: 234 179 8;      /* Warning background (use with alpha) */
+    --color-status-error-bg: 239 68 68;        /* Error background (use with alpha) */
+    --color-status-info-bg: 59 130 246;        /* Info background (use with alpha) */
+  }
+
+  .dark {
+    /* ═══════════════════════════════════════════════════════════════════════ */
+    /*                       DARK THEME (PRIMARY)                             */
+    /*                    Street Dance Culture Aesthetic                      */
+    /* ═══════════════════════════════════════════════════════════════════════ */
+    
+    /* Surface Colors - Dark, urban aesthetic */
+    --color-surface-primary: 0 0 0;            /* #000000 - Pure black background */
+    --color-surface-secondary: 23 23 23;       /* #171717 - Section backgrounds */
+    --color-surface-elevated: 38 38 38;        /* #262626 - Cards, modals */
+    --color-surface-overlay: 0 0 0;            /* #000000 - Modal overlays (use with alpha) */
+    --color-surface-inverse: 255 255 255;      /* #ffffff - High contrast backgrounds */
+    
+    /* Content Colors - High contrast for readability */
+    --color-content-primary: 255 255 255;      /* #ffffff - Primary text */
+    --color-content-secondary: 163 163 163;    /* #a3a3a3 - Secondary text */
+    --color-content-tertiary: 115 115 115;     /* #737373 - Tertiary text */
+    --color-content-inverse: 0 0 0;            /* #000000 - Text on light backgrounds */
+    --color-content-disabled: 82 82 82;        /* #525252 - Disabled text */
+    
+    /* Brand Accent Colors - Vibrant against dark backgrounds */
+    --color-accent-primary: 249 115 22;        /* #f97316 - Orange (unchanged) */
+    --color-accent-secondary: 236 72 153;      /* #ec4899 - Pink (unchanged) */
+    --color-accent-tertiary: 168 85 247;       /* #a855f7 - Purple (unchanged) */
+    --color-accent-primary-hover: 251 146 60;  /* #fb923c - Lighter orange hover */
+    --color-accent-secondary-hover: 244 114 182;/* #f472b6 - Lighter pink hover */
+    --color-accent-tertiary-hover: 196 181 253;/* #c4b5fd - Lighter purple hover */
+    
+    /* Stroke Colors - Subtle on dark */
+    --color-stroke-primary: 82 82 82;          /* #525252 - Default borders */
+    --color-stroke-secondary: 64 64 64;        /* #404040 - Subtle borders */
+    --color-stroke-tertiary: 38 38 38;         /* #262626 - Very subtle borders */
+    --color-stroke-accent: 249 115 22;         /* #f97316 - Accent borders */
+    --color-stroke-focus: 251 146 60;          /* #fb923c - Focus rings (lighter) */
+    
+    /* Status Colors - Same across themes for consistency */
+    --color-status-success: 34 197 94;         /* #22c55e - Success states */
+    --color-status-warning: 234 179 8;         /* #eab308 - Warning states */
+    --color-status-error: 239 68 68;           /* #ef4444 - Error states */
+    --color-status-info: 59 130 246;           /* #3b82f6 - Info states */
+    --color-status-success-bg: 34 197 94;      /* Success background (use with alpha) */
+    --color-status-warning-bg: 234 179 8;      /* Warning background (use with alpha) */
+    --color-status-error-bg: 239 68 68;        /* Error background (use with alpha) */
+    --color-status-info-bg: 59 130 246;        /* Info background (use with alpha) */
+  }
+
   * {
-    @apply border-gray-200 box-border;
+    @apply box-border;
   }
+  
+  html {
+    /* Default to dark theme for street dance culture aesthetic */
+    background-color: rgb(var(--color-surface-primary));
+    color: rgb(var(--color-content-primary));
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  html.light {
+    color-scheme: light;
+  }
+
   body {
-    @apply bg-white text-gray-900;
+    background-color: rgb(var(--color-surface-primary));
+    color: rgb(var(--color-content-primary));
     font-feature-settings: "rlig" 1, "calt" 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
+
+  /* Theme toggle styles moved to component */
 }

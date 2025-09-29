@@ -44,7 +44,7 @@ export const FeatureCard = ({
       <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
         {icon}
       </div>
-      <h3 className="text-xl font-black text-white mb-3 magazine-headline">
+      <h3 className="text-xl font-black text-content-primary mb-3 magazine-headline">
         {title}
       </h3>
       <p className="text-content-secondary leading-relaxed magazine-body">

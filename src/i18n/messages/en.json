@@ -43,7 +43,17 @@
       "prefix": "Est.",
       "year": "1973",
       "suffix": "From the Bronx to the World"
+    },
+    "themeToggle": {
+      "label": "Toggle theme",
+      "light": "Switch to light mode",
+      "dark": "Switch to dark mode"
     }
+  },
+
+  "theme": {
+    "light": "Light",
+    "dark": "Dark"
   },
 
   "about": {
