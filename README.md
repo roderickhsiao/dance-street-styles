@@ -118,7 +118,7 @@ pnpm project:list
 
 ### Contributing
 1. Check the [project board](https://github.com/users/roderickhsiao/projects/1) for open tasks
-2. Review [contributing guidelines](.github/CONTRIBUTING.md) (coming soon)
+2. Review [contributing guidelines](.github/CONTRIBUTING.md) for detailed instructions
 3. Create issues using our [templates](.github/ISSUE_TEMPLATE/)
 4. Submit PRs following our [template](.github/pull_request_template.md)
 
