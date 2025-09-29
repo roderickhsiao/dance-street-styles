@@ -1,10 +1,24 @@
 # Project Backlog - Street Dance Culture
 
-This document contains all the features, improvements, and tasks for the Street Dance Culture website, organized by priority and feature area.
+This ### 💰 Community Sustainability (NEW)
+- [ ] Community Support Platform (Buy Me Coffee, Ko-fi) (Issue #8)
+- [ ] At-Cost Merchandise (printing cost only, no markup)
+- [ ] Free Digital Resources (Educational PDFs, Posters, Materials)
+- [ ] Expense transparency dashboard (100% open books)
+- [ ] Simple community contribution system
+- [ ] Monthly operational cost reporting for communityt contains all the features, improvements, and tasks for the Street Dance Culture website, organized by priority and feature area.
 
 ## High Priority Items
 
-### 🎨 Design System & UI
+### � Content Expansion (NEW)
+- [ ] Music & Moves Database for Dance Styles (Issue #7)
+- [ ] Educational Tools & Interactive Learning Features (Issue #11)
+- [ ] Regional Dance Styles & Global Variations (Issue #10)
+- [ ] Video integration and tutorial embedding
+- [ ] Interactive move builder and choreography tools
+- [ ] Cultural context and historical timeline expansion
+
+### �🎨 Design System & UI
 - [ ] Create consistent design tokens for colors, typography, spacing
 - [ ] Implement responsive navigation with mobile menu
 - [ ] Design and implement hero sections for all pages
@@ -37,7 +51,23 @@ This document contains all the features, improvements, and tasks for the Street 
 
 ## Medium Priority Items
 
-### 📊 Content Management
+### � Monetization & Sustainability (NEW)
+- [ ] Donation Platform Integration (Buy Me Coffee, Ko-fi, Patreon) (Issue #8)
+- [ ] Merchandise & Print Store Setup
+- [ ] Digital Products (Educational PDFs, Posters, Materials)
+- [ ] Revenue tracking and transparency dashboard
+- [ ] Print-on-demand integration for apparel and accessories
+- [ ] Subscription tiers and recurring donation system
+
+### 🚀 Operations & Growth (NEW)
+- [ ] Custom Domain Setup & Professional Infrastructure (Issue #9)
+- [ ] Social Media Presence & Content Distribution
+- [ ] Automated Workflows for Content Sharing
+- [ ] Brand Identity & Marketing Materials
+- [ ] Community Engagement & Partnership Strategy
+- [ ] Performance monitoring and analytics setup
+
+### �📊 Content Management
 - [ ] Create comprehensive dance styles database
 - [ ] Implement searchable timeline component
 - [ ] Add biography pages for key figures
@@ -138,17 +168,29 @@ This document contains all the features, improvements, and tasks for the Street 
 ### Epic 1: Foundation (8-10 weeks)
 All high-priority design system, responsive design, and accessibility items
 
-### Epic 2: Content (6-8 weeks)
-Content management, dance culture content, and basic community features
+### Epic 2: Content Expansion (10-12 weeks) **UPDATED**
+- Music & Moves Database (Issue #7)
+- Regional Styles & Global Variations (Issue #10) 
+- Educational Tools & Interactive Learning (Issue #11)
+- Video integration and tutorial systems
 
-### Epic 3: Enhancement (4-6 weeks)
+### Epic 3: Community Sustainability (6-8 weeks) **NEW**
+- Community support platform integration (Issue #8)
+- At-cost merchandise system (zero profit)
+- Free digital educational resources
+- Complete expense transparency and community reporting
+
+### Epic 4: Operations & Growth (8-10 weeks) **NEW**
+- Domain setup and infrastructure (Issue #9)
+- Social media presence and automation
+- Brand identity and marketing materials
+- Community engagement strategy
+
+### Epic 5: Enhancement & Polish (6-8 weeks)
 Interactive features, advanced functionality, and performance optimization
 
-### Epic 4: Community (6-8 weeks)
-Community features, social integration, and user-generated content
-
-### Epic 5: Growth (4-6 weeks)
-Advanced features, analytics, and scaling preparation
+### Epic 6: Community Platform (8-10 weeks) **EXPANDED**
+Advanced community features, user-generated content, and collaboration tools
 
 ## Definition of Done
 
